@@ -1,0 +1,260 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage {fontspec} %,xunicode} %,xltxtra}
+%	\setmainfont{Times New Roman}
+\setmainfont[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]{LibertinusSerif-Regular.otf}
+
+\usepackage[margin={1in}]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=purple,pagebackref=false]{hyperref}
+
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0.2ex,belowexskip=0.8ex,aboveglftskip=-0.2ex,interpartskip=0.2ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+
+\usepackage{mdwlist}  %
+\usepackage[normalem]{ulem}
+\usepackage{array} % >{\...} in tabulars
+\setlength\parindent{0pt}
+\usepackage{dashrule} %\hdashrule
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\addtolength{\headheight}{2.5pt}
+\pagestyle{fancy} %or fancyplain
+\lhead{Morphology 2022-23 (UoE)}
+\rhead{Jigsaw group C}
+\fancyfoot[C]{\thepage~of \pageref{LastPage}}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{Page \thepage~of \pageref{LastPage}} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\definecolor{edir}{RGB}{193,0,67}
+\definecolor{edib}{RGB}{0,50,95}
+\newcommand\ruler{{\centering \color{edir} \rule[-0.5em]{0.6\columnwidth}{0.4pt}\par}}
+
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\hand}{\ding{43}}
+
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\title{Jigsaw group C} % complex events, VoiceP-derived, cause O to V
+\date{Morphology 2022-23, causatives}
+\author{}
+
+\begin{document}
+
+In this jigsaw puzzle we will look at different kinds of causatives. For simplicity, assume that all the forms glossed \gsc{CAUS} are the same kind of element (albeit in different languages).
+
+In this expert group, see if you can find out what is being caused, and to what/whom.
+
+% \section{English}
+
+
+\section{Hebrew}
+
+\pex
+    \a \begingl
+        \gla adam axal et ha-xumus//
+        \glb Adam ate-\gsc{PAST} \gsc{ACC} the-hummus//
+        \glft `Adam ate the hummus.'//
+    \endgl
+    \a \begingl
+        \gla adam heexil et teo xumus//
+        \glb Adam ate.\gsc{CAUS-\gsc{PAST}} \gsc{ACC} Theo hummus//
+        \glft `Adam fed Theo hummus.'//
+    \endgl
+\xe
+
+\pex
+    \a \begingl
+        \gla teo lavaʃ et ha-taxposet//
+        \glb Theo wore-\gsc{PAST} \gsc{ACC} the-costume//
+        \glft `Theo wore the costume.'//
+    \endgl
+    \a \begingl
+        \gla adam helbiʃ et teo be-taxposet ʃel totoro//
+        \glb Adam wore.\gsc{CAUS-\gsc{PAST}} \gsc{ACC} Theo in-costume of Totoro//
+        \glft `Adam dressed Theo in a Totoro costume.'//
+    \endgl
+\xe
+\pex
+    \a \begingl
+        \gla teo xatam al ha-mismax//
+        \glb Theo signed-\gsc{PAST} on the-document//
+        \glft `Theo signed the document.'//
+    \endgl
+
+    \a \begingl
+        \gla teo hextim et ha-menahelet al ha-mismax//
+        \glb Theo signed.\gsc{CAUS-\gsc{PAST}} \gsc{ACC} the-manager on the-document//
+        \glft `Theo signed the manager on the document.'//
+    \endgl
+\xe
+
+
+\section{Japanese}
+
+\ex \begingl
+    \gla Taroo-ga Hanako-o ik-ase-ta//
+    \glb Taro-\gsc{NOM} Hanako-\gsc{ACC} go-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Taro made Hanako go.'//
+    \endgl
+\xe
+
+\ex \begingl
+    \gla Kotosi-wa dekinai gakusei-o hue-sase-ta//
+    \glb This.year-\gsc{Topic} poor students-\gsc{ACC} increase-\gsc{CAUS}-\gsc{PAST}//
+    \glft `This year, we caused (the number of) poor students to increase.'//
+    \endgl
+\xe
+
+% kow-as-ase
+% break-\gsc{CAUS}-\gsc{CAUS}
+% ‘make someone break something’
+
+% ugok-as-ase
+%  move-\gsc{CAUS}-\gsc{CAUS}
+% ‘make someone move something
+
+\ex \begingl
+    \gla Taroo-wa Hanako-ni hanasi-o tutae-sase-ta//
+    \glb Taro-\gsc{Topic} Hanako-\gsc{DAT} story-\gsc{ACC} convey-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Taro made Hanako convey a story.'//
+    \endgl
+\xe
+
+
+\section{Quechua}
+
+\ex \begingl
+    \gla Marya Juan-man libru-ta rikhu-chi-rqa//
+    \glb Mary Juan-\gsc{DAT} book-\gsc{ACC} see-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Mary showed John the book.'//
+\endgl
+\xe
+
+\ex \begingl
+    \gla Juan puñu-n//
+    \glb Juan sleep-\gsc{3SUBJ}//
+    \glft `Juan sleeps.'//
+    \endgl
+\xe
+\ex \ljudge{*} \begingl
+    \gla Maria Juan-ta puñu-n//
+    \glb Maria Juan-\gsc{ACC} sleep-\gsc{3SUBJ}//
+    \glft (int.~‘Maria sleeps Juan.’)//
+    \endgl
+\xe
+\ex \begingl
+    \gla Maria Juan-ta puñu-chi-n//
+    \glb Maria Juan-\gsc{ACC} sleep-\gsc{CAUS}-\gsc{3SUBJ}//
+    \glft ‘Maria makes Juan sleep.’//
+    \endgl
+\xe
+
+% And when the embedded verb is transitive:
+
+\pex \a \begingl
+    \gla Alqo wayna-ta khani-rqa//
+    \glb Dog boy-\gsc{ACC} bite-\gsc{PAST}//
+    \glft ‘The dog bit the boy.’//
+    \endgl
+    
+    \a \begingl
+    \gla Juan alqo-wan wayna-ta khani-chi-rqa.//
+    \glb Juan dog-\gsc{INSTR} boy-\gsc{ACC} bite-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Juan made the dog bite the boy.' (literally `Juan made-bite the boy using the dog')//
+    \endgl
+\xe
+
+
+\section{Hiaki}
+\ex \begingl
+    \gla Juan Maria-ta vaso-ta ham-ta-tua-k//
+    \glb Juan Maria-\gsc{ACC} glass-\gsc{ACC} break-\gsc{TR}-\gsc{CAUS}-\gsc{PERF}//
+    \glft `Juan made Maria break the glass.'//
+    \endgl
+\xe
+
+\section{Turkish}
+
+\ex \begingl
+  \gla ben kIz-a maymun-u sat-tIr-dI-m//
+  \glb I girl-\gsc{DAT} monkey-\gsc{ACC} sell-\gsc{CAUS}-\gsc{PAST}-1SG//
+  \glft `I made the girl sell the monkey'//
+  \endgl
+\xe 
+
+\ex \begingl
+  \gla kIz-I maymun-a bak-tIr-dI-m//
+  \glb girl-\gsc{ACC} monkey-\gsc{DAT} look-\gsc{CAUS}-\gsc{PAST}-1SG//
+  \glft `I made/had/let the girl look at the monkey'//
+  \endgl
+\xe 
+
+
+\ex \begingl
+  \gla kIz-I maymun-dan kork-tur-uyor-um//
+  \glb girl-\gsc{ACC} monkey-ABL fear-\gsc{CAUS}-PRES-1SG//
+  \glft `I am making the girl fear the monkey'//
+  \endgl
+\xe 
+
+% \section{IsiXhosa}
+% \pex 
+%     \a Intengiso i-fun-is-e inkwenkwe ithoyi.
+% 9advertisement 9SBJ-want-\gsc{CAUS}-PRF 9boy 9toy
+% ‘The advertisement made the boy want a toy.’
+
+%     \a uDallas_i w-aphul-is-e uZoli_j iglasi ngabom{i/*j}.
+% 1Dallas 1SBJ-break.TR-\gsc{CAUS}-PRF 1Zoli 9glass on.purpose
+% ‘Dallas [[made Zoli break the glass] on purpose].’
+% *‘Dallas [made [Zoli break the glass on purpose]].’
+% \xe
+
+
+% (3) Intengiso y-enz-e ukuba inkwenkwe i-fun-e ithoyi.
+% 9advertisement 9SBJ-make-PRF COMP 9boy 9SBJ-want-SBJV 9toy
+% ‘The advertisement made the boy want a toy.’
+
+
+\section{Analysis}
+
+What would a formal analysis look like? Specifically, what would the relationship be between the Causer, the Causee, the verb/root, and the element \gsc{CAUS}?
+
+
+
+
+\end{document}

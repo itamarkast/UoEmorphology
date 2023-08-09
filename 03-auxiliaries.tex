@@ -1,0 +1,167 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2022-23, Edinburgh, Exercise 3}
+\bigskip
+
+Let's recap the order of auxiliaries in English.
+
+\pex
+    \a She will have be-en winn-ing the race.
+    \a \ljudge{*} She has been will winning the race.
+\xe
+\pex
+    \a The cake will have be-en (be-ing) eat-en.
+    \a \ljudge{*} The cake is having were been eat.
+\xe
+
+% T > Perf > Prog > Pass > V.
+
+\bigskip
+What can you say about the relationship of each element with the others?
+% \begin{itemize} \tightlist
+%     \item Takes semantic \emph{scope} over the next: the future of the perfect of the passive of an eating event.
+%     \item Takes morpho(-phono)logical \emph{scope} over the next: \emph{have}_{\gsc{perf}} triggers participial morphology on \emph{eat-en}, \emph{is}_{\gsc{prog}} triggers progressive morphology on \emph{winn-ing}, etc.
+% \end{itemize}
+
+\vspace{3cm}
+
+Draw a tree for~(\lastx a). It doesn't need to be too fancy - we don't need any movement, for example, just an idea of what the different heads or phrases are and where they originate.
+
+\ex
+
+\xe
+
+\vspace{6cm}
+
+Now let's do the same thing for Latin:
+\pex
+    \a \begingl
+        \gla am-\=a-ve-ra-m//
+        \glb \root{LOVE}-\gsc{THEME}-Perf-Past-1\gsc{SG}//
+        \glft `I loved'//
+        \endgl
+    \a \begingl
+        \gla am-\=a-ve-r-\=o//
+        \glb \root{LOVE}-\gsc{THEME}-Perf-Fut-1SG//
+        \glft `I will have loved'//
+        \endgl
+\xe
+
+% V < Th < Perf < T.
+% \begin{itemize} \tightlist
+%     \item $\approx$ T > Perf > V.
+%     \item Like in English, except in morphology rather than syntax.
+%     \item Still get morphological conditioning, but we'll return to that later (allomorphy).
+% \end{itemize}
+
+How does this compare to the order in English?
+
+% \bibliographystyle{linquiry2}
+% \bibliography{lingxbib}
+
+\end{document}

@@ -104,14 +104,58 @@
 % \pagenumbering{gobble}
 % \singlespacing
 
-\section*{What is a word, inflection vs derivation, etc}
 
-See ``EdinMorph meeting records'' doc.
+\hfill \emph{Morphology 2022-23, Edinburgh}
 
+\section*{Introduction}
 
-\section*{Warm-up}
+    \subsection*{What is morphology?}
+When we study morphology, the structure of words, there is a range of things that might interest us. Some things we mentioned are:
+\begin{enumerate} \tightlist
+    \item Morphology's relationship to syntax (morphosyntax, and specifically syntactic features and argument structure)
+    \item Morphology's relationship to phonology (morphophonology, and specifically allomorphy)
+    \item Morphology's relationship to semantics (morphosemantics, and specifically lexical semantics)
+    \item Lexical processing (psycholinguistics)
+    \item Lexical acquisition (L1/L2)
+    \item Computational modeling
+    \item Lexical change (historical linguistics)
+    \item Lexical variation (variationist sociolinguistics)
+\end{enumerate}
 
-Segment the following words.
+How do we accurately describe how language works? We need a theory, which predicts both what does happen and what cannot ever happen. Once we have a theory in place, we can form hypotheses and test them. So for example, suppose we find that L2 learners of English learners learn the plural suffix -\emph{s} in \emph{dogs} before the agentive suffix -\emph{er} of \emph{worker}. Is this because:
+\begin{itemize} \tightlist
+    \item The former is more frequent in terms of total number of words (tokens)?
+    \item The former is more frequent in terms of the number of distinct words it can attach to (types)?
+    \item The former is conceptually easier to learn?
+    \item The former is more regular in its meaning (compare \emph{worker} with \emph{computer} or \emph{ruler})?
+    \item The former is inflection and the latter derivation?
+    \item All/some/none of the above?
+\end{itemize}
+
+Once we have a hypothesis in place about how morphology works, we can make predictions about learning.
+
+The questions we ask lead us to develop a variant of the framework called Distributed Morphology, or simply DM for short \citep{dm}. The core idea of DM is that morphology (words) have complex internal hierarchical structure just like syntax (sentences) does. DM actually assumes that morphology and syntax are one and the same structure. But we build up to this idea, seeing what it predicts and what we can learn along the way.
+
+\paragraph{General readings on DM}
+The course does not follow a specific textbook; there is, in fact, no current textbook which motivates the architectural assumptions of DM in the way we try to do (although the upcoming \citealt{punske23} looks promising). Here are some suggestions for general references on the framework.
+
+\begin{itemize} \tightlist
+    \item For the bare-bones version of ``what you need to know'', have a look at the introductory chapter to a recent book on morphology using DM. For example, \cite{wood15springer} and \cite{myler17oup} both have good overviews. Chapter 1.3 of \cite{kastner20ogs} has an extremely \sout{short} economical overview.
+    \item For a single-article overview, I like \cite{mcginnis16cup}. \cite{harley13handbook} is particularly useful in that it does not assume that its audience knows what we're talking about. \cite{embicknoyer07} and \cite{bobaljik17oup} are both good as well, and fairly comprehensive for single-chapter overviews (especially when it comes to morphophonological details).
+    \item There are one published textbook and two unpublished textbook drafts which together cover a lot of ground. The published one is \cite{embick15}. The unpublished ones are \cite{nevins16ms}, which you can find on the online repository \href{https://ling.auf.net/lingbuzz/}{LingBuzz}, and \cite{bobaljikbaker02}, which does not have one official ``home'', as far as I can tell, but which is hosted as separate PDFs on a number of sites.
+    \item I would \emph{not} recommend starting with \cite{dm}, which is both very technical and slightly outdated, although it is a good read.
+    \item For general textbooks on morphology, check out \cite{harley06}, which focuses on English, and \cite{fabregasscalise12}, which tries to survey different theories.
+\end{itemize}
+
+    \subsection*{What's a word?}
+We started by seeing whether we can come up with a definition of ``word'' that's consistent across all its uses: in writing (orthography), lexicography, syntax, semantics, phonology and so on. We concluded that there was none, but we were happy to talk about morphemes.
+
+We then discussed what the differences were between inflection and derivation [Exercise 2], and whether it's possible to postulate one basic difference which derives all the rest, or are we stuck with the notions of ``inflection'' and ``derivation'' as primitives of our theory, i.e.~something that we can't reduce to other factors (which is what Section~\ref{sec:affix:inflder} ends up doing).
+
+Until I incorporate these discussion into this set of lecture notes, the summaries can be found \href{https://uoe-my.sharepoint.com/:w:/g/personal/ikastner_ed_ac_uk/EbjHH_7rci5AoL0msG6mBJcBEg3YWsLaQ7gqXQjV69VERw}{at this link} (or via Learn).
+
+    \subsection*{Warm-up}
+Segment the following words (into morphemes).
 
 \pex
     \a walk
@@ -123,7 +167,7 @@ Segment the following words.
     \a walkability
 \xe
 
-And what issues arise when we segment these ones?
+Now segment the words in~(\nextx)--(\anextx). What issues arise when we segment these ones?
 
 \pex
     \a bassoon
@@ -139,11 +183,18 @@ And what issues arise when we segment these ones?
     \a glimmer
 \xe
 
+%\answer
 Not every string that repeats itself is a grammatical primitive (a morpheme). How can we tell? What are we looking for? What kinds of evidence are relevant?
+
+Usually we want to find recurring elements that share form (phonology) and meaning (semantics). But we also need to pay attention to how frequent or productive they are, whether they have any syntactic function, and whether they have cognitive plausibility (i.e.~behave in certain ways psycholinguistically).
+
 
 \section{Affix ordering}
 
     \subsection{Auxiliaries and preliminaries}
+
+[Exercise 3]
+
 What's the order of auxiliaries in English?
 
 \pex
@@ -155,16 +206,20 @@ What's the order of auxiliaries in English?
     \a \ljudge{*} The cake is having were been eat.
 \xe
 
+%\answer
 T > Perf > Prog > Pass > V.
 
 \bigskip
-Each element:
+How each element fits with the others:
+%\answer
 \begin{itemize} \tightlist
     \item Takes semantic \emph{scope} over the next: the future of the perfect of the passive of an eating event.
     \item Takes morpho(-phono)logical \emph{scope} over the next: \emph{have}_{\gsc{perf}} triggers participial morphology on \emph{eat-en}, \emph{is}_{\gsc{prog}} triggers progressive morphology on \emph{winn-ing}, etc.
 \end{itemize}
 
-We've already talked about how to represent this formally:
+\bigskip
+Representing this formally:
+%\answer
 \ex
 \Tree
 [.TP
@@ -190,7 +245,7 @@ What's the order in Latin \citep{embick10,kastnerzu17,kastner18nllt}?
     \a \begingl
         \gla am-\=a-ve-ra-m//
         \glb \root{LOVE}-\gsc{THEME}-Perf-Past-1\gsc{SG}//
-        \glft `I loved'//
+        \glft `I had loved'//
         \endgl
     \a \begingl
         \gla am-\=a-ve-r-\=o//
@@ -198,13 +253,23 @@ What's the order in Latin \citep{embick10,kastnerzu17,kastner18nllt}?
         \glft `I will have loved'//
         \endgl
 \xe
-
+%\answer
 V < Th < Perf < T.
 \begin{itemize} \tightlist
     \item $\approx$ T > Perf > V.
     \item Like in English, except in morphology rather than syntax.
     \item Still get morphological conditioning, but we'll return to that later (allomorphy).
 \end{itemize}
+
+How does this compare to the order in English?
+
+%\answer
+\begin{itemize} \tightlist
+    \item It's the opposite linearly.
+    \item It's the same in terms of scope (hierarchically).
+\end{itemize}
+
+\paragraph{Summary} Auxiliaries have a rigid ordering which reflects scope, and that these auxiliaries might be independent syntactic/phonological words in one language but affixes in another.
 
     \subsection{The Mirror Principle}
         \subsubsection{Preliminaries}
@@ -221,7 +286,9 @@ What's the order of the reciprocal and causative suffixes in Chiche\^{w}a \citep
     \glft `The hunters made each other hit the goats.'//
     \endgl
 \xe
-The order is whatever it needs to be to get scope right; You go from the verb ``outwards''.
+
+%\answer
+The order is whatever it needs to be to get scope right; you go from the verbal root ``outwards''.
 
 \bigskip
 Here's another pair \citep{hymanmchombo92}:
@@ -235,12 +302,15 @@ Here's another pair \citep{hymanmchombo92}:
 \xe
 
 What would this language (\emph{Chichewa'}) look like if it had prefixes instead of suffixes?
+%\answer
 \pex
     \a its-an-mang
     \a an-its-mang
 \xe
 
-Because hierarchy is what matters (relative ordering), rather than linear order.
+ Because hierarchy is what matters (relative ordering), rather than linear order.
+
+\bigskip
 
 Another example: Bemba in \cite{baker85}, citing \cite{givon76}.
 \pex[exno=49]
@@ -268,6 +338,7 @@ In Chichewa, the applicative can be used for instruments \citep{alsina99}:
 
 Let's try to passivize: `The axe was used to cut the net (by the fisherman)'. The instrument will become the subject (we'll get back to that in argument structure). What will be the ordering of \gsc{Appl} and \gsc{Pass}?
 
+\bigskip
 \pex[exno=10]
     \a[label=b] \begingl
         \gla Nkhw\^{a}ngwa i-na-dúl-\textbf{ír}-\uline{idw}-á úk\=onde (ndí ms\=odzi)//
@@ -286,8 +357,8 @@ Schematic, ignoring the actual arguments:\\
     ]
 ]    
 
-
-Chi-Mwi:ni in \cite{baker85} from \cite{kisseberthabasheikh77}:
+\bigskip
+Some more examples. Chi-Mwi:ni in \cite{baker85} from \cite{kisseberthabasheikh77}:
 \pex[exno=56]   
     \a \begingl
         \gla Nu:ru Ø-chi-tes-ete chibu:ku//
@@ -344,13 +415,8 @@ Yupik \citep[43]{mithun99}:
         \glft `He probably said that he would go.'//
     \endgl
 \xe
-\ex \begingl
-    \gla ayag-yug-umi-ite-qapiar-tu-a//
-    \glb go-want-be.in.state-not-really-\gsc{INDIC.INTR}-1\gsc{SG}//
-    \glft `I really don't want to go.'//
-    \endgl
-\xe
-% (Why do we gloss these sometimes as words and sometimes as affixes? Because.)
+
+% (Why do we gloss these sometimes as words and sometimes as affixes? Usually phonology.)
 
 
 Oji-Cree \citep{slavin05uot} in \cite{rice11}:
@@ -358,29 +424,29 @@ Oji-Cree \citep{slavin05uot} in \cite{rice11}:
     \a \begingl
         \gla ishkwaa-niipaa-sookihpawn//
         \glb finish-at.night-be.snowing//
-        \glft `It stopped snowing at night.' (does not snow at night anymore)//
+        \glft `It stopped snowing at night.' (does not snow at night anymore)// %\answer
     \endgl
     \a \begingl
         \gla nipaa-ishkwaa-sookihpwan//
         \glb at.night-finish-be.snowing//
-        \glft `It stopped snowing at night.' (was snowing the whole day)//
+        \glft `It stopped snowing at night.' (was snowing the whole day)// %\answer
     \endgl
 \xe
 \pex[exno=11']
     \a \begingl
         \gla kiimooci-kishahtapi-wiihsini//
         \glb secretly-fast-eat//
-        \glft `He secretly eats fast.' (nobody knows that he eats fast)//
+        \glft `He secretly eats fast.' (nobody knows that he eats fast)// %\answer
     \endgl
     \a \begingl
         \gla kishahtapi-kiimooci-wiihsini//
         \glb fast-secretly-eat//
-        \glft `He eats secretly (nobody knows that he eats) and he does it fast.'//
+        \glft `He eats secretly (nobody knows that he eats) and he does it fast.'// %\answer
     \endgl
 \xe
 
 
-Pulaar \citep{paster05}:
+Pulaar \citep{paster05}, with \gsc{com}prehensive \emph{id} `all' and \gsc{sep} \emph{it} which denotes the reverse of the action (so `open' + \gsc{sep} = `close').
 \pex
     \a \begingl
         \gla mi udd-id-it-ii baafe ɗe fof//
@@ -393,6 +459,9 @@ Pulaar \citep{paster05}:
         \glft `I opened all the doors (at once).'//
         \endgl
 \xe
+
+Here, \gsc{rep}epetitive means `again'. Assume that one of the following means `make someone learn' and one means `teach' - which is which?
+
 \pex
     \a \begingl
         \gla o jaŋŋg-in-it-ii kam//
@@ -406,20 +475,40 @@ Pulaar \citep{paster05}:
         \endgl
 \xe
 
-    \subsection*{Interim summary}
+\paragraph{Summary} The order of affixes reflects the order of syntactic heads, which reflects semantic scope; this is the Mirror Principle \citep{baker85}.
+
+    \subsection*{Interim summary and references}
+We have seen evidence for:
 \begin{itemize} \tightlist
     \item Rigid ordering for some (inflectional?) categories, e.g.~auxiliaries.
     \item Variable ordering depending on scope for some (inflectional?) categories.
-    \item Always respect semantic and morphological scope.
+    \item Affix order always respects semantic and morphological scope.
 \end{itemize}
 
 Key references:
-\cite{baker85} gets all the glory for coining the Mirror Principle but \cite{muysken81,muysken88} was there first. \cite{rice11} is an excellent overview of different factors in affix ordering, based in part on \cite{rice00}.
-
+\begin{enumerate} \tightlist
+    \item \cite{baker85} coined the Mirror Principle and is the canonical work on the topic.
+        \begin{itemize}
+            \item \cite{muysken81,muysken88} was actually there first, at least in general linguistic publications.
+            \item \cite{harley11oup} discusses different syntactic ways of deriving orders which obey or don't obey the Mirror Principle. \cite{myler17oup} analyzes a counterexample to the Mirror Principle and argues that it isn't problematic after all.
+        \end{itemize}
+    \item The constraints on the ordering of auxiliaries in English go back to Syntactic Structures \citep{chomsky57}. For a more contemporary introduction, see \cite{adger03}.
+    \item \cite{rice11} is an excellent overview of different factors in affix ordering, based in part on \cite{rice00}. 
+        \begin{itemize}
+            \item Additional factors in affix ordering are pointed out in Section~\ref{sec:affix2}.
+        \end{itemize}
+\end{enumerate}
 
     \subsection{Longer chains}
-Turkish \citep[368]{inkelasorgun98} 
-\ex \begingl
+\pex
+    \a Yupik \citep{mithun99}\\
+  \begingl
+    \gla ayag-yug-umi-ite-qapiar-tu-a//
+    \glb go-want-be.in.state-not-really-\gsc{INDIC.INTR}-1\gsc{SG}//
+    \glft `I really don't want to go.'//
+    \endgl
+
+    \a Turkish \citep[368]{inkelasorgun98} \\ \begingl
 	\glpreamble \emph{çekoslovakyalilaştiramayacaklarimizdanmiydiniz}//
 	\gla çekoslovakya li laş tir ama yacak lar imiz dan mi ydi niz //
 	\glb Czechoslovakia from become \gsc{CAUSE} unable Fut \gsc{PL} \gsc{1PL} \gsc{ABL} \gsc{INTERR} Past \gsc{2PL}//
@@ -437,6 +526,8 @@ Japanese:
 
 What would a structure for this look like?
 
+% \bigskip
+%\answer
 \ex
 \Tree
 [.TP
@@ -459,18 +550,21 @@ What would a structure for this look like?
 					[.v\\{[\gsc{caus}]} \emph{sase} ]
 				]
 			]
-			[.v\\{[\gsc{pass}]} \emph{rare} ]
+			[.v/Voice\\{[\gsc{pass}]} \emph{rare} ]
 		]
 		[.T \emph{-ta} ]
 	]
 ]
 \xe
 
-Note how arguments (DPs, phrases) and suffixes live in harmony in the same tree.
+Note how arguments (DPs, phrases) and suffixes live in harmony in the same tree structure.
 % \emph{sodat-e} means `raise (a child or animal)' and \emph{sodat-u} is the inchoative `grow up'
 
-
+% \newpage
     \subsection{Nouns}
+
+[Exercise 4]
+
 Gender in Catalan, \cite{kramer16llc} from \cite{picallo91}:
 \pex
     \a \begingl
@@ -494,6 +588,7 @@ Gender in Catalan, \cite{kramer16llc} from \cite{picallo91}:
 \xe
 
 Schematic tree:
+
 \ex \label{tree:pl-catalan}
 \Tree
 [.
@@ -538,17 +633,25 @@ Let's draw a structure for~(\ref{ex:globalization}):
 
 Is this morphology or syntax? Does it matter, and if so, in what ways?
 
+\begin{itemize} \tightlist
+    \item We see that we can arrange morphemes in a hierarchical morphological structure the same way we do in the syntax with ``words''.
+    \item We saw evidence from Japanese that we could have both in the same structure.
+    \item Compositionality is an important issue: \emph{globe} can mean either `sphere' or `the world', but then \emph{global} only means `the world', so where should this information be encoded?
+    \item In English, most of the syntax is head-initial but most of the morphology is head-final. Does this matter? How should it be encoded?
+\end{itemize}
+
+% \newpage
     \subsection{Building structure}
 Quick reminder: what is the evidence for hierarchical structure within words, as opposed to linear structure?
 
         \subsubsection{Ordering}
 \pex \emph{unhelpful}:
-    \a {[}un-[help-ful]]
-    \a \ljudge{*} {[[}un-help]-ful] 
+    \a  {[}un-[help-ful]]
+    \a \ljudge{*}  {[[}un-help]-ful] 
 \xe
 \pex \emph{unpredictable}:
-    \a {[}un-[predict-able]]
-    \a \ljudge{*} {[[}un-predict]-able] 
+    \a  {[}un-[predict-able]]
+    \a \ljudge{*}  {[[}un-predict]-able] 
 \xe
 
 \pex But also \emph{unhappier} (a bracketing paradox, because -\emph{er} normally attaches to smaller prosodic bases):
@@ -564,7 +667,7 @@ See also \cite{libben03springer} for processing aspects and \cite{osekimarantz20
 Where there's structure, there can be structural ambiguity.
 
 \pex
-    \a \emph{unlockable, unfoldable}, \dots{} \hfill \citep{dealmedialibben05,pollatseketal10}
+    \a \emph{unlockable, unfoldable}, \dots{} \hfill \citep{dealmedialibben05,viknervikner08,pollatseketal10}
     \a Compounds like \emph{kitchen towel rack}
 \xe
 
@@ -607,6 +710,8 @@ It's hard to talk about building up words (or phrases, or sentences) without a c
 
 \bigskip
 Back to technical concerns: what about bound roots?
+
+We'll need some way of representing the abstract, bound root. Sometimes people borrow the mathematical square-root symbol:
 \pex
     \a \emph{eternity} \\
     \Tree
@@ -623,7 +728,15 @@ Back to technical concerns: what about bound roots?
 \xe
 
 \bigskip
-With that in place, what's to stop us from always positing a root? What would that look like for the noun \emph{globe}?
+
+Now let's think back to inflection. If we assume that verbs always inflect for certain features in some language, then we often assume silent affixes (notated with the empty set symbol, \zero{}). This way the formal system is consistent (though not everyone is a fan of the concept of silent affixes; Paradigm Function Morphology for instance works very differently, \citealt{stump15}):
+\pex
+    \a she walk-s_{\gsc{3SG.PRES}}
+    \a I walk-\zero{}_{\gsc{1.PRES}}
+    \a They walk-\zero{}_{\gsc{PL.PRES}}
+\xe
+
+Returning to word-building (derivation), if we think that \emph{some} words consist of a root and an affix providing the syntactic category, why not assume that all words are built this way? Then, for ``ordinary'' nouns like \emph{globe}:
 \ex
 \Tree
 [.n
@@ -632,9 +745,10 @@ With that in place, what's to stop us from always positing a root? What would th
 ]
 \xe
 
-Nothing really, though we would need grounds to decide which of the following two derivations to prefer:
+And once that's what we want to do, there's actually another choice point: now we would need grounds to decide which of the following two derivations to prefer for \emph{global} \citep{grestenbergerkastner22}:
 \ex \emph{global}\\
-    a.~\Tree
+    a.~
+    \Tree
     [.a
         [.n
             [.\root{\gsc{globe}} ]
@@ -643,7 +757,8 @@ Nothing really, though we would need grounds to decide which of the following tw
         [.a\\\emph{al} ]
     ]
     \hspace{5em}
-    b.~\Tree
+    b.
+    ~\Tree
     [.a
         [.\root{\gsc{GLOBE}} ]
         [.a\\\emph{al} ]
@@ -651,14 +766,14 @@ Nothing really, though we would need grounds to decide which of the following tw
 \xe
 
 \bigskip
-Next, we would expect to find languages that have these kinds of roots which must be \emph{categorized} as a noun, verb or adjective first.
+What does this mean crosslinguistically? We would expect to find languages in which all roots must be \emph{categorized} as a noun, verb or adjective first. Semitic languages seems to fit the bill.
 
-$\Rightarrow$ \cite{arad03}!
+The Semitic philologists have been debating the notion of a categorized root for centuries, going back at least to grammarians of the Fertile Crescent in the 8th century (\citealt[563ff]{borer13oup}, citing \citealt{owens88}). \cite{arad03} makes this point in contemporary terms based on a range of observations about Hebrew.
 
 
-    \subsection{Back to inflection and derivation}
+    \subsection{Summary and discussion} \label{sec:affix:inflder}
 
-Let's recap once more the differences between inflection and derivation. We want to see whether our way of building structure helps explain these.
+Let's recap once more the typical differences between inflection and derivation. We want to see whether our way of building structure helps explain these.
 
 \begin{tabular}{ll}
 Inflection & 
@@ -680,24 +795,28 @@ Closer to the base \\
 \end{tabular}
 
 \bigskip
-Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: it's scope! It's scope all the way down!
+Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: scope. The reason that, for instance, a derivational nominal marker is closer to the root than an inflectional plural marker, is that we create the noun first, and only then pluralize it.
 
 \bigskip
-We can also look at meaning change again. Do we get meaning change with \emph{every} derivational affix? Does our theory explain this?
+We can also look at meaning change again. Do we get meaning change with \emph{every} derivational affix? Does our theory explain this? What about non-compositional meaning?
 \pex
     \a globalization
     \a novelization
 \xe
 
-\bigskip
-What about non-compositional meaning?
+It looks like the first affix picks out one possible meaning, which is then consistent across further derivations. This is also the point \cite{arad03,arad05} makes for Hebrew.
 
+\paragraph{Recommended readings} Start with \cite{arad03}, and follow that up with \cite{mcginniswood19cup}.
 
+\cite{elenasamioti13,elenasamioti14} and \cite{harley14thlia} all weigh in on the issue of compositional meaning and the combination of root and affix. They concluding (in a way we haven't had time to do ourselves) that the current formalism has a way of deriving this: just as the first affix (even if it's silent) assigns the first syntactic category to the root, it also picks out one of the meanings of the root. This way we have compositionality and non-compositionality living together in the same syntactic system. For additional discussion, see also the overview article by \cite{grestenbergerkastner22}. \cite{marantz13} suggests that locality for meaning is the same as locality for allomorphy (though we haven't gotten to allomorphy yet at this point).
 
+Section~\ref{sec:affix2} contains extra material on affix ordering, which isn't part of the course itself.
 
-\section{More factors affecting affix ordering}
+\section{More factors affecting affix ordering} \label{sec:affix2}
+
+Since this section consists of ``bonus'' material, it's a bit telegraphic in nature. Read ahead for lots of data, or jump ahead to Section~\ref{sec:allomorphy} for allomorphy.
+
     \subsection{Syntactic vs semantic ordering}
-
 \cite{rice00,rice11}: syntactic role (subj/obj) vs semantic role (Agent/Theme) in Athapaskan.
 
 Some data from Koyukon \citep{thompson96ijal,jettejones00}:
@@ -752,7 +871,7 @@ Phonological placement of the pluractional affix in Kashaya (Pomoan) from \cite{
 
 If the root ends in a coronal, the pluractional -\emph{ta} is a suffix, else infix.
 
-But this is about infix and base, not two affixes. See \cite{kalin20inf} on infixes as affixes.
+But this is about infix and base, not two affixes. See \cite{kalin22lang} on infixes as affixes.
 
         \subsubsection{Affixes in Gombe Fula}
 Ordering in Gombe Fula \citep{arnott70}, as discussed by \cite{paster05,paster06phd} and recapped in \cite{rice11}.
@@ -802,9 +921,7 @@ Examples of these combining \citep[235]{paster06phd}:
 
 \cite{arnott70} claims that affixes in Gombe Fula are ordered according to their phonological identity. But maybe they... arnott!
 
-\cite{paster06phd} identifies a phonological generalization. What is it?
-
-This is sonority ordering!
+\cite{paster06phd} identifies a phonological generalization: this is sonority ordering.
 
 \bigskip
 But what about reverse orderings? Well TDNR \emph{is} the baseline scopal ordering. Yet we do find different orders and they're what we'd expect.
@@ -840,6 +957,7 @@ Simplified:
 
 The two affixes do not take scope over one another!
 
+\bigskip
 Western Cherokee in \cite{manova21wiley}, from \cite{foley80}: when do we get metathesis?
 \ex
     \begin{tabular}{l|ll|ll}
@@ -852,7 +970,7 @@ Western Cherokee in \cite{manova21wiley}, from \cite{foley80}: when do we get me
 
 Meathesis in 2\gsc{SG} but no scope. Cherokee doesn't have clusters of a glide plus a non-vocalic segment.
 
-I don't know what \emph{nega} means because we just take data from communities!
+% I don't know what \emph{nega} means because we just take data from communities!
 
     \subsection{Exceptions to the Mirror Principle?}
 Prosodic size of affix in Slave, \cite{rice89} in \cite{rice11}. 
@@ -924,24 +1042,19 @@ This makes sense if it's a high inflectional element and the first P then raises
     \item By and large, phonological factors do not override syntactic factors.
 \end{itemize}
 
-    \subsection{Even more?}
-Huave (Kim, Noyer).
-
-Hap(lo)ology.
-
-Computational angle, e.g.~\cite{ryan10}.
-
-\cite{mueller20}
-
-        \subsubsection{Templates}
-CARP (Hyman, Paster)
-
-Nimboran/Inkelas/Noyer
-
-\citet[194]{rice11} has a nice quote from Hyman which is pro-templates, and mentions processing and social factors as additional possibilities.
+For additional phenomena and reading:
+\begin{itemize} \tightlist
+    \item Huave (isolate, Mexico) has \emph{mobile} suffixes \citep{noyer93,kim10}.
+    \item A formal analysis of \emph{haplology}, where one of two similar affixes gets deleted, can be found in \cite{nevins12}.
+    \item For one computational angle on affix ordering, see~\cite{ryan10}.
+    \item See \cite{mueller20} for an analysis of affix ordering in a variant of Optimality Theory (reviewed in \citealt{kastner21phono}).
+    \item Discussion of the ``CARP'' template of Bantu: \cite{hyman03,manovaetal20}.
+    \item \citet[194]{rice11} has a nice quote from Hyman which is pro-templates, and mentions processing and social factors as additional possibilities.
+\end{itemize}
 
 
-\section{Allomorphy}
+\newpage
+\section{Allomorphy} \label{sec:allomorphy}
 
 What is allomorphy? What changes, and based on what? Let's find some examples.
 
@@ -954,7 +1067,7 @@ Our \textbf{suffix} depends on the \textbf{phonology} of the stem:
  	\a  \emph{jump}[t] 
 \xe
 
-Why?
+% Why?
 
 A formalization (does it capture the reason?):
 
@@ -965,13 +1078,14 @@ A formalization (does it capture the reason?):
 	\end{cases}$
 \xe
 
-Well it works, but if the generalization is about coronals and voicing, we want that to drive the formalization or at least be clear in it.
+\bigskip
+It works, but if the generalization is about coronals and voicing, we want that to drive the formalization or at least be clear in it.
 
 Is this phonology or morphology?
 \begin{itemize} \tightlist
     \item There's a phonological logic at play.
     \item If it's phonology, you'd expect similar patterns elsewhere. If we look at the \emph{-s/-z-əz} suffix, we do see the same beahvior in the present tense, the plural and the possessive.
-    \item But remember the major lesson from \cite{wug}: you can't rely solely on phonology to decide what the variant is after sonorants, so there's at least \emph{some} morphology in the morphophonlogy.
+    \item You can't rely solely on the phonology to decide what the variant is after sonorants, since we fine minimal pairs like \emph{rice} and \emph{rise}. We'll return to this when we discuss \cite{wug}.
 \end{itemize}
 
 \bigskip
@@ -981,7 +1095,7 @@ Our \textbf{determiner} depends on the \textbf{phonology} of the noun:
  	\a  \emph{an apple} 
 \xe
 
-Why?
+% Why?
 
 Formally (does it capture the reason?):
 \ex
@@ -994,12 +1108,12 @@ Formally (does it capture the reason?):
 This is much harder to capture in purely phonological forms: we don't insert /n/ to break of hiatus in English.
 
         \subsubsection{Interlude: Allomorphy as optimization}
-In~(\ref{ex:past-en}) and~(\ref{ex:en-indef}) the alternations make phonotactic sense. In fact, the past tense alternation could be treated in the phonology proper (with phonological rules), and see \cite{gouskovaetal15} and \cite{pak16} on the indefinite article in English.
-
-Does allomorphy always make phonological sense?
+In~(\ref{ex:past-en}) and~(\ref{ex:en-indef}) the alternations make phonotactic sense. The former can even be treated in the phonology, although the latter isn't the result of a productive rule in the phonology of English. To see what it would take to derive it in the phonology, see \cite{gouskovaetal15} and \cite{pak16}.
 
 \bigskip
-Data from \cite{embick10}:
+Let's look more closely at the question of whether allomorphy always makes phonological sense.
+
+Data from \cite{embick10}: The Korean data is ``optimizing'' in that it creates phonologically unmarked outputs, the Seri data less so, and Haitian actually creates consonant clusters and hiatuses, which are both marked outputs. So allomorphy is not necessarily optimizing.
 \pex[exno=2]
     \a Korean nominative: optimizing\\
         \begin{tabular}{llll}
@@ -1025,8 +1139,6 @@ Data from \cite{embick10}:
         \end{tabular}
 \xe
 \bigskip
-
-Allomorphy is not necessarily optimizing. 
 
         \subsubsection{Syntactic conditioning}
 \emph{Suppletion}: our \textbf{root} depends on the \textbf{syntactic features}.
@@ -1060,7 +1172,7 @@ Why? (diachronic reasons)
 
         \subsubsection{What's possible?}
 
-We need an inventory of relevant elements. Which of these do we consider?
+What constraints exist on allomorphy? We'll need to set up an inventory of relevant elements. Which of these do we consider?
 \pex
     \a Syntactic features
     \a Phonological features
@@ -1070,7 +1182,7 @@ We need an inventory of relevant elements. Which of these do we consider?
     \a \dots{}
 \xe
 
-Where is allomorphy? Who is allomorphy? I'll do you one better: Why is allomorphy?
+% Where is allomorphy? WhyWho is allomorphy? I'll do you one better: Why is allomorphy?
 
 \bigskip
 We will:
@@ -1136,12 +1248,12 @@ Latin recap:
 ]
 \xe
 
-Latin:
+% Latin:
 \pex
     \a \begingl
         \gla am-\=a-ve-ra-m//
         \glb \root{LOVE}-\gsc{THEME}-Perf-Past-1\gsc{SG}//
-        \glft `I loved'//
+        \glft `I had loved'//
         \endgl
     \a \begingl
         \gla am-\=a-ve-r-\=o//
@@ -1271,7 +1383,7 @@ Honorification is affixal in Korean \citep{choiharley19}:
 \ex Hon \lra{} \emph{si}-
 \xe
 
-\bigskip
+% \bigskip
 But a few verbs supplete:
 \ex \label{ex:korean-sleep-ellipsis}
     \begingl
@@ -1313,7 +1425,7 @@ Because idioms are perserved under honorifics \citep[1343]{choiharley19}:
 And also ellipsis as in~(\ref{ex:korean-sleep-ellipsis}).
 
         \subsubsection{Multiple affixes in Georgian}
-Applicatives in Georgian with the verb \emph{rbina} `run': \hfill \citep{hewitt95,bonetharbour12}
+Applicative \emph{-i-}/\emph{-u-} in Georgian with the verb \emph{rbina} `run': \hfill \citep{hewitt95,bonetharbour12}
 \pex 
     \a mo-\textbf{m}-\uline{i}-rbina `\textbf{I} had run here'
     \a mo-\textbf{gv}-\uline{i}-rbina `\textbf{we} had run here'
@@ -1367,6 +1479,8 @@ Questions (for another time):
 
 
     \subsection{Phonology: Inward sensitivity}
+We've already seen some cases in English, like the past tense and indefinite article (what are some others?).
+
         \subsubsection{Arabic}
 Moroccan Arabic (and other dialects), \cite{rolle21wiley} from \cite{mascaro07} from \cite{harrell62}:
 \ex
@@ -1382,7 +1496,7 @@ Moroccan Arabic (and other dialects), \cite{rolle21wiley} from \cite{mascaro07} 
     \a \emph{h} / V \trace{}
     \a \emph{u}
 \xe
-Issues? Again, doesn't explain the phonotactic logic behind the alternation (historically -hu). Recall also the Korean nominative (optimizing), but the Haitian definite article too (anti-optimizing).
+Issues? Again, doesn't explain the phonotactic logic behind the alternation (historically -\emph{hu}). Remember also that these alternations don't need to be optimizing.
 % \ex
 %         \begin{tabular}{llll}
 %         % Allomorph   &   Environment & Example & Gloss\\ \hline
@@ -1514,7 +1628,7 @@ And while cases of dissimilation like~(\lastx) are attested, you still lose the 
 
 All explicit theories try to account for what's possible and what should be impossible. The strongest ones find ways of building that into the architecture, making strong testable claims.
 
-\paragraph{Syntax} Why was the advent of X-bar theory so cool?
+\paragraph{Syntax} Why was the advent of X-bar theory so important?
 
 Phrase structure grammar:
 \pex
@@ -1587,13 +1701,60 @@ Let's remind ourselves of what we need to derive (the \emph{explananda}):
     \item So the different assumptions, when combined, create an architecture which \emph{derives} the generalization.
 \end{itemize}
 
-\paragraph{Summary.} This is more or less contemporary Distributed Morphology, as developed most clearly by \cite{embick10}. There are still many questions we haven't explored, such as what the cycles are like, what the locality relations are, and how else you might deal with any of these issues.
+        \subsubsection{Worked example}
+Let's think about the alternation \emph{go}$\sim$\emph{went}, and why phonological conditioning can only go in one direction. For simplicity we'll focus on a low node V and a higher node T. I'll use [] for syntactic/semantic features and // for phonological content.
 
-\paragraph{Caveat.} Other theories do have ways of dealing with e.g.~suppletion. Some of the even-stronger evidence for Late Insertion theories comes for patterns of syncretism. See for example Ruth Kramer's recent/upcoming chapter in the CUP DM handbook.
+We start, following standard assumptions, by merging the verb or root. At this point, it has some syntactic/semantic features, but we just said it can't have phonology yet, because this root knows it needs to know what tense it is, and T isn't in the structure yet:
+\ex \Tree
+[.{V\\\root{go}\\syn:[verb]\\phon:/\trace/} ]
+\xe
+
+So we go ahead and add T, which by the same logic gives us this:
+\ex \label{ex:went-nophono} \Tree
+[.
+    [.
+        [.{V\\\root{go}\\syn:[verb]\\phon:/\trace/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace/} ]
+]
+\xe
+
+We now have the information that V needs. So we can go ahead and choose its form, or \emph{exponent}, or \emph{vocabulary item}, namely \emph{went}. This is our syntactic conditioning (looking upwards / conditioned downwards):
+\ex \Tree
+[.
+    [.
+        [.{V\\\root{go}\\syn:[verb]\\phon:/\textbf{wɛnt}/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace/} ]
+]
+\xe
+
+Could we have gotten phonological conditioning? Well, at~(\ref{ex:went-nophono}) we didn't have any phonology in T yet. In fact, we always get phonology low (e.g.~in V) before we get it high (e.g.~in T), as this follows from the order in which we derived: we add syntactic objects things bottom-up, and also spell them out bottom-up. If the syntactic features are there first, we're never in a situation in which we have phonology high but not low, like in~(\nextx):
+\ex (Does not happen:)\\ \Tree
+[.
+    [.
+        [.{X\\\root{wug}\\syn:[Perf]\\phon:/\trace{}/} ]    
+        [. ]
+    ]
+    [.{Y\\syn:[Past]\\phon:/blɪk/} ]
+] 
+\xe
 
 
-    \subsection{Locality}
-        \subsubsection{Prelude: Reminder of \cite{arad03}}
+        \subsubsection{Summary and readings}
+By this point we have more or less built contemporary Distributed Morphology, with some aspects developed most clearly by \cite{embick10}. So see that monograph, or the textbook version in \cite{embick15}.
+
+Embick's system builds on an important paper by Boblajik which focuses on data from Itelmen \citep{bobaljik00}. Those data are reviewed in the excellent overview article of \cite{gouskovabobaljik20cup}. A slightly older overview article is \cite{bonetharbour12}. The textbooks mentioned in the Introduction also deal with allomorphy quite closely.
+
+There are still many questions we haven't explored, such as what the cycles of derivation are like, what the locality relations are, whether there's a difference between suppletion and other kinds of allomorphy, and how else you might deal with any of these issues. Section~\ref{sec:allomorphy:locality} contains additional material on some of these issues, and see also \cite{adgeretal03tops} for a discussion of the architectural issues.
+
+It's also worth mentioning that other theories do have ways of dealing with e.g.~suppletion. Some of the even-stronger evidence for Late Insertion theories comes for patterns of syncretism \citep{kramer20cup}. Other ways of thinking about Late Insertion can be found in \cite{beard95} and \cite{embick16oup}.
+
+
+    \subsection{Locality} \label{sec:allomorphy:locality}
+        \subsubsection{Prelude: \cite{arad03}}
 \pex Forms derived from \root{sgr} (after \citealt[746]{arad03}): \label{ex:sgr}
     \a \emph{seger} `closure' (N)
     \a \emph{sograim} `parentheses' (N)
@@ -2133,7 +2294,7 @@ With a V-initial noun, e.g.~\emph{de} + \emph{le} + \emph{arbre} `of the tree'? 
 \xe
 
 \bigskip
-No fusion:
+What we actually find is no fusion:
 \pex \a \emph{de l'arbre}
     \a \ljudge{*} \emph{du arbre}
 \xe
@@ -2144,14 +2305,15 @@ Why no fusion? Because you first adjoin D to N. This makes sense if \textbf{the 
 % stopped at p. 92 of his book
 
 
+\paragraph{Locality conditions.} As \cite{gouskovabobaljik20cup} mention, locality in allomorphy might be weaker than strict adjacency. See for instance \cite{kastnermoskal18}, \cite{merchant15li}, \cite{christopoulospetrosino18} and \cite{sandeetal20}.
 
 
-    \subsection{Discussion}
-\paragraph{Summary.} We've ended up with a cyclic, modular, bottom-up, local theory of allomorphy. Along the way we've assumed that syntax and morphology \{are, can be\} the same module, and Late Insertion of phonological material.
+    \subsection{Discussion: Allomorphy and allosemy across domains}
+We've ended up with a cyclic, modular, bottom-up, local theory of allomorphy. Along the way we've assumed that syntax and morphology can be the same module, and Late Insertion of phonological material.
 
-\paragraph{Meaning.} Recall: what did \cite{arad03} conclude about how meaning is computed across derivations based on Hebrew?
+Now recall: what did \cite{arad03} conclude about how meaning is computed across derivations based on Hebrew?
 
-\paragraph{Locality conditions across domains.} Combining Arad's proposal with the locality conditions on allomorphy, \cite{marantz13} argues for similar locality conditions for allomorphy and meaning. This is an architectural point: the structure (syntax/morphology) imposes constraints on how each module (phonology, morphology) gets its own information.
+Combining Arad's proposal with the locality conditions on allomorphy, \cite{marantz13} argues for similar locality conditions for allomorphy and meaning. This is an architectural point: the structure (syntax/morphology) imposes constraints on how each module (phonology, morphology) gets its own information.
 
 \bigskip
 Combining the unpredictable meaning with special allomorphy for English nouns \citep{embick10}:
@@ -2187,110 +2349,133 @@ One possible (Arad-style) analysis:
 
 See \cite{kastner19cup} for an overview of this last bit.
 
-\paragraph{Locality conditions.} Locality in allomorphy might be weaker than strict adjacency: \cite{kastnermoskal18}, \cite{merchant15li,christopoulospetrosino17}, Nanosyntax, \cite{sandeetal20}.
+\paragraph{Further reading: *ABA.} \cite{bobaljik12}, \cite{smithetal16supplet}, \cite{mueller20}, and the articles in \cite{cahavanden17}.
 
 
-    \subsection{Further reading}
+% \newpage
 
-\cite{gouskovabobaljik20cup}, \cite{bonetharbour12}, \cite{bobaljik00}, \cite{adgeretal03tops}
+%     \subsection*{Bonus: Hungarian (material incomplete)}
+% Hungarian (also \citealt{tabachnik21dp}):
 
+% Plural is -(V)\emph{k} (depends on the stem, plus there's vowel harmony):
+% \pex 
+%     \a csont-ok\\
+%     `bones'
+%     \a fog-ak\\
+%     `teeth'
+% \xe
 
-    \subsection*{Bonus: Hungarian (material incomplete)}
-Hungarian (also \citealt{tabachnik21dp}):
+% Possession is marked on the possessed item:
+% \pex
+%     \a \begingl
+%         \gla az (\H{o}) csont -ja -Ø//
+%         \glb the her bone -\gsc{poss} -\gsc{3sg}//
+%         \glft `her bone'//
+%     \endgl
+%     \a \begingl
+%         \gla az (\H{o}) fog -a -Ø//
+%         \glb the her tooth -\gsc{poss} -\gsc{3sg}//
+%         \glft `her tooth'//
+%     \endgl
+% \xe
 
-Plural is -(V)\emph{k} (depends on the stem, plus there's vowel harmony):
-\pex 
-    \a csont-ok\\
-    `bones'
-    \a fog-ak\\
-    `teeth'
-\xe
+% \ex[exno=62] Hungarian plural possessive \citep[165]{carstairs87}\\
+%     \begin{tabular}{llllll}
+%     & \gsc{sg}  & \gsc{sg}, \gsc{1sg.poss}    & \gsc{pl}  & \gsc{pl}, \gsc{1sg.poss} & Gloss\\\hline
+%     a.& ruha & ruhá-m & ruhá-k & ruha-ái-m & `(my) dress(es)'\\
+%     b.& kalap & kalap-op & kalap-ok & kalap-jai-m & `(my) hat(s)'\\
+%     c.& ház & ház-am & ház-ak & ház-ai-m & `(my) house(s)'\\
+%     \end{tabular}
+% \xe
 
-Possession is marked on the possessed item:
-\pex
-    \a \begingl
-        \gla az (\H{o}) csont -ja -Ø//
-        \glb the her bone -\gsc{poss} -\gsc{3sg}//
-        \glft `her bone'//
-    \endgl
-    \a \begingl
-        \gla az (\H{o}) fog -a -Ø//
-        \glb the her tooth -\gsc{poss} -\gsc{3sg}//
-        \glft `her tooth'//
-    \endgl
-\xe
-
-\ex[exno=62] Hungarian plural possessive \citep[165]{carstairs87}\\
-    \begin{tabular}{llllll}
-    & \gsc{sg}  & \gsc{sg}, \gsc{1sg.poss}    & \gsc{pl}  & \gsc{pl}, \gsc{1sg.poss} & Gloss\\\hline
-    a.& ruha & ruhá-m & ruhá-k & ruha-ái-m & `(my) dress(es)'\\
-    b.& kalap & kalap-op & kalap-ok & kalap-jai-m & `(my) hat(s)'\\
-    c.& ház & ház-am & ház-ak & ház-ai-m & `(my) house(s)'\\
-    \end{tabular}
-\xe
-
-From \cite{rolle21wiley}:
-\ex \cite{carstairsmccarthy01}\\
-    \begin{tabular}{llll}
-    & \gsc{SG} & \gsc{PL} & \\
-    a.& dal & dal-o-k & `song'\\\hline
-    b.& dal-o-m & dal-a-i-m & `my song(s)'\\
-    c.& dal-o-d & dal-a-i-d & `your.\gsc{SG} song(s)'\\
-    d.& dal-a-Ø & dal-a-i-Ø & `his/her song(s)'\\
-    e.& dal-u-nk & dal-a-i-nk & `our song(s)'\\
-    f.& dal-o-tok & dal-a-i-tok & `your.\gsc{PL} song(s)'\\
-    g.& dal-u-k & dal-a-i-k & `their song(s)'\\
-    \end{tabular}
-\xe
+% From \cite{rolle21wiley}:
+% \ex \cite{carstairsmccarthy01}\\
+%     \begin{tabular}{llll}
+%     & \gsc{SG} & \gsc{PL} & \\
+%     a.& dal & dal-o-k & `song'\\\hline
+%     b.& dal-o-m & dal-a-i-m & `my song(s)'\\
+%     c.& dal-o-d & dal-a-i-d & `your.\gsc{SG} song(s)'\\
+%     d.& dal-a-Ø & dal-a-i-Ø & `his/her song(s)'\\
+%     e.& dal-u-nk & dal-a-i-nk & `our song(s)'\\
+%     f.& dal-o-tok & dal-a-i-tok & `your.\gsc{PL} song(s)'\\
+%     g.& dal-u-k & dal-a-i-k & `their song(s)'\\
+%     \end{tabular}
+% \xe
 
 
-\ex \begingl
-    \gla az (\H{o}) csont -ja \textbf{-i} -Ø//
-    \glb the her bone -\gsc{poss} -\gsc{PL} -\gsc{3sg}//
-    \glft `her bones'//
-    \endgl
-\xe
+% \ex \begingl
+%     \gla az (\H{o}) csont -ja \textbf{-i} -Ø//
+%     \glb the her bone -\gsc{poss} -\gsc{PL} -\gsc{3sg}//
+%     \glft `her bones'//
+%     \endgl
+% \xe
 
-Possessor agreement:
-\pex 
-    \a \begingl
-    \gla az (én) csont -Ø -om//
-    \glb the my bone -\gsc{poss} -\gsc{1sg}//
-    \glft `my bone'//
-    \endgl
+% Possessor agreement:
+% \pex 
+%     \a \begingl
+%     \gla az (én) csont -Ø -om//
+%     \glb the my bone -\gsc{poss} -\gsc{1sg}//
+%     \glft `my bone'//
+%     \endgl
 
-    \a \begingl
-    \gla az (én) csont -ja \textbf{-i} -m//
-    \glb the her bone -\gsc{poss} -\gsc{PL} -\gsc{1sg}//
-    \glft `her bones'//
-    \endgl
-\xe
+%     \a \begingl
+%     \gla az (én) csont -ja \textbf{-i} -m//
+%     \glb the her bone -\gsc{poss} -\gsc{PL} -\gsc{1sg}//
+%     \glft `her bones'//
+%     \endgl
+% \xe
 
-\pex
-    \a \gsc{pl} \lra{} -((j)a)i- / \trace{} \gsc{Poss}
-    \a \gsc{pl} \lra{} -(V)k
-    \a \gsc{Agr[1sg]} \lra{} -m
-\xe
+% \pex
+%     \a \gsc{pl} \lra{} -((j)a)i- / \trace{} \gsc{Poss}
+%     \a \gsc{pl} \lra{} -(V)k
+%     \a \gsc{Agr[1sg]} \lra{} -m
+% \xe
 
 
 
-\section{*ABA (incomplete)}
+% \section{*ABA (incomplete)}
 
-    \subsection{Comparatives and superlatives}
+%     \subsection{Comparatives and superlatives}
     
-    \subsection{Extending to inchoatives}
+%     \subsection{Extending to inchoatives}
     
-    \subsection{Extending to case and pronouns}
-Smith et al
+%     \subsection{Extending to case and pronouns}
+% Smith et al
 
-    \subsection{More}
-McFadden, \cite{mueller20}, Andersson.
+%     \subsection{More}
+% McFadden, \cite{mueller20}, Andersson.
 
+
+% \newpage
+
+\section*{Interim recap}
+
+We started off this course by considering the different things morphology interacts with. In order to start somewhere, we concentrated on cases where morphemes interact with one another:
+
+\ex \Tree
+    [.{Morpheme-to-morpheme interactions}
+        [.{Affix ordering\\ (\emph{morphotactics})} ]
+        [.{Morphophonology\\(\emph{allomorphy})} ]
+    ]
+\xe
+
+We saw that:
+\begin{enumerate} \tightlist
+    \item We can make sense of affix ordering if we think of morphological structure in terms of syntactic-semantic structure.
+    \item There are independent reasons to think that there is hierarchical structure in morphology (ambiguity, etc).
+    \item A specific view of syntactic structure plus phonological Late Insertion predicts crosslinguistic patterns of allomorphy.
+\end{enumerate}
+
+This kind of theory is inspired by Distributed Morphology but is consistent with a number of other related frameworks, including the Exo-Skeletal Model \citep{borer05vol1,borer05vol2,borer13oup,borer14lingua,acedomatellanmateu14}, First Phase Syntax \citep{ramchand08} and Nanosyntax \citep{caha16dm}.
+
+Now it's time to see how explanatory this kind of theory is. We will look at the interaction of morphology and syntax (argument structure), followed by the interaction of morphology and semantics (lexical semantics).
 
 \section{Argument structure}
+
 	\subsection{Preliminaries}
 	    \subsubsection{Valency}
-Verbs seems to differ in terms of the number of semantic dependents they require (or are compatible with).
+Verbs differ in terms of the number of syntactic and semantic dependents they require (or are compatible with). This is often called verb valency.
+
 \ex It rained.
 \xe
 \pex
@@ -2302,25 +2487,505 @@ Verbs seems to differ in terms of the number of semantic dependents they require
 	\a Chris knows the answer.
 \xe
 \pex
-	\a John put the book on the table.
-	\a \ljudge{*} John put the book.
-	\a \ljudge{*} John put on the table.
-	\a John gave Mary a book.
-	\a \ljudge{*} John gave Mary.
-	\a \ljudge{*} John gave a book.
+	\a Sam put the book on the table.
+	\a \ljudge{*} Sam put the book.
+	\a \ljudge{*} Sam put on the table.
+	\a Sam gave Tyler a book.
+	\a \ljudge{*} Sam gave Tyler.
+	\a \ljudge{*} Sam gave a book.
 \xe
 
-More than 3 dependents? Transactional verbs seem to imply 3 complements semantically but don’t require that all be expressed:
-\ex John bought a car (from Bill) (for \$40,000).
+\textbf{Observation:} Verbs (in English) require at most one \textbf{external} argument, one \textbf{internal} argument and one \textbf{indirect/applied/oblique} argument at the same time.
+
+\bigskip
+Do any verbs take more than 3 dependents (subject plus two objects)?
+
+%\answer
+Transactional verbs seem to imply 3 complements semantically but don’t require that all be expressed:
+\pex
+    \a Max bet Sam (£20) (that he would win the race).
+    \a Itamar bought a house (from Michael) (for £40).
 \xe
 
-\textbf{Observation:} Verbs (in English) require at most one external argument and two complements.
 
-	    \subsubsection{Unaccusativity}
+        \subsubsection{External arguments}
+Let's look at \emph{external arguments} (subjects) more closely. In~(\nextx)--(\anextx) we see cases where the external argument (subject) varies but the verb and internal argument (object) stay the same. How do the readings within~(\nextx) and within~(\anextx) differ?
+
+\pex
+	\a Kim took a nap.
+	\a The child took a nap.
+	\a The dog took a nap.
+	\a \ljudge{?} The computer took a nap.
+\xe
+
+\pex 
+	\a Kim threw the ball.
+	\a The child threw the ball.
+	\a The monkey threw (the dog) the ball.
+\xe
+
+\bigskip
+
+%\answer
+It's the same event, except with a different subject/agent. Even the computer example makes sense if we think of the ``sleep'' function.
+
+\bigskip
+
+Now, in~(\nextx)--(\anextx), we see cases where the internal argument varies while the verb and external argument stay the same. How do the readings differ within~(\nextx) and~(\anextx)? How are these cases different from those in~(\blastx)--(\lastx)?
+
+\pex
+	\a Kim took a nap.
+	\a Kim took a book from the shelf.
+	\a Kim took a bus.
+\xe
+
+\pex
+	\a Kim threw the ball.
+	\a Kim threw a party.
+	\a Kim threw a tantrum.
+	\a Kim threw the match [lost it on purpose].
+\xe
+
+%\answer
+The kind of event changes, depending on the object, even though the verb stays the same. And in all cases we still have an internal argument (object), so the syntax stays more or less the same.
+
+\bigskip
+%\answer
+\paragraph{Generalization.} The semantic relationship between the verb and the internal argument is less predictable than that between the verb and the external argument, which is predictable.
+
+How can we derive this generalization in our formal system?
+
+%\answer
+\begin{itemize} \tightlist
+    \item It appears that a predicate has selectional requirements for its complement, but less so for its subject.
+    \item This makes sense if the verb and internal argument form one domain (much like a root and the first categorizing affix), with the external argument being added later in the derivation.
+    \item One common way of doing this technically is by using a separate head to introduce the external argument. For \cite{chomsky95} this is ``little \emph{v}''. Other work since calls this head Voice \citep{kratzer96,marantz97,marantz13lingua,pylkkanen08,layering15,kastner20ogs}.
+\end{itemize}
+
+Tree:
+\ex \emph{Sam ate cake}:\\
+\Tree
+[.TP
+	\qroof{\tikz{\node (SpecTP) {\emph{Sam}};}}.DP
+	[.T'
+		[.T[Past] ]
+		[.VoiceP
+			\qroof{\tikz{\node (SpecVoice) {\emph{\sout{Sam}}};}}.DP
+			[.
+				[.Voice ]
+				[.vP
+					[.{v\\\emph{ate}}
+						[.\root{\gsc{EAT}} ]
+						[.v ]
+					]
+					\qroof{\emph{cake}}.DP
+				]
+			]
+		]
+	]
+]
+\begin{tikzpicture}[overlay]
+	\draw[thick,->] (SpecVoice) .. controls +(south west:2) and +(south west:2) .. node[below]{\scriptsize (EPP)\phantom{aa}}(SpecTP);
+\end{tikzpicture}
+\xe
+\bigskip
+
+See \cite{kratzer96} for the original proposal; the paper gets a bit technical at times but is fairly readable overall. See chapter 1.3 of \cite{layering15} or chapter 1.3.1 of \cite{kastner20ogs} for a very quick overview.
+
+    \subsection{Sublexical modification}
+Now let's go deeper into argument structure by seeing how morphology and syntax interact.
+        
+        \subsubsection{Syntax}
+
+What are the possible readings for~(\nextx)?
+\ex Itamar turned the wi-fi off again.
+\xe
+
+\bigskip
+%\answer
+\pex \a The new router arrived from the factory. The tech people plugged it in, turned it on, and then Itamar turned it back off. \hfill [\emph{restitutive}]
+	\a Alex turned the wi-fi off so that students would focus on his lecture. At the end of the lecture he turned it back on. Then Itamar turned it off again for his own lecture. \hfill [\emph{repetitive}]
+	\a Before every lecture, Itamar turns the wi-fi off so that students focus on his lecture. He'd done so for the past six weeks, and has just turned it off again. \hfill [\emph{repetitive}]
+\xe
+
+\emph{Again} can modify either being-off (restitutive, a), or causing-something (repetitive, b--c).
+
+\bigskip
+We can do this with various predicates:
+\ex Chris opened the door again.
+\xe
+
+%\answer
+\pex \a The door had been open before. Maybe it was built open, then someone closed it, then Chris opened it. \hfill [\emph{restitutive}]
+	\a Someone else opened the door, someone closed the door, and then Chris opened the door. \hfill [\emph{repetitive}]
+	\a Chris had already opened the door once, then they opened it a second time. \hfill [\emph{repetitive}]
+\xe
+
+\emph{Again} can modify either becoming-open (restitutive, a), or causing-something (repetitive, b--c).
+
+\bigskip
+How do we capture this formally? Say we schematize an event the following way \citep{vonstechow96,beckjohnson04,dowty91}. What can \emph{again} modify?
+
+\ex {[}Chris CAUSE [door BECOME open]]
+\xe
+
+%\answer
+If \emph{again} modifies BECOME, we get the restitutive reading. If it modifies CAUSE, we get the repetitive reading.
+
+Or in a tree: 
+\citep{kratzer96,dm,layering15,kastner20ogs}
+\ex
+\Tree
+	[.VoiceP
+		[.\emph{Chris} ]
+		[.
+			[.Voice ]
+			[.vP 
+				[.v 
+					[.\root{open} ]
+					[.v ]
+				]
+				[.{DP\\\emph{the door}} ]
+			]
+		]
+	]
+\xe
+
+\pex In such a structure, \emph{again} could adjoin to (and modify):
+	\a The root \root{open} (restitutive).
+	\a The vP, perhaps together with Voice (repetitive, `someone' reading).
+    \a The full VoiceP (repetitive, `Chris' reading).
+\xe
+
+We can imagine various analytical choices. Does \emph{again} attach to different parts of the tree in the syntax? Or does it attach in one set place, but then combine with different constituents in the semantics?
+
+\bigskip
+One prediction of this view is that \emph{again} shouldn't be able to modify only part of a constituent. For example, we wouldn't expect \emph{again} to modify the entire VoiceP but without the internal argument. In other words, the following reading should not be possible - which is correct:
+\ex Itamar turns the air conditioning off before each class. But today he flipped the wrong switch. Today, \# Itamar turned the WI-FI off again.
+\xe
+
+        \subsubsection{Morphology}
+Is there an affix that does the same job as \emph{again}, and has the same readings?
+
+%\answer{}
+\ex Chris \textbf{re-}opened the door.
+\xe
+
+\bigskip
+
+Other affixes influence argument structure. How?
+
+\pex \a  I danced.
+	\a \ljudge{*} I danced Eryl.
+\xe
+\pex \a \ljudge{*} I out-danced.
+	\a I out-danced Eryl.
+\xe
+
+The following verbs seem to allow \emph{out}-prefixation easily:
+\pex \a swim, dance, jump, eat.
+	\a I out-swam/out-danced/out-jumped/out-ate Eryl.
+\xe
+
+But these ones resist it (at least with the meanings they have when used with just a subject and no object).
+\pex \a appear, arrive, die.
+	\a \judge{*} I out-appeared/out-arrived/out-died Eryl.
+\xe
+
+What's the difference between the verbs that allow it and the ones that don't?
+
+%\answer{}
+\emph{Out}-prefixation attaches to verbs that don't \emph{need} an object, and creates a standard of comparison out of the new object.
+
+See \cite{ahn22}.
+
+\bigskip
+And do the following sentences change our description of the behavior of \emph{out}-prefixation?
+\pex 
+    \a \ljudge{*} The bus ran
+	\a I out-ran the bus.
+    \a \ljudge{*} My pajamas grew
+    \a I out-grew my pajamas.
+\xe
+
+
+\bigskip
+Here's a similar example, Spanish \emph{sobre}- `over' \citep[100]{fabregasscalise12}:
+
+\pex
+    \a \begingl
+        \gla El pájaro vuela.//
+        \glft `The bird flies.'//
+    \endgl
+    \a \begingl
+        \gla El pájaro sobrevuela *(la casa)//
+        \glb The bird over-flies (the house)//
+        \glft `The bird flies over the house.'//
+    \endgl
+\xe
+
+\bigskip
+\textbf{Summary.} Events, or verb phrases in technical terms, have internal structure. We can isolate parts of this structure through \emph{sublexical modification}: modifying part of an opening event, for example, using an adverbial. See chapter 2.2.2.1 of \cite{layering15} for more on this.
+
+If syntax and morphology are the same module, we expect that these adverbials could be either words or affixes - as is the case. And these elements which we add can also change the argument structure of the verb (adding or removing arguments), in ways which we haven't made precise yet.
+
+    \subsection{Causativization}
+        \subsubsection{Thinking structurally}
+Jigsaw puzzle: how do we express causation? What are some of the kinds of \emph{causative verbs} that we find?
+
+% What do we think is going on in each case?
+% \pex
+%     \a Destroy the tower. (transitive/causative)
+%     \a Open the door. (labile/alternating)
+%     \a Make Sam dance. (periphrastic)
+% \xe
+
+We have seen examples of:
+\pex
+    \a ``Lexical'' causatives, where the combination of verb and causative suffix results in a novel, non-transparent verb.
+    \a ``Analytical'' or ``syntactic'' causatives where the causee is also the object/patient.
+    \a ``Analytical'' or ``syntactic'' causatives where the causee is also the subject/agent.
+\xe
+
+How can these be represented formally?
+
+\pex
+    \a Lexical causatives, like all our idiosyncratic verbs, might be the result of adjoining \gsc{CAUS} to the root:\\
+        \Tree
+            [.
+                [.\root{\gsc{smell}} ]
+                [.{\gsc{CAUS}\\\emph{sase}} ]
+            ]
+    \a An analytical causative where the causee is the patient might only take the vP, so the argument remains the patient:\\
+        \Tree
+        [.
+            [.{DP1\\Agent\\Causer} ]
+            [.
+                [.\gsc{CAUS} ]
+                [.vP
+                    [.v
+                        [.\root{\gsc{root}} ]
+                        [.v ]
+                    ]
+                    [.{DP2\\Theme\\Causee} ]
+                ]
+            ]
+        ]
+    \a An analytical causative where the causee is the agent might take a full VoiceP:\\
+        \Tree
+        [.
+            [.{DP1\\Agent\\Causer} ]
+            [.
+                [.\gsc{CAUS} ]
+                [.VoiceP
+                    [.{DP2\\Agent\\Causee} ]
+                    [.
+                        [.Voice ]
+                        [.vP 
+                            [.v
+                                [.\root{\gsc{ROOT}} ]
+                                [.v ]
+                            ]
+                            [.{DP3\\Theme} ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+\xe
+
+We should now see what these analyses predict, and we have just the tool for that: sublexical modification.
+
+        \subsubsection{Sublexical modification with causation}
+
+
+Turkish, scope of \emph{again}:
+\ex \begingl
+    \gla Ö\v{g}retmen Mary-yi yine ko\c{s}-tur-du//
+    \glb teacher Mary-\gsc{ACC} again run-\gsc{CAUS-PAST}//
+    \glft `The teacher made Mary run again.'\\
+    a. \emph{again} \gsc{CAUS} > V\\
+    Context: It is sports day at school. Mary wanted to play volleyball in the morning, but the teacher made her run instead. In the afternoon the teacher made Mary run again.\\
+    b. \gsc{CAUS} > \emph{again} V\\
+    Context: Mary ran around the field in the morning, but the teacher wasn't watching. So in the afternoon the teacher made Mary run again.//
+    \endgl
+\xe
+
+Turkish, scope of negation:
+\ex \begingl
+    \gla John Mary-yi koş-tur-ma-d\i//
+    \glb John Mary-\gsc{ACC} run-\gsc{CAUS-NEG-PAST}//
+    \glft a. `John did not make Mary run.' (= she ran on her own accord)\\
+    b. `John made Mary not run.' (= he prevented her from running)//
+    \endgl
+\xe
+
+Japanese, scope of disjunction `or':
+\pex
+    \a \begingl
+        \gla Hanako-ga [Masao-ni [uti-o soozisuru]-ka [heya-dai-o haraw]]-aseru koto ni sita//
+        \glb Hanako-\gsc{Nom} [Masao-\gsc{Dat} [house-\gsc{Acc} clean]-or [room-rent-\gsc{Acc} pay]]-\gsc{CAUS} that of do//
+        \glft `Hanako decided to make Masao clean the house or pay room rent.'\\
+        Reading: \gsc{CAUS} scopes over OR; Masao has a choice.//
+    \endgl
+    \a \begingl
+        \gla Hanako-ga [Masao-ni [uti-o soozis-aseru]-ka [heya-dai-o haraw-aseru]] koto ni sita//
+        \glb Hanako-\gsc{Nom} Masao-\gsc{Dat} house-\gsc{Acc} clean-\gsc{CAUS}-or room-rent-\gsc{Acc} pay-\gsc{CAUS} that of do//
+        \glft `Hanako decided to make Masao clean the house or she decided to make him pay room rent.'\\
+        Reading: OR scopes over \gsc{CAUS}; Masao won’t have a choice.//
+    \endgl
+\xe
+
+
+Turkish, attachment of an agent-oriented adverb:
+\pex \begingl
+    \gla Anne-si Ay\c{s}e-ye sessizce Mary-yi oyna-t-tır-dı//
+    \glb mother-3\gsc{SG.POSS} Ay\c{s}e-\gsc{DAT} quietly Mary-\gsc{ACC} play-\gsc{CAUS-CAUS-PAST}//
+    \glft `Her mother made Ay\c{s}e make Mary play quietly.'//
+    \endgl
+    \a \emph{quietly} \gsc{CAUS} > \gsc{CAUS} > V\\
+    Context: We are at a dinner party at Ay\c{s}e's house. Ay\c{s}e’s friend Mary is bored. Ay\c{s}e’s mother quietly asks Ay\c{s}e to make Mary play with her toys.
+    \a \gsc{CAUS} > \emph{quietly} \gsc{CAUS} > V\\
+    Context: Ay\c{s}e’s friend Mary is bored in the next room. Ay\c{s}e’s mother asks Ay\c{s}e to quietly go and make Mary play with her toys.
+    \a \ljudge{\#} \gsc{CAUS} > \gsc{CAUS} > \emph{quietly} V
+    Context: Ay\c{s}e’s friend Mary is playing loudly with her toys. Ay\c{s}e’s mother asks
+    Ay\c{s}e to make Mary play quietly.
+\xe
+
+    \subsection{Summary}
+Once we view morphological structure as the same thing as syntactic structure, we can make sense of how affixation influences (a) the interpretation of clauses (like with \emph{again}), and (b) which arguments get added.
+
+We started off by observing that in English (and in other languages) a predicate might have an external argument, an internal argument and an applied argument - but that's it. Our formal system can derive this behavior if each argument is introduced (or sometimes people say \emph{licensed by}) one particular head: Voice for external arguments and v/V for internal arguments. For applied arguments, a very brief overview of the head Appl is given below (why can't we add multiple Appls? See \citealt{nie20phd} for one proposal).
+
+\paragraph{Readings.} Start with \cite{woodmyler19} for argument structure, followed by \cite{marantz13lingua}, which makes some more specific technical claims. You might now want to delve deeper into \cite{kratzer96}, \cite{layering15}, or chapter 6 of \cite{kastner20ogs}.
+
+For causatives in particular, see \cite{harley08,harley17oup}. There is a lot of exciting work on causatives nowadays; see \cite{nie20} and \cite{akkus19jl}, for example.
+
+\paragraph{The remainder of this section} is not very tidy, but it aimes to give examples of other processes which add or reduce the number of arguments in a clause.
+
+% 	    \subsubsection{Kinds of causatives}
+
+% Thinking in theoretical terms:
+% \begin{enumerate} \tightlist
+% 	\item Attaching to a root as a verbalizer, create lexical causatives that relate to unaccusatives.\\
+% 		\emph{open the door} %open door
+% 	\bigskip
+	
+% 	\item Attaching to a verb, create causatives where there is a separation between a causing event and a caused event. %will see soon
+% 	\bigskip
+	
+% 	\item Attaching to a VoiceP with an external argument.\\
+% 		\emph{make John eat dinner} %made eat
+% \end{enumerate}
+
+
+%         \subsubsection{Morphological evidence for causativization}
+% Quechua (Neil Myler p.c.):
+% \pex
+%     \a \begingl
+%     \gla Yaku t’impu-rqa//
+%     \glb Water boil-PAST//
+%     \glft `The water boiled.'//
+%     \endgl
+    
+%     \a \begingl
+%     \gla Wayna yaku-ta t’impu-\textbf{chi}-rqa//
+%     \glb boy water-ACC boil-CAUS-PAST//
+%     \glft `The boy boiled the water.'//
+%     \endgl
+% \xe
+
+% \ex \begingl
+%     \gla Marya Juan-man libru-ta rikhu-\textbf{chi}-rqa//
+%     \glb Mary Juan-DAT book-ACC see-CAUS-PAST//
+%     \glft `Mary showed John the book.'//
+% \endgl
+% \xe
+
+% What might be going on here?
+% \pex
+%     \a hang $\sim$ hung
+%     \a hang $\sim$ hanged
+% \xe
+% \pex
+%     \a rise $\sim$ rose
+%     \a raise $\sim$ raised
+% \xe
+
+% There is a generalization here. What is it? Does our current system predict it?
+
+% Overt v leads to regular inflection. Make sense if overt v intervenes between \root{\gsc{root}} and T!
+
+%         \subsubsection{Anticausativization?}
+% What might be going on in these Quechua examples?
+% \pex \a \begingl
+%     \gla Wayna qeru-ta p’aki-rqa//
+%     \glb Boy glass-ACC break-PAST//
+%     \glft `The boy broke the glass.'//
+%     \endgl
+%     \a \begingl
+%     \gla Qeru p’aki-\uline{ku}-rqa//
+%     \glb Glass break-REFL-PAST//
+%     \glft `The glass broke.'//
+%     \endgl
+% \xe
+% \pex \a \begingl
+%     \gla Juan Marya-ta phiña-\textbf{chi}-rqa//
+%     \glb John Mary-ACC anger-CAUS-PAST//
+%     \glft `John angered Mary/made Mary angry.'//
+%     \endgl
+%     \a \begingl
+%     \gla Marya phiña-\uline{ku}-rqa//
+%     \glb Mary anger-REFL-PAST//
+%     \glft `Mary got angry.'//
+%     \endgl
+% \xe
+
+%         \subsubsection{Causativizing larger events}
+% What's going on here? How does case get assigned?
+% \ex \begingl
+%     \gla Juan puñu-n//
+%     \glb Juan sleep-3SUBJ//
+%     \glft `Juan sleeps.'//
+%     \endgl
+% \xe
+% \ex \ljudge{*} \begingl
+%     \gla Maria Juan-ta puñu-n//
+%     \glb Maria Juan-ACC sleep-3SUBJ//
+%     \glft (int.~‘Maria sleeps Juan.’)//
+%     \endgl
+% \xe
+% \ex \begingl
+%     \gla Maria Juan-ta puñu-\textbf{chi}-n//
+%     \glb Maria Juan-ACC sleep-CAUS-3SUBJ//
+%     \glft ‘Maria makes Juan sleep.’//
+%     \endgl
+% \xe
+
+% What do we think would happen if the embedded verb were transitive?
+
+% \pex \a \begingl
+%     \gla Alqo wayna-ta khani-rqa//
+%     \glb Dog boy-ACC bite-PAST//
+%     \glft ‘The dog bit the boy.’//
+%     \endgl
+    
+%     \a \begingl
+%     \gla Juan alqo-wan wayna-ta khani-\textbf{chi}-rqa.//
+%     \glb Juan dog-INSTR boy-ACC bite-CAUS-PAST//
+%     \glft ‘Juan made the dog bite the boy.’//
+%     \endgl
+% \xe
+
+% Something like `Juan made-bite the boy using the dog'.
+
+% Languages differ in how they set up such embedded causatives.
+
+    \subsection{Unaccusativity}
 Direct objects with \textbf{resultatives}:
 \pex
 	\a I hammered the metal flat.
-	\a John stripped himself naked.
+	\a The cat licked itself clean.
 \xe
 
 Are all intransitive verbs alike?
@@ -2378,9 +3043,12 @@ Underlying object	& Underlying subject\\
 	\endgl
 \xe
 
-\emph{habe geschlafen, bin eingeschlafen.}
+\pex
+    \a \emph{habe geschlafen}: \emph{have}-auxiliary, activity `slept'
+    \a \emph{bin eingeschlafen}, \emph{be}-auxiliary, change of state `fell asleep'
+\xe
 
-	    \subsubsection{Syntactic structure and affixation}
+\bigskip 
 Morphology is sensitive to these distinctions.
 \pex Unaccusative vs unergative:
 	\a The door re-opened.
@@ -2402,31 +3070,32 @@ Morphology is sensitive to these distinctions.
     	\subsubsection{English}
 Passivization changes a transitive structure into an unaccusative structure.
 \pex
-	\a John kissed Mary.
-	\a Mary was kissed by John.
+	\a Sam kissed Max.
+	\a Max was kissed by Sam.
 \xe
 
 \pex
-	\a John considered there to be too many	students in the class / it to be raining.
+	\a Kim considered there to be too many	students in the class / it to be raining.
 	\a 	There were considered to be too many students in the class / It was considered to be raining.
 \xe
 
 \pex
-	\a John put the book on the table / gave Mary a book.
-	\a The book was put on the table / Mary was given a book.
+	\a Tyler put the book on the table / gave Chris a book.
+	\a The book was put on the table / Chris was given a book.
 \xe
 
 \pex
-	\a John said that the book was expensive.
+	\a Max said that the book was expensive.
 	\a The book was said to be expensive.
 \xe
 
 \pex
-	\a John slept in the bed.
+	\a Max slept in the bed.
 	\a The bed was slept in.
 \xe
 
 	    \subsubsection{Crosslinguistically}
+German:
 \ex \begingl
 	\gla Die Schlange frisst den Frosch//
 	\glb the.\gsc{NOM.F} snake devours the.\gsc{ACC.M} frog//
@@ -2441,10 +3110,10 @@ Passivization changes a transitive structure into an unaccusative structure.
 	\endgl
 \xe
 
-\ex \ljudge{*} Den Frosch wird gefressen
+\ex \ljudge{*} \emph{Den Frosch wird gefressen}
 \xe
 
-\textbf{Five canonical properties of the passive:}
+\paragraph{Five canonical properties of the passive:}
 \begin{enumerate} \tightlist
 	\item  The internal argument gets \emph{promoted} to subject instead of the external argument. Controls agreement.
 	\item The external argument becomes an optional argument of a \emph{by}-phrase.
@@ -2461,26 +3130,6 @@ Passivization changes a transitive structure into an unaccusative structure.
 
 
 	    \subsubsection{Analysis}
-The external argument is introduced by a separate head.
-\begin{itemize} \tightlist
-	\item It appears that a predicate has selectional requirements for its complement, but less so for its subject.
-	\item \cite{chomsky95}: little \emph{v}.\\
-		\cite{kratzer96,marantz97,pylkkanen08,layering15,kastner20ogs}: Voice.
-\end{itemize}
-
-\pex
-	\a throw a baseball
-	\a throw a boxing match
-	\a throw a party
-	\a throw a tantrum
-\xe
-
-\pex
-	\a take a book from the shelf
-	\a take a bus
-	\a take a nap
-\xe
-
 \ex \emph{Mia left Seb}:\\
 \Tree
 [.TP
@@ -2537,18 +3186,6 @@ The external argument is introduced by a separate head.
 	\draw[thick,->] (IA) .. controls +(south west:3) and +(south west:3) .. (SpecTP);
 \end{tikzpicture}
 \xe
-\bigskip
-
-
-\begin{mdframed}[hidealllines=true,innerleftmargin=3pt,leftmargin=0pt,innerrightmargin=10pt,rightmargin=-3pt,backgroundcolor=gray!20]
-\textbf{Mystery:} Why does English (and other languages) care about the existence of a complement to the passive verb?
-\pex
-	\a It was danced all night long.
-	\a \ljudge{*} There was danced all night long.
-	\a \ljudge{*} At the party was danced by the children.
-\xe
-\end{mdframed}
-
 
     \subsection{Applicatives}
 Applicative constructions ``add'' a complement. We've already seen some in affix order.
@@ -2583,7 +3220,8 @@ Applicative constructions ``add'' a complement. We've already seen some in affix
 	\endgl
 \xe
 
-Draw low Appl!
+Where would these fit in a tree structure?
+\bigskip
 
 In many languages, applicatives want (mono-)transitive verbs stems. In other languages this is OK.
 
@@ -2622,135 +3260,6 @@ Difference between languages that allow benefactives on intransitives and those 
 \cite{pylkkanen08} on high and low applicatives. 
 
 
-    \subsection{Causativization}
-How do we express causation?
-
-What do we think is going on in each case?
-\pex
-    \a Destroy the tower. (transitive/causative)
-    \a Open the door. (labile/alternating)
-    \a Make Sam dance. (periphrastic)
-\xe
-
-	    \subsubsection{Kinds of causatives}
-
-Thinking in theoretical terms:
-\begin{enumerate} \tightlist
-	\item Attaching to a root as a verbalizer, create lexical causatives that relate to unaccusatives.\\
-		\emph{open the door} %open door
-	\bigskip
-	
-	\item Attaching to a verb, create causatives where there is a separation between a causing event and a caused event. %will see soon
-	\bigskip
-	
-	\item Attaching to a VoiceP with an external argument.\\
-		\emph{make John eat dinner} %made eat
-\end{enumerate}
-
-
-        \subsubsection{Morphological evidence for causativization}
-Quechua (Neil Myler p.c.):
-\pex
-    \a \begingl
-    \gla Yaku t’impu-rqa//
-    \glb Water boil-PAST//
-    \glft `The water boiled.'//
-    \endgl
-    
-    \a \begingl
-    \gla Wayna yaku-ta t’impu-\textbf{chi}-rqa//
-    \glb boy water-ACC boil-CAUS-PAST//
-    \glft `The boy boiled the water.'//
-    \endgl
-\xe
-
-\ex \begingl
-    \gla Marya Juan-man libru-ta rikhu-\textbf{chi}-rqa//
-    \glb Mary Juan-DAT book-ACC see-CAUS-PAST//
-    \glft `Mary showed John the book.'//
-\endgl
-\xe
-
-What might be going on here?
-\pex
-    \a hang $\sim$ hung
-    \a hang $\sim$ hanged
-\xe
-\pex
-    \a rise $\sim$ rose
-    \a raise $\sim$ raised
-\xe
-
-There is a generalization here. What is it? Does our current system predict it?
-
-Overt v leads to regular inflection. Make sense if overt v intervenes between \root{\gsc{root}} and T!
-
-        \subsubsection{Anticausativization?}
-What might be going on in these Quechua examples?
-\pex \a \begingl
-    \gla Wayna qeru-ta p’aki-rqa//
-    \glb Boy glass-ACC break-PAST//
-    \glft `The boy broke the glass.'//
-    \endgl
-    \a \begingl
-    \gla Qeru p’aki-\uline{ku}-rqa//
-    \glb Glass break-REFL-PAST//
-    \glft `The glass broke.'//
-    \endgl
-\xe
-\pex \a \begingl
-    \gla Juan Marya-ta phiña-\textbf{chi}-rqa//
-    \glb John Mary-ACC anger-CAUS-PAST//
-    \glft `John angered Mary/made Mary angry.'//
-    \endgl
-    \a \begingl
-    \gla Marya phiña-\uline{ku}-rqa//
-    \glb Mary anger-REFL-PAST//
-    \glft `Mary got angry.'//
-    \endgl
-\xe
-
-        \subsection{Causativizing larger events}
-What's going on here? How does case get assigned?
-\ex \begingl
-    \gla Juan puñu-n//
-    \glb Juan sleep-3SUBJ//
-    \glft `Juan sleeps.'//
-    \endgl
-\xe
-\ex \ljudge{*} \begingl
-    \gla Maria Juan-ta puñu-n//
-    \glb Maria Juan-ACC sleep-3SUBJ//
-    \glft (int.~‘Maria sleeps Juan.’)//
-    \endgl
-\xe
-\ex \begingl
-    \gla Maria Juan-ta puñu-\textbf{chi}-n//
-    \glb Maria Juan-ACC sleep-CAUS-3SUBJ//
-    \glft ‘Maria makes Juan sleep.’//
-    \endgl
-\xe
-
-What do we think would happen if the embedded verb were transitive?
-
-\pex \a \begingl
-    \gla Alqo wayna-ta khani-rqa//
-    \glb Dog boy-ACC bite-PAST//
-    \glft ‘The dog bit the boy.’//
-    \endgl
-    
-    \a \begingl
-    \gla Juan alqo-wan wayna-ta khani-\textbf{chi}-rqa.//
-    \glb Juan dog-INSTR boy-ACC bite-CAUS-PAST//
-    \glft ‘Juan made the dog bite the boy.’//
-    \endgl
-\xe
-
-Something like `Juan made-bite the boy using the dog'.
-
-Languages differ in how they set up such embedded causatives.
-
-
 	    \subsubsection{Causativization in Hiaki \citep{harley13lingua}}
 \begin{itemize} \tightlist
 	\item \textbf{\emph{-tua}} takes a voiceP complement, so the external argument of the caused verb phrase is a complement of the derived causative verb.
@@ -2784,7 +3293,20 @@ When passive is added to \underline{\emph{-tevo}}, the object of the lower vP is
 \xe
 
 
-    \subsection{Head movement}
+
+
+% \begin{mdframed}[hidealllines=true,innerleftmargin=3pt,leftmargin=0pt,innerrightmargin=10pt,rightmargin=-3pt,backgroundcolor=gray!20]
+% \textbf{Mystery:} Why does English (and other languages) care about the existence of a complement to the passive verb?
+% \pex
+% 	\a It was danced all night long.
+% 	\a \ljudge{*} There was danced all night long.
+% 	\a \ljudge{*} At the party was danced by the children.
+% \xe
+% \end{mdframed}
+
+    \subsection{Additional phenomena and formal tools}
+
+        \subsubsection{Head movement}
 \textbf{Adverbs}
 \ex \begingl
 		\gla Jean a \fbox{souvent} embrass\'e Pierre//
@@ -2831,8 +3353,6 @@ When passive is added to \underline{\emph{-tevo}}, the object of the lower vP is
 	\endgl
 \xe
 
-Draw a tree!
-
 Common assumptions:
 \begin{itemize} \tightlist
 	\item Morphologically complex words are built by head-to-head(-to-head) movement up the tree.
@@ -2842,9 +3362,7 @@ Common assumptions:
 Not necessarily true! But productive.
 
 
-    \subsection{Cliticization}
-Examples of clitics?
-
+    \subsubsection{Cliticization}
 In some cases, morphemes seem to be only partially positioned by the syntax.
 \begin{itemize} \tightlist
 	\item \textbf{Clitics} are positioned with respect to phrases by the syntax.
@@ -2853,7 +3371,7 @@ In some cases, morphemes seem to be only partially positioned by the syntax.
 	\item Other clitics infix morphophonologically into constituents they are positioned next to.
 \end{itemize}
 
-	    \subsubsection{Straightforward clitics}
+\textbf{Straightforward clitics}
 \ex Queen of England's hat\\
 \Tree
 [.DP
@@ -2865,8 +3383,8 @@ In some cases, morphemes seem to be only partially positioned by the syntax.
 ]
 \xe
 
-	    \subsubsection{Phonological attachment}
-Where can BCS auxiliares appear?
+\textbf{Phonological attachment}
+Where can Bosnian-Croatian-Serbian auxiliares appear?
 
 \pex
 	\a \begingl
@@ -2909,7 +3427,7 @@ Latin:
 \xe
 	
 
-	    \subsubsection{Non-active Voice}
+	   \subsubsection{Non-active Voice}
 Non-active Voice is often marked by an element external to tense and agreement.
 \pex French
 	\a \begingl
@@ -2954,7 +3472,7 @@ Non-active Voice is often marked by an element external to tense and agreement.
 	`The door opens' (unaccusative)
 \xe
 
-The EA is not projected.
+The external argument is not projected.
 
 Part of the verb and not of the next phonological word.
 \pex
@@ -2971,6 +3489,7 @@ Tree: Clitics that originate in the specifier of voice, rather than as the head 
 What does the interaction of argument structure and morphology teach us about the interface between syntax and morphology?
 
 
+\newpage
 \bibliographystyle{linquiry2}
 \bibliography{lingxbib}
 

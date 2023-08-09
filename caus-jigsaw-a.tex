@@ -1,0 +1,217 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage {fontspec} %,xunicode} %,xltxtra}
+%	\setmainfont{Times New Roman}
+\setmainfont[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]{LibertinusSerif-Regular.otf}
+
+\usepackage[margin={1in}]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=purple,pagebackref=false]{hyperref}
+
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0.2ex,belowexskip=0.8ex,aboveglftskip=-0.2ex,interpartskip=0.2ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+
+\usepackage{mdwlist}  %
+\usepackage[normalem]{ulem}
+\usepackage{array} % >{\...} in tabulars
+\setlength\parindent{0pt}
+\usepackage{dashrule} %\hdashrule
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\addtolength{\headheight}{2.5pt}
+\pagestyle{fancy} %or fancyplain
+\lhead{Morphology 2022-23 (UoE)}
+\rhead{Jigsaw group A}
+\fancyfoot[C]{\thepage~of \pageref{LastPage}}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{Page \thepage~of \pageref{LastPage}} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\definecolor{edir}{RGB}{193,0,67}
+\definecolor{edib}{RGB}{0,50,95}
+\newcommand\ruler{{\centering \color{edir} \rule[-0.5em]{0.6\columnwidth}{0.4pt}\par}}
+
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\hand}{\ding{43}}
+
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\title{Jigsaw group A} % lexical, unpredictable transitive meaning, root-derived
+\date{Morphology 2022-23, causatives}
+\author{}
+
+\begin{document}
+
+In this jigsaw puzzle we will look at different kinds of causatives. For simplicity, assume that all the forms glossed \gsc{CAUS} are the same kind of element (albeit in different languages).
+
+In this expert group, we will try to see how \gsc{CAUS} can interact with the verb.
+
+\section{German}
+
+The prefix \emph{be}- creates causative verbs in German:
+\pex
+    \a \emph{enden} `to end (intransitive)'
+    \a \emph{beenden} `to end something (transitive)'
+\xe
+\pex
+    \a \emph{malen} `to draw, paint'
+    \a \emph{bemalen} `to paint a surface (completely)'
+\xe
+\pex
+    \a \emph{Nachricht} `a message'
+    \a \emph{benachrichtigen} `to inform'
+\xe
+
+The other groups will look into these kinds of verbs more closely. 
+
+But many verbs with this prefix have a different profile, like those in~(\nextx)--(\anextx). What can you say about their meaning (if anything)?
+\pex
+    \a \emph{gleiten} `to slide'
+    \a \emph{begleiten} `to accompany'
+\xe
+\pex
+    \a \emph{nehmen} `to take'
+    \a \emph{benehmen} `to behave'
+\xe
+
+\section{Japanese}
+
+Here are some more examples. What is the literal meaning of each of these examples, and what is the actual meaning?
+
+\ex 
+    \begingl
+        \gla Taroo-ga zisyoku-o niow-ase-ta//
+        \glb Taro-\gsc{NOM} resignation-\gsc{ACC} smell-\gsc{CAUS}-\gsc{PAST}//
+        \glft `Taro hinted at resigation.'//
+    \endgl
+\xe
+\ex
+    \begingl
+        \gla mimi-o sum-ase//
+        \glb ear-\gsc{ACC} clear-\gsc{CAUS}//
+        \glft `listen carefully'//
+    \endgl
+\xe
+\ex
+    \begingl
+        \gla hana-o sak-ase//
+        \glb flower-\gsc{ACC} bloom-\gsc{CAUS}//
+        \glft `engage in heatedly'//
+    \endgl
+\xe
+
+\section{Hebrew}
+
+And is there a way to characterize the relationship between the simple verb and the causative verb in the following examples?
+
+\pex \a \begingl
+        \gla teo sagar et ha-delet//
+        \glb Theo closed-\gsc{PAST} \gsc{ACC} the-door//
+        \glft `Theo closed the door.'//
+    \endgl
+    \a \begingl
+        \gla teo hesgir et axiv la-ʃiltonot//
+        \glb Theo closed.\gsc{CAUS}-\gsc{PAST} \gsc{ACC} his.brother to.the-authorities//
+        \glft `Theo turned his brother in.'//
+    \endgl
+\xe
+\pex
+    \a \begingl
+        \gla teo matsa et ha-matana//
+        \glb Theo found-\gsc{PAST} \gsc{ACC} the-present//
+        \glft `Theo found the present.'//
+    \endgl
+    \a \begingl
+        \gla teo hemtsi et ha-misxak ha-xadaʃ//
+        \glb Theo found.\gsc{CAUS}-\gsc{PAST} \gsc{ACC} the-game the-new//
+        \glft `Theo invented the new game.'//
+    \endgl
+\xe
+\pex 
+    \a \begingl
+        \gla beki ravtsa al ha-ritspa//
+        \glb Becky lazed-\gsc{PAST} on the-floor//
+        \glft `Becky lay down on the floor', `Becky lazed around on the floor.'//
+    \endgl
+    \a \begingl
+        \gla beki herbits-a la-xatul//
+        \glb Becky lazed.\gsc{CAUS}-\gsc{PAST.3SG.F} to.the-cat//
+        \glft `Becky hit the cat.'//
+    \endgl
+\xe
+
+
+\section{Analysis}
+
+What would a formal analysis look like? Specifically, what would the relationship be between the verb/root and the element \gsc{CAUS}?
+
+
+\section{English}
+
+If there's time, we can carry out a different kind of exercise.
+
+Is \emph{kill} the same thing as \emph{cause to die}? Is \emph{melt} the same thing as \emph{cause to melt}? Let's look at some examples (some are mildly violent).
+
+Direct causation:
+
+\pex \a Mary caused John to die and it surprised me that he did so.
+    \a \ljudge{*} Mary killed John and it surprised me that he did so.
+\xe
+
+Time adverbials:
+\pex   \a Mary caused the glass to melt on Sunday by heating it on Saturday.
+    \a \ljudge{*} Mary melted the glass on Sunday by heating it on Saturday.
+\xe
+\ex Pat broke the stick on Monday (*by stepping on it on last week).
+\xe
+
+Instrumentals and agent-oriented adverbials:
+\pex \a The pirates caused Bill to die by swallowing his tongue.
+	\a \ljudge{*} The pirates killed Bill by swallowing his tongue.
+\xe
+
+\ex Pat broke the stick quickly (*by stepping on it slowly). \xe
+
+What do these examples mean for the relationship between the causing event and the caused event?
+
+
+
+% \vfill
+
+% If you finish with time to spare: what other kinds of causatives would you expect to exist?
+
+
+\end{document}

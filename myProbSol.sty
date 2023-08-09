@@ -1,0 +1,127 @@
+\ProvidesPackage{myProbSol}
+
+\RequirePackage{ifthen}
+\newboolean{LEAVESPACE}
+\newboolean{SHOWANS}
+\setboolean{LEAVESPACE}{false}
+\setboolean{SHOWANS}{false}
+\newcounter{qcounter}
+
+\DeclareOption{spaces}{
+	\setboolean{LEAVESPACE}{true}
+}
+\DeclareOption{solution}{
+	\setboolean{SHOWANS}{true}
+}
+\ProcessOptions
+
+%
+%\newsavebox\mysavebox
+%\newenvironment{answer}{%
+%  \setlength{\fboxrule}{0pt}
+%  \setlength{\fboxsep}{4pt}
+%  	\begin{lrbox}\mysavebox\blue\psset{linecolor=blue}
+% 	\begin{minipage}{\linewidth-\widthof{\fbox{}}}%
+%}{%
+%  \end{minipage}%
+%  \end{lrbox}%
+%  \ifthenelse{\boolean{LEAVESPACE}\or\boolean{SHOWANS}}{\par\noindent}{}
+%  \fbox{
+%	  \ifthenelse{\boolean{SHOWANS}} 
+%	  	{\usebox\mysavebox}
+%		{\ifthenelse{\boolean{LEAVESPACE}} {\phantom{\usebox\mysavebox}}{}}
+%	  }% 
+%}
+%
+%\def\inSolution#1{
+%	  \ifSHOWANS
+%	  	{\psset{linecolor=blue}\blue{#1}}
+%	  \fi
+%}
+
+%\makeatletter
+%\newenvironment{myboxenv}
+%  {\setbox\z@\hbox\bgroup\color@setgroup}
+%  {\color@endgroup\egroup\myboxmacro{\usebox\z@}}
+%\makeatother
+
+%%	Craig added below:
+\newcommand\fillblank[1]{\uline{\phantom{~#1~}}}	%	When [solutions] not passed, draws an empty underline (for fill-in-the-blanks). I didn't bother making it sensitive to [spaces]
+
+
+\newsavebox\mysavebox
+
+\newenvironment{answer}{
+	  	\begin{lrbox}\mysavebox
+}{
+	  \end{lrbox}%
+}
+
+\newenvironment*{questions}[1][0]{ 
+%	\addtocounter{qcounter}{#1}
+	\begin{list}{\textbf{\roman{qcounter}.~}}{\usecounter{qcounter}\addtocounter{qcounter}{#1}}
+	  \setlength{\itemsep}{1pt}
+	  \setlength{\parskip}{0pt}
+	  \setlength{\parsep}{0pt}
+
+}{
+	\end{list}
+}
+
+\ifthenelse{\boolean{SHOWANS}}{
+	\renewcommand\fillblank[1]{\uline{\color{blue}{{~#1~}}}}	%	Displays the contents of the fill-in-the-blank
+	\renewenvironment{answer}
+	{
+	%\par\noindent\blue\psset{linecolor=blue} % IK hack
+    \par\noindent\blue
+	}
+	{
+	}
+}
+{
+	\ifthenelse{\boolean{LEAVESPACE}}{
+	\renewenvironment{answer}{%
+	  \setlength{\fboxrule}{0pt}
+	  \setlength{\fboxsep}{0pt}
+	  	\begin{lrbox}\mysavebox\blue\psset{linecolor=blue}
+	 	\begin{minipage}{\linewidth-\widthof{\fbox{}}}%
+	}%beginANSWER
+	{%
+	  \end{minipage}%
+	  \end{lrbox}%
+	  \par\noindent\fbox{\phantom{\usebox\mysavebox}}% 
+	}%endANSWER
+	}%endifLEAVESPACE
+	{
+	}%endelseLEAVESPACE
+}
+
+\def\inSolution#1{
+	  \ifSHOWANS
+	  	% {\psset{linecolor=blue}\blue{#1}} % IK hack
+        {\blue{#1}
+	  \fi
+}
+
+\def\inProblem#1{
+	  \ifSHOWANS
+	  	{}
+	  \else
+	    {#1}
+	  \fi
+}
+
+\def\isWorth#1{
+	  \ifSHOWANS
+	  	{\textcolor[rgb]{.7,0,.7}{(#1)}}
+	  \fi
+}
+
+\def\newsolpage{
+	  \ifSHOWANS
+	  	\newpage
+	  \fi
+	  \ifLEAVESPACE
+	  	\newpage
+	  \fi
+}

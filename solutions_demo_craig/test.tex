@@ -1,0 +1,176 @@
+%!TEX TS-program = latex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[11pt,a4paper]{article}
+\usepackage{geometry}
+	\geometry{margin=.75in}
+%\usepackage{tgpagella}
+
+\usepackage{fontspec}
+\usepackage{fourier}
+
+\usepackage{tipa}
+\usepackage{color}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{linguex}			%MUST COME AFTER TIPA, better to come after graphicx
+	\renewcommand{\firstrefdash}{}
+							%makes linguex references go better
+	\let\eachwordone=\upshape
+	\let\eachwordtwo=\upshape
+							%Change this ``upshape'' to bf, it, sc, or tt for bold, italics, smallcaps, or typewriter fonts, respectively
+\usepackage{pstricks}
+
+\usepackage{ulem}
+	\normalem
+	\renewcommand{\ULthickness}{.6pt}
+	 \newcommand\subsout{\bgroup\markoverwith
+      {{\rule[0.2ex]{2pt}{0.9pt}}}\ULon}
+\usepackage{natbib}
+\def\quotecite#1{\citeauthor{#1}'s (\citeyear{#1})}
+							%Adds the quotecite command, which I find useful
+\usepackage[hang,flushmargin,multiple,bottom]{footmisc}
+							%For making footnotes look good				
+\usepackage{expex} %Linguistics examples
+\lingset{everygla=,glhangstyle=none,everyglb=,everyglft=,aboveglftskip=-.5ex,interpartskip=.3ex}	
+	
+
+\newcounter{ques}\stepcounter{ques}	%	Initializes the counter for the 'Q:' series of examples
+
+\usepackage[nocenter]{qtree}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% USING \refex INSTEAD OF \ref %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\def\userefex{\renewcommand{\theExRBr}{}\renewcommand{\theExLBr}{}}
+	\def\refex#1{(\ref{#1})}
+	\renewcommand{\refex}[2][]{(\ref{#2}#1)}
+	\let\NextOld\Next
+	\let\NNextOld\NNext
+	\let\LastOld\Last
+	\let\LLastOld\LLast
+	\renewcommand{\Next}[1][]{{\renewcommand{\theExRBr}{)}\renewcommand{\theExLBr}{(}\NextOld[#1]}}
+	\renewcommand{\NNext}[1][]{{\renewcommand{\theExRBr}{)}\renewcommand{\theExLBr}{(}\NNextOld[#1]}}
+	\renewcommand{\Last}[1][]{{\renewcommand{\theExRBr}{)}\renewcommand{\theExLBr}{(}\LastOld[#1]}}
+	\renewcommand{\LLast}[1][]{{\renewcommand{\theExRBr}{)}\renewcommand{\theExLBr}{(}\LLastOld[#1]}}
+	\userefex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\feature}[1]{\ensuremath{[\mbox{#1}]}}
+
+\usepackage{calc}
+
+\usepackage[solution,spaces]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{\textbf{Syntax II}\vspace{-5pt}\\
+{\normalsize Trinity College Dublin}\vspace{5pt}\\
+{\Large Solutions demo \inSolution{--- Notes for students}}\vspace{-5pt}}
+\author{\textbf{Demo}}
+\date{Semester 2, 2022/23\vspace{-12pt}}
+
+
+
+\begin{document}
+\maketitle
+\definelingstyle{Q}{exno= \bfseries{\arabic{ques}}, exnoformat= {\bfseries QX:}, everyex={\stepcounter{ques}}}	%	Defines the style of the 'Q:' examples
+
+\ex Fill in the blank: \fillblank{asdfasdf}
+\xe
+
+
+\section{Honorifics and agreement in Hindi}  % Taken from Bhatt & Davis 2022 slides (PSST)
+%   lightly modified for data concealment (just changed the predicate and proper name I think)
+
+\noindent Hindi (Indo-European) is a language with a pretty rich $\phi$-agreement system. For example, in certain nonverbal predicates, the copula agrees with the person and number of the subject (and, for certain predicate adjectives, the adjective also shows agreement for number and gender):\footnote{As is often the case with syntax problem sets, these examples have been lightly `cooked' (manipulated), so suppress any native-speaker intuitions you might have here and take the data at face value. Abbreviations: \textsc{3} = 3rd person; \textsc{dem} = demonstrative; \textsc{f} = feminine; \textsc{hon} = honorific marker; \textsc{m} = masculine; \textsc{pl} = plural; \textsc{pres} = present tense; \textsc{sg} = singular.}
+
+%	regular number agreement
+\pex
+\a
+	\begingl
+	\gla	Mohan cho\textipa{\:t}a: h\textipa{E}	//
+	\glb	Mohan.\textsc{m} small.\textsc{m.sg} be.\textsc{pres.3sg}	//
+	\glft	`Mohan is small.'	//
+	\endgl	
+\a
+	\begingl
+	\gla	ve  log cho\textipa{\:t}e h\textipa{\~E}	//
+	\glb	\textsc{dem}.\textsc{pl} people small.\textsc{m.pl} be.\textsc{pres.3pl}	//
+	\glft	`The people are small.'	//
+	\endgl	
+\xe
+
+\noindent Like many languages, Hindi has a way for speakers to mark their respect for a particular referent in a sentence. For example, it has a dedicated \textsc{hon}(orific) suffix, /-ji:/, that attaches to the respected nominal. Interestingly, the presence of this marker yields an unexpected $\phi$-agreement pattern for the nominal it attaches to:\footnote{Is it crosslinguistically common for languages to use unexpected $\phi$-features as a means of indicating respect for a referent.}
+
+
+%honorific requires PL
+\pex\label{hindi-mohan}
+\a \ljudge{*}
+	\begingl
+	\gla	Mohan-ji: cho\textipa{\:t}a: h\textipa{E}	//
+	\glb	Mohan.\textsc{m-hon} small.\textsc{m.sg} be.\textsc{pres.3sg}	//
+	\glft	\textit{Intended:} `Mohan (whom I respect) is small.'	//
+	\endgl	
+\a
+	\begingl
+	\gla	Mohan-ji: cho\textipa{\:t}e h\textipa{\~E}	//
+	\glb	Mohan.\textsc{m-hon} small.\textsc{m.pl} be.\textsc{pres.3pl}	//
+	\glft	`Mohan (whom I respect) is small.' (\textit{Literally:} `Mohan are small.')	//
+	\endgl	
+\xe
+
+
+
+% N = SG, DEM = PL. Make them discover HON introduces [phi: PL], and DEM agrees with it:
+\pex~\label{hindi-dem}
+\a
+	\begingl
+	\gla	vo la\textipa{\:r}ki: cho\textipa{\:t}i: h\textipa{E}	//
+	\glb	\textsc{dem.sg} girl.\textsc{f.sg} small.\textsc{f.sg} be.\textsc{pres.3sg}	//
+	\glft	`That girl is small.'	//
+	\endgl	
+\a
+	\begingl
+	\gla	ve la\textipa{\:r}ki:-ji: cho\textipa{\:t}i: h\textipa{\~E}	//
+	\glb	\textsc{dem.pl} girl.\textsc{f.sg-hon} small.\textsc{f.pl} be.\textsc{pres.3pl}	//
+	\glft	`That girl (whom I respect) is small.' (\textit{Literally:} `Those girl are small.')\footnotemark	//
+	\endgl	
+\xe
+\footnotetext{As indicated in the gloss, assume that the adjective in \refex[b]{hindi-dem} bears \textsc{pl} agreement (syncretic with \textsc{sg} in the feminine paradigm).\label{hindi-fn}}\vspace{-12pt}
+\newpage
+\ex~[lingstyle=Q] When the honorific marker is present on the subject, certain other subject-internal elements (e.g.\ \textsc{dem}) show plural agreement, even if the head noun is singular. In a sentence or two, propose a simple analysis that could explain this. (You don't need to discuss anything \uline{external} to the subject here, but you can if you think it would help.) You may wish to posit the existence of one or more syntactic projections within the nominal domain beyond those we've discussed; you can give these any label you like, as long as you explain them. \xe
+\begin{answer}
+It seems that \textsc{hon} introduces its own [\textit{i}$\phi$: \textsc{pl}] feature, and that \textsc{dem} agrees with this feature (when it is present) rather than the N. Given that the \textsc{dem} agrees with the N when \textsc{hon} \uline{isn't} present, the simplest assumption is that we have a [Dem [(Hon) [N]]] structure (ignoring head directionality for simplicity), with \textsc{dem} probing downwards for a goal, stopping at the first one it finds.\\
+\end{answer}
+
+\ex~[lingstyle=Q] Draw a tree for the subject in \refex[b]{hindi-dem}. (You only need to depict the subject nominal, \uline{not} the entire clause.) Your tree must have the following properties:\vspace{-12pt}
+\xe
+\begin{itemize}
+	\item It must be consistent with the answer you gave to the previous question.
+	\item It must include $\phi$-features everywhere they are relevant (i.e., probes and goals). These should be given in the format we discussed, e.g. [\textit{i}$\phi$: \textsc{2, sg, m}]. (You may `unbundle' the $\phi$-features if you wish, but this isn't strictly necessary.)
+	\item It must explicitly show any Agree relations that take place within the nominal. Make sure it's clear which element is the probe and which is the goal.
+\end{itemize}
+\begin{answer}
+I'm electing to model this as involving distinct functional heads for both the \textsc{dem} and the \textsc{hon} affix, because this will allow us to easily appeal to intervention to explain the different agreement patterns we see; however, you might have modeled this by using adjunction, etc. Regardless, the probe on \textsc{dem} is valued by \textsc{hon}'s $\phi$-value when \textsc{hon} is present because it is higher in the structure than the N, and thus \uline{more local} to the \textsc{dem} probe than N. \\[2mm]
+\Tree [.DemP {Dem\\\feature{\textit{u}$\phi$: \uline{\textsc{\textbf{pl}}}}} [.HonP [.NP {N\\\feature{\textit{i}$\phi$: {\textsc{sg, f}}}} ] {Hon\\\feature{\textit{i}$\phi$: \textbf{\textsc{pl}}}} ] ]
+
+\end{answer}
+%[ [.\textit{v} [.D \textsc{om} ] [.\textit{v} ] ] [.VP V DP ] ] ]
+
+%Now that you've told us about the behavior of the $\phi$-features \uline{internal} to the subject DP bearing /-ji:/; now tell us about the \textit{external} behavior of these DPs with respect to $\phi$-agreement.   
+
+% [ DEM.PL [ [N.SG] HON.PL ] ]
+
+\ex[lingstyle=Q] Is the analysis you gave above consistent with the observation that the copula in \refex[b]{hindi-dem} (and \refex[b]{hindi-mohan}) bears \textit{plural} agreement? Explain your answer, using the formalisms of Agree as needed. (You don't need to explain how both the copula and the adjective come to agree with the subject, but you can if you want to.)
+\xe
+\begin{answer}
+Yes, it's consistent. The probe associated with the copula (wherever that is---perhaps on I) goes looking for a $\phi$ bundle to serve as a goal. The first one it will encounter is the highest projection of the subject nominal. If there has been internal agreement within that nominal, such that the Dem(P) ends up with \textsc{pl}, then the entire subject nominal will value any probe with \textsc{pl}. (The probe can't find the lower \textsc{sg} head noun, since this would require violating the locality condition on Agree by skipping over a possible goal.)
+\end{answer}
+
+
+
+
+\end{document}

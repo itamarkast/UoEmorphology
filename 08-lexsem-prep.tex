@@ -1,0 +1,154 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2022-23, Edinburgh, Exercise 8}
+\bigskip
+
+In the next session we'll look at two classes of verbs (or roots) and examine how their semantics influences their syntactic behavior, i.e.~argument structure. Let's see what that looks like.
+
+\bigskip
+One class of verbs doesn't require an internal argument, or object. Here are a few examples where we can leave out the object:
+
+\pex	\a Chris \textbf{swept} the floor.
+	\a All last night, Chris \textbf{swept}.
+\xe
+
+\pex \a Chris \textbf{scrubbed} the floor.
+	\a All last night, Chris \textbf{scrubbed}.
+\xe
+
+In the other class of verbs, we cannot omit the object:
+
+\pex \a Chris \textbf{broke} the vase.
+	\a \ljudge{*} All last night, Chris \textbf{broke}.
+\xe
+
+\pex \a Chris \textbf{dimmed} the lights.
+	\a \ljudge{*} All last night, Chris \textbf{dimmed}.
+\xe
+
+\paragraph{Q1} Why might this be the case? In other words, what is it about \emph{sweeping} and \emph{scrubbing} that should allow us to drop the object, and what is it about \emph{breaking} and \emph{dimming} that requires one?
+
+\bigskip
+Here's an additional challenge. The list in~(\nextx) contains a number of verbs like \emph{sweep} and \emph{scrub}. The list in~(\anextx) contains verbs like \emph{break} and \emph{dim}.
+
+\ex \emph{eat, bash, bellow, dance, flutter, hit, jog, jump, laugh, murmur, nibble, pour, roll, rub, run, scour, scream, scribble, scrub, shout, spin, sweep, swim, walk, whisper, wipe, yell}
+\xe
+
+\ex \emph{admit, approach, arrive, break, clean, clear, come, cover, declare, destroy, devour, die, empty, enter, faint, fall, fill, freeze, go, increase, kill, melt, near, open, proclaim, propose, remove, rise, say}
+\xe
+
+\paragraph{Q2} Can you divide the second list, (\lastx), into two or three sub-classifications?
+
+\paragraph{Q3} Can you propose a generalization for what the semantic difference between~(\blastx) and~(\lastx) amounts to?
+
+
+
+% \bibliographystyle{linquiry2}
+% \bibliography{lingxbib}
+
+\end{document}

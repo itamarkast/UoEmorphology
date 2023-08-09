@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage {fontspec} %,xunicode} %,xltxtra}
+%	\setmainfont{Times New Roman}
+\setmainfont[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]{LibertinusSerif-Regular.otf}
+
+\usepackage[margin={1in}]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=purple,pagebackref=false]{hyperref}
+
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0.2ex,belowexskip=0.8ex,aboveglftskip=-0.2ex,interpartskip=0.2ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+
+\usepackage{mdwlist}  %
+\usepackage[normalem]{ulem}
+\usepackage{array} % >{\...} in tabulars
+\setlength\parindent{0pt}
+\usepackage{dashrule} %\hdashrule
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\addtolength{\headheight}{2.5pt}
+\pagestyle{fancy} %or fancyplain
+\lhead{Morphology 2022-23 (UoE)}
+\rhead{Jigsaw group A}
+\fancyfoot[C]{\thepage~of \pageref{LastPage}}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{Page \thepage~of \pageref{LastPage}} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\definecolor{edir}{RGB}{193,0,67}
+\definecolor{edib}{RGB}{0,50,95}
+\newcommand\ruler{{\centering \color{edir} \rule[-0.5em]{0.6\columnwidth}{0.4pt}\par}}
+
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\hand}{\ding{43}}
+
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\title{Jigsaw group A}
+\date{Morphology 2022-23, allomorphy}
+\author{}
+
+\begin{document}
+
+What allomorphy is happening here? What is being \textbf{conditioned} by what? % syntactic, outward-looking
+
+
+\pex
+\a \emph{go} (today) 
+\a  \emph{went} (yesterday) 
+\xe
+
+
+\pex
+\a \emph{good}		 
+\a  \emph{better} 
+\a  \emph{best} 
+\xe
+
+What would the \textbf{tree structure} for this interaction look like? Which node is looking at which?
+\vspace{3cm}
+
+
+Similar phenomenon for Applicatives in Georgian, here with the verb \emph{rbina} `run':
+\pex 
+\a mo-\textbf{m}-\uline{i}-rbina `\textbf{I} had run here'
+\a mo-\textbf{gv}-\uline{i}-rbina `\textbf{we} had run here'
+\a mo-\textbf{g}-\uline{i}-rbina(t) `\textbf{you} all had run here'\\
+\hdashrule[2pt][c]{0.5\linewidth}{1pt}{1.5mm}
+\a mo-\textbf{Ø}-\uline{u}-rbina(t) `\textbf{he/she/they} had run here'
+\xe
+
+%\ex \gsc{appl} \lra{} $\begin{cases}
+	%	u & / [3~[~\trace{}~]] \\
+	%	i
+	%\end{cases}$
+	%\xe
+
+\bigskip
+
+Also for suppletive verbs in Hiaki:
+
+\ex
+\begin{tabular}{l >{\em}l >{\em}l l}
+	& \gsc{SG} & \gsc{PL} & \\\hline
+	a.& vuite & tenne & `run' \\
+	b.& siika & saka & `go'\\
+	c.& weama & rehte & `wander'\\
+	d.& kivake & kiime & `enter'\\
+	e.& vo'e & to'e & `lie'\\
+	f.& weye & kaate & `walk'\\
+	g.& mea & sua & `kill' (\gsc{sg}$\sim$\gsc{pl} object)\\
+\end{tabular}
+\xe
+
+\vfill
+
+If you finish with time to spare: what other interactions would you expect to exist?
+
+
+\end{document}

@@ -1,0 +1,216 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage {fontspec} %,xunicode} %,xltxtra}
+%	\setmainfont{Times New Roman}
+\setmainfont[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]{LibertinusSerif-Regular.otf}
+
+\usepackage[margin={1in}]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=purple,pagebackref=false]{hyperref}
+
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0.2ex,belowexskip=0.8ex,aboveglftskip=-0.2ex,interpartskip=0.2ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+
+\usepackage{mdwlist}  %
+\usepackage[normalem]{ulem}
+\usepackage{array} % >{\...} in tabulars
+\setlength\parindent{0pt}
+\usepackage{dashrule} %\hdashrule
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\addtolength{\headheight}{2.5pt}
+\pagestyle{fancy} %or fancyplain
+\lhead{Morphology 2022-23 (UoE)}
+\rhead{Jigsaw group B}
+\fancyfoot[C]{\thepage~of \pageref{LastPage}}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{Page \thepage~of \pageref{LastPage}} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\definecolor{edir}{RGB}{193,0,67}
+\definecolor{edib}{RGB}{0,50,95}
+\newcommand\ruler{{\centering \color{edir} \rule[-0.5em]{0.6\columnwidth}{0.4pt}\par}}
+
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\hand}{\ding{43}}
+
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\title{Jigsaw group B} % transitive, verb-derived, cause O to be V-ed, relating causing and caused events
+\date{Morphology 2022-23, causatives}
+\author{}
+
+\begin{document}
+
+In this jigsaw puzzle we will look at different kinds of causatives. For simplicity, assume that all the forms glossed \gsc{CAUS} are the same kind of element (albeit in different languages).
+
+In this expert group, see if you can find out what is being caused, and to what/whom.
+
+\section{English}
+
+\pex \a Tyler opened the door.
+    \a The door opened.
+    \a Tyler caused the door to open.
+\xe
+
+\pex \a Kim broke the vase.
+    \a The vase broke.
+    \a Kim caused the vase to break.
+\xe
+
+\pex \a Kim taught Chris.
+    \a Chris learned.
+    \a Kim caused Chris to learn.
+\xe
+
+% hang hung
+% hang hanged
+
+% rise rose
+% raise raised
+
+% rise raise
+
+
+% destroy the tower
+% * the tower destroyed
+
+% They broke \{their promise / the world record}
+% * \{The promise / The world record\} broke
+
+
+\section{Hebrew}
+
+\pex
+    \a \begingl
+        \gla teo kara et ha-sefer//
+        \glb Theo read.\gsc{PAST} \gsc{ACC} the-book//
+        \glft `Theo read the book.'//
+    \endgl
+    \a \begingl
+        \gla teo hekri et ha-sefer le-noni//
+        \glb Theo read.\gsc{PAST}-\gsc{CAUS} \gsc{ACC} the-book to-Noni//
+        \glft `Theo read the book out to Noni.'//
+    \endgl
+\xe
+\pex
+    \a \begingl
+        \gla ha-maxʃev kalat et ha-ʃeder//
+        \glb the-computer received.\gsc{PAST} \gsc{acc} the-transmission//
+        \glft `The computer received the transmission.//
+    \endgl
+    \a \begingl
+        \gla ha-maxʃev heklit et ha-toxnit//
+        \glb the-computer received.\gsc{PAST}-\gsc{CAUS} \gsc{ACC} the-program//
+        \glft `The computer recorded the program.'//
+    \endgl
+\xe
+\pex
+    \a \begingl
+        \gla ha-sefer nafal//
+        \glb the-book fell.\gsc{PAST}//
+        \glft `The book fell.'//
+    \endgl
+    \a \begingl
+        \gla teo hepil et ha-sefer//
+        \glb Theo fell.\gsc{PAST}-\gsc{CAUS} \gsc{ACC} the-book//
+        \glft `Theo dropped the book.'//
+    \endgl
+\xe
+
+\newpage
+\section{Quechua}
+
+\pex
+    \a \begingl
+    \gla Yaku t'impu-rqa//
+    \glb Water boil-\gsc{PAST}//
+    \glft `The water boiled.'//
+    \endgl
+    
+    \a \begingl
+    \gla Wayna yaku-ta t'impu-chi-rqa//
+    \glb boy water-\gsc{ACC} boil-\gsc{CAUS}-\gsc{PAST}//
+    \glft `The boy boiled the water.'//
+    \endgl
+\xe
+
+\ex \begingl
+    \gla Juan Marya-ta phiña-chi-rqa//
+    \glb John Mary-\gsc{ACC} anger-\gsc{CAUS}-\gsc{PAST}//
+    \glft `John angered Mary.'//
+    \endgl
+    % \a \begingl
+    % \gla Marya phiña-\uline{ku}-rqa//
+    % \glb Mary anger-REFL-\gsc{PAST}//
+    % \glft `Mary got angry.'//
+    % \endgl
+\xe
+
+\section{Romance}
+\pex
+    \a \begingl
+        \gla \rightcomment{[French]}Marie  fit  reparer  la  voiture  (à  Jean). //
+        \glb Marie made repair the car at Jean//
+        \glft `Marie got the car fixed (by Jean)', `Marie made John fix the car.'//
+    \endgl
+    \a \begingl
+        \gla \rightcomment{[Italian]}Maria  fece  riparare  la  macchina  (a  Gianni).  //
+        \glb Maria made repair the car at Gianni//
+        \glft `Maria got the car fixed (by Gianni).'//
+    \endgl
+    \a \begingl
+        \gla \rightcomment{[Spanish]}Maria  hizo  arreglar  el  coche  (a  Juan). //
+        \glb Maria made repair the car at Juan//
+        \glft `Maria got the car fixed (by Juan).'//
+    \endgl
+\xe
+
+\section{Hiaki}
+
+\ex \begingl
+    \gla Juan vaso-ta ham-ta-tevo-k//
+    \glb Juan glass-\gsc{ACC} break-\gsc{TR-CAUS-PRF}//
+    \glft `Juan had the glass broken.'//
+    \endgl
+\xe
+
+
+\section{Analysis}
+
+What would a formal analysis look like? Specifically, what would the relationship be between the Causer, the Causee, the verb/root, and the element \gsc{CAUS}?
+
+\end{document}

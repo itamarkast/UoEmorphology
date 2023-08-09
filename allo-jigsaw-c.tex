@@ -1,0 +1,148 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage {fontspec} %,xunicode} %,xltxtra}
+%	\setmainfont{Times New Roman}
+\setmainfont[
+Ligatures={TeX,Common},
+	PunctuationSpace=0,
+	Numbers={Proportional},
+	BoldFont = LibertinusSerif-Semibold.otf,
+	ItalicFont = LibertinusSerif-Italic.otf,
+	BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+	BoldSlantedFont = LibertinusSerif-Semibold.otf,
+	SlantedFont    = LibertinusSerif-Regular.otf,
+	SlantedFeatures = {FakeSlant=0.25},
+	BoldSlantedFeatures = {FakeSlant=0.25},
+	SmallCapsFeatures = {FakeSlant=0},
+]{LibertinusSerif-Regular.otf}
+
+\usepackage[margin={1in}]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=purple,pagebackref=false]{hyperref}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0.2ex,belowexskip=0.8ex,aboveglftskip=-0.2ex,interpartskip=0.2ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+
+\usepackage{mdwlist}  %
+\usepackage[normalem]{ulem}
+\usepackage{array} % >{\...} in tabulars
+\setlength\parindent{0pt}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+	\addtolength{\headheight}{2.5pt}
+	\pagestyle{fancy} %or fancyplain
+	\lhead{Morphology 2022-23 (UoE)}
+	\rhead{Jigsaw group C}
+	\fancyfoot[C]{\thepage~of \pageref{LastPage}}
+	\fancypagestyle{plain}{%
+		\fancyhf{} % clear all header and footer fields
+		\fancyfoot[C]{Page \thepage~of \pageref{LastPage}} % except the center
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}}
+
+\definecolor{edir}{RGB}{193,0,67}
+\definecolor{edib}{RGB}{0,50,95}
+\newcommand\ruler{{\centering \color{edir} \rule[-0.5em]{0.6\columnwidth}{0.4pt}\par}}
+
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\usepackage{pifont}
+	\newcommand{\cmark}{\ding{51}}% 52
+	\newcommand{\xmark}{\ding{55}}%
+	\newcommand{\hand}{\ding{43}}
+
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\title{Jigsaw group C}
+\date{Morphology 2022-23, allomorphy}
+\author{}
+
+\begin{document}
+
+What allomorphy is happening here? What is being \textbf{conditioned} by what? % phonological, inward-looking
+
+\pex \label{ex:past-en}
+	\a \emph{ungrade}\textbf{[əd]} 
+	\a \emph{jam}\textbf{[d] }
+	\a  \emph{jump}\textbf{[t] }
+\xe
+
+\pex
+\a   \emph{\textbf{a} dog}		 
+\a  \emph{\textbf{an} apple} 
+\xe
+
+
+\bigskip
+
+What would the \textbf{tree structure} for this interaction look like? Which node is looking at which?
+\vspace{3cm}
+
+
+
+Similar phenomenon in Moroccan Arabic (and other dialects):
+\ex
+\begin{tabular}{l>{\em}ll>{\em}ll}
+	a.& xtʕa-h & `his error'  & ktab-u & `his book'\\
+	b.& ʃafu-h & `they saw him' & ʃaf-u & `he saw him'\\
+	c.& mʕa-h & `with him' & menn-u & `from him'\\
+\end{tabular}
+\xe
+
+
+\bigskip
+And in Tahitian:
+\ex
+\begin{tabular}{l>{\em}ll>{\em}ll}
+	a.& 'amu & `eat' & \textbf{fa'a}-'amu & `make eat'\\
+	b.& rave & `do, make' & \textbf{fa'a}-rave & `make make'\\
+	c.& tai'o & `read' & \textbf{fa'a}-tai'o & `make read'\\\hline
+	d.& mana'o & `think' & \textbf{ha'a}-mana'o & `remember'\\
+	e.& fiu & `grow tired' & \textbf{ha'a}-fiu & `be bored'\\
+	f.& veve & `be poor' & \textbf{ha'a}-veve & `impoverish'\\
+\end{tabular}
+\xe
+
+\bigskip
+
+And also in Chaha:
+\ex Imperative\\
+\begin{tabular}{lll}
+	2\gsc{SG.M} & 2\gsc{SG.F} & gloss \\\hline
+	nomæd & nomædʲ & `love' \\
+	noqo\d{t} & noqo\d{t}ʲ & `kick'\\
+	goræz & goræzʲ & `be old'\\
+\end{tabular}
+\xe
+\ex Perfective\\
+\begin{tabular}{lll}
+	without object & with object & gloss \\\hline
+	qænæf & qænæfʷ & `knock down'\\
+	nækæb & nækæbʷ & `find'\\\hline
+	nækæs & nækʷæs & `bite' \\
+	kæfæt & kæfʷæt & `open' \\\hline
+	qæ\d{t}ær & qʷæ\d{t}ær & `kill'\\
+	mæsær & mʷæsær & `seem'\\
+\end{tabular}
+\xe
+
+\vfill
+
+If you finish with time to spare: what other interactions would you expect to exist?
+
+\end{document}

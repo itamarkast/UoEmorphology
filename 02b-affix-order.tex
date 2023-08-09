@@ -1,0 +1,283 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=true]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\newcommand\midline{\rule[-0.5ex]{4cm}{.4pt}}
+\newcommand\longline{\rule[-0.5ex]{7cm}{.4pt}}
+
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2022-23, Edinburgh}
+
+\section{Affix ordering (contd)}
+
+    \subsection{Building structure}
+Quick reminder: what is the evidence for hierarchical structure within words, as opposed to linear structure?
+
+        \subsubsection{Ordering}
+\pex \emph{unhelpful}:
+    \a \midline{} % {[}un-[help-ful]]
+    \a \ljudge{*}  {[[}un-help]-ful] 
+\xe
+\pex \emph{unpredictable}:
+    \a \midline{} % {[}un-[predict-able]]
+    \a \ljudge{*} \midline{} % {[[}un-predict]-able] 
+\xe
+
+\pex But also \emph{unhappier} (a bracketing paradox, because -\emph{er} normally attaches to smaller prosodic bases):
+    \a \ljudge{*} {[}un-[happi-er]]
+    \a {[[}un-happi]-er] 
+\xe
+
+See also \cite{libben03springer} for processing aspects and \cite{osekimarantz20} for modelling.
+
+\emph{[[en-joy]-ment]} vs *\emph{[en-joy]ful}.
+
+        \subsubsection{Ambiguity}
+Where there's structure, there can be structural ambiguity.
+
+\pex
+    \a \emph{unlockable, unfoldable}, \dots{} \hfill \citep{dealmedialibben05,pollatseketal10}
+    \a Compounds like \emph{kitchen towel rack}
+\xe
+
+        \subsubsection{A formal implementation}
+Schematic trees for:
+\ex  \emph{globalizations}
+\vspace{2cm}
+
+    % \Tree
+    % [.\emph{glob-al-iz-ation-s}
+    %     [.[N]
+    %         [.[V]
+    %             [.[A]
+    %                 [.[N] \emph{glob} ]
+    %                 [.[A] \emph{al} ]
+    %             ]
+    %             [.[V] \emph{ize} ]
+    %         ]
+    %         [.[N] \emph{ation} ]
+    %     ]
+    %     [.[\gsc{PL}] \emph{s} ]
+    % ]
+\xe
+
+\ex \emph{reddened}
+\vspace{2cm}
+    % \Tree
+    % [.\emph{redd-en-ed}
+    %     [.[V]
+    %         [.[A] \emph{red} ]
+    %         [.[V] \emph{en} ]
+    %     ]
+    %     [.[\gsc{PAST}] \emph{ed} ]
+    % ]
+\xe
+
+% \ex solid-ifi-ed
+% \xe
+
+Are we putting everything in the same tree or is there some point in which we want to take the ``morphological tree'' and put it within a ``syntactic tree''?
+
+It's hard to talk about building up words (or phrases, or sentences) without a concrete theory of morphology, a concrete theory of syntax, and empirical domains in which to test them. I'm also of the opinion that it's extremely hard to talk about processing or computational aspects of morphology (or syntax) without a formal theory. So we'll flesh out one kind of theory that blurs the distinction between morphology and syntax somewhat, mostly in order to give ourselves a concrete starting point.
+
+\bigskip
+Back to technical concerns: what about bound roots?
+\pex
+    \a \emph{eternity} 
+    \vspace{2cm}
+    % \Tree
+    %     [.n
+    %         [.\root{etern} ]
+    %         [.n \emph{ity}\\{[N]} ]
+    %     ]
+    \a \emph{eternal}
+    \vspace{2cm}
+    % \Tree
+    %     [.a
+    %         [.\root{etern} ]
+    %         [.a \emph{al}\\{[A]} ]
+    %     ]
+\xe
+
+\bigskip
+What would that mean for ``ordinary'' nouns like \emph{globe}?
+\ex
+% \Tree
+% [.n
+%     [.\root{\gsc{globe}} ]
+%     [.n ]
+% ]
+\xe
+\bigskip
+
+We would need grounds to decide which of the following two derivations to prefer for \emph{global} \citep{grestenbergerkastner22}:
+\ex \emph{global}\\
+    a.~
+    % \Tree
+    % [.a
+    %     [.n
+    %         [.\root{\gsc{globe}} ]
+    %         [.n ]
+    %     ]
+    %     [.a\\\emph{al} ]
+    % ]
+    \hspace{5em}
+    b.
+    % ~\Tree
+    % [.a
+    %     [.\root{\gsc{GLOBE}} ]
+    %     [.a\\\emph{al} ]
+    % ]
+\xe
+\vspace{3cm}
+
+Next, we would expect to find languages that have these kinds of roots which must be \emph{categorized} as a noun, verb or adjective first.
+
+$\Rightarrow$ \cite{arad03}!
+
+
+    \subsection{Back to inflection and derivation}
+
+Let's recap once more the differences between inflection and derivation. We want to see whether our way of building structure helps explain these.
+
+\begin{tabular}{ll}
+Inflection & 
+Derivation \\\hline
+Forced by syntactic context & 
+Not forced by syntactic context\\ 
+Productive in all lexical categories &  
+Limited productivity \\
+More regular (morphologically? Semantically?) & 
+Less regular \\
+Does not change category &
+Sometimes changes category \\ 
+Does not change meaning (compositional)  &
+Usually changes meaning \\
+Doesn't create new stems & 
+Creates new stems \\
+Farther away from the base & 
+Closer to the base \\
+\end{tabular}
+
+\bigskip
+% Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: it's scope! It's scope all the way down!
+
+\bigskip
+We can also look at meaning change again. Do we get meaning change with \emph{every} derivational affix? Does our theory explain this?
+\pex
+    \a globalization
+    \a novelization
+\xe
+
+\bigskip
+What about non-compositional meaning?
+
+
+
+\newpage
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}

@@ -1,0 +1,260 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=true]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\newcommand\midline{\rule[-0.5ex]{4cm}{.4pt}}
+\newcommand\longline{\rule[-0.5ex]{7cm}{.4pt}}
+
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2022-23, Edinburgh}
+
+    \subsection*{Causativization}
+        \subsubsection*{Thinking structurally}
+Jigsaw puzzle: how do we express causation? What are some of the kinds of \emph{causative verbs} that we find?
+
+% What do we think is going on in each case?
+% \pex
+%     \a Destroy the tower. (transitive/causative)
+%     \a Open the door. (labile/alternating)
+%     \a Make Sam dance. (periphrastic)
+% \xe
+
+We have seen examples of:
+\pex
+    \a ``Lexical'' causatives, where the combination of verb and causative suffix results in a novel, non-transparent verb.
+    \a ``Analytical'' or ``syntactic'' causatives where the causee is also the object/patient.
+    \a ``Analytical'' or ``syntactic'' causatives where the causee is also the subject/agent.
+\xe
+
+How can these be represented formally?
+
+\pex
+    \a Lexical causatives
+    \vspace{5cm}
+    % like all our idiosyncratic verbs, might be the result of adjoining \gsc{CAUS} to the root:\\
+        % \Tree
+            % [.
+            %     [.\root{\gsc{smell}} ]
+            %     [.{\gsc{CAUS}\\\emph{sase}} ]
+            % ]
+    \a An analytical causative where the causee is the patient
+    \vspace{5cm}
+    % might only take the vP, so the argument remains the patient:\\
+    %     \Tree
+    %     [.
+    %         [.{DP1\\Agent\\Causer} ]
+    %         [.
+    %             [.\gsc{CAUS} ]
+    %             [.vP
+    %                 [.v
+    %                     [.\root{\gsc{root}} ]
+    %                     [.v ]
+    %                 ]
+    %                 [.{DP2\\Theme\\Causee} ]
+    %             ]
+    %         ]
+    %     ]
+    \a An analytical causative where the causee is the agent
+    \vspace{5cm}
+    % might take a full VoiceP:\\
+    %     \Tree
+    %     [.
+    %         [.{DP1\\Agent\\Causer} ]
+    %         [.
+    %             [.\gsc{CAUS} ]
+    %             [.VoiceP
+    %                 [.{DP2\\Agent\\Causee} ]
+    %                 [.
+    %                     [.Voice ]
+    %                     [.vP 
+    %                         [.v
+    %                             [.\root{\gsc{ROOT}} ]
+    %                             [.v ]
+    %                         ]
+    %                         [.{DP3\\Theme} ]
+    %                     ]
+    %                 ]
+    %             ]
+    %         ]
+    %     ]
+\xe
+
+We should now see what these analyses predict, and we have just the tool for that: sublexical modification.
+
+        \subsubsection*{Sublexical modification with causation}
+
+
+Turkish, scope of \emph{again}:
+\ex \begingl
+    \gla Ö\v{g}retmen Mary-yi yine ko\c{s}-tur-du//
+    \glb teacher Mary-\gsc{ACC} again run-\gsc{CAUS-PAST}//
+    \glft `The teacher made Mary run again.'\\
+    a. \emph{again} \gsc{CAUS} > V\\
+    Context: \vspace{2cm} \\
+    % It is sports day at school. Mary wanted to play volleyball in the morning, but the teacher made her run instead. In the afternoon the teacher made Mary run again.\\
+    b. \gsc{CAUS} > \emph{again} V\\
+    Context: \vspace{2cm} //
+    % Mary ran around the field in the morning, but the teacher wasn't watching. So in the afternoon the teacher made Mary run again.//
+    \endgl
+\xe
+
+Turkish, scope of negation:
+\ex \begingl
+    \gla John Mary-yi koş-tur-ma-d\i//
+    \glb John Mary-\gsc{ACC} run-\gsc{CAUS-NEG-PAST}//
+    \glft a. \longline{}\\ %`John did not make Mary run.' (= she ran on her own accord)\\
+    b. \longline{} // %`John made Mary not run.' (= he prevented her from running)//
+    \endgl
+\xe
+\bigskip
+
+Japanese, scope of disjunction `or':
+\pex
+    \a \begingl
+        \gla Hanako-ga [Masao-ni [uti-o soozisuru]-ka [heya-dai-o haraw]]-aseru koto ni sita//
+        \glb Hanako-\gsc{Nom} [Masao-\gsc{Dat} [house-\gsc{Acc} clean]-or [room-rent-\gsc{Acc} pay]]-\gsc{CAUS} that of do//
+        \glft `Hanako decided to make Masao clean the house or pay room rent.'\\
+        Reading: \gsc{CAUS} scopes over OR; Masao has a choice.//
+    \endgl
+    \a \begingl
+        \gla Hanako-ga [Masao-ni [uti-o soozis-aseru]-ka [heya-dai-o haraw-aseru]] koto ni sita//
+        \glb Hanako-\gsc{Nom} Masao-\gsc{Dat} house-\gsc{Acc} clean-\gsc{CAUS}-or room-rent-\gsc{Acc} pay-\gsc{CAUS} that of do//
+        \glft `Hanako decided to make Masao clean the house or she decided to make him pay room rent.'\\
+        Reading: OR scopes over \gsc{CAUS}; Masao won’t have a choice.//
+    \endgl
+\xe
+
+\bigskip
+Turkish, attachment of an agent-oriented adverb:
+\pex \begingl
+    \gla Anne-si Ay\c{s}e-ye sessizce Mary-yi oyna-t-tır-dı//
+    \glb mother-3\gsc{SG.POSS} Ay\c{s}e-\gsc{DAT} quietly Mary-\gsc{ACC} play-\gsc{CAUS-CAUS-PAST}//
+    \glft `Her mother made Ay\c{s}e make Mary play quietly.'//
+    \endgl
+    \a \emph{quietly} \gsc{CAUS} > \gsc{CAUS} > V\\
+    Context: \vspace{1cm}
+    % We are at a dinner party at Ay\c{s}e's house. Ay\c{s}e’s friend Mary is bored. Ay\c{s}e’s mother quietly asks Ay\c{s}e to make Mary play with her toys.
+    \a \gsc{CAUS} > \emph{quietly} \gsc{CAUS} > V\\
+    Context: \vspace{1cm}
+    % Ay\c{s}e’s friend Mary is bored in the next room. Ay\c{s}e’s mother asks Ay\c{s}e to quietly go and make Mary play with her toys.
+    \a \ljudge{\#} \gsc{CAUS} > \gsc{CAUS} > \emph{quietly} V\\
+    Context: \vspace{1cm} 
+    % Ay\c{s}e’s friend Mary is playing loudly with her toys. Ay\c{s}e’s mother asks Ay\c{s}e to make Mary play quietly.
+\xe
+
+    \subsection*{Interim summary}
+Once we view morphological structure as the same thing as syntactic structure, we can make sense of how affixation influences (a) the interpretation of clauses (like with \emph{again}), and (b) which arguments get added.
+
+The remainder of this section gives examples of other processes which add or reduce the number of arguments in a clause.
+
+\paragraph{Readings.} Start with \cite{woodmyler19} for argument structure, followed by \cite{marantz13lingua}, which makes some more specific technical claims. You might now want to delve deeper into \cite{kratzer96}, \cite{layering15}, or chapter 6 of \cite{kastner20ogs}.
+
+For causatives in particular, see \cite{harley08,harley17oup}. There is a lot of exciting work on causatives nowadays; see \cite{nie20} and \cite{akkus19jl}, for example.
+
+% \newpage
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}
