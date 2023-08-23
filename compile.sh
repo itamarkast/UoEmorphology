@@ -1,0 +1,1 @@
+pandoc -t beamer --pdf-engine=xelatex --include-in-header=ikheader.tex --citeproc --slide-level=2 $1.md -o $1.pdf
