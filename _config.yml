@@ -1,8 +1,10 @@
 name: UoE Morphology
 description: Academic year 2023-2024
-theme: jekyll-theme-tactile
+# theme: jekyll-theme-tactile
+remote_theme: pages-themes/tactile@v0.2.0
 plugins:
   - jekyll-relative-links
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
 relative_links:
   enabled: true
   collections: true
