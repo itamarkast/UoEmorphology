@@ -1,0 +1,10 @@
+name: UoE Morphology
+description: Academic year 2023-2024
+theme: minima
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - index.md
