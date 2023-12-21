@@ -1,6 +1,6 @@
 name: UoE Morphology
 description: Academic year 2023-2024
-theme: jekyll-theme-minimal
+theme: jekyll-theme-tactile
 plugins:
   - jekyll-relative-links
 relative_links:
