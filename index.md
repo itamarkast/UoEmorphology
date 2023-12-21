@@ -2,7 +2,7 @@ This site contains the pedagogical and administrative parts of Itamar Kastner's 
 
 The site will be updated as the semester progresses.
 
-# Welcome messages
+## Welcome messages
 
 I like to send announcements via our virtual learning system before the course starts for two reasons: to say hi, and to get students used to the less traditional nature of the course.
 
