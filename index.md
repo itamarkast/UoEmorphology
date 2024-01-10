@@ -7,3 +7,10 @@ The site will be updated as the semester progresses.
 I like to send announcements via our virtual learning system before the course starts for two reasons: to say hi, and to get students used to the less traditional nature of the course.
 
 [Welcome messages](welcome.md) 
+
+## Week 1
+
+Section 1 of the lecture notes:
+
+- What's a word?
+- Inflection and derivation
