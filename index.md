@@ -10,7 +10,7 @@ I like to send announcements via our virtual learning system before the course s
 
 ## Week 1
 
-Section 1 of the lecture notes:
+Section 1 of the [lecture notes](https://github.com/itamarkast/UoEmorphology/blob/main/morpho24.tex):
 
 - What's a word?
 - Inflection and derivation
