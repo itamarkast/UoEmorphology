@@ -164,6 +164,8 @@ And some related questions: What elements can combine and how? What elements can
         \item Nice and clear definition, useful if you don't know where to start
         \item Not all languages use spaces to separate ``words'' (Thai, Chinese)
         \item Not all languages have writing systems: ancient languages, dialects and other varieties, sign languages
+        \item Language existed a long time before writing was invented (and early writing systems tend not to have spaces; see also scriptio continua)
+        \item In English, we have things that seem word-like but that are divided by spaces, like compounds or phrasal verbs. Sometimes we get arbitrary minimal pairs: \emph{do not} $\sim$ \emph{cannot}
         \end{itemize}
     \item Lexicographic word
         \begin{itemize} \tightlist
@@ -178,20 +180,32 @@ And some related questions: What elements can combine and how? What elements can
         \begin{itemize} \tightlist
             \item Is a \emph{dog} really one thing?
             \item What about function words like \emph{the}?
+            \item Inflected forms have different meanings, but we might still want to think of them as the same word
             \item Compounds: \emph{watermelon} (which is not \emph{water}+\emph{melon})
             \item \emph{Strawberry, cranberry} – there is no *\emph{cran}
             \item \emph{Kit and caboodle} `everything' - but there are no standalone \emph{kit} or \emph{caboodle} synchronically \citep{harley14thlia}
+            \item Words aren’t created without meaning, but they might lose or change meaning over time
         \end{itemize}
     \item Prosodic/phonological word
         \begin{itemize} \tightlist
             \item Bears primary stress (but only in some languages, and how do you know where the rest of the word starts and ends?)
             \item Domain for processes like vowel harmony (but depends on the affixes)
+            \item Constraint on phonological words in English: it has a minimal prosodic size
+                \begin{itemize} \tightlist
+                    \item Example minimal phonological word: \emph{key} [ki]
+                    \item But [kɪ] is not good
+                    \item But \emph{a} [ə] is fine
+                    \item Distinction between tense/lax vowels, definable in terms of morae, which applies differently to lexical and functional items
+                \end{itemize}
             \item Might identify something that's too big or unstructured to be a reasonable syntactic unit: ``\textbf{D'yawanna} do syntax with phonological words?'' \citep{marantz01}
+            \item There are generalizations about what can be interrupted and how: \emph{abso-fucking-lutely} \citep{jjmcc82lang}, \emph{saxo-ma-phone} \citep{yu04nels}
         \end{itemize}
     \item Syntactic word
         \begin{itemize} \tightlist
             \item A head in a syntactic tree
-            \item Might identify something that's too small to be a unit elsewhere, e.g.~affixes and clitics are not phonological words.
+            \item Might identify something that's too small to be a unit elsewhere, e.g.~affixes and clitics are not phonological words
+            \item Sometimes heads are silent
+            \item Do words have their own internal structure? 
         \end{itemize}
     \item Psycholinguistic words
         \begin{itemize} \tightlist
@@ -239,97 +253,107 @@ Usually we want to find recurring elements that share form (phonology) and meani
 
 We then discussed what the differences were between inflection and derivation [Exercise 2], and whether it's possible to postulate one basic difference which derives all the rest, or are we stuck with the notions of ``inflection'' and ``derivation'' as primitives of our theory, i.e.~something that we can't reduce to other factors (which is what Section~\ref{sec:affix:inflder} ends up doing).
 
-@@@
+\begin{tabular}{ll}
+\textbf{Inflection}	& \textbf{Derivation} \\\hline
+Forced by syntactic context	& Not forced by syntactic context\\
+Productive in all lexical categories	& Limited productivity\\
+More regular (morphologically? Semantically?)	& Less regular\\
+Does not change category &	Sometimes changes category\\
+Does not change meaning (compositional)	& Usually changes meaning\\
+Doesn't create new stems	& Creates new stems\\
+Farther away from the base &	Closer to the base\\
+Etc	& Etc\\
+\end{tabular}
 
-Inflection	Derivation
-Forced by syntactic context	Not forced by syntactic context
-Productive in all lexical categories	Limited productivity
-More regular (morphologically? Semantically?)	Less regular
-Does not change category	Sometimes changes category
-Does not change meaning (compositional)	Usually changes meaning
-Doesn't create new stems	Creates new stems
-Farther away from the base	Closer to the base
+
+\textbf{Productivity:}
+\begin{itemize} \tightlist
+    \item There are different notions of productivity. You can say that a category is productive if it applies to everything with some property (e.g.~all nouns), but not every individual affix within the given category might be productive. So you can also look at the productivity of individual forms.
+    \item There are some inflectional categories that are not very productive, e.g.~subjunctive in English.
+    \item The typical notion of productivity for inflection: you can fill in all the cells in a paradigm. But sometimes this breaks down and you get paradigmatic gaps.
+    \item You might get gaps because of:
+        \begin{itemize} \tightlist
+            \item Semantic constraints (e.g.~an adjective must be gradable if you want to compare it; \cmark{}\emph{happier} vs \xmark{} \emph{deader})
+            \item Speakers not being able to figure out morphophonology (participle of \emph{stride}: \emph{stridden}? \emph{Strode}?)
+            \item Seemingly arbitrary reasons (for some subset of Russian nouns there’s no genitive, even though there could be; for Hebrew verbal templates, nominalizations and infinitives exist except for in passive templates)
+        \end{itemize}
+    \item On adjectival comparison: you get synthetic vs. periphrastic comparatives in English (\cmark{}\emph{happier} but \xmark{}\emph{effortfuller}, must be \cmark{}\emph{more effortful}).
+\end{itemize}
+
+\textbf{Required by syntactic context:}
+\begin{itemize} \tightlist
+    \item Prototypical example: Syntax needs a main clause with tense, so there’s some tense inflection on the verb. But when syntax needs a noun, it doesn’t care whether the noun ends in -\emph{ness} or -\emph{ity}.
+    \item Are argument-changing applicatives inflection or derivation?
+        \begin{itemize} \tightlist
+            \item Diagnostic: in the given language, is there any syntactic context that demands an applicative marker? In some languages, you can’t have a benefactive/double object structure without an applicative ($\rightarrow$ inflection), while in others, you can ($\rightarrow$ derivation).
+        \end{itemize}
+    \item Is it true that derivation is never required by syntax?
+        \begin{itemize} \tightlist
+            \item \emph{She gave a beautiful answer} vs \emph{She answered beautifully}: the structure of the sentence determines whether you use the adjective or the adverb.
+            \item But is it really the structure of the sentence, or is it communicative need/intention? What does it mean to “require”?
+            \item \emph{The storm darkened the sky} / *\emph{The storm darked the sky}: we derive the verb from the adjective dark because the syntax needs a verb, but there are adjectives that don’t need this -\emph{en} (\emph{intensify}).
+            \item Syntax demands a verb, but it doesn't demand a de-adjectival verb with -\emph{en}. Again, what does it mean to “require”?
+        \end{itemize}
+\end{itemize}
 
 
-On productivity:
-•	There are different notions of productivity. You can say that a category is productive if it applies to everything with some property (e.g., all nouns), but not every individual affix within the given category might be productive. So you can also look at the productivity of individual forms.
-•	There are some inflectional categories that are not very productive, e.g., subjunctive in English.
-•	The typical notion of productivity for inflection: you can fill in all the cells in a paradigm. But sometimes this breaks down and you get paradigmatic gaps.
-•	You might get gaps because of:
-o	Semantic constraints (e.g., an adjective must be gradable if you want to compare it; 
-��happier vs. ��deader)
-o	Speakers not being able to figure out morphophonology (e.g., participle of “stride”: stridden? Strode?)
-o	Seemingly arbitrary reasons (e.g., for some subset of Russian nouns, the details of which I forget, there’s just no genitive, even though there could be; for Hebrew verbal templates, nominalizations and infinitives exist except for passive templates)
-•	On adjectival comparison: you get synthetic vs. periphrastic comparatives in English (e.g., 
-��happier but ��effortfuller, must be more effortful).
-o	Some analyses would say that you fill the cell with a periphrastic construction, you allow syntactic paraphrases as part of an inflectional paradigm ��
+\textbf{Changing/not changing category:}
+\begin{itemize} \tightlist
+    \item In general, inflection doesn’t change the part of speech, while inflection does.
+    \item Counterexamples: diminutives are derivational but don't change part of speech.
+    \item What about participles?
+        \begin{itemize} \tightlist
+            \item \emph{I am walking(V) the dog} / \emph{the walking(N) of the dog} / \emph{the walking(Adj) man}
+            \item -\emph{ing} is part of every verb's paradigm, so it's inflection, but the resulting things aren't verbs any longer; they behave distributionally like nouns and adjectives.
+        \end{itemize}
+\end{itemize}
 
-On being forced by syntactic context:
-•	Prototypical example: Syntax needs a main clause with tense, so there’s some tense inflection on the verb. But when syntax needs a noun, it doesn’t care whether the noun ends in -ness or 
--ity.
-•	Are argument-changing applicatives inflection or derivation?
-o	Diagnostic: in the given language, is there any syntactic context that demands an applicative marker? In some languages, you can’t have a benefactive/double object structure without an applicative (-> inflection), while in others, you can (-> derivation).
-o	It is these kinds of cases that lead people to question whether there is a difference between inflection and derivation.
-•	Is it true that derivation is never required by syntax?
-o	She gave a beautiful answer vs She answered beautifully; the structure of the sentence determines whether you use the adjective or the adverb.
-	Arguments about whether adverbs are inflected adjectives (Pullum vs. Giegerich)
-	The origin of Germanic -ly is from Germanic corpse (compare German Leiche) ��
-	But is it really the structure of the sentence, or is it communicative need/intention? What does it mean to “require”?
-o	The storm darkened the sky / *The storm darked the sky.
-	We derive the verb from the adjective dark because the syntax needs a verb, but there are adjectives that don’t need this -en (e.g., close can be zero-derived into a verb)
-	Syntax demands a verb, but it doesn’t demand a de-adjectival verb with -en. Again, what does it mean to “require”?
-Next week, we’ll continue along these lines. Also think about whether there is any phonological difference in any of the languages you know between inflection and derivation.  
+\textbf{Phonological characteristics:}
+\begin{itemize} \tightlist
+    \item Inflectional suffixes may be less phonologically prominent (for some definition of phonological prominence).
+    \item In English, there are suffixes that attract stress and some that don't, but these don't divide up cleanly into inflectional/derivational.
+\end{itemize}
 
-20.10.2021
-Finishing up our critical examination of the inflection vs. derivation table.
-On changing/not changing category:
-•	In general, inflection doesn’t change the part of speech, while inflection does.
-o	Counterexample: diminutive; derivational, but doesn’t change part of speech.
-•	What about participles?
-o	I am walking(V) the dog / the walking(N) of the dog / the walking(Adj) man
-o	-ing is part of every verb’s paradigm, so it’s inflection, but the resulting things aren’t verbs any longer; they behave distributionally like nouns and adjectives
-•	Wasow1977 weighs in on participles, also presents diagnostics for identifying part of speech, e.g., “very” only works before adjectives, so you can say “a very aggravated person” but not “I very aggravated you”, so “aggravated” in “a very aggravated person” is an adjective, not a verb.
+\textbf{Changes in meaning:}
+\begin{itemize} \tightlist
+    \item It seems a bit suspect to say that inflection doesn't change the meaning. In \emph{walked}, adding -\emph{ed} to \emph{walk} changes the meaning to say that the event happened in the past.
+    \item Counterpoint: it's still the same event, no matter when it happened, whereas the concept of \emph{good} is not the same as the concept of \emph{good-ness}.
+    \item Compositionality of inflection: inflection generally comes from some pool of morphosyntactic features (tense, aspect, gender, number, etc.), and adding on an inflection adds on this feature. \emph{Walked}  = ``There's a walking event, and it's in the past.''
+    \item Depending on your perspective, this might happen with derivation too: \emph{goodness} = ``There's some quality of being good, and this is the essence of that quality''. 
+    \item When is inflection more clearly non-compositional?
+        \begin{itemize} \tightlist
+            \item \emph{persons} $\sim$ \emph{people}: subtly different meaning with the two plural forms.
+            \item pluralia tantum: words without a singular form, like \emph{scissors}, \emph{odds} in ``the odds are against you''.
+        \end{itemize}
+\end{itemize}
 
-Phonological characteristics of inflection vs. derivation:
-•	Inflectional suffixes may be less phonologically prominent (for some definition of phonological prominence).
-•	In the language that Tatiana studies, there are vowel alternations in the stem that change one way if the stem is inflected and another way if the stem is derived.
-•	In English, there are suffixes that attract stress and some that don’t, but these don’t divide up cleanly into inflectional/derivational.
+\textbf{Creating new stems:}
+\begin{itemize} \tightlist
+    \item Comes back to the question of what's a word and what's a stem.
+    \item Comes back to the question of changing the semantics of the base.
+    \item Some say that derivation, by definition, creates a new lexeme, while inflection doesn't. But that just asserts a difference.
+    \item In English, inflection is a bit of an end point; you can't add on more suffixes once you've pluralized.
+        \begin{itemize} \tightlist
+            \item You can create compounds, though: \emph{admission-s committee} or \emph{publication-s record}.
+            \item Plural inflection can arise in compounds if the first noun is inherently plural.
+            \item In other languages, you can stack on a lot of inflectional suffixes.
+        \end{itemize}
+\end{itemize}
 
-Changes in meaning:
-•	It seems a bit suspect to say that inflection doesn’t change the meaning. In walked, adding -ed to walk changes the meaning to say that the event happened in the past.
-•	Counterpoint: well, it’s still the same event, no matter when it happened, whereas the concept of good is not the same as the concept of goodness (derived with -ness).
-•	Compositionality of inflection:
-o	Inflection generally comes from some pool of morphosyntactic features (tense, aspect, gender, number, etc.), and adding on an inflection adds on this feature, e.g., walked  = “there’s a walking event, and it’s in the past”.
-	Depending on your perspective, this might happen with derivation too, e.g., goodness = “there’s some quality of being good, and this is the essence of that quality” 
-o	When is inflection non-compositional?
-	persons vs. people; subtly different meaning with the two plural forms
-	pluralia tantum (sg: plurale tantum, I believe): words without a singular form, e.g., scissors, odds in, say, “the odd-s are against you” 
-Sidebar: Pinker’s Words and Rules theory
-•	Based on irregular verb inflection in English (e.g., catch–caught vs. the regular walk–walked). The basic idea: if a verb has irregular forms, those forms are stored whole in the mental lexicon. If the verb inflects regularly, then that’s done using rules, and the inflected forms are not stored.
-•	Influential idea but wrong; at least in reading and auditory perception, this is not how we process inflected words. Experiments have shown that inflected verbs in English are decomposed whether they’re regular or irregular.
 
-Creating new stems: 
-•	Comes back to the question of what’s a word and what’s a stem? 
-•	Comes back to the question of changing the semantics of the base.
-•	Some say that derivation, by definition, creates a new lexeme, while inflection doesn’t.
-•	In English, inflection is a bit of an end point; can’t add on more suffixes once you’ve pluralized.
-o	You can create compounds, though, e.g., admission-s committee or publication-s record.
-o	Plural inflection can arise in compounds if the first noun is inherently plural (pertinent terminology: inherent inflection vs. contextual inflection)
-	Happens in English and in German, at least
-•	But in other languages, you can stack on a lot of inflectional suffixes.
-
-Inflection is farther from the base, derivation is closer:
-•	Generally, yes.
-•	There are Dutch dialects in which clitics can intervene between the verb stem and inflectional affix.
-•	Udi (NE Caucasian): clitics “wantonly” disrupt words; Alice Harris has a whole book on Udi endoclitics
+\textbf{Inflection is farther from the base, derivation is closer:}
+\begin{itemize} \tightlist
+    \item Generally, yes.
+    \item There are Dutch dialects and various other langauges in which clitics can intervene between the verb stem and inflectional affix.
+\end{itemize}
 
 Zooming out and thinking about a broader theory of morphology:
-•	What kind of role should this distinction between inflection and derivation play in our theory?
-o	Depends on what you want, how you want to theory-build. 
-o	Bottom-up or top-down: Do you assume that inflection builds paradigms and not new lexemes and analyse the language in accordance with these assumptions (top-down)? Or do you look at the language and see what distinctions its data supports (bottom-up, descriptive)?
-o	What generalisations do you want your theory to derive or account for? 
-•	There’s no one criterion that obviously separates inflection from derivation (except maybe ordering), so if we want to construct a theory of morphology that does separate these two, we would need to look elsewhere for a way to do it.
-
+\pex
+    \a What kind of role should this distinction between inflection and derivation play in our theory?
+    \a Do you assume that inflection builds paradigms and not new lexemes and analyse the language in accordance with these assumptions (top-down)? Or do you look at the language and see what distinctions its data supports (bottom-up, descriptive)?
+    \a What generalisations do you want your theory to derive or account for?
+    \a There's no one criterion that obviously separates inflection from derivation (except maybe ordering), so if we want to construct a theory of morphology that does separate these two, we would need to look elsewhere for a way to do it.
+\xe
 
 
 \section{Affix ordering}
