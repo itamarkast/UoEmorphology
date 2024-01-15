@@ -1,0 +1,451 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+%\usepackage{fontspec} %,xunicode} % xltxtra
+ %   \defaultfontfeatures{Ligatures=TeX}
+ %   \setmainfont{Brill}[
+ %   Extension=.ttf,
+  %  UprightFont=*-Roman,
+  %  BoldFont=*-Bold,
+  %  ItalicFont=*-Italic,
+ %   BoldItalicFont=*-Bold-Italic,
+  %  Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=true]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\newcommand\midline{\rule[-0.5ex]{4cm}{.4pt}}
+\newcommand\longline{\rule[-0.5ex]{7cm}{.4pt}}
+
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Théories linguistiques 2024, Utrecht}
+
+
+\section{Ordre des affixes}
+
+    \subsection{Auxiliaires et échauffement}
+Dans quel ordre apparaissent les auxiliaires en français?
+
+\pex
+    \a Elle va avoir eu gagn-é la course.
+    \a \ljudge{*} Elle a eu va gagn-er la course.
+\xe
+\pex
+    \a Le gâteau va avoir été mangé.
+    \a \ljudge{*} Le gâteau a eté avoir aller être mangé.
+\xe
+
+\midline{}
+
+\bigskip
+Comment s'imbriquent les éléments entre eux:
+% \begin{itemize} \tightlist
+%     \item Takes semantic \emph{scope} over the next: the future of the perfect of the passive of an eating event.
+%     \item Takes morpho(-phono)logical \emph{scope} over the next: \emph{have}_{\gsc{perf}} triggers participial morphology on \emph{eat-en}, \emph{is}_{\gsc{prog}} triggers progressive morphology on \emph{winn-ing}, etc.
+% \end{itemize}
+
+\vspace{3cm}
+
+\bigskip
+Représentons cela formellement:
+
+\newpage
+\ex
+% \Tree
+% [.TP
+%     [.\emph{The cake} ]
+%     [.
+%         [.T\\\emph{will} ]
+%         [.PerfP/AspP
+%             [.Perf\\\emph{have} ]
+%             [.ProgP
+%                 [.Prog\\\emph{been} ]
+%                 [.PassP
+%                     [.Pass\\\emph{being} ]
+%                     [.VP\\\emph{eaten} ]
+%                 ]
+%             ]
+%         ]
+%     ]
+% ]
+\xe
+\vspace{3cm}
+
+Quel est l'ordre observé en latin \citep{embick10,kastnerzu17,kastner18nllt}?
+\pex
+    \a \begingl
+        \gla am-\=a-ve-ra-m//
+        \glb \root{AIM}-\gsc{THÈME}-Perf-Passé-1\gsc{SG}//
+        \glft `J'ai eu aimé'//
+        \endgl
+    \a \begingl
+        \gla am-\=a-ve-r-\=o//
+        \glb \root{AIM}-\gsc{THÈME}-Perf-Fut-1SG//
+        \glft `Je vais avoir aimé'//
+        \endgl
+\xe
+
+\vspace{3cm}
+
+% V < Th < Perf < T.
+% \begin{itemize} \tightlist
+%     \item $\approx$ T > Perf > V.
+%     \item Like in English, except in morphology rather than syntax.
+%     \item Still get morphological conditioning, but we'll return to that later (allomorphy).
+% \end{itemize}
+
+En quoi cela est-il différent du français?
+
+\longline{}
+
+    \subsection{Le Principe du Miroir}
+        \subsubsection{Introduction}
+Dans quel ordre apparaissent les suffixes réciproque et causatif en Chiche\^{w}a \citep{alsina99}?
+\ex[exno=3] \begingl
+    \gla Al\=enje a-na-mény-\textbf{án}-\uline{its}-á mb\^{u}zi//
+    \glb 2.chasseurs 2\gsc{s}-\gsc{PASSÉ}-frapper-\gsc{RECIP}-\gsc{CAUS}-\gsc{V-fin} 10.boucs//
+    \glft `Les boucs, les chasseurs les ont fait se frapper l'un l'autre.'//
+    \endgl
+\xe
+\ex[exno=4] \begingl
+    \gla Al\=enje a-na-mény-\uline{éts}-\textbf{an}-a mb\^{u}zi//
+    \glb 2.chasseurs \gsc{2S}-\gsc{PASSÉ}-frapper-\gsc{CAUS}-\gsc{RECIP}-\gsc{FV} 10.boucs//
+    \glft `Les chasseurs se sont fait l'un l'autre frapper les boucs.'//
+    \endgl
+\xe
+
+\longline{}
+% The order is whatever it needs to be to get scope right; You go from the verb ``outwards''.
+
+\bigskip
+Voici une autre paire \citep{hymanmchombo92}:
+\pex
+    \a mang-\textbf{an}-\uline{its}\\
+    attacher-\gsc{RECIP}-\gsc{CAUS}\\
+    `faire s'attacher l'un l'autre'
+    \a mang-\uline{its}-\textbf{an}\\
+    attacher-\gsc{CAUS}-\gsc{RECIP}\\
+    `se faire l'un l'autre attacher'
+\xe
+
+À quoi ressemblerait cette langue  (\emph{chichewa'}) si elle avait des préfixes plutôt que des suffixes? 
+\pex
+    \a \midline{} % its-an-mang
+    \a \midline{} % an-its-mang
+\xe
+
+% Because hierarchy is what matters (relative ordering), rather than linear order.
+
+\bigskip
+
+Un autre example: le bemba tel que décrit par \cite{baker85}, qui cite \cite{givon76}.
+\pex[exno=49]
+    \a \begingl
+        \gla Naa-mon-an-ya Mwape na Mutumba//
+        \glb 1s.\gsc{S}-\gsc{passé}-voir-\gsc{recip-caus} Mwape et Mutumba//
+        \glft `Mwape et Mutumba, je les ai fait se voir l'un l'autre.'//
+        \endgl
+    \a \begingl
+        \gla Mwape na Chilufya baa-mon-eshy-ana Mutumba//
+        \glb Mwape et Chilufya 3p.\gsc{S}-voir-\gsc{caus-recip} Mutumba//
+        \glft `Mwape et Chilufya se sont fait l'un l'autre voir  Mutumba.'//
+        \endgl
+\xe
+
+        \subsubsection{Passivation}
+En chichewa, l'applicatif peut être utilisé pour les instruments \citep{alsina99}:
+\pex[exno=10] 
+    \a \begingl
+        \gla Ms\=odzi a-na-dúl-\textbf{ír}-a \textbf{nkhw\^{a}ngwa} uk\=onde//
+        \glb 1.fisherman \gsc{1S}-\gsc{PASSÉ}-couper-\gsc{APPL-VF} 9.hache 14.filet//
+        \glft `Le pêcheur a coupé le filet avec une hache.'//
+        \endgl
+\xe
+
+Essayons de passiver de cette manière: `La hache a été utilisée pour couper le filet (par le pêcheur). L'instrument va devenir le sujet. Quel va être l'ordre de  \gsc{Appl} et \gsc{Pass}?
+
+\bigskip
+\pex[exno=10]
+    \a[label=b] \begingl
+        \gla Nkhw\^{a}ngwa i-na-dúl-\textbf{ír}-\uline{idw}-á úk\=onde (ndí ms\=odzi)//
+        \glb 9.hache 9\gsc{S}-\gsc{PASSÉ}-couper-\gsc{APPL}-\gsc{PASS-VF} 14.filet par 1.pêcheur//
+        \glft `La hache a été utilisée pour couper le filet (par le pêcheur).'//
+        \endgl
+\xe
+
+Schématiquement, en ignorant les arguments:\\
+\Tree
+[.PassP
+    [.Pass ]
+    [.ApplP
+        [.Appl ]
+        \qroof{\emph{couper}}.vP
+    ]
+]    
+
+
+Le chi-Mwi:ni dans \cite{baker85}, données de \cite{kisseberthabasheikh77}:
+\pex[exno=56]   
+    \a \begingl
+        \gla Nu:ru Ø-chi-tes-ete chibu:ku//
+        \glb Nuru \gsc{S-O}-apporter-\gsc{asp} livre//
+        \glft `Nuru a apporté le livre.'//
+        \endgl
+    \a \begingl
+        \gla Nu:ru ø-m-tet-\textbf{el}-ele mwa:limu chibu:ku//
+        \glb Nuru \gsc{S-O}-apporter-\gsc{appl-asp} professeur livre//
+        \glft `Nuru a apporté le livre au professeur.'//
+        \endgl
+    \a \begingl
+        \gla Mwa:limu ø-tet-\textbf{el}-el-\uline{a} chibu:ku na Nu:ru//
+        \glb professeur \gsc{S}-apporter-\gsc{appl-asp-pass} livre par Nuru//
+        \glft Littéralement `Le professeur a été apporté le livre par Nuru (en bon français: le livre a été apporté au professeur par Nuru).'//
+        \endgl
+\xe
+
+Le kinyarwanda dans \cite{baker85}, données de  \cite{kimenyi80}:
+\pex[exno=57]
+    \a \begingl
+        \gla Umugabo a-ra-andik-a ibaruwa \textbf{n'i}-ikaramu//
+        \glb homme \gsc{S-prés}-écrire-\gsc{asp} lettre avec-stylo//
+        \glft `L'homme a écrit  [sic] la lettre avec le stylo.'//
+        \endgl
+    \a \begingl
+        \gla Umugabo a-ra-andik-\textbf{iish}-a ibaruwa ikaramu//
+        \glb homme \gsc{S-prés}-écrire-\gsc{instr-asp} lettre stylo//
+        \glft `L'homme a écrit  [sic] la lettre avec le stylo.'//
+        \endgl
+    \a \begingl
+        \gla Ikaramu i-ra-andik-\textbf{iish}-\uline{w}-a ibaruwa n'umugabo//
+        \glb stylo \gsc{S-prés}-écrire-\gsc{instr-pass-asp} lettre par-homme//
+        \glft `Le stylo a été écrit-avec  [sic] la lettre par l'homme.'//
+        \endgl
+    \a \begingl
+        \gla Ibaruwa i-ra-andik-\textbf{iish}-\uline{w}-a ikaramu n'umugabo//
+        \glb lettre \gsc{S-prés}-écrire-\gsc{instr-pass-asp} stylo par-homme//
+        \glft `La lette a été écrite avec le stylo par l'homme.'//
+        \endgl
+\xe
+
+        \subsubsection{Ailleurs qu'en bantou}
+Yupik \citep[43]{mithun99}:
+\pex
+    \a \begingl
+        \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
+        \glb aller-\gsc{FUT}-probablement-dire-\gsc{PASSÉ-INDIC.INTR}-3\gsc{SG}//
+        \glft `Il a dit qu'il irait probablement.'//
+    \endgl
+    \a \begingl
+        \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
+        \glb aller-\gsc{FUT}-dire-\gsc{PAST}-probablement-\gsc{INDIC.INTR}-3\gsc{SG}//
+        \glft `Il a probablement dit qu'il irait.'//
+    \endgl
+\xe
+
+% \ex \begingl
+%     \gla ayag-yug-umi-ite-qapiar-tu-a//
+%     \glb go-want-be.in.state-not-really-\gsc{INDIC.INTR}-1\gsc{SG}//
+%     \glft `I really don't want to go.'//
+%     \endgl
+% \xe
+% (Why do we gloss these sometimes as words and sometimes as affixes? Because.)
+
+
+Oji-Cree \citep{slavin05uot} dans \cite{rice11}:
+\pex[exno=11]
+    \a \begingl
+        \gla ishkwaa-niipaa-sookihpawn//
+        \glb finir-dans.la.nuit-être.neigeant//
+        \glft \longline{} // %`It stopped snowing at night.' (does not snow at night anymore)//
+    \endgl
+    \a \begingl
+        \gla nipaa-ishkwaa-sookihpwan//
+        \glb dans.la.nuit-finir-être.neigeant//
+        \glft \longline{} // % `It stopped snowing at night.' (was snowing the whole day)//
+    \endgl
+\xe
+\pex[exno=11']
+    \a \begingl
+        \gla kiimooci-kishahtapi-wiihsini//
+        \glb secrètement-vite-manger//
+        \glft \longline{} // % `He secretly eats fast.' (nobody knows that he eats fast)//
+    \endgl
+    \a \begingl
+        \gla kishahtapi-kiimooci-wiihsini//
+        \glb vite-secrètement-manger//
+        \glft \longline{} // % `He eats secretly (nobody knows that he eats) and he does it fast.'//
+    \endgl
+\xe
+
+
+Pulaar \citep{paster05}, with \gsc{com}prehensive \emph{id} `all' and \gsc{sep} \emph{it} which denotes the reverse of the action (so `open' + \gsc{sep} = `close').
+\pex
+    \a \begingl
+        \gla mi udd-id-it-ii baafe ɗe fof//
+        \glb 1\gsc{SG} close-\gsc{COM-SEP-past} door Det all//
+        \glft `I opened [sic] all the doors (in sequence).'//
+        \endgl
+    \a \begingl
+        \gla mi udd-it-id-ii baafe ɗe fof//
+        \glb 1\gsc{SG} close-\gsc{SEP-COM-past} door Det all//
+        \glft `I opened all the doors (at once).'//
+        \endgl
+\xe
+
+Here, \gsc{rep}epetitive means `again'. Assume that one of the following means `make someone learn' and one means `teach' - which is which?
+\pex
+    \a \begingl
+        \gla o jaŋŋg-in-it-ii kam//
+        \glb 3\gsc{SG} learn-\gsc{CAUS-REP-past} 1\gsc{SG}//
+        \glft \longline{} // % `He taught me again.' (taught me before)//
+        \endgl
+    \a \begingl
+        \gla o jaŋŋg-it-in-ii kam//
+        \glb 3\gsc{SG} learn-\gsc{REP-CAUS-past} 1\gsc{SG}//
+        \glft \longline{} // % `‘He made me learn again.'//
+        \endgl
+\xe
+
+    \subsection*{Interim summary}
+\begin{itemize} \tightlist
+    \item Rigid ordering for some (inflectional?) categories, e.g.~auxiliaries.
+    \item Variable ordering depending on scope for some (inflectional?) categories.
+    \item Always respect semantic and morphological scope.
+\end{itemize}
+
+Key references:
+\cite{baker85} gets all the glory for coining the Mirror Principle but \cite{muysken81,muysken88} was there first. \cite{rice11} is an excellent overview of different factors in affix ordering, based in part on \cite{rice00}.
+
+
+    \subsection{Longer chains}
+Turkish \citep[368]{inkelasorgun98} 
+\ex \begingl
+	\glpreamble \emph{çekoslovakyalilaştiramayacaklarimizdanmiydiniz}//
+	\gla çekoslovakya li laş tir ama yacak lar imiz dan mi ydi niz //
+	\glb Czechoslovakia from become \gsc{CAUSE} unable Fut \gsc{PL} \gsc{1PL} \gsc{ABL} \gsc{INTERR} Past \gsc{2PL}//
+	\glft `were you one of those whom we are not going to be able to turn into Czechoslovakians?'//
+	\endgl
+\xe
+
+Japanese:
+\ex \begingl
+	\gla taro-ga kodomo-o \textbf{sodat-e-sase-rare-ta}//
+	\glb Taro-\gsc{NOM} child-\gsc{ACC} rise-\gsc{CAUS}-\gsc{CAUS}-\gsc{PASS}-\gsc{PAST}//
+	\glft `Taro was made to raise the child.'//
+	\endgl
+\xe
+
+What would a structure for this look like?
+
+\ex
+% \Tree
+% [.TP
+% 	[.\emph{taro-ga} ]
+% 	[.
+% 		[.vP
+% 			[.vP
+% 				[.Ø ]
+% 				[.
+% 					[.vP
+% 						[.\sout{\emph{taro-ga}} ]
+% 						[.
+% 							[.VP
+% 								[.\emph{kodomo-o} ]		
+% 								[.V \emph{sodat} ]
+% 							]
+
+\newpage
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}
