@@ -1,0 +1,186 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+%\usepackage{fontspec} %,xunicode} % xltxtra
+    %\defaultfontfeatures{Ligatures=TeX}
+   % \setmainfont{Brill}[
+  %  Extension=.ttf,
+  %  UprightFont=*-Roman,
+  %  BoldFont=*-Bold,
+  %  ItalicFont=*-Italic,
+  %  BoldItalicFont=*-Bold-Italic,
+ %   Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Théories linguistiques 2024, Utrecht}
+\bigskip
+
+La fois passée, on a examiné l'ordre des affixes dans les verbes. Faisons la même chose pour les noms maintenant.  
+
+Une représentation possible du genre en français:
+\pex
+    \a \begingl
+        \gla l-e chat-ø//
+        \glb \gsc{déf}.\gsc{M} chat.\gsc{M}//
+        \endgl
+    \a \begingl
+        \gla l-es chat-ø-s//
+        \glb \gsc{déf}.\gsc{PL} chat-\gsc{M}-\gsc{PL}//
+        \endgl
+\xe
+\pex
+    \a \begingl
+        \gla l-a chatt-e//
+        \glb \gsc{déf}.F chat-F//
+        \endgl
+    \a \begingl
+        \gla l-es chatt-e-s//
+        \glb \gsc{déf}.\gsc{PL} chat-\gsc{F-PL}//
+        \endgl
+\xe
+
+Dessinez un arbre (schématique) pour le nom féminin pluriel  \emph{chattes} en~(\lastx b).
+
+\ex \label{tree:pl-catalan}
+% \Tree
+% [.
+%     [.
+%         [.\emph{goss} ]
+%         [.\gsc{[F]} \emph{e} ]
+%     ]
+%     [.\gsc{[PL]} \emph{s} ]
+% ]
+\xe
+
+\vspace{3cm}
+% Yupik \citep[43]{mithun99}
+% \pex
+%     \a yug-\textbf{pag}-\uline{cuar}\\
+%     person-big-little\\
+%     `little giant'
+%     \a yug-\uline{cuar}-\textbf{pag}\\
+%     person-little-big\\
+%     `big midget'
+% \xe
+
+Français:
+\ex soci-al-is-ation \label{ex:globalization}
+\xe
+\ex capital-is-ation-s
+\xe
+
+Dessinez une structure pour ~(\ref{ex:globalization}):
+\ex
+% \Tree
+% [.[N]
+%     [.[V]
+%         [.[A]
+%             [.[N] \emph{glob} ]
+%             [.[A] \emph{al} ]
+%         ]
+%         [.[V] \emph{ize} ]
+%     ]
+%     [.[N] \emph{ation} ]
+% ]
+\xe
+
+\vspace{3cm}
+
+Est-ce que c'est de la morphologie ou de la syntaxe? Est-ce que c'est important, et si oui, en quel sens? 
+
+
+
+\end{document}
