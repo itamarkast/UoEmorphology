@@ -15,8 +15,10 @@ Section 1 of the [lecture notes](https://github.com/itamarkast/UoEmorphology/blo
 1. What's a word?
    - Exercise 0: Practice using the journal
 2. What's a word? / Course plan
+   - Develop course plan together (week-by-week schedule)
+   - Time allowing: in-class [warm-up exercise](e0-warmup.pdf)
    - Exercise 1: Recap inflection vs derivation
-3. Inflection and derivation
+4. Inflection and derivation
    - Exercise 2: Name something you're good at; Say what you're at uni for; Give two memories about marks, one positive and one negative.
 
 ## Week 2
