@@ -19,6 +19,11 @@
 %	\setmainfont[Renderer=ICU]{Charis SIL}
 % 	\setmainfont[Renderer=ICU]{Brill}
 
+\usepackage[solution,spaces]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
 \usepackage{amsmath,amssymb} % for $\text{}$
 \usepackage{url,natbib} 
 \usepackage[dvipsnames]{xcolor} %,bm}
@@ -110,56 +115,58 @@
 
 \hfill \emph{Théories linguistiques 2024, Utrecht}
 
-
 \section{Ordre des affixes}
 
-    \subsection{Auxiliaires et échauffement}
+    \subsection{Entrée en matière: les auxiliaires}
 Dans quel ordre apparaissent les auxiliaires en français?
 
 \pex
-    \a Elle va avoir eu gagn-é la course.
-    \a \ljudge{*} Elle a eu va gagn-er la course.
+    \a Elle va (certainement) avoir eu gagn-é la course.
+    \a \ljudge{*} Elle a eu (certainement) aller gagn-er la course.
 \xe
 \pex
-    \a Le gâteau va avoir été mangé.
-    \a \ljudge{*} Le gâteau a eté avoir aller être mangé.
+    \a Le gâteau va (déjà) avoir été (complètement)  mangé.
+    \a \ljudge{*} Le gâteau a eté avoir (déjà) aller être (complètement) mangé.
 \xe
 
 \midline{}
 
 \bigskip
 Comment s'imbriquent les éléments entre eux:
-% \begin{itemize} \tightlist
-%     \item Takes semantic \emph{scope} over the next: the future of the perfect of the passive of an eating event.
-%     \item Takes morpho(-phono)logical \emph{scope} over the next: \emph{have}_{\gsc{perf}} triggers participial morphology on \emph{eat-en}, \emph{is}_{\gsc{prog}} triggers progressive morphology on \emph{winn-ing}, etc.
-% \end{itemize}
-
-\vspace{3cm}
-
-\bigskip
+\begin{answer}{
+ \begin{itemize} \tightlist
+     \item Chaque élément a une influence sémantique sur le suivant. \\
+    En termes techniques: chaque élément a le terme suivant \textbf{dans sa portée sémantique.} 
+     \item Futur du parfait d'un passif d'un événement manger-le-gâteau.
+     \item Les éléments ont une influence morphologique sur le suivant.\\
+     En termes techniques: les éléments ont le terme suivant \textbf{dans leur portée morphologique} = conditionnement morphologique
+\emph{avoir}_{\gsc{parfait}} déclenche la morphologie participiale sur \textit{être} (\textit{été}), \emph{être}_{\gsc{passif}} déclenche la morphologie participiale sur \textit{manger} (\emph{mangé}), etc.
+ \end{itemize}
+}
+\end{answer}
 Représentons cela formellement:
 
 \newpage
+\begin{answer}{
 \ex
-% \Tree
-% [.TP
-%     [.\emph{The cake} ]
-%     [.
-%         [.T\\\emph{will} ]
-%         [.PerfP/AspP
-%             [.Perf\\\emph{have} ]
-%             [.ProgP
-%                 [.Prog\\\emph{been} ]
-%                 [.PassP
-%                     [.Pass\\\emph{being} ]
-%                     [.VP\\\emph{eaten} ]
-%                 ]
-%             ]
-%         ]
-%     ]
-% ]
+ \Tree
+ [.TP
+     [.\emph{Le gâteau} ]
+     [.
+         [.T\\\emph{va} ]
+         [.PerfP/AspP
+             [.Perf\\\emph{avoir} ]
+                 [.PassP
+                     [.Pass\\\emph{été} ]
+                     [.VP\\\emph{mangé} ]
+                 ]
+         ]
+     ]
+ ]
 \xe
-\vspace{3cm}
+}
+\end{answer}
+
 
 Quel est l'ordre observé en latin \citep{embick10,kastnerzu17,kastner18nllt}?
 \pex
@@ -174,41 +181,91 @@ Quel est l'ordre observé en latin \citep{embick10,kastnerzu17,kastner18nllt}?
         \glft `Je vais avoir aimé'//
         \endgl
 \xe
-
-\vspace{3cm}
-
-% V < Th < Perf < T.
-% \begin{itemize} \tightlist
-%     \item $\approx$ T > Perf > V.
-%     \item Like in English, except in morphology rather than syntax.
-%     \item Still get morphological conditioning, but we'll return to that later (allomorphy).
-% \end{itemize}
-
 En quoi cela est-il différent du français?
+\begin{answer}{
+ V < Th < Perf < T.
+ \begin{itemize} \tightlist
+     \item $\approx$ T > Perf > V.
+     \item C'est comme en français, mais dans la syntaxe en français et dans la morphologie en latin.  except in morphology rather than syntax.
+     \item Il y a aussi du conditionnement morphologique (allomorphie). 
+     %Still get morphological conditioning, but we'll return to that later (allomorphy).
+ \end{itemize}
+ }
+ \end{answer}
 
 \longline{}
 
     \subsection{Le Principe du Miroir}
         \subsubsection{Introduction}
-Dans quel ordre apparaissent les suffixes réciproque et causatif en Chiche\^{w}a \citep{alsina99}?
+
+Supposons ceci:
+
+\begin{itemize} 
+\item 'faire+inf.' ou `se faire+inf.' exprime le trait CAUS (=cause). Voir \textit{faire chanter}, \textit{se faire conduire}, etc.
+\item  `l'un l'autre' ou `les uns les autres' exprime le trait RECIP (=reciprocité). Voir \textit{se voir l'un l'autre}, \textit{s'aider les uns les autres}, etc.
+\end{itemize} 
+
+        Comparez le sens de ces deux phrases en français:
+        \pex<bouc>
+       \a Les boucs, les chasseurs les ont fait se frapper les uns les autres.
+        \a Les chasseurs se sont  les uns les autres fait frapper les boucs
+       \xe 
+
+Observez la syntaxe (l'ordre des mots) dans ces deux phrases. Dans quel ordre  apparaissent le verbe causatif et l'expression réciproque?  Est-ce que cela reflète la portée sémantique?
+
+\begin{answer}{
+\begin{itemize}
+\item L'ordre syntaxique reflète la portée sémantique:
+    \item En (\getref{bouc}a): CAUS > RECIP
+    \item En (\getref{bouc}b): RECIP > CAUS
+\end{itemize}}
+\end{answer}
+
+
+       
+Dans quel ordre apparaissent les suffixes réciproque et causatif pour les contreparties de ces phrases français en chiche\^{w}a \citep{alsina99}?
 \ex[exno=3] \begingl
     \gla Al\=enje a-na-mény-\textbf{án}-\uline{its}-á mb\^{u}zi//
     \glb 2.chasseurs 2\gsc{s}-\gsc{PASSÉ}-frapper-\gsc{RECIP}-\gsc{CAUS}-\gsc{V-fin} 10.boucs//
-    \glft `Les boucs, les chasseurs les ont fait se frapper l'un l'autre.'//
+    \glft `Les boucs, les chasseurs les ont fait se frapper les uns les autres.'//
     \endgl
 \xe
 \ex[exno=4] \begingl
     \gla Al\=enje a-na-mény-\uline{éts}-\textbf{an}-a mb\^{u}zi//
     \glb 2.chasseurs \gsc{2S}-\gsc{PASSÉ}-frapper-\gsc{CAUS}-\gsc{RECIP}-\gsc{FV} 10.boucs//
-    \glft `Les chasseurs se sont fait l'un l'autre frapper les boucs.'//
+    \glft `Les chasseurs se sont fait les uns les autres frapper les boucs.'//
     \endgl
 \xe
 
-\longline{}
-% The order is whatever it needs to be to get scope right; You go from the verb ``outwards''.
 
-\bigskip
-Voici une autre paire \citep{hymanmchombo92}:
+\begin{answer}{
+\begin{itemize} 
+\item L'ordre observé est l'ordre nécessaire pour avoir la portée sémantique dont on a besoin pour le sens visé:
+\item L'élément le moins enchâssé morphologiquement (le plus extérieur) a une portée sémantique sur les éléments le plus enchâssé.
+%\item On part du verbe et on continue `vers l'extérieur': les morphèmes `ont les yeux tournés vers l'extérieur'  (\textit{outward-looking}).
+\end{itemize}}
+\end{answer}
+
+\longline{}
+
+Comparez maintenant les deux phrases suivantes en français et exprimer la relation de portée sémantique entre CAUS et RECIP:
+
+\pex<poulie> 
+\a Ils se sont fait attacher l'un l'autre à la poulie.
+\a Ils se sont l'un l'autre fait attacher à la poulie
+\xe 
+
+\begin{answer}{
+\begin{itemize}
+\item L'ordre syntaxique reflète la portée sémantique:
+    \item En (\getref{poulie}a): CAUS > RECIP
+    \item En (\getref{poulie}b): RECIP > CAUS
+\end{itemize}}
+\end{answer}
+
+
+
+Comparez maintenant une paire similaire en chichewa \citep{hymanmchombo92}:
 \pex
     \a mang-\textbf{an}-\uline{its}\\
     attacher-\gsc{RECIP}-\gsc{CAUS}\\
@@ -218,17 +275,28 @@ Voici une autre paire \citep{hymanmchombo92}:
     `se faire l'un l'autre attacher'
 \xe
 
-À quoi ressemblerait cette langue  (\emph{chichewa'}) si elle avait des préfixes plutôt que des suffixes? 
-\pex
-    \a \midline{} % its-an-mang
-    \a \midline{} % an-its-mang
-\xe
+Comment la portée sémantique est refletée dans la syntaxe en français et dans la morphologie en chichewa'?
 
-% Because hierarchy is what matters (relative ordering), rather than linear order.
+\begin{answer}{
+    \begin{itemize}
+        \item Français: l'élément qui apparaît d'abord a portée sémantique sur un élément qui apparaît après.
+        \item Chichewa', le morphème qui est `plus à l'extérieur' a portée sémantique sur un élément `plus à l'intérieur'.
+    \end{itemize}}
+\end{answer}
+
+À quoi ressemblerait cette langue  (\emph{chichewa'}) si elle avait des préfixes plutôt que des suffixes, et pourquoi? 
+\begin{answer}{
+\pex
+    \a \midline{} its-an-mang
+    \a \midline{}  an-its-mang
+\xe
+Parce que ce qui compte, c'est la hiérarchie (l'ordre des éléments les uns par rapport aux autres) plutôt que l'ordre linéaire. 
+}
+\end{answer}
 
 \bigskip
 
-Un autre example: le bemba tel que décrit par \cite{baker85}, qui cite \cite{givon76}.
+Un autre exemple: le bemba tel que décrit par \cite{baker85}, qui cite \cite{givon76}.
 \pex[exno=49]
     \a \begingl
         \gla Naa-mon-an-ya Mwape na Mutumba//
@@ -238,12 +306,12 @@ Un autre example: le bemba tel que décrit par \cite{baker85}, qui cite \cite{gi
     \a \begingl
         \gla Mwape na Chilufya baa-mon-eshy-ana Mutumba//
         \glb Mwape et Chilufya 3p.\gsc{S}-voir-\gsc{caus-recip} Mutumba//
-        \glft `Mwape et Chilufya se sont fait l'un l'autre voir  Mutumba.'//
+        \glft `Mwape et Chilufya se sont  l'un l'autre fait voir  Mutumba.'//
         \endgl
 \xe
 
         \subsubsection{Passivation}
-En chichewa, l'applicatif peut être utilisé pour les instruments \citep{alsina99}:
+En chichewa', l'applicatif peut être utilisé pour les instruments \citep{alsina99}:
 \pex[exno=10] 
     \a \begingl
         \gla Ms\=odzi a-na-dúl-\textbf{ír}-a \textbf{nkhw\^{a}ngwa} uk\=onde//
@@ -254,7 +322,7 @@ En chichewa, l'applicatif peut être utilisé pour les instruments \citep{alsina
 
 Essayons de passiver de cette manière: `La hache a été utilisée pour couper le filet (par le pêcheur). L'instrument va devenir le sujet. Quel va être l'ordre de  \gsc{Appl} et \gsc{Pass}?
 
-\bigskip
+\pagebreak 
 \pex[exno=10]
     \a[label=b] \begingl
         \gla Nkhw\^{a}ngwa i-na-dúl-\textbf{ír}-\uline{idw}-á úk\=onde (ndí ms\=odzi)//
@@ -313,24 +381,42 @@ Le kinyarwanda dans \cite{baker85}, données de  \cite{kimenyi80}:
     \a \begingl
         \gla Ibaruwa i-ra-andik-\textbf{iish}-\uline{w}-a ikaramu n'umugabo//
         \glb lettre \gsc{S-prés}-écrire-\gsc{instr-pass-asp} stylo par-homme//
-        \glft `La lette a été écrite avec le stylo par l'homme.'//
+        \glft `La lettre a été écrite avec le stylo par l'homme.'//
         \endgl
 \xe
 
         \subsubsection{Ailleurs qu'en bantou}
-Yupik \citep[43]{mithun99}:
+
+
+        Comparez la portée respective du passé, du verbe \textit{dire} et du marqueur épistémique (\textit{probablement}) dans les  phrases suivantes:
+
+        \pex<neige>
+        \a Il a dit que, probablement, il partait  demain.
+        \a Probablement qu'il a dit qu'il partait demain.
+        \xe 
+        
+\begin{answer}{
+\begin{itemize}
+    \item En (\getref{neige}a): PASSE > \textit{dire} > \textit{probablement}
+    \item En (\getref{neige}b): \textit{probablement} > PASSE > \textit{dire}
+\end{itemize}
+}
+\end{answer}
+Comparez maintenant les phrases du français avec les contreparties de ces phrases en Yupik \citep[43]{mithun99}:
 \pex
     \a \begingl
         \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
         \glb aller-\gsc{FUT}-probablement-dire-\gsc{PASSÉ-INDIC.INTR}-3\gsc{SG}//
-        \glft `Il a dit qu'il irait probablement.'//
+        \glft `Il a dit  qu'il allait probablement partir.'//
     \endgl
     \a \begingl
         \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
         \glb aller-\gsc{FUT}-dire-\gsc{PAST}-probablement-\gsc{INDIC.INTR}-3\gsc{SG}//
-        \glft `Il a probablement dit qu'il irait.'//
+        \glft `Probablement qu'il a dit qu'il allait partir.'//
     \endgl
 \xe
+
+
 
 % \ex \begingl
 %     \gla ayag-yug-umi-ite-qapiar-tu-a//
@@ -340,39 +426,85 @@ Yupik \citep[43]{mithun99}:
 % \xe
 % (Why do we gloss these sometimes as words and sometimes as affixes? Because.)
 
+Comparez maintenant les phrases suivantes en français:
 
+\pex<stop>
+\a  Il a arrêté de neiger dans la nuit (il ne neige plus pendant la nuit)
+\a  Il a arrêté de neiger dans la nuit (il a neigé toute la journée).
+\xe 
+
+Laquelle des deux phrases (\getref{stop}a/b) a le même sens que la phrase (\getref{stop2}) ci-dessous, et pourquoi? (Réfléchissez à la portée relative de \textit{arrêter} et \textit{dans la nuit})
+
+\pex<stop2> 
+Dans la nuit il a arrêté de neiger.
+\xe 
+
+\begin{answer}{
+\begin{itemize}
+    \item C'est (\getref{stop}b) qui a le même sens que (\getref{stop2}), parce que l'ordre syntaxique de (\getref{stop2}) reflète de manière transparente la portée sémantique en (\getref{stop}b): \textit{dans la nuit} > \textit{arrêter}
+    \item Le fait qu'une même phrase peut exprimer une portée sémantique différente montre déjà que le tableau jusqu'ici est simplifié: parfois, la hiérarchie syntaxique ne reflète pas la hiérarchie sémantique.
+    \item Nous reviendrons sur ce point  plus tard.
+\end{itemize}
+}    
+\end{answer}
+
+Appariez maintenant les phrases françaises avec les phrases ci-dessous en
 Oji-Cree \citep{slavin05uot} dans \cite{rice11}:
 \pex[exno=11]
     \a \begingl
-        \gla ishkwaa-niipaa-sookihpawn//
-        \glb finir-dans.la.nuit-être.neigeant//
-        \glft \longline{} // %`It stopped snowing at night.' (does not snow at night anymore)//
-    \endgl
-    \a \begingl
         \gla nipaa-ishkwaa-sookihpwan//
-        \glb dans.la.nuit-finir-être.neigeant//
+        \glb dans.la.nuit-arrêter-être.neigeant//
         \glft \longline{} // % `It stopped snowing at night.' (was snowing the whole day)//
     \endgl
+    \a \begingl
+        \gla ishkwaa-niipaa-sookihpawn//
+        \glb arrêter-dans.la.nuit-être.neigeant//
+        \glft \longline{} // %`It stopped snowing at night.' (does not snow at night anymore)//
+    \endgl
 \xe
-\pex[exno=11']
+
+Même exercice avec les deux phrases français ci-dessous (réfléchissez à la portée relative de \textit{à l'insu de tous} (= \textit{secrètement}) et \textit{très vite}):
+
+\pex<insu> 
+\a A l'insu de tous, il mange très vite (personne ne sait qu'il mange très vite)
+\a Très vite, il mange à l'insu de tous
+\xe 
+
+Quelle phrase française correspond à quelle phrase en Oji-Cree et pourquoi?
+
+\pex<11'>
     \a \begingl
         \gla kiimooci-kishahtapi-wiihsini//
-        \glb secrètement-vite-manger//
+        \glb à.l'insu.de.tous-vite-manger//
         \glft \longline{} // % `He secretly eats fast.' (nobody knows that he eats fast)//
     \endgl
     \a \begingl
         \gla kishahtapi-kiimooci-wiihsini//
-        \glb vite-secrètement-manger//
+        \glb vite-à.l'insu.de.tous-manger//
         \glft \longline{} // % `He eats secretly (nobody knows that he eats) and he does it fast.'//
     \endgl
 \xe
+
+\begin{answer}{
+\begin{itemize}
+    \item (\getref{insu}a) exprime le même sens que (\getref{11'}a).
+   \item  (\getref{insu}b) exprime le même sens que (\getref{11'}b).
+   \item L'emboîtement morphologique ou syntaxique reflète l'emboîtement sémantique.
+\end{itemize}
+}\end{answer}
 
 
     \subsection*{Résumé}
 \begin{itemize} \tightlist
     \item Certaines catégories suivent un ordre rigide, come par exemple les auxiliaires.
     \item D'autres catégories suivent un ordre variable qui dépend de la \textit{portée} sémantique.
-    \item La portée morphologique reflète systèmatiquement la portée sémantique.
+    \item La portée morphologique reflète systématiquement la portée sémantique.
+\end{itemize}
+
+Principe du Miroir:
+\begin{itemize}
+    \item 
+    \item 
 \end{itemize}
 
 Références clé:
