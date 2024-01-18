@@ -262,7 +262,7 @@ The same can't be said for -\emph{oon}. The phonesthemes like \emph{gl-} are int
 
     \subsection{Inflection vs derivation}
 
-We then discussed what the differences were between inflection and derivation [Exercise 2], and whether it's possible to postulate one basic difference which derives all the rest, or are we stuck with the notions of ``inflection'' and ``derivation'' as primitives of our theory, i.e.~something that we can't reduce to other factors (which is what Section~\ref{sec:affix:inflder} ends up doing).
+We discussed the differences between inflection and derivation [Exercise 1], and whether it's possible to postulate one basic difference which derives all the rest, or are we stuck with the notions of ``inflection'' and ``derivation'' as primitives of our theory, i.e.~something that we can't reduce to other factors. 
 
 \begin{tabular}{ll}
 \textbf{Inflection}	& \textbf{Derivation} \\\hline
@@ -270,9 +270,10 @@ Forced by syntactic context	& Not forced by syntactic context\\
 Productive in all lexical categories	& Limited productivity\\
 More regular (morphologically? Semantically?)	& Less regular\\
 Does not change category &	Sometimes changes category\\
-Does not change meaning (compositional)	& Usually changes meaning\\
+Does not change meaning (compositional)	& Often changes meaning\\
 Doesn't create new stems	& Creates new stems\\
 Farther away from the base &	Closer to the base\\
+Fills cells in a paradigm & No paradigms\\
 Etc	& Etc\\
 \end{tabular}
 
@@ -329,6 +330,7 @@ Etc	& Etc\\
 \begin{itemize} \tightlist
     \item It seems a bit suspect to say that inflection doesn't change the meaning. In \emph{walked}, adding -\emph{ed} to \emph{walk} changes the meaning to say that the event happened in the past.
     \item Counterpoint: it's still the same event, no matter when it happened, whereas the concept of \emph{good} is not the same as the concept of \emph{good-ness}.
+    \item Some derivations only change lexical category: \emph{happy+ly}.
     \item Compositionality of inflection: inflection generally comes from some pool of morphosyntactic features (tense, aspect, gender, number, etc.), and adding on an inflection adds on this feature. \emph{Walked}  = ``There's a walking event, and it's in the past.''
     \item Depending on your perspective, this might happen with derivation too: \emph{goodness} = ``There's some quality of being good, and this is the essence of that quality''. 
     \item When is inflection more clearly non-compositional?
@@ -356,6 +358,7 @@ Etc	& Etc\\
 \begin{itemize} \tightlist
     \item Generally, yes.
     \item There are Dutch dialects and various other langauges in which clitics can intervene between the verb stem and inflectional affix.
+    \item It can be hard to tell whether umlaut/ablaut happens before or after affixation.
 \end{itemize}
 
 Zooming out and thinking about a broader theory of morphology:
@@ -366,6 +369,7 @@ Zooming out and thinking about a broader theory of morphology:
     \a There's no one criterion that obviously separates inflection from derivation (except maybe ordering), so if we want to construct a theory of morphology that does separate these two, we would need to look elsewhere for a way to do it.
 \xe
 
+We ended up with an intuition that derivation happens before inflection: you create your new word, decide on its lexical category, meaning, and so on, and then pick out the relevant inflectional endings. We'll formalize this in Section~\ref{sec:affix:inflder}, once we have a basic theory in place explaining how morphemes are ordered.
 
 \section{Affix ordering}
 
@@ -451,7 +455,9 @@ How does this compare to the order in English?
     \item It's the same in terms of \fillblank{scope (hierarchically)}.
 \end{itemize}
 
-\paragraph{Summary} \fillblank{Auxiliaries have a rigid ordering which reflects scope, and that these auxiliaries might be independent syntactic/phonological words in one language but affixes in another.}
+\paragraph{Summary} \begin{answer}
+{Auxiliaries have a rigid ordering which reflects scope, and the fact that these auxiliaries might be independent syntactic/phonological words in one language but affixes in another.}
+\end{answer}
 
     \subsection{The Mirror Principle}
         \subsubsection{Preliminaries}
