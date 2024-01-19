@@ -2,7 +2,7 @@
 
 
 %% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
-\usepackage[solution,spaces]{myProbSol} %   Optional arguments:
+%\usepackage[solution,spaces]{myProbSol} %   Optional arguments:
 %                                               'solution': reveals solutions
 %                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
 %\usepackage{times}
@@ -79,7 +79,7 @@
 \newcommand\itp[1]{\textit{\textipa{#1}}}
 \newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
 \renewcommand\root[1]{$\sqrt{\text{#1}}$}
-
+\newcommand\reponse[1]{\textcolor{blue}{#1}}
 \newcommand\blue[1]{\textcolor{blue}{#1}}
 \newcommand\red[1]{\textcolor{red}{#1}}
 \newcommand\green[1]{\textcolor{ForestGreen}{#1}}
@@ -150,13 +150,13 @@ Patron irrégulier (supplétif):
 
 \xe 
 
-Analyse allomorphique du comparatif:
+Règles d'épèlation pour le comparatif régulier:
 \pex
 \a \root{\gsc{COMPR}} \( \to \) \text{\emph{plus}} 
 \a \root{\gsc{BEAU}} \( \to \) \text{\emph{beau}} 
 \xe 
 
-Avec \textit{bon}, la Condition Ailleurs (\textit{Elsewhere condition}) fait gagner l'allomorphe irrégulier sur la forme régulière:
+Ave les adjectifs qui ont un comparatif irrégulier comme \textit{bon}, la Condition Ailleurs (\textit{Elsewhere condition}) fait gagner l'allomorphe irrégulier sur la forme régulière:
 
 \ex  \root{\gsc{BON}} \lra $\begin{cases} 
 	\text{\emph{mieux}} & / \trace ~ \text{[\gsc{CMPR}]} \\
@@ -212,13 +212,12 @@ non-attesté & A & A & B & \sout{\textit{bon - plus bon - le mieux }}\\
 Dans  cette perspective, que pourriez-vous dire:
 
 \begin{itemize} 
-\item des relations implicatives entre les trois formes? Formulez
+\item des relations implicatives entre les trois formes? 
 \item de l'inexistence des modèles non-attestés (*ABA/*AAB)?
 \end{itemize}
 
 
-\begin{answer}{
-Relations implicatives entre les trois formes:
+\reponse{Relations implicatives entre les trois formes:
 \begin{itemize}
     \item Pour  le patron régulier, les formes de l'adjectif simple, du comparatif et du superlatif peuvent être prédites les unes des autres avec certitude maximale.
     \item Pour le patron supplétif, même relation implicative pour les formes comparatives et superlatives.
@@ -228,42 +227,41 @@ Limitations du modèle paradigmatique:
     \item Il décrit mais n'explique pas ces relations implicatives entre les trois formes pour le patron régulier et supplétif
     \item Il ne décrit ni n'explique l'absence des patrons ABA et AAB.
 \end{itemize}}
-\end{answer}
 
-Observez maintenant ces mêmes généralisations en vous mettant dans la peau d'un morphologue constructionnel (comme ceux qui font de la morphologie distribuée) et qui adoptent l'idée que la structure morphologique reflète directement la structure sémantique. 
+Observez maintenant ces mêmes généralisations en vous mettant dans la peau d'un morphologue constructionnel (comme ceux qui font de la morphologie distribuée) et qui adoptent l'idée que la structure morphologique reflète directement la structure syntactico-sémantique.
 
 Quelle hypothèse pourrait dans ce cadre expliquer ces généralisations? Supposez que 
 
 \begin{itemize}
-    \item S1 est le sens de l'adjectif;
-    \item S2 est le sens du comparatif;
-    \item S3 est le sens du superlatif.
+    \item S1 est le sens de l'adjectif \hfill (\textit{beau, bon})
+    \item S2 est le sens du comparatif \hfill (\textit{plus beau, mieux})
+    \item S3 est le sens du superlatif \hfill (\textit{le plus beau, le mieux})
 \end{itemize}
 
-En français, pour le patron régulier, S1 est exprimé par l'adjectif (\textit{beau}), S2 par \textit{plus beau}, et S3 par \textit{le plus beau}.
+%En français, pour le patron régulier, S1 est exprimé par l'adjectif (\textit{beau}), S2 par \textit{plus beau}, et S3 par \textit{le plus beau}.
 
-En français, pour le patron supplétif simple, S1 est exprimé par l'adjectif simple (\textit{bon}), S2 par \textit{mieux}, et S3 par \textit{le mieux.}
+%En français, pour le patron supplétif simple, S1 est exprimé par l'adjectif simple (\textit{bon}), S2 par \textit{mieux}, et S3 par \textit{le mieux.}
 
-\begin{answer}{Ajoutons à nos deux hypothèses précédentes (1) et (2) 
-
+Rappelons deux hypothèses de la morphologie distribuée:
 \begin{enumerate}
-    \item Condition Ailleurs/principe de Pañini: si deux règles sont en compétition pour l'épelation, alors la règle la plus spécifique s'applique d'abord: \textit{mieux} `gagne sur' \textit{plus bon}.
-    \item Le sens du superlatif `contient' le sens du comparatif: S3 = S2 + \( \gamma\)\\
-    \( \to \) La forme utilisée pour le superlatif doit contenir la forme utilisée pour le comparatif
-    \item Principe du miroir: La structure morphologique reflète la structure sémantique
-\end{enumerate}
-On prédit alors les données:
-\begin{itemize}
-    \item Le patron AAA respecte les
-    \item ABB: S1 + S2 (\textit{mieux}) + S3 (\textit{le mieux})
-    \item *ABA: 
-\end{itemize}
-}
+    \item Condition Ailleurs/principe de Pañini: si deux règles sont en compétition pour l'épelation, alors la règle la plus spécifique s'applique d'abord (\textit{mieux} `gagne sur' \textit{plus bon}).
+        \item Principe du miroir: La structure morphologique reflète la structure syntactico-sémantique
+        \end{enumerate}
    
-\end{answer}
-
-
-
+        
+  \reponse{Ajoutons à ces deux hypothèses l'hypothèse suivante:}
+        
+        \begin{enumerate}
+        \item[3.] \reponse{Le sens du superlatif `contient' le sens du comparatif: S3 = S2 + \( \gamma\)\\
+    \( \to \) Vu le principe du miroir, la forme utilisée pour le superlatif doit contenir la forme utilisée pour le comparatif}
+\end{enumerate}
+\reponse{On prédit alors les données:
+\begin{itemize}
+    \item AAA: \textit{plus A} \( \subseteq\) \textit{le plus A}
+    \item ABB: \textit{mieux} \( \subseteq\) \textit{le mieux}
+    \item *ABA: \textit{mieux} \( \not\subseteq\) \textit{le plus bon}
+        \item *ABA: \textit{plus bon} \( \not\subseteq\) \textit{le mieux}\textbf{}
+\end{itemize}}
 
 
 
