@@ -187,7 +187,8 @@ And some related questions: What elements can combine and how? What elements can
             \item Compounds: \emph{watermelon} (which is not \emph{water}+\emph{melon})
             \item \emph{Strawberry, cranberry} – there is no *\emph{cran}
             \item \emph{Kit and caboodle} `everything' - but synchronically standalone \emph{kit} doesn't have this restricted meaning, and \emph{caboodle} only works in this kind of context \citep{harley14thlia}
-            \item Words aren’t created without meaning, but they might lose or change meaning over time
+            \item Words aren't the only things that have meaning: intonation, emojis and keyboard smashes (\emph{adjksfhajklsdfh}) might all convey meaning, which is still linguistic even if not carried by word
+            \item Words aren't created without meaning, but they might lose or change meaning over time
         \end{itemize}
     \item Prosodic/phonological word
         \begin{itemize} \tightlist
@@ -659,7 +660,7 @@ Pulaar \citep{paster05}, with \gsc{com}prehensive \emph{id} `all' and \gsc{sep} 
         \endgl
 \xe
 
-Here, \gsc{rep}epetitive means `again'. Assume that one of the following means `make someone learn' and one means `teach' - which is which?
+Here, \gsc{rep}etitive means `again'. Assume that one of the following means `make someone learn' and one means `teach' - which is which?
 
 \pex
     \a \begingl
@@ -674,7 +675,8 @@ Here, \gsc{rep}epetitive means `again'. Assume that one of the following means `
         \endgl
 \xe
 
-\paragraph{Summary} \fillblank{The order of affixes reflects the order of syntactic heads, which reflects semantic scope; this is the Mirror Principle \citep{baker85}.}
+\paragraph{Summary} \fillblank{The order of affixes reflects the order of syntactic heads, which reflects semantic scope.}\\
+\fillblank{This is the Mirror Principle \citep{baker85}.}
 
     \subsection*{Interim summary and references}
 We have seen evidence for:
@@ -837,13 +839,16 @@ Let's draw a structure for~(\ref{ex:globalization}):
 }\end{answer}
 
 Is this morphology or syntax? Does it matter, and if so, in what ways?
-
+\begin{answer}
+{
 \begin{itemize} \tightlist
-    \item \fillblank{We see that we can arrange morphemes in a hierarchical morphological structure the same way we do in the syntax with ``words''.}
-    \item \fillblank{We saw evidence from Japanese that we could have both in the same structure.}
-    \item \fillblank{Compositionality is an important issue: \emph{globe} can mean either `sphere' or `the world', but then \emph{global} only means `the world', so where should this information be encoded?}
-    \item \fillblank{In English, most of the syntax is head-initial but most of the morphology is head-final. Does this matter? How should it be encoded?}
+    \item We see that we can arrange morphemes in a hierarchical morphological structure the same way we do in the syntax with ``words''.
+    \item We saw evidence from Japanese that we could have both in the same structure.
+    \item Compositionality is an important issue: \emph{globe} can mean either `sphere' or `the world', but then \emph{global} only means `the world', so where should this information be encoded?
+    \item In English, most of the syntax is head-initial but most of the morphology is head-final. Does this matter? How should it be encoded?
 \end{itemize}
+}
+\end{answer}
 
 % \newpage
     \subsection{Building structure}
@@ -871,8 +876,10 @@ See also \cite{libben03springer} for processing aspects and \cite{osekimarantz20
         \subsubsection{Ambiguity}
 Where there's structure, there can be structural ambiguity.
 
+\ex I hit the clown with a banana.
+\xe
 \pex
-    \a \fillblank{\emph{unlockable, unfoldable}, \dots{} \hfill \citep{dealmedialibben05,viknervikner08,pollatseketal10}}
+    \a \fillblank{\emph{unlockable, unfoldable}, \dots{} \hfill (\citealt{dealmedialibben05}, \citealt{viknervikner08}, \citealt{pollatseketal10})}
     \a Compounds like \fillblank{\emph{kitchen towel rack}}
 \xe
 
@@ -910,6 +917,15 @@ Schematic trees for:
 % \xe
 
 Are we putting everything in the same tree or is there some point in which we want to take the ``morphological tree'' and put it within a ``syntactic tree''?
+\bigskip
+
+Now let's think back to inflection. If we assume that verbs always inflect for certain features in some language, then we often assume silent affixes (notated with the empty set symbol, \zero{}). This way the formal system is consistent (though not everyone is a fan of the concept of silent affixes; Paradigm Function Morphology for instance works very differently, \citealt{stump15}):
+\pex
+    \a she walk-s_{\gsc{3SG.PRES}}
+    \a I walk-\zero{}_{\gsc{1.PRES}}
+    \a They walk-\zero{}_{\gsc{PL.PRES}}
+\xe
+\bigskip
 
 It's hard to talk about building up words (or phrases, or sentences) without a concrete theory of morphology, a concrete theory of syntax, and empirical domains in which to test them. I'm also of the opinion that it's extremely hard to talk about processing or computational aspects of morphology (or syntax) without a formal theory. So we'll flesh out one kind of theory that blurs the distinction between morphology and syntax somewhat, mostly in order to give ourselves a concrete starting point.
 
@@ -940,6 +956,7 @@ Now let's think back to inflection. If we assume that verbs always inflect for c
     \a I walk-\zero{}_{\gsc{1.PRES}}
     \a They walk-\zero{}_{\gsc{PL.PRES}}
 \xe
+\bigskip
 
 Returning to word-building (derivation), if we think that \emph{some} words consist of a root and an affix providing the syntactic category, why not assume that all words are built this way? Then, for ``ordinary'' nouns like \emph{globe}:
 \ex
@@ -1002,7 +1019,8 @@ Closer to the base \\
 \end{tabular}
 
 \bigskip
-Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: scope. The reason that, for instance, a derivational nominal marker is closer to the root than an inflectional plural marker, is that we create the noun first, and only then pluralize it.
+\begin{answer}
+{Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: scope. The reason that, for instance, a derivational nominal marker is closer to the root than an inflectional plural marker, is that we create the noun first, and only then pluralize it.}
 
 \bigskip
 We can also look at meaning change again. Do we get meaning change with \emph{every} derivational affix? Does our theory explain this? What about non-compositional meaning?
@@ -1011,7 +1029,9 @@ We can also look at meaning change again. Do we get meaning change with \emph{ev
     \a novelization
 \xe
 
-It looks like the first affix picks out one possible meaning, which is then consistent across further derivations. This is also the point \cite{arad03,arad05} makes for Hebrew.
+\begin{answer}
+{It looks like the first affix picks out one possible meaning, which is then consistent across further derivations. This is also the point \cite{arad03,arad05} makes for Hebrew.}
+\end{answer}
 
 \paragraph{Recommended readings} Start with \cite{arad03}, and follow that up with \cite{mcginniswood19cup}.
 

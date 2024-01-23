@@ -1,0 +1,384 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[spaces]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2023-24, Edinburgh, Handout 2}
+\bigskip
+
+\section{Affix order}
+
+    \subsection{Nouns}
+
+[Exercise 4]
+
+Gender in Catalan, \cite{kramer16llc} from \cite{picallo91}:
+\pex
+    \a \begingl
+        \gla el gos-ø//
+        \glb the.\gsc{M} dog.\gsc{M}//
+        \endgl
+    \a \begingl
+        \gla els goss-o-s//
+        \glb the-\gsc{PL} dog-\gsc{M}-\gsc{PL}//
+        \endgl
+\xe
+\pex
+    \a \begingl
+        \gla la goss-a//
+        \glb the.F dog-F//
+        \endgl
+    \a \begingl
+        \gla les goss-e-s//
+        \glb the.\gsc{F.PL} dog-\gsc{F-PL}//
+        \endgl
+\xe
+
+Schematic tree:
+
+\begin{answer}
+{\ex \label{tree:pl-catalan}
+\Tree
+[.
+    [.
+        [.\emph{goss} ]
+        [.\gsc{[F]} \emph{e} ]
+    ]
+    [.\gsc{[PL]} \emph{s} ]
+]
+\xe
+}
+\end{answer}
+Yupik \citep[43]{mithun99}
+\pex
+    \a yug-\textbf{pag}-\uline{cuar}\\
+    person-big-little\\
+    `little giant'
+    \a yug-\uline{cuar}-\textbf{pag}\\
+    person-little-big\\
+    `big midget'
+\xe
+
+English:
+\ex glob-al-iz-ation \label{ex:globalization}
+\xe
+\ex novel-iz-ation-s
+\xe
+
+Let's draw a structure for~(\ref{ex:globalization}):
+\begin{answer}{
+\ex
+\Tree
+[.[N]
+    [.[V]
+        [.[A]
+            [.[N] \emph{glob} ]
+            [.[A] \emph{al} ]
+        ]
+        [.[V] \emph{ize} ]
+    ]
+    [.[N] \emph{ation} ]
+]
+\xe
+}\end{answer}
+
+Is this morphology or syntax? Does it matter, and if so, in what ways?
+\begin{answer}
+{
+\begin{itemize} \tightlist
+    \item We see that we can arrange morphemes in a hierarchical morphological structure the same way we do in the syntax with ``words''.
+    \item We saw evidence from Japanese that we could have both in the same structure.
+    \item Compositionality is an important issue: \emph{globe} can mean either `sphere' or `the world', but then \emph{global} only means `the world', so where should this information be encoded?
+    \item In English, most of the syntax is head-initial but most of the morphology is head-final. Does this matter? How should it be encoded?
+\end{itemize}
+}
+\end{answer}
+
+% \newpage
+    \subsection{Building structure}
+Quick reminder: what is the evidence for hierarchical structure within words, as opposed to linear structure?
+
+        \subsubsection{Ordering}
+\pex \emph{unhelpful}:
+    \a  {[}un-[help-ful]]
+    \a \ljudge{*}  {[[}un-help]-ful] 
+\xe
+\pex \emph{unpredictable}:
+    \a  \fillblank{{[}un-[predict-able]]}
+    \a \ljudge{*}  \fillblank{{[[}un-predict]-able]}
+\xe
+
+\pex But also \emph{unhappier} (a bracketing paradox, because -\emph{er} normally attaches to smaller prosodic bases):
+    \a \ljudge{*} {[}un-[happi-er]]
+    \a {[[}un-happi]-er] 
+\xe
+
+See also \cite{libben03springer} for processing aspects and \cite{osekimarantz20} for modelling.
+
+\emph{[[en-joy]-ment]} vs *\emph{[en-joy]ful}.
+
+        \subsubsection{Ambiguity}
+Where there's structure, there can be structural ambiguity.
+
+\ex I hit the clown with a banana.
+\xe
+\pex
+    \a \fillblank{\emph{unlockable, unfoldable}, \dots{} \hfill (\citealt{dealmedialibben05}, \citealt{viknervikner08}, \citealt{pollatseketal10})}
+    \a Compounds like \fillblank{\emph{kitchen towel rack}}
+\xe
+
+        \subsubsection{A formal implementation}
+Schematic trees for:
+\ex  
+    \Tree
+    [.\emph{glob-al-iz-ation-s}
+        [.[N]
+            [.[V]
+                [.[A]
+                    [.[N] \emph{glob} ]
+                    [.[A] \emph{al} ]
+                ]
+                [.[V] \emph{ize} ]
+            ]
+            [.[N] \emph{ation} ]
+        ]
+        [.[\gsc{PL}] \emph{s} ]
+    ]
+\xe
+
+\ex 
+    \Tree
+    [.\emph{redd-en-ed}
+        [.[V]
+            [.[A] \emph{red} ]
+            [.[V] \emph{en} ]
+        ]
+        [.[\gsc{PAST}] \emph{ed} ]
+    ]
+\xe
+
+% \ex solid-ifi-ed
+% \xe
+
+Are we putting everything in the same tree or is there some point in which we want to take the ``morphological tree'' and put it within a ``syntactic tree''?
+\bigskip
+
+Now let's think back to inflection. If we assume that verbs always inflect for certain features in some language, then we often assume silent affixes (notated with the empty set symbol, \zero{}). This way the formal system is consistent (though not everyone is a fan of the concept of silent affixes; Paradigm Function Morphology for instance works very differently, \citealt{stump15}):
+\pex
+    \a she walk-s_{\gsc{3SG.PRES}}
+    \a I walk-\zero{}_{\gsc{1.PRES}}
+    \a They walk-\zero{}_{\gsc{PL.PRES}}
+\xe
+\bigskip
+
+It's hard to talk about building up words (or phrases, or sentences) without a concrete theory of morphology, a concrete theory of syntax, and empirical domains in which to test them. I'm also of the opinion that it's extremely hard to talk about processing or computational aspects of morphology (or syntax) without a formal theory. So we'll flesh out one kind of theory that blurs the distinction between morphology and syntax somewhat, mostly in order to give ourselves a concrete starting point.
+
+\bigskip
+Back to technical concerns: what about bound roots?
+
+We'll need some way of representing the abstract, bound root. Sometimes people borrow the mathematical square-root symbol:
+\pex
+    \a \emph{eternity} \\
+    \Tree
+        [.n
+            [.\root{etern} ]
+            [.n \emph{ity}\\{[N]} ]
+        ]
+    \a \emph{eternal} \\
+    \Tree
+        [.a
+            [.\root{etern} ]
+            [.a \emph{al}\\{[A]} ]
+        ]
+\xe
+
+\bigskip
+
+If we think that \emph{some} words consist of a root and an affix providing the syntactic category, why not assume that all words are built this way? Then, for ``ordinary'' nouns like \emph{globe}:
+\ex
+\Tree
+[.n
+    [.\root{\gsc{globe}} ]
+    [.n ]
+]
+\xe
+
+And once that's what we want to do, there's actually another choice point: now we would need grounds to decide which of the following two derivations to prefer for \emph{global} \citep{grestenbergerkastner22}:
+\begin{answer}{
+\ex \emph{global}\\
+    a.~
+    \Tree
+    [.a
+        [.n
+            [.\root{\gsc{globe}} ]
+            [.n ]
+        ]
+        [.a\\\emph{al} ]
+    ]
+    \hspace{5em}
+    b.
+    ~\Tree
+    [.a
+        [.\root{\gsc{GLOBE}} ]
+        [.a\\\emph{al} ]
+    ]
+\xe
+}\end{answer}
+
+\bigskip
+What does this mean crosslinguistically? We would expect to find languages in which all roots must be \emph{categorized} as a noun, verb or adjective first. Semitic languages seems to fit the bill.
+
+The Semitic philologists have been debating the notion of a categorized root for centuries, going back at least to grammarians of the Fertile Crescent in the 8th century (\citealt[563ff]{borer13oup}, citing \citealt{owens88}). \cite{arad03} makes this point in contemporary terms based on a range of observations about Hebrew.
+
+
+    \subsection{Summary and discussion} \label{sec:affix:inflder}
+
+Let's recap once more the typical differences between inflection and derivation. We want to see whether our way of building structure helps explain these.
+
+\begin{tabular}{ll}
+Inflection & 
+Derivation \\\hline
+Forced by syntactic context & 
+Not forced by syntactic context\\ 
+Productive in all lexical categories &  
+Limited productivity \\
+More regular (morphologically? Semantically?) & 
+Less regular \\
+Does not change category &
+Sometimes changes category \\ 
+Does not change meaning (compositional)  &
+Usually changes meaning \\
+Doesn't create new stems & 
+Creates new stems \\
+Farther away from the base & 
+Closer to the base \\
+\end{tabular}
+
+\bigskip
+\begin{answer}
+{Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: scope. The reason that, for instance, a derivational nominal marker is closer to the root than an inflectional plural marker, is that we create the noun first, and only then pluralize it.}
+\end{answer}
+
+\bigskip
+We can also look at meaning change again. Do we get meaning change with \emph{every} derivational affix? Does our theory explain this? What about non-compositional meaning?
+\pex
+    \a globalization
+    \a novelization
+\xe
+
+\begin{answer}
+{It looks like the first affix picks out one possible meaning, which is then consistent across further derivations. This is also the point \cite{arad03,arad05} makes for Hebrew.}
+\end{answer}
+
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}

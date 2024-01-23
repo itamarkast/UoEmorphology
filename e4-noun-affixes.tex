@@ -1,0 +1,193 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2023-24, Edinburgh, Exercise 4}
+\bigskip
+
+Up till now we looked at affix ordering in verbs. Let's do the same for nouns now.
+
+Gender in Catalan, \cite{kramer16llc} from \cite{picallo91}:
+\pex
+    \a \begingl
+        \gla el gos-ø//
+        \glb the.\gsc{M} dog.\gsc{M}//
+        \endgl
+    \a \begingl
+        \gla els goss-o-s//
+        \glb the-\gsc{PL} dog-\gsc{M}-\gsc{PL}//
+        \endgl
+\xe
+\pex
+    \a \begingl
+        \gla la goss-a//
+        \glb the.F dog-F//
+        \endgl
+    \a \begingl
+        \gla les goss-e-s//
+        \glb the.\gsc{F.PL} dog-\gsc{F-PL}//
+        \endgl
+\xe
+
+Draw a (schematic) tree for the noun \emph{gosses} `female dogs' in~(\lastx b).
+
+\ex \label{tree:pl-catalan}
+% \Tree
+% [.
+%     [.
+%         [.\emph{goss} ]
+%         [.\gsc{[F]} \emph{e} ]
+%     ]
+%     [.\gsc{[PL]} \emph{s} ]
+% ]
+\xe
+
+\vspace{3cm}
+% Yupik \citep[43]{mithun99}
+% \pex
+%     \a yug-\textbf{pag}-\uline{cuar}\\
+%     person-big-little\\
+%     `little giant'
+%     \a yug-\uline{cuar}-\textbf{pag}\\
+%     person-little-big\\
+%     `big midget'
+% \xe
+
+English:
+\ex glob-al-iz-ation \label{ex:globalization}
+\xe
+\ex novel-iz-ation-s
+\xe
+
+Draw a structure for~(\ref{ex:globalization}):
+\ex
+% \Tree
+% [.[N]
+%     [.[V]
+%         [.[A]
+%             [.[N] \emph{glob} ]
+%             [.[A] \emph{al} ]
+%         ]
+%         [.[V] \emph{ize} ]
+%     ]
+%     [.[N] \emph{ation} ]
+% ]
+\xe
+
+\vspace{3cm}
+
+Is this morphology or syntax? Does it matter, and if so, in what ways?
+
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}
