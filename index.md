@@ -8,7 +8,7 @@ I like to send announcements via our virtual learning system before the course s
 
 [Welcome messages](welcome.md) 
 
-## Week 1
+## Week 1: Words
 
 Section 1 of the [lecture notes](https://github.com/itamarkast/UoEmorphology/blob/main/morpho24.tex):
 
@@ -21,15 +21,18 @@ Section 1 of the [lecture notes](https://github.com/itamarkast/UoEmorphology/blo
 4. Inflection and derivation
    - Exercise 2: Name something you're good at; Say what you're at uni for; Give two memories about marks, one positive and one negative.
 
-## Week 2
+## Week 2: Affix order
   
 Section 2 of the lecture notes.
 
 1. Assessment
-   - Exercise 3: English and Latin auxiliaries
+   - [Discussion and decisions on assessment structure](ungrading.md)
+   - [Exercise 3:](e3-auxiliaries.pdf) English and Latin auxiliaries
 3. Affix order
-   - Exercise 4: Catalan plurals and *globalization*
-4. Affix order
+   - [Handout 1](01-affix-order.pdf)
+   - [Exercise 4:](e4-noun-affixes.pdf) Catalan plurals and *globalization*
+5. Affix order
+   - [Handout 2](02-affix-order.pdf)
    - Exercise 5: Group work
 
 ## Week 3
