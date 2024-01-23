@@ -24,7 +24,7 @@ What we want to evaluate:
 
 - What we've learned and how we've grown (portfolio: reflections)
 - How well we've learned the skills (portfolio: exercises)
-- How we can apply the new knowledge (project)
+- How we can apply the new knowledge and create (project)
 
 Accordingly, self-assessment will rely on the following:
 
@@ -40,6 +40,10 @@ Accordingly, self-assessment will rely on the following:
 Working in pairs or small groups on the exercises is permitted and encouraged! There's no need to disclose anything in the journal, though I imagine that the reflections and self-evaluations will discuss collaboration.
 
 Students give themselves marks at the end of the course, based on their self assessment. The instructors reserves the right to change these; in practice, this means raising marks when students are too hard on themselves.
+
+See also [Bloom's taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/):
+
+<img src="https://cdn.vanderbilt.edu/vu-wp0/wp-content/uploads/sites/59/2019/03/27124326/Blooms-Taxonomy.jpg" alt="Bloom's taxonomy" width="500"/>
 
 
 ## Portfolio, self-assessment and feedback
