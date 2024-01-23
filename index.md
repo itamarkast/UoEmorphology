@@ -26,7 +26,7 @@ Section 1 of the [lecture notes](https://github.com/itamarkast/UoEmorphology/blo
 Section 2 of the lecture notes.
 
 1. Assessment
-   - [Discussion and decisions on assessment structure](ungrading.md)
+   - [Discussion and decisions on assessment structure](assessment.md)
    - [Exercise 3:](e3-auxiliaries.pdf) English and Latin auxiliaries
 3. Affix order
    - [Handout 1](01-affix-order.pdf)
