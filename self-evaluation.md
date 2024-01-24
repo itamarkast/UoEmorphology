@@ -98,3 +98,23 @@ With that in mind:
     What feedback will I submit about my other courses to the yearly reps and the SSLC? (Definitely no need to enter this in the self-evaluation!)
 
 ## Guidance on assigning number marks
+
+
+The university requires that Hons/MSc courses receive a grade, but does not offer any guidance or training on how to do so. Here is what I have learned from experience over the past few years:
+
+    The Common Marking Scheme serves as a basic starting point for thinking about different grade bands: https://www.ed.ac.uk/timetabling-examinations/exams/regulations/common-marking-scheme
+    One rule of thumb I've encountered is that 100 is essentially "publish as is in a journal", 90 is "publish in a journal" (so essentially irrelevant to students), and 80-90 is "this is something the student can work on some more and potentially submit to a conference".
+    Some pieces of coursework such as programming problems, language exercises and problem sets have specific correct answers and can get 90 or 100, but that's not the case for an open-ended assignment like an essay, dissertation, project, or anything that involves a bit of critical thinking, argumentation or writing.
+    Our colleauges in Psychology use the following system for undergraduate work: https://uoe.sharepoint.com/sites/hss/ppls/PPLS-Undergraduate-Student-Hub-home/SitePages/Psychology-marking-information.aspx
+    For our purposes, you can think about how well your performance matched your expectations and goals on the following aspects:
+        Academic achievement and "excellence"
+        Personal and intellectual growth
+        Risk taking
+    Whatever mark you choose, we will discuss it together in the context of your performance in the course as a whole, taking into account whatever personal or academic circumstances might be relevant.
+
+For reference, the "learning outcomes" for this course are:
+At the end of the course students will
+- be thoroughly familiar with concepts and ideas used in the study of complex words
+- be able to apply these concepts and ideas to new and unfamiliar data
+- be able to critically evaluate literature that makes use of these concepts and ideas
+
