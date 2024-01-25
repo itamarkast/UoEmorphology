@@ -30,18 +30,16 @@ Section 2 of the lecture notes.
    - [Exercise 3:](e3-auxiliaries.pdf) English and Latin auxiliaries
 3. Affix order
    - [Handout 1](01-affix-order.pdf)
-   - [Exercise 4:](e4-noun-affixes.pdf) Catalan plurals and *globalization*
+   - Exercise 4: Finish Oji-Cree and Yupik examples from class
 5. Affix order
-   - [Handout 2](02-affix-order.pdf)
-   - Exercise 5: Group work
+   - Handout 1, continued 
+   - [Exercise 5](e5-allomorphy.md): allomorphy prep
+   - [Exercise 6](e6-groupwork.md): Allomorphy prep and group work
 
 ## Week 3
 
 Sections 2, 4 of the lecture notes.
 
-1. Affix order wrap-up / Inflection and derivation revisited
-   - Exercise 6: Allomorphy prep
-2. Group work / Allomorphy
-   - Exercise 6
-3. Allomorphy
-   - Exercise 7: Theory building
+1. [Handout 2](02-affix-order.pdf)
+2. Allomorphy jigsaw
+3. Allomorphy / Group work
