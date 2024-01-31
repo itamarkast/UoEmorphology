@@ -902,6 +902,7 @@ Where there's structure, there can be structural ambiguity.
 \xe
 \pex
     \a \fillblank{\emph{unlockable, unfoldable}, \dots{} \hfill (\citealt{dealmedialibben05}, \citealt{viknervikner08}, \citealt{pollatseketal10})}
+    \inSolution{(Potentially \emph{bi-week-ly} and \emph{bi-month-ly}, though that might be lexical ambiguity)}
     \a Compounds like \fillblank{\emph{kitchen towel rack}}
 \xe
 
@@ -954,41 +955,41 @@ Now let's think back to inflection. If we assume that verbs always inflect for c
 
 It's hard to talk about building up words (or phrases, or sentences) without a concrete theory of morphology, a concrete theory of syntax, and empirical domains in which to test them. I'm also of the opinion that it's extremely hard to talk about processing or computational aspects of morphology (or syntax) without a formal theory. So we'll flesh out one kind of theory that blurs the distinction between morphology and syntax somewhat, mostly in order to give ourselves a concrete starting point.
 
-\bigskip
-Back to technical concerns: what about bound roots?
-
-We'll need some way of representing the abstract, bound root. Sometimes people borrow the mathematical square-root symbol:
-\pex
-    \a \emph{eternity} \\
-    \Tree
-        [.n
-            [.\root{etern} ]
-            [.n \emph{ity}\\{[N]} ]
-        ]
-    \a \emph{eternal} \\
-    \Tree
-        [.a
-            [.\root{etern} ]
-            [.a \emph{al}\\{[A]} ]
-        ]
-\xe
-
-\bigskip
-
-Now let's think back to inflection. If we assume that verbs always inflect for certain features in some language, then we often assume silent affixes (notated with the empty set symbol, \zero{}). This way the formal system is consistent (though not everyone is a fan of the concept of silent affixes; Paradigm Function Morphology for instance works very differently, \citealt{stump15}):
+Let's think back to inflection. If we assume that verbs always inflect for certain features in some language, then we often assume silent affixes (notated with the empty set symbol, \zero{}). This way the formal system is consistent (though not everyone is a fan of the concept of silent affixes; Paradigm Function Morphology for instance works very differently, \citealt{stump15}):
 \pex
     \a she walk-s_{\gsc{3SG.PRES}}
     \a I walk-\zero{}_{\gsc{1.PRES}}
     \a They walk-\zero{}_{\gsc{PL.PRES}}
 \xe
+
+\bigskip
+Returning to word-building (derivation), what about bound roots like ``\emph{etern}'', where we have \emph{etern-al} and \emph{etern-ity} but no standalone word *\emph{etern}? We'll need some way of representing the abstract, bound root. Sometimes people borrow the mathematical square-root symbol to show that the root needs some kind of affix to get its category:
+\ex
+\begin{minipage}[t]{0.4\textwidth}
+    a.~\emph{eternity} \\
+    \Tree
+        [.n
+            [.\root{etern} ]
+            [.n \emph{ity}\\{[N]} ]
+        ]
+   \end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    b.~\emph{eternal} \\
+    \Tree
+        [.a
+            [.\root{etern} ]
+            [.a \emph{al}\\{[A]} ]
+        ]
+\end{minipage}
+\xe
 \bigskip
 
-Returning to word-building (derivation), if we think that \emph{some} words consist of a root and an affix providing the syntactic category, why not assume that all words are built this way? Then, for ``ordinary'' nouns like \emph{globe}:
+And if we think that \emph{some} words consist of a root and an affix providing the syntactic category, why not assume that all words are built this way? Then, for ``ordinary'' nouns like \emph{globe}:
 \ex
 \Tree
 [.n
     [.\root{\gsc{globe}} ]
-    [.n ]
+    [.n \zero{} ]
 ]
 \xe
 
@@ -1000,16 +1001,16 @@ And once that's what we want to do, there's actually another choice point: now w
     [.a
         [.n
             [.\root{\gsc{globe}} ]
-            [.n ]
+            [.n  \zero{} ]
         ]
-        [.a\\\emph{al} ]
+        [.a \emph{al} ]
     ]
     \hspace{5em}
     b.
     ~\Tree
     [.a
         [.\root{\gsc{GLOBE}} ]
-        [.a\\\emph{al} ]
+        [.a \emph{al} ]
     ]
 \xe
 }\end{answer}
@@ -1045,7 +1046,10 @@ Closer to the base \\
 
 \bigskip
 \begin{answer}
-{Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: scope. The reason that, for instance, a derivational nominal marker is closer to the root than an inflectional plural marker, is that we create the noun first, and only then pluralize it.}
+{Starting from the last line, we now have an \emph{explanation} for why derivation is closer to the root: scope. The reason that, for instance, a derivational nominal marker is closer to the root than an inflectional plural marker, is that we create the noun first, and only then pluralize it.
+Creation of new stems also makes sense: ``derivation'' is affixation of categorizing affixes, whereas ``inflection'' is selection of morphosyntactic features that are in a scopally higher position.
+For regularity, we need to know which categorizing affix combines with which root/stem. But there's also a sense in which this is true for the allomorphy of inflection, which is our next topic.}
+\end{answer}
 
 \bigskip
 We can also look at meaning change again. Do we get meaning change with \emph{every} derivational affix? Does our theory explain this? What about non-compositional meaning?
