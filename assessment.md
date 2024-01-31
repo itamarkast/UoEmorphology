@@ -90,3 +90,81 @@ Here are some examples of prompts for reflection:
 - How do I like this material compared to other courses?
 - What did I find especially useful this time?
 - What did I find especially unhelpful this time?
+
+
+## Ungrading resources
+
+- [Recording](https://media.ed.ac.uk/media/UngradingA+What+it+is+and+why+should+we+do+itF/1_zydssy92) of the January 2023 UoE Ungrading event (UoE-internal).
+- [Morris (2022)](https://www.timeshighereducation.com/campus/problem-ungrading-everyones-doing-it-wrong) in THE.
+- The Happiness Lab Podcast: [Making the Grade](http://www.youtube.com/watch?v=AeBHvSPL6bk)
+
+## Groupwork
+
+### How to work in groups (class discussion)
+
+The rationale: why do group projects at uni?
+
+- Teamwork and collaborative work are prevalent in the real world (and in academia).
+- Another chance to learn from one another.
+- Another chance to learn additional skills, e.g. communication.
+- With this project students get agency in getting to create something of value to them.
+
+Working in groups:
+
+1. How do members communicate? [communication]
+  - Email, group text, collaborative doc, Slack/Discord/Teams - whatever works, as long as it's clear what the platform is.
+
+2. When and how often does the group meet? [time management]
+  - As necessary. Sometimes it's good to plan a regular meeting (once a week? Twice a week? Every other week?) and sometimes it's easier to decide ad-hoc.
+
+3. What are the steps between now and the completed project?
+  - Does the project go from parts to a whole, or from a draft version to a full version? [project planning, time management]
+    + Some projects imply a certain sequence: for example, first do the lit review, then the methods, then the materials, then the analysis, then the conclusion, then the introduction.
+    + Others benefit from creating a small draft version of the final product, then slowly adding and enhancing.
+    + In practice, a given project will include both aspects.
+
+4. What does a (productive) meeting look like? [communication]
+  - Usually some subset of the following:
+    + Stating aims for the meeting
+    + reports back on what's been done since the last meeting
+    + other updates
+    + items for discussion
+    + recap of action items and whose responsibility they are
+    + decision on time of the next meeting
+
+5. What roles do members assume? [project planning]
+  - Is one person in charge of co-ordinating everyone? Does everyone know what they're responsible for? Is someone responsible for the lit review and someone else for materials, or is the setup different? There are no right answers, only communication and co-ordination between group members!
+
+6. Do members work in parallel or sequence? [project planning]
+  - Depends on the task: sometimes member A needs to finish a task so that member B can start their own work on it, and sometimes they can make progress concurrently.
+
+7. When do groups check in with the instructor? [project planning]
+  - Whenever they need to! We will also have regular check-ins.
+
+8. How is work distributed? [communication, project planning]
+  - It doesn't need to be distributed equally - few teams in the real world work under completely equal division of labour.
+  - Rather, each member should do the work that speaks to their strengths and contributes to the project as a whole, keeping in mind their own commitments elsewhere.
+  - This means that some members might choose to do less than others. This isn't a problem *as long as* the plan and expectations are clear to all members.
+
+### Group project in our course
+
+Once we've reached week 3, students will form small groups (4-5 members) to work on joint projects and learn from one another.
+
+Possible forms for the project could be:
+
+- A traditional essay
+- A proposal for an experiment
+- A comic strip
+- A video, collection of short videos
+- A podcast
+- A [listicle](https://labovfeed.webnode.page/)
+- A poem, painting or other work of art
+
+See here for some examples and motivation: [](https://blogs.ed.ac.uk/learning-teaching-conference-2022/d5/)
+
+The expectation is that each group will decide on its topic and the form of its project together with the instructor by the mid-semester mark (Flexible Learning Week).
+
+### Groupwork resources
+
+- [Scaffolding student projects](https://campuspress.yale.edu/yctl/scaffolding-student-projects/) (Yale)
+
