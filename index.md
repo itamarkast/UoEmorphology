@@ -42,6 +42,11 @@ Sections 2, 4 of the lecture notes.
 
 1. [Handout 2](02-affix-order.pdf)
 2. Handout 2, continued / [Group work](assessment.md)
-3. Allomorphy jigsaw
+3. Allomorphy jigsaw: [general setup](03-jigsaw.pdf), [worksheets](03-allo-jigsaws.pdf)
 
 ## Week 4: Allomorphy
+
+1. Allomorphy jigsaw, continued
+2. Allomorphy / \*ABA
+
+## Week 5
