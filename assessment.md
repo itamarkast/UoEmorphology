@@ -146,7 +146,7 @@ Working in groups:
   - Rather, each member should do the work that speaks to their strengths and contributes to the project as a whole, keeping in mind their own commitments elsewhere.
   - This means that some members might choose to do less than others. This isn't a problem *as long as* the plan and expectations are clear to all members.
 
-### Group project in our course
+### Group projects in our course
 
 Once we've reached week 3, students will form small groups (4-5 members) to work on joint projects and learn from one another.
 
@@ -164,6 +164,13 @@ See here for some examples and motivation: [](https://blogs.ed.ac.uk/learning-te
 
 The expectation is that each group will decide on its topic and the form of its project together with the instructor by the mid-semester mark (Flexible Learning Week).
 
+### How do I find a topic?
+
+You'd want to think about the kinds of things you're interested in, and what you might want to create.
+
+1. In terms of content: are you interested in a specific language or language family? Are you interested in a specific phenomenon or phenomena?
+2. In terms of form: are you looking to create novel analyses? Are you more interested in communicating ideas to a general audience (or a general linguistic audience)? Do you want to learn or practice a certain skill?
+    
 ### Groupwork resources
 
 - [Scaffolding student projects](https://campuspress.yale.edu/yctl/scaffolding-student-projects/) (Yale)
