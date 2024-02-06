@@ -47,6 +47,7 @@ Sections 2, 4 of the lecture notes.
 ## Week 4: Allomorphy
 
 1. Allomorphy jigsaw, continued
-2. Allomorphy / \*ABA
+   - [Exercise 7](e7-comparatives.pdf): comparatives (\*ABA)
+2. [Handout 4](04-comparatives.pdf): comparatives (\*ABA)
 
-## Week 5
+## Week 5: Argument structure
