@@ -1323,10 +1323,9 @@ For additional phenomena and reading:
 \end{itemize}
 
 
-\newpage
 \section{Allomorphy} \label{sec:allomorphy}
 
-What is allomorphy? What changes, and based on what? Let's find some examples.
+What is allomorphy? What changes, and based on what? Let's find some examples first.
 
     \subsection{Preliminaries}
         \subsubsection{Phonological conditioning}
@@ -1350,7 +1349,6 @@ A formalization (does it capture the reason?):
 \xe
 }\end{answer}
 
-\bigskip
 It works, but if the generalization is about coronals and voicing, we want that to drive the formalization or at least be clear in it.
 
 Is this phonology or morphology?
@@ -1433,7 +1431,8 @@ Also with adjectives:
  	\a  \emph{best} 
 \xe
 
-\ex  \gsc{GOOD} \lra $\begin{cases} 
+\ex Initial rules, to be revised when we get to *ABA:\\
+    \gsc{GOOD} \lra $\begin{cases} 
 	\text{\emph{good}} & / \trace~ \text{[\gsc{NORM}]} \\
 	\text{\emph{better}} & / \trace ~ \text{[\gsc{CMPR}]} \\
 	\text{\emph{best}} & / \trace ~ \text{[\gsc{SPRL}]} \\
@@ -1467,39 +1466,6 @@ We will:
 [Jigsaw puzzle on allomorphy]
 
     \subsection{Syntactic: Inward sensitivity}
-        \subsubsection{English}
-PL in English is sensitive to the root (we're talking about the suffix now, not root suppletion!):
-
-\pex[exno=4] \gsc{pl} \lra{}
-    \a -en / \{ \root{\gsc{ox}}, \dots \} \trace{}
-    \a -Ø / \{ \root{\gsc{sheep}}, \root{\gsc{deer}}, \dots \}
-    \a \dots
-    \a -s
-\xe
-
-What's the relevant structure? We already proposed something in~(\ref{tree:pl-catalan}):
-\ex \Tree
-[.
-    [.
-        [.{\emph{goss}\\`dog'} ]
-        [.\gsc{[F]} \emph{e} ]
-    ]
-    [.\gsc{[PL]} \emph{s} ]
-]
-\xe
-
-So if we want we can add the categorizer and find the direction of allomorph triggering:
-\ex 
-\Tree
-[.
-    [.
-        [.\root{\gsc{root}} ]
-        [.(n/Gen) ]
-    ]
-    [.\gsc{[PL]} ]
-]
-\xe
-
         \subsubsection{Latin}
 Latin recap:
 \ex
@@ -1602,6 +1568,39 @@ If our theory is about hierarchy and nodes, rather than features or values as su
     \endgl
 \xe
 
+        \subsubsection{English}
+PL in English is sensitive to the root (we're talking about the suffix now, not root suppletion!):
+
+\pex[exno=4] \gsc{pl} \lra{}
+    \a -en / \{ \root{\gsc{ox}}, \dots \} \trace{}
+    \a -Ø / \{ \root{\gsc{sheep}}, \root{\gsc{deer}}, \dots \}
+    \a \dots
+    \a -s
+\xe
+
+What's the relevant structure? We already proposed something in~(\ref{tree:pl-catalan}):
+\ex \Tree
+[.
+    [.
+        [.{\emph{goss}\\`dog'} ]
+        [.\gsc{[F]} \emph{e} ]
+    ]
+    [.\gsc{[PL]} \emph{s} ]
+]
+\xe
+
+So if we want we can add the categorizer and find the direction of allomorph triggering:
+\ex 
+\Tree
+[.
+    [.
+        [.\root{\gsc{root}} ]
+        [.(n/Gen) ]
+    ]
+    [.\gsc{[PL]} ]
+]
+\xe
+
         \subsubsection{More}
 \cite{rolle21wiley}:
 \pex Outward-conditioning by a morphosyntactic feature (inward sensitivity)
@@ -1620,6 +1619,8 @@ What would outward sensitivity in syntactically-conditioned allomorphy look like
     \item Affixes conditioning roots (root suppletion).
     \item Affixes conditioning affixes that essentially come before them.
 \end{itemize}
+
+We've already seen this with \emph{go}$\sim$\emph{went}: the allomorphy of the root/verb depends on the tense value of the higher Tense head.
 
 
         \subsubsection{Suppletion in Hiaki and Korean}
@@ -1714,7 +1715,7 @@ Applicative \emph{-i-}/\emph{-u-} in Georgian with the verb \emph{rbina} `run': 
 \xe
 \bigskip
 
-Itelmen \citep{bobaljik00}: class morpheme depends on Agr. \citet[10--11]{gouskovabobaljik20cup}:
+Itelmen \citep{bobaljik00}: class morpheme depends on Agr. \citet[10--11]{gouskovabobaljik20cup} show that this is about hierarchy, not linear order, because it holds for prefixes as well as suffixes:
 
 \ex /Ø-tɸɬ-z-čŋ-in/ [tɸsčŋin] `you are bringing it'
 \xe
@@ -1863,18 +1864,24 @@ What would this look like?
 
 \inSolution{
 Affix conditions root:
-\begin{enumerate}
-	\item Root: \emph{pata} `dog'.
+\begin{enumerate} \tightlist
+	\item Root \root{\gsc{pata}} `dog' with allomorphs \emph{pata} and \emph{der}.
 	\item With C-initial suffix: \emph{pata-\textbf{k}i} `the dog', \emph{pata-\textbf{m}u} `my dog'.
 	\item With V-initial suffix: \emph{\uline{der}-\textbf{a}} `dogs', \emph{\uline{der}-\textbf{e}} `your dog'.
 \end{enumerate}
-No language like this has been reported! When we find something similar, we also find alternative analyses \citep{adgeretal03tops,kalin20jomo,kastner21li,kiparsky21tlr,dolatian22gjgl}.
+No language like this has been reported! When we find something similar, we also find alternative analyses \citep{adgeretal03tops,kalin20jomo,kastner21li,kiparsky21tlr,dolatian22gjgl}.\\
+Here's what English would look like if it had upward-looking phonological sensitivity:
+\begin{enumerate} \tightlist
+    \item Root \root{\gsc{PERSON}} with phonologically-conditioned allomorphs \emph{person} and \emph{people}.
+    \item With C-initial suffix: \emph{person-ness}, \emph{person-s} (plural!).
+    \item With V-initial suffix: \emph{people-ality}, \emph{people-age}.
+\end{enumerate}
 }
 
     \subsection{Theory building}
         \subsubsection{Restrictive theories}
 
-[Exercise]
+[Exercise 6]
 
 \paragraph{Phonology} Generative phonology has gone through different formalisms.
 
@@ -1885,7 +1892,7 @@ What's wrong with this?
 \inSolution{
 \begin{enumerate} \tightlist
     \item You lose the generalization that this is about voicing.
-    \begin{itemize}
+    \begin{itemize} \tightlist
         \item There might be a general devoicing/assimilation rule in the language.
     \end{itemize}
     \item You could write anything!
@@ -1939,7 +1946,7 @@ So:
 \end{enumerate}
 }
 
-\paragraph{Semantics} Variables must be bound in their domain. This is why e.g.~donkey sentences are so fascinating to formal semanticists.
+\paragraph{Semantics} Variables must be bound in their domain. This is why e.g.~``donkey sentences'' are so fascinating to formal semanticists.
 
 \paragraph{Summary} These aren't the only relevant subfields, of course. But:
     \begin{itemize} \tightlist
@@ -1971,7 +1978,7 @@ Let's remind ourselves of what we need to derive (the \emph{explananda}):
     \item But when do you know? You can only do that once you have that information.
     \item Lexicalist theories assume that the syntax combines full words. Would that work?
         \begin{itemize} \tightlist
-            \item No, because how would you know what word to put at the base of your tree if you don't have the rest of it with the conditioning information yet!
+            \item Not immediately, because how would you know what word to put at the base of your tree if you don't have the rest of it with the conditioning information yet!
             \item So we need a node to be a bundle of syntax, and only pick the form once you have other nodes with the relevant info around it.
         \end{itemize}
 \end{itemize}
@@ -2003,7 +2010,9 @@ So we go ahead and add T, which by the same logic gives us this:
 ]
 \xe
 
-We now have the information that V needs. So we can go ahead and choose its form, or \emph{exponent}, or \emph{vocabulary item}, namely \emph{went}. This is our syntactic conditioning (looking upwards / conditioned downwards):
+We now have two nodes, each with syntactic features. So each can look at the syntactic features of the other, be it upwards or downwards, as necessary.
+
+We now also have the information that \root{go} needs. So we can go ahead and choose its form, or \emph{exponent}, or \emph{vocabulary item}, namely \emph{went}. This is our syntactic conditioning (looking upwards / conditioned downwards):
 \ex \Tree
 [.
     [.
@@ -2021,10 +2030,43 @@ Could we have gotten phonological conditioning? Well, at~(\ref{ex:went-nophono})
         [.{X\\\root{wug}\\syn:[Perf]\\phon:/\trace{}/} ]    
         [. ]
     ]
-    [.{Y\\syn:[Past]\\phon:/blɪk/} ]
+    [.{Y\\syn:[verb]\\phon:/blɪk/} ]
 ] 
 \xe
 
+Another way of seeing this is by looking at a regular verb like \root{treat}. We merge both elements in the structure, not spelling out either one yet:
+\ex \label{ex:treat-nophono} \Tree
+[.
+    [.
+        [.{V\\\root{treat}\\syn:[verb]\\phon:/\trace/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace/} ]
+]
+\xe
+
+The root doesn't care about T, so we fill in its phonology:
+\ex \label{ex:treat-phono1} \Tree
+[.
+    [.
+        [.{V\\\root{treat}\\syn:[verb]\\phon:/trit/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace{}/} ]
+]
+\xe
+
+Only now do we move to T. In order to know which allomorphy of the past tense suffix to choose, we need to look down to the phonology of the verb. We have that information, so we can choose the right allomorph, deriving \emph{treat-ed}. But what we wouldn't have is a situation in which V looks up to the phonology of T, because the phonology of T hasn't been filled in yet at that point.
+
+\ex \label{ex:treat-phono2} \Tree
+[.
+    [.
+        [.{V\\\root{treat}\\syn:[verb]\\phon:/trit/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/əd/} ]
+]
+\xe
 
         \subsubsection{Summary and readings}
 By this point we have more or less built contemporary Distributed Morphology, with some aspects developed most clearly by \cite{embick10}. So see that monograph, or the textbook version in \cite{embick15}.
@@ -2035,9 +2077,88 @@ There are still many questions we haven't explored, such as what the cycles of d
 
 It's also worth mentioning that other theories do have ways of dealing with e.g.~suppletion. Some of the even-stronger evidence for Late Insertion theories comes for patterns of syncretism \citep{kramer20cup}. Other ways of thinking about Late Insertion can be found in \cite{beard95} and \cite{embick16oup}.
 
-
+\newpage
     \subsection{Locality} \label{sec:allomorphy:locality}
-        \subsubsection{Prelude: \cite{arad03}}
+        \subsubsection{Prelude: *ABA}
+[Exercise 7]
+
+\citet{bobaljik12}:
+
+\begin{center}
+\begin{tabular}{lllll}
+ & \textbf{Positive} & \textbf{Comparative} & \textbf{Superlative} &  \\\hline\hline
+ English & \textbf{strong} & \textbf{strong}-er & \textbf{strong}-est & `strong'\\
+ & A & A & A \\\hline
+ English & \textbf{happy} & \textbf{happi}-er & \textbf{happi}-est & `happy'\\
+ & A & A & A \\\hline
+ 
+ English  & \textbf{far} & \textbf{farth}-er &  \textbf{farth}-st & `far' \\
+ & A & B & B \\\hline
+ 
+ French & \textbf{bon} & \textbf{mieux} & le \textbf{mieux} & `good'\\
+ & A & B & B \\\hline
+    % English  & \textbf{good} & \textbf{bett}-er &  \textbf{be}-st & `good' \\
+ % & A & B & B \\\hline
+
+ German & \textbf{schnell} & \textbf{schnell}-er & am \textbf{schnell}-sten & `fast'\\
+    & A & A & A\\\hline
+
+
+ French & \textbf{mauvais} & \textbf{pire} & le \textbf{pire} & `bad' \\
+ & A & B & B\\\hline
+
+  Latin & \textbf{bon}-us & \textbf{mel}-ior & \textbf{opt}-imus &  `good'\\
+ & A & B & C\\\hline
+% English  & \textbf{bad} &  \textbf{worse} & \textbf{wor}-st & `bad' \\
+
+Danish  & \textbf{god} &  \textbf{bed}-re &  \textbf{bed}-st &  `good'\\
+   &  A & B & B\\\hline
+
+German & \textbf{gut} & \textbf{bess}-er & am \textbf{bes}-ten & `good'\\
+    & A & B & B\\\hline
+    
+Georgian & \textbf{k'argi}-i & u-\textbf{m\v{j}ob}-es-i & sa-u-\textbf{m\v{j}ob}-es-o & `good'\\
+   & A & B & B\\\hline
+
+Welsh  & \textbf{da} & \textbf{gwell} &  \textbf{gor}-au & `good' \\
+    & A & B & C\\\hline
+
+Basque & \textbf{asko} & \textbf{gehi}-ago & \textbf{gehi}-en & `a lot'\\
+    & A & B & B\\\hline
+
+Irish  & \textbf{maith} &  \textbf{ferr} & \textbf{dech} & `good' \\
+    & A & B & C\\\hline
+Persian  & \textbf{x\={o}b} &  \textbf{weh/wah}-\={i}y &  \textbf{pahl}-om/\textbf{p\={a}\v{s}}-om &  `good'\\
+    & A & B & C\\\hline
+Czech & \textbf{\v{s}patn}-\'{y} & \textbf{hor}-\v{s}í & nej-\textbf{hor}-\v{s}í & `bad'\\
+    & A & B & B\\
+
+\end{tabular}
+\end{center}
+
+What additional patterns emerge? Which patterns might we expect to see, but do not find? Why not? Can you propose a structural explanation? You might find it convenient to assume that the root is spelled out as the positive form when it's a plain adjective, as well as two additional heads or features [\gsc{cmpr}] and [\gsc{sprl}].
+
+\inSolution{We don't have evidence for AAB or ABA. This generalization has now come to be known simply as ``*ABA'' (star-A-B-A).}
+\bigskip
+
+Deriving *ABA:
+
+\ex Structure: \inSolution{ {[[[} Adjective ] Comparative ] Superlative ] }
+\xe
+\pex Rules of exponence (Vocabulary Insertion):
+    \a \inSolution{ \root{good} \lra{} \emph{bon} }
+    \a \inSolution{ \root{good} \lra{} \emph{mel} / \trace{} ] \gsc{CMPR} }
+    \a \inSolution{ \root{good} \lra{} \emph{opt} / \trace{} ] \gsc{CMPR} ] \gsc{SPRL} }
+\xe
+
+\inSolution{If superlatives had been derived directly from the adjectives (without a comparative layer), then~(\lastx a) would've kicked in, giving us ABA or ABB. But Czech shows us that we still get ABB instead.}
+\bigskip
+
+For deriving *AAB and many other *ABA phenomena outwith adjectival suppletion, see the additional readings.
+ 
+\paragraph{Further reading:} \cite{bobaljik12,bobaljik15ar}, \cite{smithetal16supplet}, \cite{mueller20}, and the articles in \cite{cahavanden17}.
+        
+        \subsubsection{Locality in DM: \cite{arad03}}
 \pex Forms derived from \root{sgr} (after \citealt[746]{arad03}): \label{ex:sgr}
     \a \emph{seger} `closure' (N)
     \a \emph{sograim} `parentheses' (N)
@@ -2633,9 +2754,6 @@ One possible (Arad-style) analysis:
 \xe
 
 See \cite{kastner19cup} for an overview of this last bit.
-
-\paragraph{Further reading: *ABA.} \cite{bobaljik12}, \cite{smithetal16supplet}, \cite{mueller20}, and the articles in \cite{cahavanden17}.
-
 
 % \newpage
 
