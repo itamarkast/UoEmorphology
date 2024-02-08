@@ -49,5 +49,10 @@ Sections 2, 4 of the lecture notes.
 1. Allomorphy jigsaw, continued
    - [Exercise 7](e7-comparatives.pdf): comparatives (\*ABA)
 2. [Handout 4](04-comparatives.pdf): comparatives (\*ABA)
+   - [Exercise 8](e8-causatives.md): causatives
 
 ## Week 5: Argument structure
+
+1. [Handout 5](05-argument-structure.pdf): Argument structure
+2. Handout 5, continued / Causatives
+3. Causatives
