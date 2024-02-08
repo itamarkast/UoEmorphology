@@ -1,0 +1,1 @@
+After we've established some ideas about argument structure, we'll do a group exercise on causatives. Do you know anything you might call a causative verb or causative construction (in any language)? Who is the Causer and who is the Causee in each case? We'll look at a number of examples together.
