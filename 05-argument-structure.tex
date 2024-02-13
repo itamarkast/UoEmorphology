@@ -1,0 +1,383 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[solution]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2023-24, Edinburgh, Handout 5}
+\bigskip
+
+\section{Argument structure}
+
+	\subsection{Preliminaries}
+	    \subsubsection{Valency}
+Verbs differ in terms of the number of syntactic and semantic dependents they require (or are compatible with). This is often called verb valency.
+
+\ex It rained.
+\xe
+\pex
+	\a Chris ran.
+	\a The door opened.
+\xe
+\pex
+	\a Chris hit the ball.
+	\a Chris knows the answer.
+\xe
+\pex
+	\a Sam put the book on the table.
+	\a \ljudge{*} Sam put the book.
+	\a \ljudge{*} Sam put on the table.
+	\a Sam gave Tyler a book.
+	\a \ljudge{*} Sam gave Tyler.
+	\a \ljudge{*} Sam gave a book.
+\xe
+
+\textbf{Observation:} \inSolution{Verbs (in English) require at most one \textbf{external} argument, one \textbf{internal} argument and one \textbf{indirect/applied/oblique} argument at the same time.}
+
+\bigskip
+Do any verbs take more than 3 dependents (subject plus two objects)?
+
+\begin{answer}{
+Transactional verbs seem to imply 3 complements semantically but don’t require that all be expressed:
+\pex
+    \a Max bet Sam (£20) (that they would win the race).
+    \a Tyler bought a house (from Kim) (for £40).
+\xe
+}\end{answer}
+
+        \subsubsection{External arguments}
+Let's look at \emph{external arguments} (subjects) more closely. In~(\nextx)--(\anextx) we see cases where the external argument (subject) varies but the verb and internal argument (object) stay the same. How do the readings within~(\nextx) and within~(\anextx) differ?
+
+\pex
+	\a Kim took a nap.
+	\a The child took a nap.
+	\a The dog took a nap.
+	\a \ljudge{?} The computer took a nap.
+\xe
+
+\pex 
+	\a Kim threw the ball.
+	\a The child threw the ball.
+	\a The monkey threw (the dog) the ball.
+\xe
+
+\bigskip
+
+\begin{answer}{
+It's the same event, except with a different subject/agent. Even the computer example makes sense if we think of the ``sleep'' function.
+}\end{answer}
+
+\bigskip
+
+Now, in~(\nextx)--(\anextx), we see cases where the internal argument varies while the verb and external argument stay the same. How do the readings differ within~(\nextx) and~(\anextx)? How are these cases different from those in~(\blastx)--(\lastx)?
+
+\pex
+	\a Kim took a nap.
+	\a Kim took a book from the shelf.
+	\a Kim took a bus.
+\xe
+
+\pex
+	\a Kim threw the ball.
+	\a Kim threw a party.
+	\a Kim threw a tantrum.
+	\a Kim threw the match [lost the game on purpose].
+\xe
+
+\begin{answer}{
+The kind of event changes, depending on the object, even though the verb stays the same. And in all cases we still have an internal argument (object), so the syntax stays more or less the same.
+}\end{answer}
+
+\bigskip
+\paragraph{Generalization:} \inSolution{The semantic relationship between the verb and the internal argument is less predictable than that between the verb and the external argument, which is predictable.}
+
+How can we derive this generalization in our formal system?
+
+\inSolution{
+\begin{itemize} \tightlist
+    \item It appears that a predicate has selectional requirements for its complement, but less so for its subject.
+    \item This makes sense if the verb and internal argument form one domain (much like a root and the first categorizing affix), with the external argument being added later in the derivation.
+    \item One common way of doing this technically is by using a separate head to introduce the external argument. For \cite{chomsky95} this is ``little \emph{v}''. Other work since calls this head Voice \citep{kratzer96,marantz97,marantz13lingua,pylkkanen08,layering15,kastner20ogs}.
+\end{itemize}
+}
+
+Tree:
+\ex \emph{Sam ate cake}:\\
+\inSolution{
+\Tree
+[.TP
+	\qroof{\tikz{\node (SpecTP) {\emph{Sam}};}}.DP
+	[.T'
+		[.T[Past] ]
+		[.VoiceP
+			\qroof{\tikz{\node (SpecVoice) {\emph{\sout{Sam}}};}}.DP
+			[.
+				[.\fbox{Voice} ]
+				[.vP
+					[.{v\\\emph{ate}}
+						[.\root{\gsc{EAT}} ]
+						[.\fbox{v} ]
+					]
+					\qroof{\emph{cake}}.DP
+				]
+			]
+		]
+	]
+]
+\begin{tikzpicture}[overlay]
+	\draw[thick,->] (SpecVoice) .. controls +(south west:2) and +(south west:2) .. node[below]{\scriptsize (EPP)\phantom{aa}}(SpecTP);
+\end{tikzpicture}
+}
+\xe
+\bigskip
+
+See \cite{kratzer96} for the original proposal; the paper gets a bit technical at times but is fairly readable overall. See chapter 1.3 of \cite{layering15} or chapter 1.3.1 of \cite{kastner20ogs} for a very quick overview.
+
+    \subsection{Sublexical modification}
+Now let's go deeper into argument structure by seeing how morphology and syntax interact.
+        
+        \subsubsection{Syntax}
+
+What are the possible readings for~(\nextx)?
+\ex Itamar turned the wi-fi off again.
+\xe
+
+\bigskip
+\begin{answer}{
+\pex \a The new router arrived from the factory. The tech people plugged it in, turned it on, and then Itamar turned it back off. \hfill [\emph{restitutive}]
+	\a Alex turned the wi-fi off so that students would focus on his lecture. At the end of the lecture he turned it back on. Then Itamar turned it off again for his own lecture. \hfill [\emph{repetitive}]
+	\a Before every lecture, Itamar turns the wi-fi off so that students focus on his lecture. He'd done so for the past six weeks, and has just turned it off again. \hfill [\emph{repetitive}]
+\xe
+\emph{Again} can modify either being-off (restitutive, a), or causing-something (repetitive, b--c).
+}\end{answer}
+
+\bigskip
+We can do this with various predicates:
+\ex Chris opened the door again.
+\xe
+
+\begin{answer}{
+\pex \a The door had been open before. Maybe it was built open, then someone closed it, then Chris opened it. \hfill [\emph{restitutive}]
+	\a Someone else opened the door, someone closed the door, and then Chris opened the door. \hfill [\emph{repetitive}]
+	\a Chris had already opened the door once, then they opened it a second time. \hfill [\emph{repetitive}]
+\xe
+\emph{Again} can modify either becoming-open (restitutive, a), or causing-something (repetitive, b--c).
+}\end{answer}
+
+\bigskip
+How do we capture this formally? Say we schematize an event the following way \citep{vonstechow96,beckjohnson04,dowty91}. What can \emph{again} modify?
+
+\ex {[}Chris CAUSE [door BECOME open]]
+\xe
+
+\begin{answer}{
+If \emph{again} modifies BECOME, we get the restitutive reading. If it modifies CAUSE, we get the repetitive reading.\\
+Or in a tree: 
+\citep{kratzer96,dm,layering15,kastner20ogs}
+\ex
+\Tree
+	[.VoiceP
+		[.\emph{Chris} ]
+		[.
+			[.Voice ]
+			[.vP 
+				[.v 
+					[.\root{open} ]
+					[.v ]
+				]
+				[.{DP\\\emph{the door}} ]
+			]
+		]
+	]
+\xe
+\pex In such a structure, \emph{again} could adjoin to (and modify):
+	\a The root \root{open} (restitutive).
+	\a The vP, perhaps together with Voice (repetitive, `someone' reading).
+    \a The full VoiceP (repetitive, `Chris' reading).
+\xe
+We can imagine various analytical choices. Does \emph{again} attach to different parts of the tree in the syntax? Or does it attach in one set place, but then combine with different constituents in the semantics?
+}\end{answer}
+
+\bigskip
+\inSolution{
+One prediction of this view is that \emph{again} shouldn't be able to modify only part of a constituent. For example, we wouldn't expect \emph{again} to modify the entire VoiceP but without the internal argument. In other words, the following reading should not be possible - which is correct:
+\ex Itamar turns the air conditioning off before each class. But today he flipped the wrong switch. Today, \# Itamar turned the WI-FI off again.
+\xe
+}
+
+        \subsubsection{Morphology}
+Is there an affix that does the same job as \emph{again}, and has the same readings?
+
+\ex \fillblank{Chris \textbf{re-}opened the door.}
+\xe
+
+\bigskip
+
+Other affixes influence argument structure. How?
+
+\pex \a  I danced.
+	\a \ljudge{*} I danced Eryl.
+\xe
+\pex \a \ljudge{*} I out-danced.
+	\a I out-danced Eryl.
+\xe
+
+The following verbs seem to allow \emph{out}-prefixation easily:
+\pex \a swim, dance, jump, eat.
+	\a I out-swam/out-danced/out-jumped/out-ate Eryl.
+\xe
+
+But these ones resist it (at least with the meanings they have when used with just a subject and no object).
+\pex \a appear, arrive, die.
+	\a \judge{*} I out-appeared/out-arrived/out-died Eryl.
+\xe
+
+What's the difference between the verbs that allow it and the ones that don't?
+
+\begin{answer}{
+In English, \emph{out}-prefixation attaches to verbs that don't \emph{need} an object, and creates a standard of comparison out of the new object.\\
+See \cite{ahn22}.
+}\end{answer}
+
+\bigskip
+And do the following sentences change our description of the behavior of \emph{out}-prefixation?
+\pex 
+    \a \ljudge{*} The bus ran
+	\a I out-ran the bus.
+    \a \ljudge{*} My pajamas grew
+    \a I out-grew my pajamas.
+\xe
+
+
+\bigskip
+Here's a similar example, Spanish \emph{sobre}- `over' \citep[100]{fabregasscalise12}:
+
+\pex
+    \a \begingl
+        \gla El pájaro vuela.//
+        \glft `The bird flies.'//
+    \endgl
+    \a \begingl
+        \gla El pájaro sobrevuela *(la casa)//
+        \glb The bird over-flies (the house)//
+        \glft `The bird flies over the house.'//
+    \endgl
+\xe
+
+\bigskip
+\textbf{Summary.} Events, or verb phrases in technical terms, have internal structure. We can isolate parts of this structure through \emph{sublexical modification}: modifying part of an opening event, for example, using an adverbial. See chapter 2.2.2.1 of \cite{layering15} for more on this.
+
+If syntax and morphology are the same module, we expect that these adverbials could be either words or affixes - as is the case. And these elements which we add can also change the argument structure of the verb (adding or removing arguments), in ways which we haven't made precise yet.
+
+\newpage
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}

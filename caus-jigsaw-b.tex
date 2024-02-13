@@ -40,7 +40,7 @@ SmallCapsFeatures = {FakeSlant=0},
 \usepackage{fancyhdr}
 \addtolength{\headheight}{2.5pt}
 \pagestyle{fancy} %or fancyplain
-\lhead{Morphology 2022-23 (UoE)}
+\lhead{Morphology 2023-24 (UoE)}
 \rhead{Jigsaw group B}
 \fancyfoot[C]{\thepage~of \pageref{LastPage}}
 \fancypagestyle{plain}{%
@@ -69,148 +69,197 @@ SmallCapsFeatures = {FakeSlant=0},
 \gdef^#1{\ensuremath{{}\sp{#1}}}%
 \makeatother
 
-\title{Jigsaw group B} % transitive, verb-derived, cause O to be V-ed, relating causing and caused events
-\date{Morphology 2022-23, causatives}
+\title{Jigsaw group B} % complex events, VoiceP-derived, cause O to V
+\date{Morphology 2023-24, causatives}
 \author{}
 
 \begin{document}
 
-In this jigsaw puzzle we will look at different kinds of causatives. For simplicity, assume that all the forms glossed \gsc{CAUS} are the same kind of element (albeit in different languages).
+In this jigsaw puzzle we will look at different kinds of causatives. For simplicity, assume that all the forms glossed \gsc{CAUS} are the same kind of element (albeit in different languages) - the exact syntactic label is not important right now.
 
-In this expert group, see if you can find out what is being caused, and to what/whom.
-
-\section{English}
-
-\pex \a Tyler opened the door.
-    \a The door opened.
-    \a Tyler caused the door to open.
-\xe
-
-\pex \a Kim broke the vase.
-    \a The vase broke.
-    \a Kim caused the vase to break.
-\xe
-
-\pex \a Kim taught Chris.
-    \a Chris learned.
-    \a Kim caused Chris to learn.
-\xe
-
-% hang hung
-% hang hanged
-
-% rise rose
-% raise raised
-
-% rise raise
-
-
-% destroy the tower
-% * the tower destroyed
-
-% They broke \{their promise / the world record}
-% * \{The promise / The world record\} broke
+In this expert group, see if you can find out what is being caused, and to what/whom. Characterise this in terms of grammatical roles (subject, object, etc).
+% \section{English}
 
 
 \section{Hebrew}
 
+Only the forms glossed with \gsc{CAUS} here are the ``causative'' ones for our purposes.
+
 \pex
     \a \begingl
-        \gla teo kara et ha-sefer//
-        \glb Theo read.\gsc{PAST} \gsc{ACC} the-book//
-        \glft `Theo read the book.'//
+        \gla adam axal et ha-xumus//
+        \glb Adam ate-\gsc{PAST} \gsc{ACC} the-hummus//
+        \glft `Adam ate the hummus.'//
     \endgl
     \a \begingl
-        \gla teo hekri et ha-sefer le-noni//
-        \glb Theo read.\gsc{PAST}-\gsc{CAUS} \gsc{ACC} the-book to-Noni//
-        \glft `Theo read the book out to Noni.'//
+        \gla adam heexil et teo xumus//
+        \glb Adam ate.\gsc{CAUS-\gsc{PAST}} \gsc{ACC} Theo hummus//
+        \glft `Adam fed Theo hummus.'//
+    \endgl
+\xe
+
+\pex
+    \a \begingl
+        \gla teo lavaʃ et ha-meil//
+        \glb Theo wore-\gsc{PAST} \gsc{ACC} the-coat//
+        \glft `Theo wore the coat.'//
+    \endgl
+    \a \begingl
+        \gla teo helbiʃ et axiv be-meil//
+        \glb Theo wore.\gsc{CAUS-\gsc{PAST}} \gsc{ACC} his.brother in-coat//
+        \glft `Theo dressed his brother in a coat.'//
     \endgl
 \xe
 \pex
     \a \begingl
-        \gla ha-maxʃev kalat et ha-ʃeder//
-        \glb the-computer received.\gsc{PAST} \gsc{acc} the-transmission//
-        \glft `The computer received the transmission.//
+        \gla teo xatam al ha-mismax//
+        \glb Theo signed-\gsc{PAST} on the-document//
+        \glft `Theo signed the document.'//
     \endgl
+
     \a \begingl
-        \gla ha-maxʃev heklit et ha-toxnit//
-        \glb the-computer received.\gsc{PAST}-\gsc{CAUS} \gsc{ACC} the-program//
-        \glft `The computer recorded the program.'//
+        \gla teo hextim et ha-menahelet al ha-mismax//
+        \glb Theo signed.\gsc{CAUS-\gsc{PAST}} \gsc{ACC} the-manager on the-document//
+        \glft `Theo signed the manager on the document.'//
     \endgl
 \xe
-\pex
-    \a \begingl
-        \gla ha-sefer nafal//
-        \glb the-book fell.\gsc{PAST}//
-        \glft `The book fell.'//
+
+
+\section{Japanese}
+
+The same pattern can be found in Japanese:
+
+\ex \begingl
+    \gla Taroo-ga Hanako-o ik-ase-ta//
+    \glb Taro-\gsc{NOM} Hanako-\gsc{ACC} go-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Taro made Hanako go.'//
     \endgl
-    \a \begingl
-        \gla teo hepil et ha-sefer//
-        \glb Theo fell.\gsc{PAST}-\gsc{CAUS} \gsc{ACC} the-book//
-        \glft `Theo dropped the book.'//
+\xe
+
+\ex \begingl
+    \gla Kotosi-wa dekinai gakusei-o hue-sase-ta//
+    \glb This.year-\gsc{Topic} poor students-\gsc{ACC} increase-\gsc{CAUS}-\gsc{PAST}//
+    \glft `This year, we caused (the number of) poor students to increase.'//
+    \endgl
+\xe
+
+% kow-as-ase
+% break-\gsc{CAUS}-\gsc{CAUS}
+% ‘make someone break something’
+
+% ugok-as-ase
+%  move-\gsc{CAUS}-\gsc{CAUS}
+% ‘make someone move something
+
+\ex \begingl
+    \gla Taroo-wa Hanako-ni hanasi-o tutae-sase-ta//
+    \glb Taro-\gsc{Topic} Hanako-\gsc{DAT} story-\gsc{ACC} convey-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Taro made Hanako convey a story.'//
     \endgl
 \xe
 
 \newpage
 \section{Quechua}
+And the same pattern in Quechua:
 
-\pex
-    \a \begingl
-    \gla Yaku t'impu-rqa//
-    \glb Water boil-\gsc{PAST}//
-    \glft `The water boiled.'//
+\ex \begingl
+    \gla Marya Juan-man libru-ta rikhu-chi-rqa//
+    \glb Mary Juan-\gsc{DAT} book-\gsc{ACC} see-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Mary showed John the book.'//
+\endgl
+\xe
+
+\ex \begingl
+    \gla Juan puñu-n//
+    \glb Juan sleep-\gsc{3SUBJ}//
+    \glft `Juan sleeps.'//
+    \endgl
+\xe
+\ex \ljudge{*} \begingl
+    \gla Maria Juan-ta puñu-n//
+    \glb Maria Juan-\gsc{ACC} sleep-\gsc{3SUBJ}//
+    \glft (int.~‘Maria sleeps Juan.’)//
+    \endgl
+\xe
+\ex \begingl
+    \gla Maria Juan-ta puñu-chi-n//
+    \glb Maria Juan-\gsc{ACC} sleep-\gsc{CAUS}-\gsc{3SUBJ}//
+    \glft ‘Maria makes Juan sleep.’//
+    \endgl
+\xe
+
+% And when the embedded verb is transitive:
+
+\pex \a \begingl
+    \gla Alqo wayna-ta khani-rqa//
+    \glb Dog boy-\gsc{ACC} bite-\gsc{PAST}//
+    \glft ‘The dog bit the boy.’//
     \endgl
     
     \a \begingl
-    \gla Wayna yaku-ta t'impu-chi-rqa//
-    \glb boy water-\gsc{ACC} boil-\gsc{CAUS}-\gsc{PAST}//
-    \glft `The boy boiled the water.'//
+    \gla Juan alqo-wan wayna-ta khani-chi-rqa.//
+    \glb Juan dog-\gsc{INSTR} boy-\gsc{ACC} bite-\gsc{CAUS}-\gsc{PAST}//
+    \glft `Juan made the dog bite the boy.' (literally `Juan made-bite the boy using the dog')//
     \endgl
 \xe
+
+
+% \section{Hiaki}
+% \ex \begingl
+%     \gla Juan Maria-ta vaso-ta ham-ta-tua-k//
+%     \glb Juan Maria-\gsc{ACC} glass-\gsc{ACC} break-\gsc{TR}-\gsc{CAUS}-\gsc{PERF}//
+%     \glft `Juan made Maria break the glass.'//
+%     \endgl
+% \xe
+
+\section{Turkish}
+And also in Turkish:
 
 \ex \begingl
-    \gla Juan Marya-ta phiña-chi-rqa//
-    \glb John Mary-\gsc{ACC} anger-\gsc{CAUS}-\gsc{PAST}//
-    \glft `John angered Mary.'//
-    \endgl
-    % \a \begingl
-    % \gla Marya phiña-\uline{ku}-rqa//
-    % \glb Mary anger-REFL-\gsc{PAST}//
-    % \glft `Mary got angry.'//
-    % \endgl
-\xe
-
-\section{Romance}
-\pex
-    \a \begingl
-        \gla \rightcomment{[French]}Marie  fit  reparer  la  voiture  (à  Jean). //
-        \glb Marie made repair the car at Jean//
-        \glft `Marie got the car fixed (by Jean)', `Marie made John fix the car.'//
-    \endgl
-    \a \begingl
-        \gla \rightcomment{[Italian]}Maria  fece  riparare  la  macchina  (a  Gianni).  //
-        \glb Maria made repair the car at Gianni//
-        \glft `Maria got the car fixed (by Gianni).'//
-    \endgl
-    \a \begingl
-        \gla \rightcomment{[Spanish]}Maria  hizo  arreglar  el  coche  (a  Juan). //
-        \glb Maria made repair the car at Juan//
-        \glft `Maria got the car fixed (by Juan).'//
-    \endgl
-\xe
-
-\section{Hiaki}
+  \gla ben kIz-a maymun-u sat-tIr-dI-m//
+  \glb I girl-\gsc{DAT} monkey-\gsc{ACC} sell-\gsc{CAUS}-\gsc{PAST}-1SG//
+  \glft `I made the girl sell the monkey'//
+  \endgl
+\xe 
 
 \ex \begingl
-    \gla Juan vaso-ta ham-ta-tevo-k//
-    \glb Juan glass-\gsc{ACC} break-\gsc{TR-CAUS-PRF}//
-    \glft `Juan had the glass broken.'//
-    \endgl
-\xe
+  \gla kIz-I maymun-a bak-tIr-dI-m//
+  \glb girl-\gsc{ACC} monkey-\gsc{DAT} look-\gsc{CAUS}-\gsc{PAST}-1SG//
+  \glft `I made/had/let the girl look at the monkey'//
+  \endgl
+\xe 
+
+
+\ex \begingl
+  \gla kIz-I maymun-dan kork-tur-uyor-um//
+  \glb girl-\gsc{ACC} monkey-ABL fear-\gsc{CAUS}-PRES-1SG//
+  \glft `I am making the girl fear the monkey'//
+  \endgl
+\xe 
+
+% \section{IsiXhosa}
+% \pex 
+%     \a Intengiso i-fun-is-e inkwenkwe ithoyi.
+% 9advertisement 9SBJ-want-\gsc{CAUS}-PRF 9boy 9toy
+% ‘The advertisement made the boy want a toy.’
+
+%     \a uDallas_i w-aphul-is-e uZoli_j iglasi ngabom{i/*j}.
+% 1Dallas 1SBJ-break.TR-\gsc{CAUS}-PRF 1Zoli 9glass on.purpose
+% ‘Dallas [[made Zoli break the glass] on purpose].’
+% *‘Dallas [made [Zoli break the glass on purpose]].’
+% \xe
+
+
+% (3) Intengiso y-enz-e ukuba inkwenkwe i-fun-e ithoyi.
+% 9advertisement 9SBJ-make-PRF COMP 9boy 9SBJ-want-SBJV 9toy
+% ‘The advertisement made the boy want a toy.’
 
 
 \section{Analysis}
 
 What would a formal analysis look like? Specifically, what would the relationship be between the Causer, the Causee, the verb/root, and the element \gsc{CAUS}?
+
+
+
 
 \end{document}

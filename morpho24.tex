@@ -2873,6 +2873,7 @@ This kind of theory is inspired by Distributed Morphology but is consistent with
 
 Now it's time to see how explanatory this kind of theory is. We will look at the interaction of morphology and syntax (argument structure), followed by the interaction of morphology and semantics (lexical semantics).
 
+
 \section{Argument structure}
 
 	\subsection{Preliminaries}
@@ -2898,7 +2899,7 @@ Verbs differ in terms of the number of syntactic and semantic dependents they re
 	\a \ljudge{*} Sam gave a book.
 \xe
 
-\textbf{Observation:} \fillblank{Verbs (in English) require at most one \textbf{external} argument, one \textbf{internal} argument and one \textbf{indirect/applied/oblique} argument at the same time.}
+\textbf{Observation:} \inSolution{Verbs/\textbf{Predicates} (in English) require at most one \textbf{subject} (external argument), one \textbf{direct object} (internal argument) and one \textbf{indirect/applied/oblique} argument at the same time.}
 
 \bigskip
 Do any verbs take more than 3 dependents (subject plus two objects)?
@@ -2906,8 +2907,8 @@ Do any verbs take more than 3 dependents (subject plus two objects)?
 \begin{answer}{
 Transactional verbs seem to imply 3 complements semantically but don’t require that all be expressed:
 \pex
-    \a Max bet Sam (£20) (that he would win the race).
-    \a Itamar bought a house (from Michael) (for £40).
+    \a Max bet Sam (£20) (that they would win the race).
+    \a Tyler bought a house (from Kim) (for £40).
 \xe
 }\end{answer}
 
@@ -2947,7 +2948,7 @@ Now, in~(\nextx)--(\anextx), we see cases where the internal argument varies whi
 	\a Kim threw the ball.
 	\a Kim threw a party.
 	\a Kim threw a tantrum.
-	\a Kim threw the match [lost it on purpose].
+	\a Kim threw the match [lost the game on purpose].
 \xe
 
 \begin{answer}{
@@ -2955,15 +2956,17 @@ The kind of event changes, depending on the object, even though the verb stays t
 }\end{answer}
 
 \bigskip
-\paragraph{Generalization.} \fillblank{The semantic relationship between the verb and the internal argument is less predictable than that between the verb and the external argument, which is predictable.}
+\paragraph{Generalization:} \inSolution{The semantic relationship between the verb and the internal argument is less predictable than that between the verb and the external argument, which is predictable.}
 
 How can we derive this generalization in our formal system?
 
+\inSolution{
 \begin{itemize} \tightlist
-    \item \fillblank{It appears that a predicate has selectional requirements for its complement, but less so for its subject.}
-    \item \fillblank{This makes sense if the verb and internal argument form one domain (much like a root and the first categorizing affix), with the external argument being added later in the derivation.}
-    \item \fillblank{One common way of doing this technically is by using a separate head to introduce the external argument. For \cite{chomsky95} this is ``little \emph{v}''. Other work since calls this head Voice \citep{kratzer96,marantz97,marantz13lingua,pylkkanen08,layering15,kastner20ogs}.}
+    \item It appears that a predicate has selectional requirements for its complement, but less so for its subject.
+    \item This makes sense if the verb and internal argument form one domain (much like a root and the first categorizing affix), with the external argument being added later in the derivation.
+    \item One common way of doing this technically is by using a separate head to introduce the external argument. For \cite{chomsky95} this is ``little \emph{v}''. Other work since calls this head Voice \citep{kratzer96,marantz97,marantz13lingua,pylkkanen08,layering15,kastner20ogs}.
 \end{itemize}
+}
 
 Tree:
 \ex \emph{Sam ate cake}:\\
@@ -2975,11 +2978,11 @@ Tree:
 		[.VoiceP
 			\qroof{\tikz{\node (SpecVoice) {\emph{\sout{Sam}}};}}.DP
 			[.
-				[.Voice ]
+				[.\fbox{Voice} ]
 				[.vP
 					[.{v\\\emph{ate}}
 						[.\root{\gsc{EAT}} ]
-						[.v ]
+						[.\fbox{v} ]
 					]
 					\qroof{\emph{cake}}.DP
 				]
@@ -3061,9 +3064,11 @@ We can imagine various analytical choices. Does \emph{again} attach to different
 }\end{answer}
 
 \bigskip
+\inSolution{
 One prediction of this view is that \emph{again} shouldn't be able to modify only part of a constituent. For example, we wouldn't expect \emph{again} to modify the entire VoiceP but without the internal argument. In other words, the following reading should not be possible - which is correct:
 \ex Itamar turns the air conditioning off before each class. But today he flipped the wrong switch. Today, \# Itamar turned the WI-FI off again.
 \xe
+}
 
         \subsubsection{Morphology}
 Is there an affix that does the same job as \emph{again}, and has the same readings?
@@ -3129,6 +3134,7 @@ Here's a similar example, Spanish \emph{sobre}- `over' \citep[100]{fabregasscali
 
 If syntax and morphology are the same module, we expect that these adverbials could be either words or affixes - as is the case. And these elements which we add can also change the argument structure of the verb (adding or removing arguments), in ways which we haven't made precise yet.
 
+\newpage
     \subsection{Causativization}
         \subsubsection{Thinking structurally}
 [Jigsaw puzzle: how do we express causation? What are some of the kinds of \emph{causative verbs} that we find?]
