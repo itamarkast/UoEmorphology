@@ -19,7 +19,7 @@
 %	\setmainfont[Renderer=ICU]{Charis SIL}
 % 	\setmainfont[Renderer=ICU]{Brill}
 
-\usepackage[solution,spaces]{myProbSol} %   Optional arguments:
+\usepackage[solution, spaces]{myProbSol} %   Optional arguments:
 %                                               'solution': reveals solutions
 %                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
 
@@ -80,7 +80,7 @@
 \newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
 \renewcommand\root[1]{$\sqrt{\text{#1}}$}
 
-\newcommand\blue[1]{\textcolor{white}{#1}}
+\newcommand\blue[1]{\textcolor{blue}{#1}}
 \newcommand\red[1]{\textcolor{red}{#1}}
 \newcommand\green[1]{\textcolor{ForestGreen}{#1}}
 \newcommand\gray[1]{\textcolor{gray}{#1}}
@@ -251,8 +251,8 @@ Dans quel ordre apparaissent les suffixes réciproque et causatif pour les contr
 Comparez maintenant les deux phrases suivantes en français et exprimer la relation de portée sémantique entre CAUS et RECIP:
 
 \pex<poulie> 
-\a Ils se sont fait attacher l'un l'autre à la poulie.
-\a Ils se sont l'un l'autre fait attacher à la poulie
+\a Marie les a fait s'attacher l'un l'autre à l'arbre.
+\a Ils se sont l'un l'autre fait attacher à l'arbre.
 \xe 
 
 \begin{answer}{
@@ -309,6 +309,141 @@ Un autre exemple: le bemba tel que décrit par \cite{baker85}, qui cite \cite{gi
         \glft `Mwape et Chilufya se sont  l'un l'autre fait voir  Mutumba.'//
         \endgl
 \xe
+
+        \subsubsection{Ailleurs qu'en bantou}
+
+
+        Comparez la portée respective du passé, du verbe \textit{dire} et du marqueur épistémique (\textit{probablement}) dans les  phrases suivantes:
+
+        \pex<neige>
+        \a Il a dit que, probablement, il partait  demain.
+        \a Probablement qu'il a dit qu'il partait demain.
+        \xe 
+        
+\begin{answer}{
+\begin{itemize}
+    \item En (\getref{neige}a): PASSE > \textit{dire} > \textit{probablement}
+    \item En (\getref{neige}b): \textit{probablement} > PASSE > \textit{dire}
+\end{itemize}
+}
+\end{answer}
+Comparez maintenant les phrases du français avec les contreparties de ces phrases en Yupik \citep[43]{mithun99}:
+\pex
+    \a \begingl
+        \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
+        \glb aller-\gsc{FUT}-probablement-dire-\gsc{PASSÉ-INDIC.INTR}-3\gsc{SG}//
+        \glft `Il a dit  qu'il allait probablement partir.'//
+    \endgl
+    \a \begingl
+        \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
+        \glb aller-\gsc{FUT}-dire-\gsc{PASSE}-probablement-\gsc{INDIC.INTR}-3\gsc{SG}//
+        \glft `Probablement qu'il a dit qu'il allait partir.'//
+    \endgl
+\xe
+
+
+
+% \ex \begingl
+%     \gla ayag-yug-umi-ite-qapiar-tu-a//
+%     \glb go-want-be.in.state-not-really-\gsc{INDIC.INTR}-1\gsc{SG}//
+%     \glft `I really don't want to go.'//
+%     \endgl
+% \xe
+% (Why do we gloss these sometimes as words and sometimes as affixes? Because.)
+
+Comparez maintenant les phrases suivantes en français:
+
+\pex<stop>
+\a  Il a arrêté de neiger dans la nuit (il ne neige plus pendant la nuit)
+\a  Il a arrêté de neiger dans la nuit (il a neigé toute la journée).
+\xe 
+
+Laquelle des deux phrases (\getref{stop}a/b) a le même sens que la phrase (\getref{stop2}) ci-dessous, et pourquoi? (Réfléchissez à la portée relative de \textit{arrêter} et \textit{dans la nuit})
+
+\pex<stop2> 
+Dans la nuit il a arrêté de neiger.
+\xe 
+
+\begin{answer}{
+\begin{itemize}
+    \item C'est (\getref{stop}b) qui a le même sens que (\getref{stop2}), parce que l'ordre syntaxique de (\getref{stop2}) reflète de manière transparente la portée sémantique en (\getref{stop}b): \textit{dans la nuit} > \textit{arrêter}
+    \item Le fait qu'une même phrase peut exprimer une portée sémantique différente montre déjà que le tableau jusqu'ici est simplifié: parfois, la hiérarchie syntaxique ne reflète pas la hiérarchie sémantique.
+    \item Nous reviendrons sur ce point  plus tard.
+\end{itemize}
+}    
+\end{answer}
+
+Appariez maintenant les phrases françaises avec les phrases ci-dessous en
+Oji-Cree \citep{slavin05uot} dans \cite{rice11}:
+\pex
+    \a \begingl
+        \gla nipaa-ishkwaa-sookihpwan//
+        \glb dans.la.nuit-arrêter-être.neigeant//
+        \glft \longline{} // % `It stopped snowing at night.' (was snowing the whole day)//
+    \endgl
+    \a \begingl
+        \gla ishkwaa-niipaa-sookihpawn//
+        \glb arrêter-dans.la.nuit-être.neigeant//
+        \glft \longline{} // %`It stopped snowing at night.' (does not snow at night anymore)//
+    \endgl
+\xe
+
+Même exercice avec les deux phrases français ci-dessous (réfléchissez à la portée relative de \textit{à l'insu de tous} (= \textit{secrètement}) et \textit{très vite}):
+
+\pex<insu> 
+\a A l'insu de tous, il mange très vite (personne ne sait qu'il mange très vite)
+\a Très vite, il mange à l'insu de tous
+\xe 
+
+Quelle phrase française correspond à quelle phrase en Oji-Cree et pourquoi?
+
+\pex<11'>
+    \a \begingl
+        \gla kiimooci-kishahtapi-wiihsini//
+        \glb à.l'insu.de.tous-vite-manger//
+        \glft \longline{} // % `He secretly eats fast.' (nobody knows that he eats fast)//
+    \endgl
+    \a \begingl
+        \gla kishahtapi-kiimooci-wiihsini//
+        \glb vite-à.l'insu.de.tous-manger//
+        \glft \longline{} // % `He eats secretly (nobody knows that he eats) and he does it fast.'//
+    \endgl
+\xe
+
+\begin{answer}{
+\begin{itemize}
+    \item (\getref{insu}a) exprime le même sens que (\getref{11'}a).
+   \item  (\getref{insu}b) exprime le même sens que (\getref{11'}b).
+   \item L'emboîtement morphologique ou syntaxique reflète l'emboîtement sémantique.
+\end{itemize}
+}\end{answer}
+
+
+    \subsection*{Résumé}
+\begin{itemize} \tightlist
+    \item Certaines catégories suivent un ordre rigide, comme par exemple les auxiliaires.
+    \item D'autres catégories suivent un ordre variable qui dépend de la \textit{portée} sémantique.
+    \item La portée morphologique reflète systématiquement la portée sémantique.
+\end{itemize}
+
+Principe du Miroir:
+\begin{itemize}
+\item L'ordre des morphèmes \textit{X}...\textit{Y} (en morphologie) est en relation systématique avec l'ordre des constituants \textit{XP}...\textit{YP} (en syntaxe).
+    \item L'ordre relatif des affixes peut être prédit à partir de propriétés sémantiques.
+\end{itemize}
+
+Références clé:
+\cite{baker85} a trouvé la formulation du principle du miroir, mais  \cite{muysken81,muysken88} est le premier à avoir trouvé la généralisation. 
+
+  
+
+\newpage
+\bibliographystyle{linquiry2}
+\bibliography{lingxbib}
+
+\end{document}
+
+\begin{comment}
 
         \subsubsection{Passivation}
 En chichewa', l'applicatif peut être utilisé pour les instruments \citep{alsina99}:
@@ -384,136 +519,4 @@ Le kinyarwanda dans \cite{baker85}, données de  \cite{kimenyi80}:
         \glft `La lettre a été écrite avec le stylo par l'homme.'//
         \endgl
 \xe
-
-        \subsubsection{Ailleurs qu'en bantou}
-
-
-        Comparez la portée respective du passé, du verbe \textit{dire} et du marqueur épistémique (\textit{probablement}) dans les  phrases suivantes:
-
-        \pex<neige>
-        \a Il a dit que, probablement, il partait  demain.
-        \a Probablement qu'il a dit qu'il partait demain.
-        \xe 
-        
-\begin{answer}{
-\begin{itemize}
-    \item En (\getref{neige}a): PASSE > \textit{dire} > \textit{probablement}
-    \item En (\getref{neige}b): \textit{probablement} > PASSE > \textit{dire}
-\end{itemize}
-}
-\end{answer}
-Comparez maintenant les phrases du français avec les contreparties de ces phrases en Yupik \citep[43]{mithun99}:
-\pex
-    \a \begingl
-        \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
-        \glb aller-\gsc{FUT}-probablement-dire-\gsc{PASSÉ-INDIC.INTR}-3\gsc{SG}//
-        \glft `Il a dit  qu'il allait probablement partir.'//
-    \endgl
-    \a \begingl
-        \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
-        \glb aller-\gsc{FUT}-dire-\gsc{PAST}-probablement-\gsc{INDIC.INTR}-3\gsc{SG}//
-        \glft `Probablement qu'il a dit qu'il allait partir.'//
-    \endgl
-\xe
-
-
-
-% \ex \begingl
-%     \gla ayag-yug-umi-ite-qapiar-tu-a//
-%     \glb go-want-be.in.state-not-really-\gsc{INDIC.INTR}-1\gsc{SG}//
-%     \glft `I really don't want to go.'//
-%     \endgl
-% \xe
-% (Why do we gloss these sometimes as words and sometimes as affixes? Because.)
-
-Comparez maintenant les phrases suivantes en français:
-
-\pex<stop>
-\a  Il a arrêté de neiger dans la nuit (il ne neige plus pendant la nuit)
-\a  Il a arrêté de neiger dans la nuit (il a neigé toute la journée).
-\xe 
-
-Laquelle des deux phrases (\getref{stop}a/b) a le même sens que la phrase (\getref{stop2}) ci-dessous, et pourquoi? (Réfléchissez à la portée relative de \textit{arrêter} et \textit{dans la nuit})
-
-\pex<stop2> 
-Dans la nuit il a arrêté de neiger.
-\xe 
-
-\begin{answer}{
-\begin{itemize}
-    \item C'est (\getref{stop}b) qui a le même sens que (\getref{stop2}), parce que l'ordre syntaxique de (\getref{stop2}) reflète de manière transparente la portée sémantique en (\getref{stop}b): \textit{dans la nuit} > \textit{arrêter}
-    \item Le fait qu'une même phrase peut exprimer une portée sémantique différente montre déjà que le tableau jusqu'ici est simplifié: parfois, la hiérarchie syntaxique ne reflète pas la hiérarchie sémantique.
-    \item Nous reviendrons sur ce point  plus tard.
-\end{itemize}
-}    
-\end{answer}
-
-Appariez maintenant les phrases françaises avec les phrases ci-dessous en
-Oji-Cree \citep{slavin05uot} dans \cite{rice11}:
-\pex[exno=11]
-    \a \begingl
-        \gla nipaa-ishkwaa-sookihpwan//
-        \glb dans.la.nuit-arrêter-être.neigeant//
-        \glft \longline{} // % `It stopped snowing at night.' (was snowing the whole day)//
-    \endgl
-    \a \begingl
-        \gla ishkwaa-niipaa-sookihpawn//
-        \glb arrêter-dans.la.nuit-être.neigeant//
-        \glft \longline{} // %`It stopped snowing at night.' (does not snow at night anymore)//
-    \endgl
-\xe
-
-Même exercice avec les deux phrases français ci-dessous (réfléchissez à la portée relative de \textit{à l'insu de tous} (= \textit{secrètement}) et \textit{très vite}):
-
-\pex<insu> 
-\a A l'insu de tous, il mange très vite (personne ne sait qu'il mange très vite)
-\a Très vite, il mange à l'insu de tous
-\xe 
-
-Quelle phrase française correspond à quelle phrase en Oji-Cree et pourquoi?
-
-\pex<11'>
-    \a \begingl
-        \gla kiimooci-kishahtapi-wiihsini//
-        \glb à.l'insu.de.tous-vite-manger//
-        \glft \longline{} // % `He secretly eats fast.' (nobody knows that he eats fast)//
-    \endgl
-    \a \begingl
-        \gla kishahtapi-kiimooci-wiihsini//
-        \glb vite-à.l'insu.de.tous-manger//
-        \glft \longline{} // % `He eats secretly (nobody knows that he eats) and he does it fast.'//
-    \endgl
-\xe
-
-\begin{answer}{
-\begin{itemize}
-    \item (\getref{insu}a) exprime le même sens que (\getref{11'}a).
-   \item  (\getref{insu}b) exprime le même sens que (\getref{11'}b).
-   \item L'emboîtement morphologique ou syntaxique reflète l'emboîtement sémantique.
-\end{itemize}
-}\end{answer}
-
-
-    \subsection*{Résumé}
-\begin{itemize} \tightlist
-    \item Certaines catégories suivent un ordre rigide, comme par exemple les auxiliaires.
-    \item D'autres catégories suivent un ordre variable qui dépend de la \textit{portée} sémantique.
-    \item La portée morphologique reflète systématiquement la portée sémantique.
-\end{itemize}
-
-Principe du Miroir:
-\begin{itemize}
-\item L'ordre des morphèmes \textit{X}...\textit{Y} (en morphologie) est en relation systématique avec l'ordre des constituants \textit{XP}...\textit{YP} (en syntaxe).
-    \item L'ordre relatif des affixes peut être prédit à partir de propriétés sémantiques.
-\end{itemize}
-
-Références clé:
-\cite{baker85} a trouvé la formulation du principle du miroir, mais  \cite{muysken81,muysken88} est le premier à avoir trouvé la généralisation. 
-
-  
-
-\newpage
-\bibliographystyle{linquiry2}
-\bibliography{lingxbib}
-
-\end{document}
+\end{comment}
