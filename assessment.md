@@ -1,22 +1,44 @@
-## Class discussion
+# Self-evaluation questionnaires
 
-### Questions for self-reflection (already done in your journals):
+## Mid-semester questionnaire
 
-- Name something you're good at
-- Say what you're at uni for
-- Two memories with marks
+Try to complete this by the end of Flexible Learning Week.
 
-### Questions for group discussion (in groups of 3-4)
+Answers can be short - there's usually no need to write more than a short paragraph for any of these questions.
 
-1. What are you taking this course for?
-2. What do you want to get out of it?
+### Part 1: Self evaluation
 
-### Questions for class discussion
+1. We've had 14 sessions. Of these, I attended: virtually all / most / some / hardly any
+2. This also means that I was asked to write 14 reflections. I submitted: virtually all / most / some / hardly any
+3. We've had 8 exercises so far. I submitted: virtually all / most / some / hardly any
+4. What has changed in my thinking about morphology so far (if anything)?
+5. How would I describe my participation in class activities? Am I happy with it?
+6. In what ways have I grown intellectually so far, if any? (It might be helpful to choose one submitted exercise from earlier in the semester and reflect on it)
+7. Is there anything I'm particularly proud of?
+8. (Unless answered above, and only if relevant:) If I had some difficult or special circumstances this semester, how did they affect my engagement with the course? Was I satisfied with that? What other support would I like to have?
 
-- What do we really want to evaluate?
-- How would we like that to be assessed?
-- What would you like to create?
+### Part 2: Course evaluation
 
+1. Compared to other courses, the workload on this course has been: low / about the same / high
+2. Are there ways in which I wish this course were more like other ones?
+3. Are there ways in which I wish other courses were more like this one?
+4. Is there something we're doing that we should stop doing? Why?
+5. Is there something that we aren't doing enough of?
+
+### Part 3: Group project
+
+1. My group project might still be in its infancy, but how would I describe my role and participation so far? Am I happy with it? (It might be too early to answer this question in any detail)
+
+### Part 4: Grading
+
+1. If I had to give myself a grade on this course so far, which of the following would it be and why? 1st (A) / 2:1 (B) / 2:2 (C) / 3rd (D) / Fail
+
+For reference, here's the university's Common Marking Scheme: https://www.ed.ac.uk/timetabling-examinations/exams/regulations/common-marking-scheme
+
+Here's an attempt in PPLS to make sense of it: http://students.ppls.ed.ac.uk/assignments/psychology/extended-common-marking-scheme/
+
+
+# Assessment structure
 
 ## Assessment structure (as discussed in class)
 
@@ -44,7 +66,6 @@ Students give themselves marks at the end of the course, based on their self ass
 See also [Bloom's taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/):
 
 <img src="https://cdn.vanderbilt.edu/vu-wp0/wp-content/uploads/sites/59/2019/03/27124326/Blooms-Taxonomy.jpg" alt="Bloom's taxonomy" width="500"/>
-
 
 ## Portfolio, self-assessment and feedback
 
@@ -91,6 +112,25 @@ Here are some examples of prompts for reflection:
 - What did I find especially useful this time?
 - What did I find especially unhelpful this time?
 
+## Prompts for in-class discussion
+
+### Questions for self-reflection (already done in your journals):
+
+- Name something you're good at
+- Say what you're at uni for
+- Two memories with marks
+
+### Questions for group discussion (in groups of 3-4)
+
+1. What are you taking this course for?
+2. What do you want to get out of it?
+
+### Questions for class discussion
+
+- What do we really want to evaluate?
+- How would we like that to be assessed?
+- What would you like to create?
+
 
 ## Ungrading resources
 
@@ -98,9 +138,9 @@ Here are some examples of prompts for reflection:
 - [Morris (2022)](https://www.timeshighereducation.com/campus/problem-ungrading-everyones-doing-it-wrong) in THE.
 - The Happiness Lab Podcast: [Making the Grade](http://www.youtube.com/watch?v=AeBHvSPL6bk)
 
-## Groupwork
+# Groupwork
 
-### How to work in groups (class discussion)
+## How to work in groups (class discussion)
 
 The rationale: why do group projects at uni?
 
@@ -146,7 +186,7 @@ Working in groups:
   - Rather, each member should do the work that speaks to their strengths and contributes to the project as a whole, keeping in mind their own commitments elsewhere.
   - This means that some members might choose to do less than others. This isn't a problem *as long as* the plan and expectations are clear to all members.
 
-### Group projects in our course
+## Group projects in our course
 
 Once we've reached week 3, students will form small groups (4-5 members) to work on joint projects and learn from one another.
 
@@ -164,14 +204,14 @@ See here for some examples and motivation: [](https://blogs.ed.ac.uk/learning-te
 
 The expectation is that each group will decide on its topic and the form of its project together with the instructor by the mid-semester mark (Flexible Learning Week).
 
-### How do I find a topic?
+## How do I find a topic?
 
 You'd want to think about the kinds of things you're interested in, and what you might want to create.
 
 1. In terms of content: are you interested in a specific language or language family? Are you interested in a specific phenomenon or phenomena?
 2. In terms of form: are you looking to create novel analyses? Are you more interested in communicating ideas to a general audience (or a general linguistic audience)? Do you want to learn or practice a certain skill?
     
-### Groupwork resources
+## Groupwork resources
 
 - [Scaffolding student projects](https://campuspress.yale.edu/yctl/scaffolding-student-projects/) (Yale)
 
