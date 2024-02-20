@@ -56,3 +56,7 @@ Sections 2, 4 of the lecture notes.
 1. [Handout 5](05-argument-structure.pdf): Argument structure
 2. Handout 5, continued / Causatives [jigsaw puzzle](06-caus-jigsaws.pdf)
 3. [Handout 6](06-causatives.pdf): Causatives
+
+## Midterm
+
+[Self-evaluation](assessment.md)
