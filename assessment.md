@@ -37,6 +37,29 @@ For reference, here's the university's Common Marking Scheme: https://www.ed.ac.
 
 Here's an attempt in PPLS to make sense of it: http://students.ppls.ed.ac.uk/assignments/psychology/extended-common-marking-scheme/
 
+## Instructor's mid-semester questionnaire
+
+### Part 1: Self evaluation
+
+1.    How would I describe my guiding of class activities? Am I happy with it?
+2.    In what ways have I grown intellectually so far (if any)?
+3.    Is there anything I'm particularly proud of?
+
+### Part 2: Course evaluation
+
+1.   What are the biggest differences between this course and others? How do I feel about these differences?
+2.   Are there ways in which I thought this course should be more like other ones?
+3. What has worked better than expected?
+4. What has worked less smoothly than expected?
+5. What am I still surprised or unsure about?
+
+## Part 3: Group projects
+
+1.    How would I describe my role and participation in the group projects so far? Am I happy with it?
+2.    What is the main contribution of our projects?
+
+
+
 
 # Assessment structure
 
