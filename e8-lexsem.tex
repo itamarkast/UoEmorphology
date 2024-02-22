@@ -6,18 +6,24 @@
 % \usepackage[T1]{fontenc}
 % \usepackage{mathptmx}  
 
-%\usepackage{fontspec} %,xunicode} % xltxtra
-    %\defaultfontfeatures{Ligatures=TeX}
-   % \setmainfont{Brill}[
-  %  Extension=.ttf,
-  %  UprightFont=*-Roman,
-  %  BoldFont=*-Bold,
-  %  ItalicFont=*-Italic,
-  %  BoldItalicFont=*-Bold-Italic,
- %   Renderer=ICU]
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
 % 	\usefonttheme{serif}
 %	\setmainfont[Renderer=ICU]{Charis SIL}
 % 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
 
 \usepackage{amsmath,amssymb} % for $\text{}$
 \usepackage{url,natbib} 
@@ -105,83 +111,50 @@
 % \singlespacing
 
 
-\hfill \emph{Théories linguistiques 2024, Utrecht}
+\hfill \emph{Morphology 2023-24, Edinburgh, Exercise 8}
 \bigskip
 
-%La fois passée, on a examiné l'ordre des affixes dans les verbes. Faisons la même chose pour les noms maintenant.  
+In the next session we'll look at two classes of verbs (or roots) and examine how their semantics influences their syntactic behavior, i.e.~argument structure. Let's see what that looks like.
 
+\bigskip
+One class of verbs doesn't require an internal argument, or object. Here are a few examples where we can leave out the object:
 
-Une représentation possible du genre en français:
-\pex
-    \a \begingl
-        \gla l-e chat-ø//
-        \glb \gsc{déf}.\gsc{M} chat.\gsc{M}//
-        \endgl
-    \a \begingl
-        \gla l-es chat-ø-s//
-        \glb \gsc{déf}.\gsc{PL} chat-\gsc{M}-\gsc{PL}//
-        \endgl
-\xe
-\pex
-    \a \begingl
-        \gla l-a chatt-e//
-        \glb \gsc{déf}.F chat-F//
-        \endgl
-    \a \begingl
-        \gla l-es chatt-e-s//
-        \glb \gsc{déf}.\gsc{PL} chat-\gsc{F-PL}//
-        \endgl
+\pex	\a Chris \textbf{swept} the floor.
+	\a All last night, Chris \textbf{swept}.
 \xe
 
-Dessinez un arbre (schématique) pour le nom féminin pluriel  \emph{chattes} en~(\lastx b).
-
-\ex \label{tree:pl-catalan}
- \Tree
- [.
-     [.
-         [.\emph{chat} ]
-         [.\gsc{[F]} \emph{e} ]
-     ]
-     [.\gsc{[PL]} \emph{s} ]
- ]
+\pex \a Chris \textbf{scrubbed} the floor.
+	\a All last night, Chris \textbf{scrubbed}.
 \xe
 
-\vspace{3cm}
-% Yupik \citep[43]{mithun99}
-% \pex
-%     \a yug-\textbf{pag}-\uline{cuar}\\
-%     person-big-little\\
-%     `little giant'
-%     \a yug-\uline{cuar}-\textbf{pag}\\
-%     person-little-big\\
-%     `big midget'
-% \xe
+In the other class of verbs, we cannot omit the object:
 
-%Français:
-\ex soci-al-is-ation \label{ex:globalization}
-\xe
-\ex capital-is-ation-s
+\pex \a Chris \textbf{broke} the vase.
+	\a \ljudge{*} All last night, Chris \textbf{broke}.
 \xe
 
-Dessinez une structure pour ~(\ref{ex:globalization}):
-\ex
- \Tree
- [.[N]
-     [.[V]
-         [.[A]
-             [.[N] \emph{soci} ]
-            [.[A] \emph{al} ]
-         ]
-         [.[V] \emph{is} ]
-     ]
-     [.[N] \emph{ation} ]
- ]
+\pex \a Chris \textbf{dimmed} the lights.
+	\a \ljudge{*} All last night, Chris \textbf{dimmed}.
 \xe
 
-\vspace{5cm}
+\paragraph{Q1} Why might this be the case? In other words, what is it about \emph{sweeping} and \emph{scrubbing} that should allow us to drop the object, and what is it about \emph{breaking} and \emph{dimming} that requires one?
 
-Est-ce que c'est de la morphologie ou de la syntaxe? 
+\bigskip
+Here's an additional challenge. The list in~(\nextx) contains a number of verbs like \emph{sweep} and \emph{scrub}. The list in~(\anextx) contains verbs like \emph{break} and \emph{dim}.
+
+\ex \emph{eat, bash, bellow, dance, flutter, hit, jog, jump, laugh, murmur, nibble, pour, roll, rub, run, scour, scream, scribble, scrub, shout, spin, sweep, swim, walk, whisper, wipe, yell}
+\xe
+
+\ex \emph{admit, approach, arrive, break, clean, clear, come, cover, declare, destroy, devour, die, empty, enter, faint, fall, fill, freeze, go, increase, kill, melt, near, open, proclaim, propose, remove, rise, say}
+\xe
+
+\paragraph{Q2} Can you propose a generalization for what the semantic difference between~(\blastx) and~(\lastx) amounts to?
+
+\paragraph{Q3} Can you divide the second list, (\lastx), into two or three semantic sub-classifications?
 
 
+
+% \bibliographystyle{linquiry2}
+% \bibliography{lingxbib}
 
 \end{document}

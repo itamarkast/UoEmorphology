@@ -4,7 +4,7 @@
 %\usepackage[T3,T1]{fontenc}
 %\usepackage[utf8x]{inputenc}
 % \usepackage[T1]{fontenc}
-% \usepackage{mathptmx}  
+ \usepackage{mathptmx}  
 
 %\usepackage{fontspec} %,xunicode} % xltxtra
  %   \defaultfontfeatures{Ligatures=TeX}
@@ -54,8 +54,8 @@
 \usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
 
 \usepackage{expex} %Linguistics examples
-\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
-%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+%\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
 
 \usepackage[nocenter]{qtree} % trees
 \usepackage{tikz}
@@ -80,7 +80,7 @@
 \newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
 \renewcommand\root[1]{$\sqrt{\text{#1}}$}
 
-\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\blue[1]{\textcolor{white}{#1}}
 \newcommand\red[1]{\textcolor{red}{#1}}
 \newcommand\green[1]{\textcolor{ForestGreen}{#1}}
 \newcommand\gray[1]{\textcolor{gray}{#1}}
@@ -201,13 +201,13 @@ En quoi cela est-il différent du français?
 Supposons ceci:
 
 \begin{itemize} 
-\item 'faire+inf.' ou `se faire+inf.' exprime le trait CAUS (=cause). Voir \textit{faire chanter}, \textit{se faire conduire}, etc.
+\item 'faire+inf.', \textit{faire en sorte que} ou `se faire+inf.' expriment le trait CAUS (=cause). Voir \textit{faire chanter}, \textit{se faire conduire}, etc.
 \item  `l'un l'autre' ou `les uns les autres' exprime le trait RECIP (=reciprocité). Voir \textit{se voir l'un l'autre}, \textit{s'aider les uns les autres}, etc.
 \end{itemize} 
 
         Comparez le sens de ces deux phrases en français:
         \pex<bouc>
-       \a Les boucs, les chasseurs les ont fait se frapper les uns les autres.
+       \a Les chasseurs ont fait en sorte que les boucs se frappent les uns les autres.
         \a Les chasseurs se sont  les uns les autres fait frapper les boucs
        \xe 
 
@@ -248,60 +248,60 @@ Dans quel ordre apparaissent les suffixes réciproque et causatif pour les contr
 
 \longline{}
 
-Comparez maintenant les deux phrases suivantes en français et exprimer la relation de portée sémantique entre CAUS et RECIP:
+%Comparez maintenant les deux phrases suivantes en français et exprimer la relation de portée sémantique entre CAUS et RECIP:
 
-\pex<poulie> 
-\a Marie les a fait s'attacher l'un l'autre à l'arbre.
-\a Ils se sont l'un l'autre fait attacher à l'arbre.
-\xe 
+%\pex<poulie> 
+%\a Marie les a fait s'attacher l'un l'autre à l'arbre.
+%\a Ils se sont l'un l'autre fait attacher à l'arbre.
+%\xe 
 
-\begin{answer}{
-\begin{itemize}
-\item L'ordre syntaxique reflète la portée sémantique:
-    \item En (\getref{poulie}a): CAUS > RECIP
-    \item En (\getref{poulie}b): RECIP > CAUS
-\end{itemize}}
-\end{answer}
+%\begin{answer}{
+%\begin{itemize}
+%\item L'ordre syntaxique reflète la portée sémantique:
+ %   \item En (\getref{poulie}a): CAUS > RECIP
+%    \item En (\getref{poulie}b): RECIP > CAUS
+%\end{itemize}}
+%\end{answer}
 
 
 
-Comparez maintenant une paire similaire en chichewa \citep{hymanmchombo92}:
-\pex
-    \a mang-\textbf{an}-\uline{its}\\
-    attacher-\gsc{RECIP}-\gsc{CAUS}\\
-    `faire s'attacher l'un l'autre'
-    \a mang-\uline{its}-\textbf{an}\\
-    attacher-\gsc{CAUS}-\gsc{RECIP}\\
-    `se faire l'un l'autre attacher'
-\xe
+%Comparez maintenant une paire similaire en chichewa \citep{hymanmchombo92}:
+%\pex
+   % \a mang-\textbf{an}-\uline{its}\\
+   % attacher-\gsc{RECIP}-\gsc{CAUS}\\
+   % `faire s'attacher l'un l'autre'
+   % \a mang-\uline{its}-\textbf{an}\\
+  %  attacher-\gsc{CAUS}-\gsc{RECIP}\\
+  %  `se faire l'un l'autre attacher'
+%\xe
 
-Comment la portée sémantique est refletée dans la syntaxe en français et dans la morphologie en chichewa'?
+%Comment la portée sémantique est refletée dans la syntaxe en français et dans la morphologie en chichewa'?
 
-\begin{answer}{
-    \begin{itemize}
-        \item Français: l'élément qui apparaît d'abord a portée sémantique sur un élément qui apparaît après.
-        \item Chichewa', le morphème qui est `plus à l'extérieur' a portée sémantique sur un élément `plus à l'intérieur'.
-    \end{itemize}}
-\end{answer}
+%\begin{answer}{
+  %  \begin{itemize}
+  %      \item Français: l'élément qui apparaît d'abord a portée sémantique sur un élément qui apparaît après.
+   %     \item Chichewa', le morphème qui est `plus à l'extérieur' a portée sémantique sur un élément `plus à l'intérieur'.
+   % \end{itemize}}
+%\end{answer}
 
-À quoi ressemblerait cette langue  (\emph{chichewa'}) si elle avait des préfixes plutôt que des suffixes, et pourquoi? 
-\begin{answer}{
-\pex
-    \a \midline{} its-an-mang
-    \a \midline{}  an-its-mang
-\xe
-Parce que ce qui compte, c'est la hiérarchie (l'ordre des éléments les uns par rapport aux autres) plutôt que l'ordre linéaire. 
-}
-\end{answer}
+%À quoi ressemblerait cette langue  (\emph{chichewa'}) si elle avait des préfixes plutôt que des suffixes, et pourquoi? 
+%\begin{answer}{
+%\pex
+   % \a \midline{} its-an-mang
+   % \a \midline{}  an-its-mang
+%\xe
+%Parce que ce qui compte, c'est la hiérarchie (l'ordre des éléments les uns par rapport aux autres) plutôt que l'ordre linéaire. 
+%}
+%\end{answer}
 
-\bigskip
+%\bigskip
 
 Un autre exemple: le bemba tel que décrit par \cite{baker85}, qui cite \cite{givon76}.
 \pex[exno=49]
     \a \begingl
         \gla Naa-mon-an-ya Mwape na Mutumba//
         \glb 1s.\gsc{S}-\gsc{passé}-voir-\gsc{recip-caus} Mwape et Mutumba//
-        \glft `Mwape et Mutumba, je les ai fait se voir l'un l'autre.'//
+        \glft `J'ai fait en sorte que Mwape et Mutumba se voient l'un l'autre.'//
         \endgl
     \a \begingl
         \gla Mwape na Chilufya baa-mon-eshy-ana Mutumba//
@@ -310,6 +310,15 @@ Un autre exemple: le bemba tel que décrit par \cite{baker85}, qui cite \cite{gi
         \endgl
 \xe
 
+À quoi ressemblerait cette langue  (\emph{bemba}) si elle avait des préfixes plutôt que des suffixes, et pourquoi? 
+
+\begin{answer}{
+\pex
+    \a \midline{} ya - an - mon
+    \a \midline{}  ana - eshy - mon
+\xe
+}
+\end{answer}
         \subsubsection{Ailleurs qu'en bantou}
 
 
@@ -332,15 +341,16 @@ Comparez maintenant les phrases du français avec les contreparties de ces phras
     \a \begingl
         \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
         \glb aller-\gsc{FUT}-probablement-dire-\gsc{PASSÉ-INDIC.INTR}-3\gsc{SG}//
-        \glft `Il a dit  qu'il allait probablement partir.'//
+      %  \glft `Il a dit  qu'il allait probablement partir.'//
     \endgl
     \a \begingl
         \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
         \glb aller-\gsc{FUT}-dire-\gsc{PASSE}-probablement-\gsc{INDIC.INTR}-3\gsc{SG}//
-        \glft `Probablement qu'il a dit qu'il allait partir.'//
+   %     \glft `Probablement qu'il a dit qu'il allait partir.'//
     \endgl
 \xe
 
+Quelles phrases du Yupik correspondent à quelles phrases du français et pourquoi?
 
 
 % \ex \begingl
@@ -367,7 +377,7 @@ Dans la nuit il a arrêté de neiger.
 \begin{answer}{
 \begin{itemize}
     \item C'est (\getref{stop}b) qui a le même sens que (\getref{stop2}), parce que l'ordre syntaxique de (\getref{stop2}) reflète de manière transparente la portée sémantique en (\getref{stop}b): \textit{dans la nuit} > \textit{arrêter}
-    \item Le fait qu'une même phrase peut exprimer une portée sémantique différente montre déjà que le tableau jusqu'ici est simplifié: parfois, la hiérarchie syntaxique ne reflète pas la hiérarchie sémantique.
+    \item Le fait qu'une même phrase peut exprimer une portée sémantique différente montre déjà que le tableau ci-desssus est simplifié: parfois, l'ordre syntaxique ne reflète pas la hiérarchie sémantique (mais celle-ci est reflétée dans la hiérarchie syntaxique).
     \item Nous reviendrons sur ce point  plus tard.
 \end{itemize}
 }    
@@ -388,35 +398,35 @@ Oji-Cree \citep{slavin05uot} dans \cite{rice11}:
     \endgl
 \xe
 
-Même exercice avec les deux phrases français ci-dessous (réfléchissez à la portée relative de \textit{à l'insu de tous} (= \textit{secrètement}) et \textit{très vite}):
+%Même exercice avec les deux phrases français ci-dessous (réfléchissez à la portée relative de \textit{à l'insu de tous} (= \textit{secrètement}) et \textit{très vite}):
 
-\pex<insu> 
-\a A l'insu de tous, il mange très vite (personne ne sait qu'il mange très vite)
-\a Très vite, il mange à l'insu de tous
-\xe 
+%\pex<insu> 
+%\a A l'insu de tous, il mange très vite (personne ne sait qu'il mange très vite)
+%\a Très vite, il mange à l'insu de tous
+%\xe 
 
-Quelle phrase française correspond à quelle phrase en Oji-Cree et pourquoi?
+%Quelle phrase française correspond à quelle phrase en Oji-Cree et pourquoi?
 
-\pex<11'>
-    \a \begingl
-        \gla kiimooci-kishahtapi-wiihsini//
-        \glb à.l'insu.de.tous-vite-manger//
-        \glft \longline{} // % `He secretly eats fast.' (nobody knows that he eats fast)//
-    \endgl
-    \a \begingl
-        \gla kishahtapi-kiimooci-wiihsini//
-        \glb vite-à.l'insu.de.tous-manger//
-        \glft \longline{} // % `He eats secretly (nobody knows that he eats) and he does it fast.'//
-    \endgl
-\xe
+%\pex<11'>
+    %\a \begingl
+        %\gla kiimooci-kishahtapi-wiihsini//
+        %\glb à.l'insu.de.tous-vite-manger//
+       % \glft \longline{} // % `He secretly eats fast.' (nobody knows that he eats fast)//
+ %   \endgl
+    %\a \begingl
+       % \gla kishahtapi-kiimooci-wiihsini//
+       % \glb vite-à.l'insu.de.tous-manger//
+       % \glft \longline{} // % `He eats secretly (nobody knows that he eats) and he does it fast.'//
+   % \endgl
+%\xe
 
-\begin{answer}{
-\begin{itemize}
-    \item (\getref{insu}a) exprime le même sens que (\getref{11'}a).
-   \item  (\getref{insu}b) exprime le même sens que (\getref{11'}b).
-   \item L'emboîtement morphologique ou syntaxique reflète l'emboîtement sémantique.
-\end{itemize}
-}\end{answer}
+%\begin{answer}{
+%\begin{itemize}
+   % \item (\getref{insu}a) exprime le même sens que (\getref{11'}a).
+ %  \item  (\getref{insu}b) exprime le même sens que (\getref{11'}b).
+  % \item L'emboîtement morphologique ou syntaxique reflète l'emboîtement sémantique.
+%\end{itemize}
+%}\end{answer}
 
 
     \subsection*{Résumé}
