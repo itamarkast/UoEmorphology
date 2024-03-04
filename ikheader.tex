@@ -1,0 +1,143 @@
+\documentclass[xelatex,xcolor={dvipsnames}]{beamer}
+\usepackage{times}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+ \usepackage{fontspec} % xltxtra
+ \defaultfontfeatures{Ligatures=TeX}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+%	\setmainfont[Renderer=ICU]{Brill}
+	\setmainfont[Renderer=ICU]{Libertinus Serif}
+%	\setmainfont[Renderer=ICU]{Libertinus Sans}
+	\usefonttheme{serif}
+ %	\newfontfamily{\H}[Scale=1,Script=Hebrew]{David CLM} %{Frank Ruehl CLM}%{Ezra SIL}
+\usepackage{colortbl,multirow,amsmath,amssymb,url,natbib,graphicx}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{graphicx,colortbl,multirow,amsmath,amssymb,url} %natbib
+\usepackage{pbox}
+\usepackage{pifont}
+%\usepackage{hyperref}
+% \usepackage{geometry,vmargin,setspace,lscape} %rotating
+\usepackage{xytree}
+\usepackage{stmaryrd,wasysym}
+\usepackage{arydshln}
+\usepackage{array} %tabular column formatting
+\usepackage{dashrule} %\hdashrule
+\usepackage{siunitx} %decimals in tables
+
+\bibpunct[:]{(}{)}{;}{a}{}{,} %\usepackage{dashrule}
+		\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage[normalem]{ulem}
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{tipa}
+\usepackage{expex}
+	\lingset{aboveexskip=0.1ex,belowexskip=0.1ex,aboveglftskip=-0.1ex,interpartskip=0.1em,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+	\resetcountonoverlays{excnt}
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\usepackage[nocenter]{qtree}
+\usepackage{tikz}
+	\tikzstyle{every picture}+=[remember picture]
+
+\newenvironment{dummy}{}{}
+% \AtBeginSection[]{}
+% \setbeameroption{show notes on second screen}
+% \setbeameroption{show notes}
+
+% \usetikzlibrary{shapes.geometric, arrows}
+% \newlength{\bls}
+% \setlength{\bls}{\baselineskip-\doublerulesep+1pt} % for double cline, uses package calc
+% \newcommand\ipa[1]{\textipa{#1}}
+\let\it\textit
+\newcommand\zero{\O{}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\newcommand\citey[1]{{\scriptsize #1}}
+  \renewcommand\root[1]{$\sqrt{\text{\gsc{#1}}}$}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+% \newcommand\hammer[1]{\begin{center}\fbox{\parbox{0.9\linewidth}{\centering \textsf{#1}}}\end{center}}
+% \newcommand\hammersmall[1]{\begin{center}\fbox{\parbox{0.3\linewidth}{\centering \textsf{#1}}}\end{center}}
+\newcommand\blue[1]{\textcolor{blue}{#1}} \newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\olive[1]{\textcolor{olive}{#1}}
+ \newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+
+\newcommand\lra{$\leftrightarrow$}
+\newcommand\dgs[1]{\textsubarch{#1}}
+	\newcommand\vz{\text{Voice$_{\text{[--D]}}$}}
+	\newcommand\vd{\text{Voice$_{\text{[+D]}}$}}
+	\newcommand\pz{\text{$p_{\text{[--D]}}$}}
+	\newcommand\va{\root{\gsc{ACTION}}}
+	\newcommand{\tkal}{\emph{XaYaZ}}
+	\newcommand{\tpie}{\emph{Xi\dgs{Y}eZ}}
+	\newcommand{\tpua}{\emph{Xu\dgs{Y}aZ}}
+	\newcommand{\mpua}{\emph{meXu\dgs{Y}aZ}}
+	\newcommand{\thif}{\emph{heXYiZ}}
+	\newcommand{\thuf}{\emph{huXYaZ}}
+	\newcommand{\mhuf}{\emph{muXYaZ}}
+	\newcommand{\thit}{\emph{hitXa\dgs{Y}eZ}}
+	\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\del[1]{$<$#1$>$}
+
+%=== shortcuts for ROOT  types ========== % 
+
+%  explicit creation roots: <s, t> 
+% (the s here is s_e), and the type of all our vPs
+% we will have subscript versions of each type too
+\newcommand{\set}{${{\langle}s_{e}, t{\rangle}}$} 
+\newcommand{\setsub}{$_{{\langle}s_{e}, t{\rangle}}$}  % because I can't get these subscripted 
+
+%  implicit creation roots: <e, t> 
+\newcommand{\et}{${{\langle}e, t{\rangle}}$} 
+\newcommand{\etsub}{$_{{{\langle}e, t{\rangle}}}$} % for subscripting
+
+%  <e, <s_s, t>> for change of state roots 
+\newcommand{\esst}{${\langle}e, {\langle} s_{s}, t{\rangle}{\rangle}$} 
+\newcommand{\esstsub}{$_{{\langle}e, {\langle} s_{s}, t{\rangle}{\rangle}}$} 
+
+\newcommand{\estsub}{$_{{\langle}e, {\langle} s, t{\rangle}{\rangle}}$} 
+
+\newcolumntype{a}{>{\columncolor{red}}c}
+\newcolumntype{b}{>{\columncolor{cyan}}c}
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+%\tikzstyle{input} = [draw, inner sep=0.4cm, outer sep=0, minimum width=2cm, text height=1.6cm, align=center, text centered, draw=black, fill=blue!30]
+%\tikzstyle{root} = [ellipse, minimum height=1cm, text width=1cm, align=center, text centered, draw=black, fill=green!30]
+%\tikzstyle{lexeme} = [draw, inner sep=0.1cm, outer sep=0, text width=1.3cm, text height=0.2cm, align=center, text centered, draw=black, fill=orange!30, node distance=1.7cm]
+%\tikzstyle{template} = [rectangle, rounded corners, minimum width=1.3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+%\tikzstyle{label} = [font=\scshape]
+%\tikzstyle{arrow} = [thick, ->, >=latex]
+%\tikzstyle{relate} = [dotted, thick]
+
+% \makeatletter %Allow superscript ^ and subscript _
+% \catcode`_=\active%
+% \gdef_#1{\ensuremath{{}\sb{#1}}}%
+% \catcode`^=\active%
+% \gdef^#1{\ensuremath{{}\sp{#1}}}%
+% \makeatother
+
+\setbeamercovered{transparent}
+\usecolortheme[RGB={0,50,95}]{structure}
+\setbeamercolor{alerted text}{fg=red}
+
+\usepackage{etoolbox}
+\makeatletter
+\preto{\appendix}{%
+	\patchcmd{\beamer@continueautobreak}{\refstepcounter{framenumber}}{}{}{}}
+\makeatother
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+%\useoutertheme{infolines}
+%\setbeamertemplate{frametitle}[default][center] 
+
+%\usepackage{beamerthemeshadow}
+\usetheme{Madrid}
+
+\let\expexgla\gla % conflict with unicode-math package, which pandoc/beamer autoloads
+\AtBeginDocument{\let\gla\expexgla}
