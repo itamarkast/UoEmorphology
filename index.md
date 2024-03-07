@@ -67,5 +67,8 @@ Sections 2, 4 of the lecture notes.
 1. Recap: hexagonal thinking ([background](https://www.cultofpedagogy.com/hexagonal-thinking/), [example template](hexagon1.pptx))
 2. [Topic 7](7-lexsem.pdf): lexical semantics
 
-## Week 8: Lexical semantics
+## Week 7: Lexical semantics
+
+1. [Topic 8](8-manres.pdf): Manner/Result complementarity
+- [Exercise 10](e10-wug.md): Berko (1958)
 
