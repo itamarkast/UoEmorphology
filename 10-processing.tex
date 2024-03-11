@@ -45,10 +45,10 @@
 \frame{\frametitle{Experimental Paradigms}
 \begin{block}{\alert<1>{\textbf{Lexical decision}}}
 	\begin{itemize} \tightlist
-		\item Response Time $\sim$ frequency.
-		\item Error rate $\sim$ frequency.
-		\item The strongest, most robust measure we have.
-		\item Though we still don't understand it completely:
+		\item Response Time $\sim$ frequency + other stuff.
+		\item Error rate (Accuracy) $\sim$ + other stuff.
+		\item The most robust measure we have.
+		% \item Though we still don't understand it completely:
 			\begin{itemize}
 			\item What's the computation? Need a theory of the task.
 			\item For morphology, is it about lookup? Combination of stem and affix?
@@ -255,6 +255,17 @@ Does \emph{nation} prime \emph{national}?
 
 
 	\subsection{MEG background}
+\frame{\frametitle{\insertsubsection}
+    \only<1>{\begin{center}\includegraphics[height=0.95\textheight]{figs/meglab.png}\end{center}}
+
+    \only<2->{\includegraphics[scale=0.2]{figs/meg1.png}
+	\hfill \includegraphics[scale=0.25]{figs/meg2.png}}
+
+    \only<3->{\includegraphics[scale=0.4]{figs/meg3.png}
+	\hfill \includegraphics[scale=0.4]{figs/meg4.png}
+    }
+}
+
 \frame{\frametitle{\insertsubsection: Priming in Irregular Verbs}
 	\begin{block}{\cite{stockallmarantz06}}
 		\begin{itemize} \tightlist
@@ -290,7 +301,7 @@ Does \emph{nation} prime \emph{national}?
 
 	\large \centering
 	
-	Where is -\emph{able} more frequent?
+	Which stem is -\emph{able} more likely to appear after?
 	
 	\bigskip
 	
@@ -420,6 +431,77 @@ Does \emph{nation} prime \emph{national}?
 		\begin{center}
 			\includegraphics[scale=0.23]{figs/fruchter2.png}
 		\end{center}
+}
+
+    \subsection{Infixation in Tagalog}
+\frame{\frametitle{\insertsubsection}
+    \begin{block}{Obligatory decomposition}
+        \begin{enumerate}
+            \item Complex forms (stem+affix) are decomposed.
+            \item We seem to encode what affixes our language has.
+            \item What if the affix is an infix?
+        \end{enumerate}
+    \end{block}
+
+    Tagalog has prefixes, suffixes and infixes \citey{\citep{cayadoetal23}}:
+
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{figs/cayado1.jpg}
+    \end{center}
+}
+
+    \subsection{Infixation in Tagalog}
+\frame{\frametitle{\insertsubsection}
+
+    % Tagalog has prefixes, suffixes and infixes \citey{\citep{cayadoetal23}}:
+
+    % \begin{center}
+    %     \includegraphics[width=0.4\textwidth]{figs/cayado1.jpg}
+    % \end{center}
+
+    \dots{} and all are decomposed in masked priming:
+    
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{figs/cayado2.jpg}
+    \end{center}
+
+    % \begin{center}
+    % \begin{small}
+    % \begin{tabular}{l|>{\em}l>{\em}ll|>{\em}l>{\em}ll}
+    % \textbf{Condition} & \multicolumn{3}{c|}{\textbf{Related}} & \multicolumn{3}{c}{\textbf{Unrelated}} \\
+    % Infix &  tinawag & TAWAG & called-TO CALL & sumbong & TAWAG & complain-TO CALL\\
+    % Prefix & nilunod & LUNOD & drown-TO DROWN & seryoso & LUNOD & be serious-DROWN\\
+    % Suffix & basagin & BASAG & get broken-TO BREAK & alangan & BASAG & be uncertain-TO BREAK\\
+    % Semantic & lagnat & SIPON & fever-COLD & bantay & SIPON & guard-COLD\\
+    % Orthographic & sapak & TUMPAK & punch-CORRECT & unggoy & TUMPAK & monkey-CORRECT\\
+    % \end{tabular}
+    % \end{small}
+    % \end{center}
+}
+
+\frame{\frametitle{\insertsubsection}
+    Tagalog infixation and pseudo-infixation \citey{\citep{wrayetal22}}: where should we get priming?
+
+    \begin{center}
+    \begin{tabular}{lllll}
+    a.& \emph{subok} & `try' & \emph{sinubok} & `tried'\\
+    b.& \emph{gulat} & `surprise' & \emph{ginulat} & `shocked someone'\\
+    c.& *\emph{noŋ} & --- & \emph{ninoŋ} & `godfather'\\
+    d.& *\emph{mistro} & --- & \emph{ministro} & `ministry'\\
+    \end{tabular}
+    \end{center}
+    
+\bigskip
+
+    \only<2>{
+    \begin{center}
+    \includegraphics[width=0.9\textwidth]{figs/tagalog.jpg}
+    \end{center}
+    
+\bigskip
+
+    \ding{228} See \cite{wrayetal22} for discussion of the M170 in Tagalog infixes, pseudo-infixes and reduplication.    
+    }
 }
 
 
