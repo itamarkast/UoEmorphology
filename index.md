@@ -70,8 +70,16 @@ Sections 2, 4 of the lecture notes.
 ## Week 7: Lexical semantics
 
 1. [Topic 8](08-manres.pdf): Manner/Result complementarity
-- [Exercise 10](e10-wug.html): Berko (1958)
+- [Exercise 10](e10-wugs.html): Berko (1958)
+- Exercise 11: Vote on topics for the last two weeks
 
-## Week 8: Acquisition
+## Week 8: Acquisition, lexical processing
 
 1. [Topic 9](09-wugs.html): Acquisition
+2. [Topic 10](10-processing.pdf): Lexical processing
+
+## Week 9: Computational modelling, summary
+
+1. Discussion of group projects
+2. [Topic 11](11-modelling.html): ChatGPT
+3. Summary: hexagonal thinking
