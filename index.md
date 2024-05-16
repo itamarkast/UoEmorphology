@@ -59,7 +59,7 @@ Sections 2, 4 of the lecture notes.
 
 ## Midterm
 
-- [Self-evaluation](assessment.md)
+- [Self-evaluation](assessment.html)
 - [Exercise 9](e9-lexsem.pdf): lexical semantics
 
 ## Week 6: Lexical semantics
@@ -85,5 +85,5 @@ Sections 2, 4 of the lecture notes.
 3. Summary: hexagonal thinking
 
 ## Final evaluations
-- [Self-evaluation](assessment.md)
+- [Self-evaluation](assessment.html)
 
