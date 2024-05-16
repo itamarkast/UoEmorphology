@@ -53,7 +53,7 @@ Here's an attempt in PPLS to make sense of it: http://students.ppls.ed.ac.uk/ass
 4. What has worked less smoothly than expected?
 5. What am I still surprised or unsure about?
 
-## Part 3: Group projects
+### Part 3: Group projects
 
 1.    How would I describe my role and participation in the group projects so far? Am I happy with it?
 2.    What is the main contribution of our projects?
