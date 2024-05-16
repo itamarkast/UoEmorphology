@@ -58,7 +58,7 @@ Here's an attempt in PPLS to make sense of it: http://students.ppls.ed.ac.uk/ass
 1.    How would I describe my role and participation in the group projects so far? Am I happy with it?
 2.    What is the main contribution of our projects?
 
-## Final questionnaire
+## Final self-assessment questionnaire
 
 This is the final self-evaluation questionnaire. Responses should be posted in the usual way, as a portfolio entry. It would be useful to go back and re-read the entire portfolio in preparation.
 
@@ -140,7 +140,7 @@ With that in mind, it's worth thinking about the following:
 - What feedback will I submit about this course? (No need to enter this in the self-evaluation!)
 - What feedback will I submit about my other courses? (Definitely no need to enter this in the self-evaluation!)
 
-## Instructor's final questionnaire
+## Instructor's final self-assessment questionnaire
 
 ### Part 1: Self evaluation
 
