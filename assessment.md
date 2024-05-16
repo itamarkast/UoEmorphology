@@ -58,7 +58,115 @@ Here's an attempt in PPLS to make sense of it: http://students.ppls.ed.ac.uk/ass
 1.    How would I describe my role and participation in the group projects so far? Am I happy with it?
 2.    What is the main contribution of our projects?
 
+## Final questionnaire
 
+This is the final self-evaluation questionnaire. Responses should be posted in the usual way, as a portfolio entry. It would be useful to go back and re-read the entire portfolio in preparation.
+
+Students are also invited to schedule an "exit interview" with Itamar to talk about how the semester went.
+
+Self-evaluations should be submitted at least a day before the exit interview. In the meeting itself, we will use the self-evaluation as a starting point to:
+
+- Agree on the final mark.
+- Discuss how the course has gone, including any feedback.
+
+### Part 1: Self evaluation
+
+1. We've had 29 sessions in total (including final presentations). Of these, I attended: virtually all / most / some / hardly any
+   2. This also means that I was asked to write reflections on 25 sessions. I submitted: virtually all / most / some / hardly any
+   3. We've had 12 exercises. I submitted (or wrote up but forgot to actually submit): virtually all / most / some / hardly any
+   4.  Did I submit the mid-semester self-evaluation? If so: what do I think has changed since then? If not: why, and how did I try to catch up?
+   5. What has changed in my thinking about morphology? (It might be useful to reflect on my final hexagon exercise or a previous exercise from my portfolio)
+   6. What has changed in my thinking about linguistics, either as a whole or about individual subfields? (For example, now that we've deconstructed morphology and rebuilt it from the ground up, to what extent would we be able to do that with another subfield?)
+   7. How would I describe my participation in class activities? Am I happy with it?
+   8. In what ways have I grown intellectually?
+   9. What skills have I gained, or developed, which will be useful after my degree?
+   10. In what ways has my relationship with my classmates evolved over the semester?
+   11. Is there anything I want to work on in the future? How?
+   12. Is there anything I'm particularly proud of? Why?
+    13. [Unless answered above, and only if relevant:] If I had some difficult or special circumstances this semester, how did they affect my engagement with the course? Was I satisfied with that? What other support would I like to have, either from the instructor or from the School/University?
+   14. If English isn't my native language: is there a note I want to leave here for myself, in my own language, which would make it easier for me to express myself or to reflect?
+
+### Part 2: Course evaluation
+
+    1. Compared to other courses, the workload on this course was (in what ways?): low / about the same / high
+   2. Compared to other courses, the degree of anxiety or stress - if any - was (in what ways?): low / about the same / high
+   3. We covered the following topics: Words and morphemes; affix ordering; allomorphy; argument structure; lexical semantics; lexical processing; acquisition (briefly); computational modelling (briefly). Which one was my favourite? Why?
+   4. Which one was my least favourite? Why?
+   5. Were my contributions to class discussion valued and acknowledged?
+   6. Are there ways in which I wish this course were more like other ones?
+   7. Are there ways in which I wish other courses were more like this one?
+   8. There is the possibility of arranging a tutorial slot for next year's course. The tutorial would be dedicated to additional exercises. Thinking about my engagement this year, how often would I realistically attend an additional weekly tutorial session? What if we had a tutorial session instead of a regular session ("lecture")?
+   9. Next year's course could also increase the focus on other topics, for example more on acquisition, or a new block on other approaches to morphology. What do I think a good balance would be?
+   10. Looking at my degree as a whole, how do I see this course fitting in? [This can also be a simple copy-paste to or from my answer to the LEL feedback form, as in Part 6 below]
+
+### Part 3: Group project
+
+  1.  How would I describe my role and participation in the group project? Am I happy with it?
+  2.  What is the main contribution of our project? What did we try to do, and did we achieve it?
+   3. What did I learn from working on this project (in terms of content, skills, or both)?
+   4. How could the group have worked (even) better together?
+
+### Part 4: Final mark
+
+    Since the university requires number marks for this course, what mark am I assigning myself?
+   
+    It might help to think about the following questions:
+    
+- What skills have I developed?
+- How did I help others in their learning?
+- Did I try to edge out of my comfort zone?
+- Did I reflect on my progress consistently, and adjust my approach when necessary?
+
+For reference, here's the university's Common Marking Scheme: [https://www.ed.ac.uk/timetabling-examinations/exams/regulations/common-marking-scheme]
+
+And here's an attempt in PPLS to make sense of it: [http://students.ppls.ed.ac.uk/assignments/psychology/extended-common-marking-scheme/]
+
+### Part 5: Being acknowledged for my contributions
+
+Itamar might be invited to give presentations on this course, or on this way of teaching and learning, in conferences and seminars in the future.
+
+- Am I ok with excerpts from my portfolio being reproduced anonymously? Yes / No
+- Am I ok being acknowledged by name as a participant in the course? Yes / No
+- Am I ok with my group project being made available to future students on this course? Yes / No
+
+### Part 6: LEL feedback (optional)
+
+The traditional way to give LEL feedback is through departmental feedback exercises (and the Staff-Student Liaison Committees, or SSLC, which have already met). Here is the link for this year's Hons/MSc feedback form, which all students are encouraged to fill out (once for all courses; separate arrangements for PhD/DPT students).
+
+This is an important opportunity to reflect on the place of any individual course within the degree programme, as well as on the programme as a whole. Staff take this feedback very seriously but don't always get much concrete, actionable input.
+
+With that in mind, it's worth thinking about the following:
+
+- What feedback will I submit about this course? (No need to enter this in the self-evaluation!)
+- What feedback will I submit about my other courses? (Definitely no need to enter this in the self-evaluation!)
+
+## Instructor's final questionnaire
+
+### Part 1: Self evaluation
+
+1. How would I describe my guiding of class activities? Am I happy with it?
+2. In what ways have I grown?
+3. Is there anything I'm particularly proud of?
+4. How well did I accommodate different learning preferences, or different individual circumstances?
+5. What else do I want to work on in the future? How? 
+6. How many times was I touched when reading students' honest reflections?
+
+### Part 2: Course evaluation
+
+1. Compared to other courses, the workload on this course was (in what ways?): low / about the same / high 
+2. How did the following components of the course go? Words and morphemes; Affix ordering; Allomorphy; Argument structure; Lexical semantics; Lexical processing; Acquisition; Computational modelling; Exercises; Reflections.
+3.   What are the biggest differences between this course and others? How do I feel about these differences?
+4. What should the course structure be like next year?
+5. What concrete things are on the to-do list for next year?
+6. What else should I think about for next time?
+
+### Part 3: Group project
+
+How would I describe the role I played in the group projects? Am I happy with it?
+
+### Part 4: Top three
+
+And finally, just for fun, my list of top 3 in-class moments.
 
 
 # Assessment structure
