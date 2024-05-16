@@ -83,3 +83,7 @@ Sections 2, 4 of the lecture notes.
 1. Discussion of group projects
 2. [Topic 11](11-modelling.html): ChatGPT
 3. Summary: hexagonal thinking
+
+## Final evaluations
+- [Self-evaluation](assessment.md)
+
