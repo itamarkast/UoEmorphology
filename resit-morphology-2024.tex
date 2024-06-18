@@ -1,0 +1,424 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage[hyphens]{url}
+\usepackage{natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2023-24, Edinburgh, Summer resit}
+
+\section{Instructions}
+
+\begin{itemize}
+    \item This resit exam consists of 8 exercises and a final self-evaluation questionnaire. 
+    \item The answer for each exercise should be short: up to one paragraph for each part of the exercise would be enough.
+    \item You may answer the exercises before or after revisiting the relevant materials. In your answers, you may explain how the materials informed the way you've answered the questions.
+\end{itemize}
+
+\section{Exercises}
+
+    \subsection{Exercise 1}
+\paragraph{Q1} Shortly recap the differences between inflection and derivation. This can be a very short table.
+
+\paragraph{Q2} To what extent do you think these are two separate phenomena?
+    
+    \subsection{Exercise 2}
+Let's look at the order of auxiliaries in English (examples with a ``*'' are ungrammatical):
+
+\pex
+    \a She will have be-en winn-ing the race.
+    \a \ljudge{*} She has been will winning the race.
+\xe
+\pex
+    \a The cake will have be-en (be-ing) eat-en.
+    \a \ljudge{*} The cake is having were been eat.
+\xe
+
+% T > Perf > Prog > Pass > V.
+
+% \bigskip
+\paragraph{Q1} What can you say about the relationship of each element with the others?
+% \begin{itemize} \tightlist
+%     \item Takes semantic \emph{scope} over the next: the future of the perfect of the passive of an eating event.
+%     \item Takes morpho(-phono)logical \emph{scope} over the next: \emph{have}_{\gsc{perf}} triggers participial morphology on \emph{eat-en}, \emph{is}_{\gsc{prog}} triggers progressive morphology on \emph{winn-ing}, etc.
+% \end{itemize}
+
+% \vspace{3cm}
+
+\paragraph{Q2} Draw a syntactic tree for~(\lastx a). It doesn't need to be too fancy - we don't need any movement, for example, or very elaborate labels for different nodes; just an idea of what the different heads or phrases are and where they originate more or less.
+
+\paragraph{Q3} Now let's do the same thing for Latin: first see how affixes are arranged. How does the order in Latin compare with the order in English?
+\pex
+    \a \begingl
+        \gla am-\=a-ve-ra-m//
+        \glb \root{LOVE}-\gsc{THEME}-Perf-Past-1\gsc{SG}//
+        \glft `I had loved'//
+        \endgl
+    \a \begingl
+        \gla am-\=a-ve-r-\=o//
+        \glb \root{LOVE}-\gsc{THEME}-Perf-Fut-1SG//
+        \glft `I will have loved'//
+        \endgl
+\xe
+
+% V < Th < Perf < T.
+% \begin{itemize} \tightlist
+%     \item $\approx$ T > Perf > V.
+%     \item Like in English, except in morphology rather than syntax.
+%     \item Still get morphological conditioning, but we'll return to that later (allomorphy).
+% \end{itemize}
+\paragraph{Q4} Draw a tree for Latin as well.
+
+    \subsection{Exercise 3}
+The following examples show Gender in Catalan:
+\pex
+    \a \begingl
+        \gla el gos-ø//
+        \glb the.\gsc{M} dog.\gsc{M}//
+        \endgl
+    \a \begingl
+        \gla els goss-o-s//
+        \glb the-\gsc{PL} dog-\gsc{M}-\gsc{PL}//
+        \endgl
+\xe
+\pex
+    \a \begingl
+        \gla la goss-a//
+        \glb the.F dog-F//
+        \endgl
+    \a \begingl
+        \gla les goss-e-s//
+        \glb the.\gsc{F.PL} dog-\gsc{F-PL}//
+        \endgl
+\xe
+
+\paragraph{Q1} Draw a (schematic) tree for the noun \emph{gosses} `female dogs' in~(\lastx b).
+
+% \ex \label{tree:pl-catalan}
+% \Tree
+% [.
+%     [.
+%         [.\emph{goss} ]
+%         [.\gsc{[F]} \emph{e} ]
+%     ]
+%     [.\gsc{[PL]} \emph{s} ]
+% ]
+% \xe
+
+% \vspace{3cm}
+% Yupik \citep[43]{mithun99}
+% \pex
+%     \a yug-\textbf{pag}-\uline{cuar}\\
+%     person-big-little\\
+%     `little giant'
+%     \a yug-\uline{cuar}-\textbf{pag}\\
+%     person-little-big\\
+%     `big midget'
+% \xe
+
+Here are two nouns in English:
+\ex glob-al-iz-ation \label{ex:globalization}
+\xe
+\ex novel-iz-ation-s
+\xe
+
+\paragraph{Q2} Draw a structure for~(\ref{ex:globalization}).
+% \ex
+% \Tree
+% [.[N]
+%     [.[V]
+%         [.[A]
+%             [.[N] \emph{glob} ]
+%             [.[A] \emph{al} ]
+%         ]
+%         [.[V] \emph{ize} ]
+%     ]
+%     [.[N] \emph{ation} ]
+% ]
+% \xe
+% \vspace{3cm}
+Is this morphology or syntax? Does it matter, and if so, in what ways?
+    
+    \subsection{Exercise 4}
+This exercises considers what it means to have a linguistic theory. 
+
+        \subsubsection*{Phonology}
+\paragraph{Q1} Many languages have voicing assimilation, whereby [v] gets devoiced to [f] before a voiceless obstruent like [t]. The rule in~(\nextx) formalizes this process, but what issues arise with this formalism? How was phonological theory further developed to address these issues?
+
+\ex /v/ $\rightarrow$ [f] / \trace{} [t]
+\xe
+
+        \subsubsection*{Syntax}
+\paragraph{Q2} In phrase structure grammar we had rules such as those in~(\nextx). What do they do, and what issues arise with them? How did X-bar theory address them?
+
+\pex
+    \a S $\rightarrow$ NP VP
+    \a NP $\rightarrow$ D (Adj) NP
+    \a NP $\rightarrow$ (Adj) N
+    \a VP $\rightarrow$ V NP
+    \a VP $\rightarrow$ V NP PP
+    \a VP $\rightarrow$ \dots{}
+    \a PP $\rightarrow$ P NP
+\xe
+
+        \subsubsection*{Morphology}
+\paragraph{Q3} How does our treatment of allomorphy in this course attempt to build a restrictive linguistic theory?
+
+    \subsection{Exercise 5}
+The table below shows a number of adjectives in different languages: the regular ``positive'' form, the ``comparative'' form and the ``superlative'' form. For English, we see that while a lot of the affixation is regular, we sometimes encounter root suppletion. Let's notate the different stems (exponents of the root) with different letters: in the first two rows they're all A, but in the following two rows we have one A followed by two B's.
+
+\paragraph{Q1} Complete the table.
+
+\begin{center}
+\begin{tabular}{lllll}
+ & \textbf{Positive} & \textbf{Comparative} & \textbf{Superlative} &  \\\hline\hline
+ English & \textbf{strong} & \textbf{strong}-er & \textbf{strong}-est & `strong'\\
+ & A & A & A \\\hline
+ English & \textbf{happy} & \textbf{happi}-er & \textbf{happi}-est & `happy'\\
+ & A & A & A \\\hline
+ 
+ English  & \textbf{far} & \textbf{farth}-er &  \textbf{farth}-st & `far' \\
+ & A & B & B \\\hline
+ 
+ French & \textbf{bon} & \textbf{mieux} & le \textbf{mieux} & `good'\\
+ & A & B & B \\\hline
+    % English  & \textbf{good} & \textbf{bett}-er &  \textbf{be}-st & `good' \\
+ % & A & B & B \\\hline
+
+ German & \textbf{schnell} & \textbf{schnell}-er & am \textbf{schnell}-sten & `fast'\\
+    \\\hline
+
+
+ French & \textbf{mauvais} & \textbf{pire} & le \textbf{pire} & `bad' \\
+ \\\hline
+
+  Latin & \textbf{bon}-us & \textbf{mel}-ior & \textbf{opt}-imus &  `good'\\
+ \\\hline
+% English  & \textbf{bad} &  \textbf{worse} & \textbf{wor}-st & `bad' \\
+
+Danish  & \textbf{god} &  \textbf{bed}-re &  \textbf{bed}-st &  `good'\\
+    \\\hline
+
+German & \textbf{gut} & \textbf{bess}-er & am \textbf{bes}-ten & `good'\\
+    \\\hline
+    
+Georgian & \textbf{k'argi}-i & u-\textbf{m\v{j}ob}-es-i & sa-u-\textbf{m\v{j}ob}-es-o & `good'\\
+    \\\hline
+
+Welsh  & \textbf{da} & \textbf{gwell} &  \textbf{gor}-au & `good' \\
+    \\\hline
+
+Basque & \textbf{asko} & \textbf{gehi}-ago & \textbf{gehi}-en & `a lot'\\
+    \\\hline
+
+Irish  & \textbf{maith} &  \textbf{ferr} & \textbf{dech} & `good' \\
+    \\\hline
+Persian  & \textbf{x\={o}b} &  \textbf{weh/wah}-\={i}y &  \textbf{pahl}-om/\textbf{p\={a}\v{s}}-om &  `good'\\
+    \\\hline
+Czech & \textbf{\v{s}patn}-\'{y} & \textbf{hor}-\v{s}í & nej-\textbf{hor}-\v{s}í & `bad'\\
+
+\end{tabular}
+\end{center}
+
+\paragraph{Q2} What additional patterns emerge?
+
+\paragraph{Q3} Which patterns might we expect to see, but do not find? Why not? Can you propose a structural explanation? You might find it convenient to assume that the root is spelled out as the positive form when it's a plain adjective, as well as two additional heads or features [\gsc{cmpr}] and [\gsc{sprl}].
+
+    \subsection{Exercise 6}
+What might you call a causative verb or causative construction (in any language)? Who is the Causer and who is the Causee in each case? Give a few examples.
+
+    \subsection{Exercise 7}
+In English, one class of verbs doesn't require an internal argument, or object. Here are a few examples where we can leave out the object:
+
+\pex	\a Chris \textbf{swept} the floor.
+	\a All last night, Chris \textbf{swept}.
+\xe
+
+\pex \a Chris \textbf{scrubbed} the floor.
+	\a All last night, Chris \textbf{scrubbed}.
+\xe
+
+In the other class of verbs, we cannot omit the object:
+
+\pex \a Chris \textbf{broke} the vase.
+	\a \ljudge{*} All last night, Chris \textbf{broke}.
+\xe
+
+\pex \a Chris \textbf{dimmed} the lights.
+	\a \ljudge{*} All last night, Chris \textbf{dimmed}.
+\xe
+
+\paragraph{Q1} Why might this be the case? In other words, what is it about \emph{sweeping} and \emph{scrubbing} that should allow us to drop the object, and what is it about \emph{breaking} and \emph{dimming} that requires one?
+
+\bigskip
+Here's an additional challenge. The list in~(\nextx) contains a number of verbs like \emph{sweep} and \emph{scrub}. The list in~(\anextx) contains verbs like \emph{break} and \emph{dim}.
+
+\ex \emph{eat, bash, bellow, dance, flutter, hit, jog, jump, laugh, murmur, nibble, pour, roll, rub, run, scour, scream, scribble, scrub, shout, spin, sweep, swim, walk, whisper, wipe, yell}
+\xe
+
+\ex \emph{admit, approach, arrive, break, clean, clear, come, cover, declare, destroy, devour, die, empty, enter, faint, fall, fill, freeze, go, increase, kill, melt, near, open, proclaim, propose, remove, rise, say}
+\xe
+
+\paragraph{Q2} Propose a generalization for what the semantic difference between~(\blastx) and~(\lastx) amounts to.
+
+\paragraph{Q3} Divide the second list, (\lastx), into two or three semantic sub-classifications.
+
+    \subsection{Exercise 8}
+Revisit the classic wug paper by Berko (1958): \url{https://www.tandfonline.com/doi/10.1080/00437956.1958.11659661}
+
+Answer the following two questions (and add any questions or thoughts of your own):
+\paragraph{Q1} Before reading the paper: what do you know the main finding of this paper is supposed to be?
+\paragraph{Q2} After reading the paper: what would you now say is the main finding of the paper?
+
+\section{Final questionnaire}
+
+    \subsection{Part 1: Self evaluation}
+\begin{enumerate}
+    \item What has changed in my thinking about morphology?
+    \item What has changed in my thinking about linguistics, either as a whole or about individual subfields? (For example, now that we've deconstructed morphology and rebuilt it from the ground up, to what extent would we be able to do that with another subfield?)
+    \item In what ways have I grown intellectually?
+    \item What skills have I gained, or developed, which will be useful after my degree?
+    \item Is there anything I want to work on in the future? How?
+    \item Is there anything I'm particularly proud of? Why?
+    \item What support would I have liked to have this semester, either from the instructor or from the School/University?
+\end{enumerate}
+
+    \subsection{Part 2: Course evaluation}
+\begin{enumerate}
+    \item We covered the following topics: Words and morphemes; affix ordering; allomorphy; argument structure; lexical semantics; lexical processing; acquisition (briefly); computational modelling (briefly). Which one was my favourite? Why?
+    \item Which one was my least favourite? Why?
+    \item Are there ways in which I wish this course were more like other ones?
+    \item Are there ways in which I wish other courses were more like this one?
+    \item Next year's course could increase the focus on other topics, for example more on acquisition, or a new block on other approaches to morphology. What do I think a good balance would be?
+    \item Looking at my degree as a whole, how do I see this course fitting in?
+\end{enumerate}
+
+    \subsection{Part 3: Project proposal}
+What project would I have liked to carry out this semester? What would be its goals and what format would it have taken?
+
+    \subsection{Part 4: Final mark}
+What mark am I proposing for myself?
+
+For reference, here's the university's Common Marking Scheme: \url{https://www.ed.ac.uk/timetabling-examinations/exams/regulations/common-marking-scheme}
+
+And here's an attempt in PPLS to make sense of it: \url{http://students.ppls.ed.ac.uk/assignments/psychology/extended-common-marking-scheme/}
+
+    \subsection{Part 5: Being acknowledged for my contributions}
+Itamar might be invited to give presentations on this course, or on this way of teaching and learning, in conferences and seminars in the future.
+\begin{enumerate}
+    \item Am I ok with excerpts from my portfolio being reproduced anonymously? Yes / No
+    \item Am I ok being acknowledged by name as a participant in the course? Yes / No
+\end{enumerate}
+
+% \newpage
+% \bibliographystyle{linquiry2}
+% \bibliography{lingxbib}
+
+\end{document}
