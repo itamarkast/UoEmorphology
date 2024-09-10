@@ -64,7 +64,7 @@ Sections 2, 4 of the lecture notes.
 
 ## Week 6: Lexical semantics
 
-1. Recap: hexagonal thinking ([background](https://www.cultofpedagogy.com/hexagonal-thinking/), [example template](hexagon1.pptx))
+1. Recap: hexagonal thinking ([background](https://www.cultofpedagogy.com/hexagonal-thinking/), [instructions](hexagons.md), [example template](hexagon1.pptx))
 2. [Topic 7](07-lexsem.pdf): lexical semantics
 
 ## Week 7: Lexical semantics
