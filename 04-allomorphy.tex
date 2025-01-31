@@ -1,0 +1,290 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[spaces]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2024-25, Edinburgh, Handout 4}
+\bigskip
+
+        \subsubsection*{A theory of allomorphy}
+Let's remind ourselves of what we need to derive (the \emph{explananda}):
+\begin{itemize} \tightlist
+    \item General distinction between syntactic features and phonological features.
+    \item Asymmetry: low material can't see high phonological material (but can see high syntactic material).
+    \item Productivity: productive rules exist but so does suppletion.
+\end{itemize}
+
+\textbf{What should the architecture look like?} Here are some relevant questions.
+\paragraph{Hierarchical relations.} We're assuming a syntactic/morphological/morphosyntactic structure, rather than a linear one (or paradigms, or anything else). Why?
+\begin{answer}
+{
+\begin{itemize} \tightlist
+    \item Affix order reflects word order.
+    \item Words have internal structure so why not.
+    \item Inward/outward is not necessarily the same as right/left (though we haven't seen that as such, but we'd expect interactions with syntax).
+    \item Uniform module so why not.
+\end{itemize}
+}
+\end{answer}
+
+\paragraph{Late Insertion.} Now let's think about what suppletion teaches us.
+\begin{itemize} \tightlist
+    \item \emph{Go/went} aren't like \emph{dog$\sim$cat}: one set of syn-sem info is associated with two different forms.
+    \item How do you know which form to choose? 
+    \item But when do you know? 
+\end{itemize}
+\begin{answer}
+{
+We need a node to be a bundle of syntax, and only pick the form once you have other nodes with the relevant info around it.  
+}
+\end{answer}
+
+\paragraph{Cyclic spell-out.} We still need to understand the contrast between phonological and syntactic conditioning.
+\begin{itemize} \tightlist
+    \item Where do syntactic and phonological features live in the structure?
+    \item How does that relate to Late Insertion?
+\end{itemize}
+\begin{answer}
+{
+    If you start at the bottom and insert one step at a time, then you can only see the phonological form that's below, not above.
+    So the different assumptions, when combined, create an architecture which \emph{derives} the generalization.
+}
+\end{answer}
+
+        \subsubsection*{Worked example}
+Let's think about the alternation \emph{go}$\sim$\emph{went}, and why phonological conditioning can only go in one direction. For simplicity we'll focus on a low node V and a higher node T. I'll use [] for syntactic/semantic features and // for phonological content.
+
+We start, following standard assumptions, by merging the verb or root. At this point, it has some syntactic/semantic features, but we just said it can't have phonology yet, because this root knows it needs to know what tense it is, and T isn't in the structure yet:
+\begin{answer}
+{
+\ex
+\Tree
+[.{V\\\root{go}\\syn:[verb]\\phon:/\trace/} ]
+\xe
+}
+\end{answer}
+
+So we go ahead and add T, which by the same logic gives us this:
+\begin{answer}
+{
+\ex \label{ex:went-nophono}
+\Tree
+[.
+    [.
+        [.{V\\\root{go}\\syn:[verb]\\phon:/\trace/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace/} ]
+]
+\xe
+}
+\end{answer}
+
+We now have two nodes, each with syntactic features. So each can look at the syntactic features of the other, be it upwards or downwards, as necessary.
+
+We now also have the information that \root{go} needs. So we can go ahead and choose its form, or \emph{exponent}, or \emph{vocabulary item}, namely \emph{went}. This is our syntactic conditioning (looking upwards / conditioned downwards):
+
+\begin{answer}
+{
+\ex
+\Tree
+[.
+    [.
+        [.{V\\\root{go}\\syn:[verb]\\phon:/\textbf{wɛnt}/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace/} ]
+]
+\xe
+}
+\end{answer}
+
+Could we have gotten phonological conditioning?
+
+\begin{answer}
+{
+Well, at~(\ref{ex:went-nophono}) we didn't have any phonology in T yet. In fact, we always get phonology low (e.g.~in V) before we get it high (e.g.~in T), as this follows from the order in which we derived: we add syntactic objects things bottom-up, and also spell them out bottom-up. If the syntactic features are there first, we're never in a situation in which we have phonology high but not low, like in~(\nextx):
+}
+\end{answer}
+
+\begin{answer}
+{
+\ex (Does not happen)\\ 
+\Tree
+[.
+    [.
+        [.{X\\\root{wug}\\syn:[Perf]\\phon:/\trace{}/} ]    
+        [. ]
+    ]
+    [.{Y\\syn:[verb]\\phon:/blɪk/} ]
+]
+\xe
+}
+\end{answer}
+
+Another way of seeing this is by looking at a regular verb like \root{treat}. We merge both elements in the structure, not spelling out either one yet:
+
+\begin{answer}
+{
+\ex \label{ex:treat-nophono}
+\Tree
+[.
+    [.
+        [.{V\\\root{treat}\\syn:[verb]\\phon:/\trace/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace/} ]
+]
+\xe
+}
+\end{answer}
+
+
+The root doesn't care about T, so we fill in its phonology. Only afterwards do we continue to T.
+\begin{answer}
+{
+\ex \label{ex:treat-phono1}
+\Tree
+[.
+    [.
+        [.{V\\\root{treat}\\syn:[verb]\\phon:/trit/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/\trace{}/} ]
+]
+\xe
+}
+\end{answer}
+
+
+% Only now do we continue to T.
+
+\begin{answer}In order to know which allomorph of the past tense suffix to choose, we need to look down to the phonology of the verb. We have that information, so we can choose the right allomorph, deriving \emph{treat-ed}. But what we wouldn't have is a situation in which V looks up to the phonology of T, because the phonology of T hasn't been filled in yet at that point.\end{answer}
+
+\begin{answer}
+{
+\ex \label{ex:treat-phono2} 
+\Tree
+[.
+    [.
+        [.{V\\\root{treat}\\syn:[verb]\\phon:/trit/} ]    
+        [. ]
+    ]
+    [.{T\\syn:[Past]\\phon:/əd/} ]
+]
+\xe
+}
+\end{answer}
+
+% \bibliographystyle{linquiry2}
+% \bibliography{lingxbib}
+
+\end{document}

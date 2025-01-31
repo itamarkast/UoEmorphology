@@ -13,8 +13,8 @@
     UprightFont=*-Roman,
     BoldFont=*-Bold,
     ItalicFont=*-Italic,
-    BoldItalicFont=*-Bold-Italic,
-    Renderer=ICU]
+    BoldItalicFont=*-Bold-Italic]
+    % Renderer=ICU]
 % 	\usefonttheme{serif}
 %	\setmainfont[Renderer=ICU]{Charis SIL}
 % 	\setmainfont[Renderer=ICU]{Brill}
@@ -111,14 +111,14 @@
 % \singlespacing
 
 
-\hfill \emph{Morphology 2023-24, Edinburgh, Handout 1}
+\hfill \emph{Morphology 2024-25, Edinburgh, Handout 1}
 \bigskip
 
 \section{Affix ordering}
 
     \subsection{Auxiliaries and preliminaries}
 
-[Exercise 3]
+[Exercise 1]
 
 What's the order of auxiliaries in English?
 
@@ -209,7 +209,7 @@ How does this compare to the order in English?
 
     \subsection{The Mirror Principle}
         \subsubsection{Preliminaries}
-What's the order of the reciprocal and causative suffixes in Chiche\^{w}a \citep{alsina99}?
+What's the order of the reciprocal and causative suffixes in Chiche\^{w}a (spoken in Malawi, \citealt{alsina99})?
 \ex[exno=3] \begingl
     \gla Al\=enje a-na-mény-\textbf{án}-\uline{its}-á mb\^{u}zi//
     \glb 2.hunters 2\gsc{s}-\gsc{PAST}-hit-\gsc{RECIP}-\gsc{CAUS}-\gsc{FinVwl} 10.goats//
@@ -261,7 +261,82 @@ Another example: Bemba in \cite{baker85}, citing \cite{givon76}.
         \endgl
 \xe
 
-        \subsubsection{Passivizing}
+        \subsubsection{Flexible ordering reflecting interpretation}
+Yupik (spoken in Alaska, \citealt[43]{mithun99}):
+\pex
+    \a \begingl
+        \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
+        \glb go-\gsc{FUT}-probably-claim-\gsc{PAST-INDIC.INTR}-3\gsc{SG}//
+        \glft `He said he would probably go.'//
+    \endgl
+    \a \begingl
+        \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
+        \glb go-\gsc{FUT}-claim-\gsc{PAST}-probably-\gsc{INDIC.INTR}-3\gsc{SG}//
+        \glft `He probably said that he would go.'//
+    \endgl
+\xe
+
+Oji-Cree (spoken in Manitoba and Ontario, \citealt{slavin05uot} in \citealt{rice11}):
+\pex[exno=11]
+    \a \begingl
+        \gla ishkwaa-niipaa-sookihpawn//
+        \glb finish-at.night-be.snowing//
+        \glft \fillblank{`It stopped snowing at night.' (does not snow at night anymore)}//
+    \endgl
+    \a \begingl
+        \gla nipaa-ishkwaa-sookihpwan//
+        \glb at.night-finish-be.snowing//
+        \glft \fillblank{`It stopped snowing at night.' (was snowing the whole day)}// 
+    \endgl
+\xe
+\pex[exno=11']
+    \a \begingl
+        \gla kiimooci-kishahtapi-wiihsini//
+        \glb secretly-fast-eat//
+        \glft \fillblank{`He secretly eats fast.' (nobody knows that he eats fast)}//
+    \endgl
+    \a \begingl
+        \gla kishahtapi-kiimooci-wiihsini//
+        \glb fast-secretly-eat//
+        \glft \fillblank{`He eats secretly (nobody knows that he eats) and he does it fast.'}// 
+    \endgl
+\xe
+
+
+Here's a pair of examples from Pulaar (spoken in Senegal, \citealt{paster05}), where \gsc{rep}etitive \emph{it} means `again'. Assume that one of the following means `make someone learn' and one means `teach' -- which might be which?
+
+\pex
+    \a \begingl
+        \gla o jaŋŋg-in-it-ii kam//
+        \glb 3\gsc{SG} learn-\gsc{CAUS-REP-past} 1\gsc{SG}//
+        \glft \fillblank{`He taught me again.' (taught me before) -- [again [cause-learn]]}//
+        \endgl
+    \a \begingl
+        \gla o jaŋŋg-it-in-ii kam//
+        \glb 3\gsc{SG} learn-\gsc{REP-CAUS-past} 1\gsc{SG}//
+        \glft \fillblank{`He made me learn again.' -- [cause [again-learn]]}//
+        \endgl
+\xe
+
+And here \gsc{com}prehensive \emph{id} means `all' and \gsc{sep} \emph{it} denotes the reverse of the action (so `open' + \gsc{sep} = `close').
+\pex
+    \a \begingl
+        \gla mi udd-id-it-ii baafe ɗe fof//
+        \glb 1\gsc{SG} close-\gsc{COM-SEP-past} door Det all//
+        \glft `I opened [sic] all the doors (in sequence).'//
+        \endgl
+    \a \begingl
+        \gla mi udd-it-id-ii baafe ɗe fof//
+        \glb 1\gsc{SG} close-\gsc{SEP-COM-past} door Det all//
+        \glft `I opened all the doors (at once).'//
+        \endgl
+\xe
+
+\paragraph{Summary} \begin{answer}{The order of affixes reflects the order of syntactic heads, which reflects semantic scope.\\
+This is the Mirror Principle \citep{baker85}.}
+\end{answer}
+
+        \subsubsection{Extensions: Passivizing}
 In Chichewa, the applicative can be used for instruments \citep{alsina99}:
 \pex[exno=10] 
     \a \begingl
@@ -335,83 +410,6 @@ Kinyarwanda in \cite{baker85} from \cite{kimenyi80}:
         \glft `The letter was written with the pen by the man.'//
         \endgl
 \xe
-
-        \subsubsection{Outside of Bantu}
-Yupik \citep[43]{mithun99}:
-\pex
-    \a \begingl
-        \gla ayag-ciq-\textbf{yugnarqe}-\uline{ni}-llru-u-q//
-        \glb go-\gsc{FUT}-probably-claim-\gsc{PAST-INDIC.INTR}-3\gsc{SG}//
-        \glft `He said he would probably go.'//
-    \endgl
-    \a \begingl
-        \gla ayag-ciq-\uline{ni}-llru-\textbf{yugnarqe}-u-q//
-        \glb go-\gsc{FUT}-claim-\gsc{PAST}-probably-\gsc{INDIC.INTR}-3\gsc{SG}//
-        \glft `He probably said that he would go.'//
-    \endgl
-\xe
-
-\inSolution{(Why do we gloss these sometimes as words and sometimes as affixes? Usually phonology.)}
-
-
-Oji-Cree \citep{slavin05uot} in \cite{rice11}:
-\pex[exno=11]
-    \a \begingl
-        \gla ishkwaa-niipaa-sookihpawn//
-        \glb finish-at.night-be.snowing//
-        \glft \fillblank{`It stopped snowing at night.' (does not snow at night anymore)}//
-    \endgl
-    \a \begingl
-        \gla nipaa-ishkwaa-sookihpwan//
-        \glb at.night-finish-be.snowing//
-        \glft \fillblank{`It stopped snowing at night.' (was snowing the whole day)}// 
-    \endgl
-\xe
-\pex[exno=11']
-    \a \begingl
-        \gla kiimooci-kishahtapi-wiihsini//
-        \glb secretly-fast-eat//
-        \glft \fillblank{`He secretly eats fast.' (nobody knows that he eats fast)}//
-    \endgl
-    \a \begingl
-        \gla kishahtapi-kiimooci-wiihsini//
-        \glb fast-secretly-eat//
-        \glft \fillblank{`He eats secretly (nobody knows that he eats) and he does it fast.'}// 
-    \endgl
-\xe
-
-
-Pulaar \citep{paster05}, with \gsc{com}prehensive \emph{id} `all' and \gsc{sep} \emph{it} which denotes the reverse of the action (so `open' + \gsc{sep} = `close').
-\pex
-    \a \begingl
-        \gla mi udd-id-it-ii baafe ɗe fof//
-        \glb 1\gsc{SG} close-\gsc{COM-SEP-past} door Det all//
-        \glft `I opened [sic] all the doors (in sequence).'//
-        \endgl
-    \a \begingl
-        \gla mi udd-it-id-ii baafe ɗe fof//
-        \glb 1\gsc{SG} close-\gsc{SEP-COM-past} door Det all//
-        \glft `I opened all the doors (at once).'//
-        \endgl
-\xe
-
-Here, \gsc{rep}etitive means `again'. Assume that one of the following means `make someone learn' and one means `teach' - which is which?
-
-\pex
-    \a \begingl
-        \gla o jaŋŋg-in-it-ii kam//
-        \glb 3\gsc{SG} learn-\gsc{CAUS-REP-past} 1\gsc{SG}//
-        \glft \fillblank{`He taught me again.' (taught me before)}//
-        \endgl
-    \a \begingl
-        \gla o jaŋŋg-it-in-ii kam//
-        \glb 3\gsc{SG} learn-\gsc{REP-CAUS-past} 1\gsc{SG}//
-        \glft \fillblank{`He made me learn again.'}//
-        \endgl
-\xe
-
-\paragraph{Summary} \fillblank{The order of affixes reflects the order of syntactic heads, which reflects semantic scope.}\\
-\fillblank{This is the Mirror Principle \citep{baker85}.}
 
     \subsection*{Interim summary and references}
 We have seen evidence for:

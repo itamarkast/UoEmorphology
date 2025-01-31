@@ -13,14 +13,14 @@
     UprightFont=*-Roman,
     BoldFont=*-Bold,
     ItalicFont=*-Italic,
-    BoldItalicFont=*-Bold-Italic,
-    Renderer=ICU]
+    BoldItalicFont=*-Bold-Italic]
+    % Renderer=ICU]
 % 	\usefonttheme{serif}
 %	\setmainfont[Renderer=ICU]{Charis SIL}
 % 	\setmainfont[Renderer=ICU]{Brill}
 
 %% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
-\usepackage[spaces]{myProbSol} %   Optional arguments:
+\usepackage[]{myProbSol} %   Optional arguments:
 %                                               'solution': reveals solutions
 %                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
 
@@ -111,80 +111,61 @@
 % \singlespacing
 
 
-\hfill \emph{Morphology 2023-24, Edinburgh, Handout 4}
+\hfill \emph{Morphology 2024-25, Edinburgh, Exercise 1}
 \bigskip
 
-% \citet{bobaljik12}:
+Let's look at the order of auxiliaries in English (examples with a ``*'' are ungrammatical):
 
-\begin{center}
-\begin{tabular}{lllll}
- & \textbf{Positive} & \textbf{Comparative} & \textbf{Superlative} &  \\\hline\hline
- English & \textbf{strong} & \textbf{strong}-er & \textbf{strong}-est & `strong'\\
- & A & A & A \\\hline
- English & \textbf{happy} & \textbf{happi}-er & \textbf{happi}-est & `happy'\\
- & A & A & A \\\hline
- 
- English  & \textbf{far} & \textbf{farth}-er &  \textbf{farth}-st & `far' \\
- & A & B & B \\\hline
- 
- French & \textbf{bon} & \textbf{mieux} & le \textbf{mieux} & `good'\\
- & A & B & B \\\hline
-    % English  & \textbf{good} & \textbf{bett}-er &  \textbf{be}-st & `good' \\
- % & A & B & B \\\hline
+\pex
+    \a She will have be-en winn-ing the race.
+    \a \ljudge{*} She has been will winning the race.
+\xe
+\pex
+    \a The cake will have be-en (be-ing) eat-en.
+    \a \ljudge{*} The cake is having were been eat.
+\xe
 
- German & \textbf{schnell} & \textbf{schnell}-er & am \textbf{schnell}-sten & `fast'\\
-    & A & A & A\\\hline
+% T > Perf > Prog > Pass > V.
 
-
- French & \textbf{mauvais} & \textbf{pire} & le \textbf{pire} & `bad' \\
- & A & B & B\\\hline
-
-  Latin & \textbf{bon}-us & \textbf{mel}-ior & \textbf{opt}-imus &  `good'\\
- & A & B & C\\\hline
-% English  & \textbf{bad} &  \textbf{worse} & \textbf{wor}-st & `bad' \\
-
-Danish  & \textbf{god} &  \textbf{bed}-re &  \textbf{bed}-st &  `good'\\
-   &  A & B & B\\\hline
-
-German & \textbf{gut} & \textbf{bess}-er & am \textbf{bes}-ten & `good'\\
-    & A & B & B\\\hline
-    
-Georgian & \textbf{k'argi}-i & u-\textbf{m\v{j}ob}-es-i & sa-u-\textbf{m\v{j}ob}-es-o & `good'\\
-   & A & B & B\\\hline
-
-Welsh  & \textbf{da} & \textbf{gwell} &  \textbf{gor}-au & `good' \\
-    & A & B & C\\\hline
-
-Basque & \textbf{asko} & \textbf{gehi}-ago & \textbf{gehi}-en & `a lot'\\
-    & A & B & B\\\hline
-
-Irish  & \textbf{maith} &  \textbf{ferr} & \textbf{dech} & `good' \\
-    & A & B & C\\\hline
-Persian  & \textbf{x\={o}b} &  \textbf{weh/wah}-\={i}y &  \textbf{pahl}-om/\textbf{p\={a}\v{s}}-om &  `good'\\
-    & A & B & C\\\hline
-Czech & \textbf{\v{s}patn}-\'{y} & \textbf{hor}-\v{s}í & nej-\textbf{hor}-\v{s}í & `bad'\\
-    & A & B & B\\
-
-\end{tabular}
-\end{center}
-
-What additional patterns emerge? Which patterns might we expect to see, but do not find? Why not? Can you propose a structural explanation? You might find it convenient to assume that the root is spelled out as the positive form when it's a plain adjective, as well as two additional heads or features [\gsc{cmpr}] and [\gsc{sprl}].
-
-\inSolution{We don't have evidence for AAB or ABA. This generalization has now come to be known simply as ``*ABA'' (star-A-B-A).}
 \bigskip
+What can you say about the relationship of each element with the others? Is there some logic that tells us what the order should be?
+% \begin{itemize} \tightlist
+%     \item Takes semantic \emph{scope} over the next: the future of the perfect of the passive of an eating event.
+%     \item Takes morpho(-phono)logical \emph{scope} over the next: \emph{have}_{\gsc{perf}} triggers participial morphology on \emph{eat-en}, \emph{is}_{\gsc{prog}} triggers progressive morphology on \emph{winn-ing}, etc.
+% \end{itemize}
 
-Deriving \fillblank{*ABA}:
+\vspace{3cm}
 
-\ex Structure: \inSolution{ {[[[} Adjective ] Comparative ] Superlative ] }
+Try to draw a syntactic tree for~(\lastx a), based on whatever you've learned about syntax at this point. It doesn't need to be too fancy - we don't need any movement, for example, or very elaborate labels for different nodes; just an idea of what the different heads or phrases are and where they originate more or less. The important thing here is not to get the tree ``right'' but to have a starting point for discussion in the next class.
+
+\ex
+
 \xe
-\pex Rules of exponence (Vocabulary Insertion):
-    \a \inSolution{ \root{good} \lra{} \emph{bon} }
-    \a \inSolution{ \root{good} \lra{} \emph{mel} / \trace{} ] \gsc{CMPR} }
-    \a \inSolution{ \root{good} \lra{} \emph{opt} / \trace{} ] \gsc{CMPR} ] \gsc{SPRL} }
+
+\vspace{5cm}
+
+Now let's do the same thing for Latin (which has ``theme vowels'' that you can ignore). First, evaluate how the affixes are arranged: what determines their order? Then consider how the order in Latin compares with the order in English.
+\pex
+    \a \begingl
+        \gla am-\=a-ve-ra-m//
+        \glb love-\gsc{THEME}-Perf-Past-1\gsc{SG}//
+        \glft `I had loved'//
+        \endgl
+    \a \begingl
+        \gla am-\=a-ve-r-\=o//
+        \glb love-\gsc{THEME}-Perf-Fut-\gsc{1SG}//
+        \glft `I will have loved'//
+        \endgl
 \xe
 
-\inSolution{If superlatives had been derived directly from the adjectives (without a comparative layer), then~(\lastx a) would've kicked in, giving us ABA or ABB. But Czech shows us that we still get ABB instead.}
- 
+% V < Th < Perf < T.
+% \begin{itemize} \tightlist
+%     \item $\approx$ T > Perf > V.
+%     \item Like in English, except in morphology rather than syntax.
+%     \item Still get morphological conditioning, but we'll return to that later (allomorphy).
+% \end{itemize}
+\vspace{2cm}
+If you want to, try to draw a tree of some kind for Latin as well.
 
 % \bibliographystyle{linquiry2}
 % \bibliography{lingxbib}

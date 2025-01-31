@@ -39,7 +39,7 @@ SmallCapsFeatures = {FakeSlant=0},
 \usepackage{fancyhdr}
 \addtolength{\headheight}{2.5pt}
 \pagestyle{fancy} %or fancyplain
-\lhead{Morphology 2023-24 (UoE)}
+\lhead{Morphology 2024-25 (UoE)}
 \rhead{Jigsaw group B}
 \fancyfoot[C]{\thepage~of \pageref{LastPage}}
 \fancypagestyle{plain}{%
@@ -69,25 +69,50 @@ SmallCapsFeatures = {FakeSlant=0},
 \makeatother
 
 \title{Jigsaw group B}
-\date{Morphology 2023-24, allomorphy}
+\date{Morphology 2024-25, allomorphy}
 \author{}
 
 \begin{document}
 
-What allomorphy is happening in these examples? Which morpheme is being \textbf{conditioned} (or \textbf{triggered}) by which element? Try and identify the same pattern that holds in all cases. % syntactic, inward-looking
+In this activity we want to understand what morpheme is \textbf{triggering} (or \textbf{conditioning}) the allomorphy of what other morpheme. The same abstract relationship holds in all cases on this sheet. For each example, we want to look at the alternations and figure out which morpheme is influencing which one; and also, on what information the alternation depends. % syntactic, inward-looking
 
-\pex English plurals (focus on the form of the plural morpheme, not the root)
-	\a sheep, deer
-	\a oxen
-	\a \dots{}
-	\a dogs, cats
+\bigskip
+What does the form of the definite article suffix in Bulgarian depend on? What would the \textbf{tree structure} (or bracket structure) for this interaction look like? Which node is looking at which? \textbf{What kind} of information is it looking for?
+
+
+\begin{multicols}{2}
+\pex
+    \a gaz\\
+    gas.\gsc{MASC}\\
+    `gas (state of matter)'
+     \a gaz-ta\\
+        gas.\gsc{FEM}-\gsc{DEF}\\
+        `the gas (fuel)'
+\xe
+\pex
+    \a gaz\\
+    gas.\gsc{FEM}\\
+    `gas (fuel)'
+   \a gaz-a\\
+    gas.\gsc{MASC}-\gsc{DEF}\\
+    `the gas (state of matter)' 
+\xe
+\end{multicols}
+\pex
+    \a kolyano\\
+    knee\\
+    `knee'
+    \a kolene\\
+    knee.\gsc{PL}\\
+    `knees'
+    \a kolene-te\\
+    knee.\gsc{PL}-\gsc{DEF}\\
+    `the knees'
 \xe
 
-What would the \textbf{tree structure} for these interactions look like? Which nodes are looking at which?
-\vspace{3cm}
+\bigskip
 
-
-Compare with a similar pattern for the form of Latin tense:
+Here is a similar pattern for the form of Latin tense:
 
 \pex \label{ex:perf-agr-past}
 \a \begingl
@@ -116,6 +141,16 @@ Compare with a similar pattern for the form of Latin tense:
 \glb \root{am}-\gsc{TH}-\fbox{Perf}-\underline{Fut}-\gsc{1SG}//
 \glft `I will have loved'//
 \endgl
+\xe
+
+\bigskip
+
+And we could even think of English irregular plurals this way (focus on the form of the plural morpheme, not the root):
+\pex
+	\a sheep, deer
+	\a oxen
+	\a \dots{}
+	\a dogs, cats
 \xe
 
 \vfill
