@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage {fontspec} %,xunicode} %,xltxtra}
+%	\setmainfont{Times New Roman}
+\setmainfont[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]{LibertinusSerif-Regular.otf}
+
+\usepackage[margin={1in}]{geometry}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=purple,pagebackref=false]{hyperref}
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+\setlength{\bibsep}{0pt plus 0.3ex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0.2ex,belowexskip=0.8ex,aboveglftskip=-0.2ex,interpartskip=0.2ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+
+\usepackage[nocenter]{qtree} % trees
+
+\usepackage{mdwlist}  %
+\usepackage[normalem]{ulem}
+\usepackage{array} % >{\...} in tabulars
+\setlength\parindent{0pt}
+\usepackage{dashrule} %\hdashrule
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\addtolength{\headheight}{2.5pt}
+\pagestyle{fancy} %or fancyplain
+\lhead{Morphology 2024-25 (UoE)}
+\rhead{Reverse jigsaw}
+\fancyfoot[C]{\thepage~of \pageref{LastPage}}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{Page \thepage~of \pageref{LastPage}} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\definecolor{edir}{RGB}{193,0,67}
+\definecolor{edib}{RGB}{0,50,95}
+\newcommand\ruler{{\centering \color{edir} \rule[-0.5em]{0.6\columnwidth}{0.4pt}\par}}
+
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\hand}{\ding{43}}
+
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\title{Reverse jigsaw} % transitive, verb-derived, cause O to be V-ed, relating causing and caused events
+\date{Morphology 2024-25, causatives}
+\author{}
+
+\begin{document}
+
+This jigsaw puzzle examines different kinds of \emph{causatives}. For simplicity, assume that we have one morpheme \gsc{CAUS} in various languages -- the exact syntactic label is not important right now. You can think of it as the verbalizer v, or as its own morpheme \gsc{CAUS}.
+
+\bigskip
+We're practising a new skill this time: taking our theory and using it to make predictions. Assuming a simple transitive structure like~(\nextx), we'll ask ourselves:
+\begin{itemize} \tightlist
+		\item[Q1] Where could \gsc{CAUS} be merged (where could we insert it)?
+		\item[Q2] What would the meaning be?
+\end{itemize}
+
+\ex Theo feared the cat.\\
+	\Tree
+	[.VoiceP
+		[.DP\\\emph{Theo} ]
+		[.
+			[.Voice ] 
+			[.vP
+				[.v
+					[.\root{\gsc{FEAR}} ]
+					[.v ]
+				]
+				[.DP\\\emph{the cat} ]
+			]
+		]
+	]	
+\xe
+
+We'll look at three possible positions, which we'll call ``middle'', ``high'', and ``low''. In the next phase of this \emph{reverse jigsaw}, each group will receive a sheet with some data and try to match it up with one of these structures. How close will you be with your predictions?
+
+\subsection*{``Middle'' causative}
+
+One option is that \gsc{CAUS} attaches above the vP, in a clause that's otherwise similar to~(\nextx), but which might need a different verb and arguments. What would be a possible example? What would the meaning be?
+
+\ex
+        \Tree
+		[.
+			[.{DP1} ]
+			[.
+				[.Voice ]
+				[.
+					[.\gsc{CAUS} ]
+					[.vP
+						[.v
+							[.\root{\gsc{root}} ]
+							[.v ]
+						]
+						[.{DP2} ]
+					]
+				]
+			]
+		]
+\xe
+
+\newpage
+\subsection*{``High'' causative}
+
+We could also embed the entire VoiceP under \gsc{CAUS}. Again, what would the meaning be?
+
+\ex
+        \Tree
+			[.VoiceP
+				[.{DP1} ]
+				[.
+					[.Voice ]
+					[.
+						[.\gsc{CAUS} ]
+						[.VoiceP
+						[.{DP2} ]
+						[.
+						[.Voice ]
+						[.vP 
+						[.v
+						[.\root{\gsc{ROOT}} ]
+						[.v ]
+						]
+						[.{(DP3)} ]
+						]
+						]
+						]
+					]
+				]
+			]
+\xe
+
+\subsection*{``Low'' causative}
+
+Lastly, \gsc{CAUS} could merge very low, either before v or instead of it. What could the effect here be like?
+\ex
+    \Tree
+	[.VoiceP
+		[.DP ]
+		[.
+			[.Voice ]
+			[.vP
+				[.v
+					[.
+						[.\root{\gsc{ROOT}} ]
+						[.{\gsc{CAUS}} ]					
+					]
+					[.v ]
+				]
+				[.DP ]
+			]
+		]
+]
+\xe
+
+\end{document}

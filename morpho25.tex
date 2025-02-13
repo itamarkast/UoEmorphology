@@ -2205,10 +2205,13 @@ There are still many questions we haven't explored, such as what the cycles of d
 
 It's also worth mentioning that other theories do have ways of dealing with e.g.~suppletion. Some of the even-stronger evidence for Late Insertion theories comes for patterns of syncretism \citep{kramer20cup}. Other ways of thinking about Late Insertion can be found in \cite{beard95} and \cite{embick16oup}.
 
-\newpage
     \subsection{Locality} \label{sec:allomorphy:locality}
+A major topic of research in allomorphy concerns \emph{locality}: how ``close'' do morphemes need to be in order to trigger allomorphy? What are the relevant hierarchical or linear constraints? We've discussed the hieararchical considerations arising from one case, *ABA, but there is much more to say. You'll find some pointers in the rest of this section.
+
         \subsubsection{*ABA}
 [Exercise 7]
+
+We're adding a layer of complexity to our previous discussion by considering two things simultaneously: suppletion of the adjectival root, and the hierarchical relations between two additional heads.
 
 \citet{bobaljik12}:
 
@@ -2290,10 +2293,59 @@ There are two main hypotheses to establish:
 \inSolution{If superlatives had been derived directly from the adjectives (without a comparative layer), then~(\lastx a) would've kicked in, giving us ABA or ABB. But Czech shows us that we still get ABB instead.}
 \bigskip
 
-For deriving *AAB and many other *ABA phenomena outwith adjectival suppletion, see the additional readings.
- 
-\paragraph{Further reading:} \cite{bobaljik12,bobaljik15ar}, \cite{smithetal16supplet}, \cite{mueller20}, and the articles in \cite{cahavanden17}.
-        
+Let's break this down a bit more.
+
+With [[[Adj] \gsc{CMPR}] \gsc{SPRL}], the following options are possible:
+
+\begin{tabular}{ccc}
+    [Adj] & [[Adj] \gsc{CMPR}] & [[[Adj] \gsc{CMPR}] \gsc{SPRL}]\\\hline
+    wug & wug-er & wug-est \\
+    A   & A &   A \\\hline
+        & baz-er & baz-est \\
+        & B & B \\\hline
+        &   & blix-est\\
+        &   & C 
+\end{tabular}
+
+So the possible patterns are: AAA, ABB, ABC, AAB.
+
+\bigskip
+On the other hand, if we'd had [[Adj] \gsc{SPRL}], then the following options would be possible:
+
+\begin{tabular}{ccc}
+    [Adj] & [[Adj] \gsc{CMPR}] & [[Adj] \gsc{SPRL}]\\\hline
+    wug & wug-er & wug-est \\
+    A   & A &   A \\\hline
+        & baz-er & \\
+        & B & \\\hline
+        &   & blix-est \\
+        &  & C \\
+\end{tabular}
+
+So the possible patterns are: AAA, \textbf{ABA}, AAC (AAB) and ABC. ABB would only be possible if the allomorphs of the adjective just happened to be B for both the comparative and the superlative, as a kind of coincidence.
+
+\paragraph{Beyond superlatives.} Here's one nice example of how the *ABA story extends further. Many languages can derive change-of-state verbs from adjectives. When we do that, notice what form of the root we get:
+
+\ex I heated/cooled the soup.
+\xe
+\pex
+    \a The latest developments have worsened/*baddened/*badded/*worstened the situation.
+    \a The recent agreement aims to better/*gooden/*engooden/*good/*best our working conditions.
+    \a Student numbers have lessend/*fewered/*fewened/*fewed in recent years.
+\xe
+
+When the adjective has a suppletive form, it's the comparative form (rather than the positive or superlative one) that's used as the base for the verb! This makes sense if we think about what comparatives are: they denote some movement on a scale, but not necessarily movement all the way:
+\ex The soup cooled (but it's still too hot to eat).
+\xe
+\ex The situation has worsened (but it's still alright).
+\xe
+\ex Eating healthily lessens the risks of illness (but doesn't remove them).
+\xe
+
+We'll return to this in the lexical semantics block.
+
+\paragraph{Further reading:} For deriving *AAB and many other *ABA phenomena outwith adjectival suppletion, see \cite{bobaljik12,bobaljik15ar}, \cite{smithetal16supplet}, \cite{mueller20}, and the articles in \cite{cahavanden17}. On the differences between comparatives with -\emph{er} and comparatives with \emph{more}, see \cite{embickmarantz08} and \cite{kastner19cup}.
+
         \subsubsection{Locality in DM: \cite{arad03}}
 \pex Forms derived from \root{sgr} (after \citealt[746]{arad03}): \label{ex:sgr}
     \a \emph{seger} `closure' (N)
@@ -3009,7 +3061,7 @@ This kind of theory is inspired by Distributed Morphology but is consistent with
 
 Now it's time to see how explanatory this kind of theory is. We will look at the interaction of morphology and syntax (argument structure), followed by the interaction of morphology and semantics (lexical semantics).
 
-
+% \newpage
 \section{Argument structure}
 
 	\subsection{Preliminaries}
@@ -3061,13 +3113,14 @@ Let's look at \emph{external arguments} (subjects) more closely. In~(\nextx)--(\
 \pex 
 	\a Kim threw the ball.
 	\a The child threw the ball.
-	\a The monkey threw (the dog) the ball.
+	\a The monkey threw the ball.
+    \a The monkey threw the dog the ball.
 \xe
 
 \bigskip
 
 \begin{answer}{
-It's the same event, except with a different subject/agent. Even the computer example makes sense if we think of the ``sleep'' function.
+It's the same event, except with a different subject/agent. Even the computer example makes sense if we think of the ``sleep/hybernate'' function.
 }\end{answer}
 
 \bigskip
@@ -3101,6 +3154,7 @@ How can we derive this generalization in our formal system?
     \item It appears that a predicate has selectional requirements for its complement, but less so for its subject.
     \item This makes sense if the verb and internal argument form one domain (much like a root and the first categorizing affix), with the external argument being added later in the derivation.
     \item One common way of doing this technically is by using a separate head to introduce the external argument. For \cite{chomsky95} this is ``little \emph{v}''. Other work since calls this head Voice \citep{kratzer96,marantz97,marantz13lingua,pylkkanen08,layering15,kastner20ogs}.
+    \item We assume, then, that we can't just merge arguments whenever we want; some functional head needs to introduce them (v for internal arguments, Voice for external arguments, and maybe others for other kinds of arguments like indirect objects).
 \end{itemize}
 }
 
@@ -3206,7 +3260,7 @@ One prediction of this view is that \emph{again} shouldn't be able to modify onl
 \xe
 }
 
-Here's another example with its associated readings (or rather, the situations that can be plausibly expressed using this sentence):
+Here's another example with its associated readings (or rather, the situations that can be plausibly expressed using this sentence), suggested by a student on the course:
 \pex Sam cooled the milk again.
     \a Repetitive \#1, event + agent: \inSolution{\textbf{Sam} cooled the milk. Then the milk got warm. Then Sam cooled the milk a second time. So Sam had cooled it the first time, and then Sam cooled it again.}
     \a Repetitive \#2, event: \inSolution{\uline{Alex} cooled the milk. Then the milk got warm. Then Sam cooled the milk. So Alex had cooled it the first time, and then Sam cooled it again.}

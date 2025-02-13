@@ -40,8 +40,8 @@ SmallCapsFeatures = {FakeSlant=0},
 \usepackage{fancyhdr}
 \addtolength{\headheight}{2.5pt}
 \pagestyle{fancy} %or fancyplain
-\lhead{Morphology 2023-24 (UoE)}
-\rhead{Jigsaw group A}
+\lhead{Morphology 2024-25 (UoE)}
+\rhead{Reverse jigsaw group A}
 \fancyfoot[C]{\thepage~of \pageref{LastPage}}
 \fancypagestyle{plain}{%
 \fancyhf{} % clear all header and footer fields
@@ -69,52 +69,95 @@ SmallCapsFeatures = {FakeSlant=0},
 \gdef^#1{\ensuremath{{}\sp{#1}}}%
 \makeatother
 
-\title{Jigsaw group A} % transitive, verb-derived, cause O to be V-ed, relating causing and caused events
-\date{Morphology 2023-24, causatives}
+\title{Reverse Jigsaw group A} % transitive, verb-derived, cause O to be V-ed, relating causing and caused events
+\date{Morphology 2024-25, causatives}
 \author{}
 
 \begin{document}
 
-In this jigsaw puzzle we will look at different kinds of causatives. For simplicity, assume that all the forms glossed \gsc{CAUS} are the same kind of element (albeit in different languages) - the exact syntactic label is not important right now.
+In this expert group, see if you can find out what is being caused, and to what/whom. Characterise this in terms of grammatical roles (subject, object, etc). Which of the three causative structures do you think this is: ``middle'', ``high'' or ``low''? How closely did the data align with your expectations?
 
-In this expert group, see if you can find out what is being caused, and to what/whom. Characterise this in terms of grammatical roles (subject, object, etc).
+\section{Quechua}
 
-\section{English}
+% And the same pattern for \gsc{CAUS}:
 
-\pex \a Tyler opened the door.
-    % \a The door opened.
-    \a Tyler caused the door to open.
+\pex
+\a \begingl
+\gla Yaku t'impu-rqa//
+\glb Water boil-\gsc{PAST}//
+\glft `The water boiled.'//
+\endgl
+
+\a \begingl
+\gla Wayna yaku-ta t'impu-chi-rqa//
+\glb boy water-\gsc{ACC} boil-\gsc{CAUS}-\gsc{PAST}//
+\glft `The boy boiled the water.'//
+\endgl
 \xe
 
-\pex \a Kim broke the vase.
-    % \a The vase broke.
-    \a Kim caused the vase to break.
+% \ex \begingl
+% \gla Juan Marya-ta phiña-chi-rqa//
+% \glb John Mary-\gsc{ACC} anger-\gsc{CAUS}-\gsc{PAST}//
+% \glft `John angered Mary.'//
+% \endgl
+% \a \begingl
+% \gla Marya phiña-\uline{ku}-rqa//
+% \glb Mary anger-REFL-\gsc{PAST}//
+% \glft `Mary got angry.'//
+% \endgl
+% \xe
+
+\section{Romance}
+Here's the same pattern again, with French `make':
+
+\pex
+    \a \begingl
+        \gla \rightcomment{[French]}Marie  fit  reparer  la  voiture  //
+        \glb Marie made repair the car//
+        \glft `Marie got the car fixed.'//
+    \endgl
+    \a \begingl
+        \gla \rightcomment{[Italian]}Maria  fece  riparare  la  macchina  //
+        \glb Maria made repair the car //
+        \glft `Maria got the car fixed.'//
+    \endgl
+    \a \begingl
+        \gla \rightcomment{[Spanish]}Maria  hizo  arreglar  el  coche //
+        \glb Maria made repair the car //
+        \glft `Maria got the car fixed.'//
+    \endgl
 \xe
 
-\pex \a Kim taught Chris.
-    % \a Chris learned.
-    \a Kim caused Chris to learn.
-\xe
+% \pex
+%     \a \begingl
+%         \gla \rightcomment{[French]}Marie  fit  reparer  la  voiture  (à  Jean). //
+%         \glb Marie made repair the car at Jean//
+%         \glft `Marie got the car fixed (by Jean)', `Marie made John fix the car.'//
+%     \endgl
+%     \a \begingl
+%         \gla \rightcomment{[Italian]}Maria  fece  riparare  la  macchina  (a  Gianni).  //
+%         \glb Maria made repair the car at Gianni//
+%         \glft `Maria got the car fixed (by Gianni).'//
+%     \endgl
+%     \a \begingl
+%         \gla \rightcomment{[Spanish]}Maria  hizo  arreglar  el  coche  (a  Juan). //
+%         \glb Maria made repair the car at Juan//
+%         \glft `Maria got the car fixed (by Juan).'//
+%     \endgl
+% \xe
 
-% hang hung
-% hang hanged
+% \section{Hiaki}
 
-% rise rose
-% raise raised
-
-% rise raise
-
-
-% destroy the tower
-% * the tower destroyed
-
-% They broke \{their promise / the world record}
-% * \{The promise / The world record\} broke
-
+% \ex \begingl
+%     \gla Juan vaso-ta ham-ta-tevo-k//
+%     \glb Juan glass-\gsc{ACC} break-\gsc{TR-CAUS-PRF}//
+%     \glft `Juan had the glass broken.'//
+%     \endgl
+% \xe
 
 \section{Hebrew}
 
-Only the forms glossed with \gsc{CAUS} here are the ``causative'' ones for our purposes. The pattern here should be similar to the one in English above.
+Only the forms glossed with \gsc{CAUS} here are the ``causative'' ones for our purposes.
 
 \pex
     \a \begingl
@@ -153,70 +196,41 @@ Only the forms glossed with \gsc{CAUS} here are the ``causative'' ones for our p
     \endgl
 \xe
 
-\newpage
-\section{Quechua}
 
-And the same pattern for \gsc{CAUS}:
+\section{English}
 
-\pex
-    \a \begingl
-    \gla Yaku t'impu-rqa//
-    \glb Water boil-\gsc{PAST}//
-    \glft `The water boiled.'//
-    \endgl
-    
-    \a \begingl
-    \gla Wayna yaku-ta t'impu-chi-rqa//
-    \glb boy water-\gsc{ACC} boil-\gsc{CAUS}-\gsc{PAST}//
-    \glft `The boy boiled the water.'//
-    \endgl
+And what do you think about these possibilities in English?
+
+\pex \a Tyler opened the door.
+% \a The door opened.
+\a Tyler caused the door to open.
 \xe
 
-\ex \begingl
-    \gla Juan Marya-ta phiña-chi-rqa//
-    \glb John Mary-\gsc{ACC} anger-\gsc{CAUS}-\gsc{PAST}//
-    \glft `John angered Mary.'//
-    \endgl
-    % \a \begingl
-    % \gla Marya phiña-\uline{ku}-rqa//
-    % \glb Mary anger-REFL-\gsc{PAST}//
-    % \glft `Mary got angry.'//
-    % \endgl
+\pex \a Kim broke the vase.
+% \a The vase broke.
+\a Kim caused the vase to break.
 \xe
 
-\section{Romance}
-And the same pattern again, with `make':
-
-\pex
-    \a \begingl
-        \gla \rightcomment{[French]}Marie  fit  reparer  la  voiture  (à  Jean). //
-        \glb Marie made repair the car at Jean//
-        \glft `Marie got the car fixed (by Jean)', `Marie made John fix the car.'//
-    \endgl
-    \a \begingl
-        \gla \rightcomment{[Italian]}Maria  fece  riparare  la  macchina  (a  Gianni).  //
-        \glb Maria made repair the car at Gianni//
-        \glft `Maria got the car fixed (by Gianni).'//
-    \endgl
-    \a \begingl
-        \gla \rightcomment{[Spanish]}Maria  hizo  arreglar  el  coche  (a  Juan). //
-        \glb Maria made repair the car at Juan//
-        \glft `Maria got the car fixed (by Juan).'//
-    \endgl
+\pex \a Kim taught Chris.
+% \a Chris learned.
+\a Kim caused Chris to learn.
 \xe
 
-% \section{Hiaki}
+% hang hung
+% hang hanged
 
-% \ex \begingl
-%     \gla Juan vaso-ta ham-ta-tevo-k//
-%     \glb Juan glass-\gsc{ACC} break-\gsc{TR-CAUS-PRF}//
-%     \glft `Juan had the glass broken.'//
-%     \endgl
-% \xe
+% rise rose
+% raise raised
+
+% rise raise
 
 
-\section{Analysis}
+% destroy the tower
+% * the tower destroyed
 
-If you have time: what would a formal analysis look like? Specifically, what would the relationship be between the Causer, the Causee, the verb/root, and the element \gsc{CAUS}?
+% They broke \{their promise / the world record}
+% * \{The promise / The world record\} broke
+
+
 
 \end{document}

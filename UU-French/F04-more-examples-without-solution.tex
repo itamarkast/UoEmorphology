@@ -133,20 +133,23 @@ Une représentation possible du genre en français:
         \endgl
 \xe
 
-Dessinez un arbre (schématique) pour le nom féminin pluriel  \emph{chattes} en~(\lastx b).
+ Arbre schématique  possible pour le nom féminin pluriel  \emph{chattes} en~(\lastx b).
 
 \ex \label{tree:pl-catalan}
- \Tree
- [.
-     [.
-         [.\emph{chat} ]
-         [.\gsc{[F]} \emph{e} ]
+\phantom{\Tree
+ [.[N]
+     [.[N]
+         [.[N]
+             [.\emph{\root{chat}} ]
+            [.[{\textit{n}, \(\emptyset \)}] ]
+         ]
+         [.{[F, \emph{e}}] ]
      ]
-     [.\gsc{[PL]} \emph{s} ]
- ]
+     [.{[PL, \emph{s}]} ]
+ ]}
 \xe
 
-\vspace{3cm}
+%\vspace{3cm}
 % Yupik \citep[43]{mithun99}
 % \pex
 %     \a yug-\textbf{pag}-\uline{cuar}\\
@@ -158,30 +161,57 @@ Dessinez un arbre (schématique) pour le nom féminin pluriel  \emph{chattes} en
 % \xe
 
 %Français:
-\ex soci-al-is-ation \label{ex:globalization}
-\xe
-\ex capital-is-ation-s
-\xe
+%\ex soci-al-is-ation \label{ex:globalization}
+%\xe
 
-Dessinez une structure pour ~(\ref{ex:globalization}):
+
+ Arbre schématique  possible pour le nom  \textit{socialisation}:
 \ex
- \Tree
+\phantom{ \Tree
  [.[N]
      [.[V]
          [.[A]
-             [.[N] \emph{soci} ]
-            [.[A] \emph{al} ]
+             [. \emph{\root{soci}} ]
+            [.{[\textit{a},\emph{al}]} ]
          ]
-         [.[V] \emph{is} ]
+         [.{[\textit{v}, \textit{is}]} ]
      ]
-     [.[N] \emph{ation} ]
- ]
+     [.{[\textit{n},\emph{ation}]} ]
+ ]}
 \xe
 
-\vspace{5cm}
+ Arbre schématique  possible pour l'adverbe \textit{fraternellement}.
+\ex
+ \phantom{\Tree
+ [.[Adv]
+     [.[A]
+         [.[A]
+             [.\emph{\root{frater}} ]
+            [.{[\textit{a}, \emph{nel}}] ]
+         ]
+         [.[F,\emph{e}] ]
+     ]
+     [.{[\textit{adv}, \emph{ment}]} ]
+ ]}
+\xe
 
-Est-ce que c'est de la morphologie ou de la syntaxe? 
-
+ Arbre schématique  possible pour le verbe fléchi au conditionnel \textit{mangeriez} (rappelez-vous l'analyse de la morphologie du conditionnel par Picabia comme une concaténation de la morphologie du futur et de la morphologie de l'imparfait). Dans cet arbre, la voyelle thématique \textit{e} est analysée comme l'épèlation de petit \textit{v}.
+\ex
+ \phantom{\Tree
+  [.[AGR]
+   [.[T]
+     [.[T]
+         [.[V]
+             [.\emph{\root{mang-}} ]
+            [.{[\textit{v}, \emph{e}}] ]
+         ]
+         [.[Fut,\emph{r}] ]
+     ]
+     [.{[Imp, \emph{i}]} ]
+     ]
+      [.{[2PL, \emph{ez}]} ]
+]}
+\xe
 
 
 \end{document}
