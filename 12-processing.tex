@@ -1,9 +1,9 @@
 \input{ikheader}
 
 \title{Lexical processing}
-\author{Itamar Kastner}
+\author{Morphology}
 %institute{}
-\date{Morphology, UoE 2023-24}
+\date{UoE 2024-25}
 
 %\setbeamertemplate{blocks}[rounded][shadow=true]
 %\setbeamertemplate{navigation symbols}{}
@@ -16,16 +16,6 @@
 
 \frame{\titlepage}
 
-\frame{
-\bigskip
-    \begin{center}
-    Start with an experiment:
-\bigskip
-
-    \url{https://www.youtube.com/watch?v=NRTFPPBZGnI}
-    
-    \end{center}
-}
 
 \frame{\frametitle{Goals}
 \begin{itemize}
@@ -40,6 +30,18 @@
 %    \item And at the role of experience and frequency.
 \end{itemize}
 }
+
+\frame{
+\bigskip
+    \begin{center}
+    Start with an experiment:
+\bigskip
+
+    \url{https://www.youtube.com/watch?v=NRTFPPBZGnI}
+    
+    \end{center}
+}
+
 
 \frame{\frametitle{Words or Morphemes}
 \begin{block}{Decomposition vs storage}
@@ -456,6 +458,191 @@ Does \emph{nation} prime \emph{national}?
 		\end{center}
 }
 
+    \subsection{Silent categorizers}
+\frame{\frametitle{\insertsubsection}
+    Reminder: how happy are we with silent categorizers?
+
+    \Tree
+        [.n
+            [.\root{\gsc{etern}} ]
+            [.n\\\emph{ity} ]
+        ]
+\hspace{2cm}
+    \Tree
+        [.n
+            [.\root{\gsc{globe}} ]
+            [.a\\\emph{al} ]
+        ]
+\hspace{2cm}
+    \Tree
+        [.n
+            [.\root{\gsc{globe}} ]
+            [.n\\\zero{} ]
+        ]        
+}
+
+\frame{\frametitle{\insertsubsection}
+    \begin{center}
+    Lexicalist view:
+    
+    \Tree
+        [.N \emph{hammer} ]
+    \hspace{2cm}
+    \Tree
+        [.V \emph{hammer} ]
+
+\bigskip
+\bigskip
+    Distributed Morphology view:
+
+    \Tree
+        [.n
+            [.\root{\gsc{hammer}} ]
+            [.n\\\zero{} ]
+        ]
+\hspace{2cm}
+    \Tree
+        [.v
+            [.\root{\gsc{hammer}} ]
+            [.v\\\zero{} ]
+        ]        
+    \end{center}
+
+\bigskip
+    \ding{228} \cite{kingetal14}: is there neurolinguistic evidence for the latter?
+}
+
+
+\frame{\frametitle{\insertsubsection}
+    \cite{solomyakmarantz09}:
+
+    \begin{itemize} \tightlist
+        \item Investigated \textbf{heteronym} nouns like \emph{wind}, \emph{bank}, \dots{}
+        \item Calculated the frequency of each sense (meaning).
+        \item The ratio was correlated with the ``M350'' response.
+    \end{itemize}
+
+\bigskip
+    \begin{columns}
+        \begin{column}[t]{0.4\textwidth}
+
+\vspace{-10em}
+            \includegraphics[width=0.95\linewidth]{figs/solomyak-fig2l.png} 
+        \end{column}
+        \begin{column}[t]{0.6\textwidth}
+            \includegraphics[width=0.95\linewidth]{figs/solomyak-fig3r.png}
+        \end{column}
+    \end{columns}
+}
+
+  % \begin{figure}
+    %     \centering
+    %     \includegraphics[width=0.6\linewidth]{figs/solomyak-fig2.png}
+    % \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.75\linewidth]{figs/solomyak-fig1.png}
+% \end{figure}
+
+\frame{\frametitle{\insertsubsection}
+    \cite{linzenetal13}: category of complement correlated with ATL ``M250''.
+    \pex 
+        \a P(NP | \emph{accept}) = 0.98: \emph{He accepted the proposal.}
+        \a P(SC | \emph{accept}) = 0.01: \emph{He accepted that he was wrong.}
+    \xe
+    \pex
+        \a P(NP | \emph{prove}) = 0.23: \emph{He proved the claim.}
+        \a P(SC | \emph{prove}) = 0.61: \emph{He proved that I was wrong.}
+    \xe
+
+    \begin{columns}
+        \begin{column}[t]{0.4\textwidth}
+
+\vspace{-11em}
+            \includegraphics[width=0.95\linewidth]{figs/linzen-fig1.png}
+        \end{column}
+        \begin{column}[t]{0.6\textwidth}
+            \includegraphics[width=0.95\linewidth]{figs/linzen-fig3.png}
+        \end{column}
+    \end{columns}
+}
+
+\frame{\frametitle{\insertsubsection}
+    \begin{block}{Lexicalist view}
+        \begin{itemize}
+            \item The choice between \emph{hammer}$_{\text{N}}$ and \emph{hammer}$_{\text{V}}$ is \alert<1>{\textbf{lexical}}, like the choice between \emph{bank}$_{\text{1}}$ and \emph{bank}$_{\text{2}}$.
+            \item Involves lookup for \emph{meaning}, distinguishing between different meanings (\emph{ambiguity}).
+            \item ``Late'' (300ms).
+            \item Middle temporal regions.
+        \end{itemize}
+    \end{block}
+
+\bigskip
+\begin{block}{DM view}
+        \begin{itemize}
+            \item The combination of \root{\gsc{hammer}}+n or \root{\gsc{hammer}}+v is \alert<2>{\textbf{syntactic}}, like [\emph{accept} + NP] or [\emph{accept} + CP].
+            \item Involves merging two elements in the syntax.
+            \item ``Early'' (250ms).
+            \item Anterior temporal regions.
+        \end{itemize}
+    \end{block}
+
+% \bigskip
+%     (Assume all the relevant literature)
+}
+
+\frame{\frametitle{\insertsubsection}
+    % \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{figs/kingetal-fig2.png}
+    % \end{figure}
+}
+
+\frame{\frametitle{\insertsubsection}
+    Procedure:
+    
+    \begin{itemize}
+        \item 13 Participants.
+        \item Saw 313 English words and 319 nonwords.
+        \item Only nouns and verbs.
+        \item For each word, calculated the probability (frequency) of it being a noun or a verb in a corpus.
+            \begin{itemize}
+                \item Strictly speaking it was \emph{N/V entropy}.
+            \end{itemize}
+    \end{itemize}
+}
+
+\frame{\frametitle{\insertsubsection}
+% \begin{figure}
+    \centering
+    \includegraphics[width=0.98\linewidth]{figs/kingetal-fig6}
+% \end{figure}
+}
+
+\frame{\frametitle{\insertsubsection}
+    \begin{block}{Summary of argumentation}
+        \begin{enumerate}
+            \item Syntactic category is assigned first.
+                \begin{itemize}
+                    \item The same process that combines \emph{accept} and NP combines \root{hammer} and v.
+                    \item Some of these combinations are more frequent than others -- that affects the activity in the region.
+                \end{itemize}
+            \item Lexical access and lookup of word meaning happen later.
+                \begin{itemize}
+                    \item The same process that looks up [\root{\gsc{hammer}}+n] and [\root{\gsc{hammer}}+v] is the one that looks up \emph{wind} (and \emph{chicken}).
+                    \item Some words are more ambiguous: have more potential meaning -- that affects the activity in the region.
+                \end{itemize}
+        \end{enumerate}
+    \end{block}
+
+    Some important caveats:
+    \begin{itemize}
+        \item Needs replicated.
+        \item Requires assumptions based on previous literature.
+    \end{itemize}
+}
+
     \subsection{Infixation in Tagalog}
 \frame{\frametitle{\insertsubsection}
     \begin{block}{Obligatory decomposition}
@@ -527,7 +714,6 @@ Does \emph{nation} prime \emph{national}?
     \ding{228} See \cite{wrayetal22} for discussion of the M170 in Tagalog infixes, pseudo-infixes and reduplication.    
     }
 }
-
 
 	\subsection{Nonconcatenative morphology}
 \frame{\frametitle{\insertsubsection}
@@ -740,7 +926,7 @@ Does \emph{nation} prime \emph{national}?
   
   \item   We	 looked	 at	 evidence	 that	 words	 are	  decomposed	 no	 matter	 how	 ``opaque'' and	 ``irregular''.
   
-  \item Even when the morphemes are complex or abstract, e.g.~infixes in Tagalog and verbalizers in Hebrew.
+  \item Even when the morphemes are silent (English), complex or abstract, e.g.~infixes in Tagalog and verbalizers in Hebrew.
 \end{itemize}
 }
 

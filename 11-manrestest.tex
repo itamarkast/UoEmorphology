@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage{times}
+%\usepackage[T3,T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx}  
+
+\usepackage{fontspec} %,xunicode} % xltxtra
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Brill}[
+    Extension=.ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-Bold-Italic,
+    Renderer=ICU]
+% 	\usefonttheme{serif}
+%	\setmainfont[Renderer=ICU]{Charis SIL}
+% 	\setmainfont[Renderer=ICU]{Brill}
+
+%% Trigger answers and notes. Package by Byron Ahn with edits by Craig Sailor
+\usepackage[solution]{myProbSol} %   Optional arguments:
+%                                               'solution': reveals solutions
+%                                               'spaces': leaves whitespace corresponding to the size of the solutions (has no effect if you also pass 'solution')
+
+
+\usepackage{amsmath,amssymb} % for $\text{}$
+\usepackage{url,natbib} 
+\usepackage[dvipsnames]{xcolor} %,bm}
+\usepackage{geometry,vmargin,setspace}
+\usepackage{multirow}
+\setmarginsrb{1in}{1in}{1in}{1in}{13.6pt}{0.1in}{0.1in}{0.2in}
+% pdflscape} %rotating
+    \setlength{\parindent}{0pt}
+
+\usepackage{stmaryrd}
+\usepackage{wasysym} %checkbox
+\usepackage[normalem]{ulem} % for \sout{}
+% \usepackage{mdwlist} % for \begin{itemize*} - but prefer \tightlist
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{natbib}
+	\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{longtable}
+\usepackage[linkcolor=purple,citecolor=ForestGreen,colorlinks=true,urlcolor=gray,pagebackref=false]{hyperref}
+\usepackage{multicol}
+\usepackage{dashrule} %\hdashrule
+\usepackage{array} % >{\...} in tabulars
+\usepackage{arydshln}
+
+\usepackage[framemethod=tikz,footnoteinside=false]{mdframed} 
+
+\usepackage{expex} %Linguistics examples
+\lingset{aboveexskip=0ex,belowexskip=0.5ex,aboveglftskip=-0.3em,interpartskip=0ex,labelwidth=!6pt,belowpreambleskip=0.1ex} %, *=*?}
+%	\lingset{aboveexskip=0.5ex,belowexskip=0.5ex,*=??}
+
+\usepackage[nocenter]{qtree} % trees
+\usepackage{tikz}
+    \tikzstyle{every picture}+=[remember picture]
+
+\usepackage{tipa} % convenient for \textsubarch etc.
+
+\newcommand\trace{\rule[-0.5ex]{0.5cm}{.4pt}}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+	\setlength{\bibsep}{0pt plus 0.3ex}
+
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}% 52
+\newcommand{\xmark}{\ding{55}}%
+ \newcommand{\hand}{\ding{43}}
+
+\newcommand\zero{\O{}}
+\newcommand\itp[1]{\textit{\textipa{#1}}}
+\newcommand\gsc[1]{\textsc{\lowercase{#1}}} %for glossing in small caps - comment out to return to caps
+\renewcommand\root[1]{$\sqrt{\text{#1}}$}
+
+\newcommand\blue[1]{\textcolor{blue}{#1}}
+\newcommand\red[1]{\textcolor{red}{#1}}
+\newcommand\green[1]{\textcolor{ForestGreen}{#1}}
+\newcommand\gray[1]{\textcolor{gray}{#1}}
+\newcommand\denote[1]{$\llbracket$#1$\rrbracket$}
+\newcommand\lra{$\leftrightarrow$}
+
+\newcommand\vz{\text{Voice$_{\text{\{--D\}}}$}}
+\newcommand\vd{\text{Voice$_{\text{\{+D\}}}$}}
+\newcommand\pz{\text{$p_{\text{\zero}}$}}
+\newcommand\va{\root{\gsc{ACTION}}}
+\newcommand{\tkal}{\emph{XaYaZ}}
+\newcommand{\tpie}{\emph{XiY̯eZ}}
+\newcommand{\tpua}{\emph{XuY̯aZ}}
+\newcommand{\thif}{\emph{heXYiZ}}
+\newcommand{\thuf}{\emph{huXYaZ}}
+\newcommand{\thit}{\emph{hitXaY̯eZ}}
+\newcommand{\tnif}{\emph{niXYaZ}}
+\newcommand\dgs[1]{\textsubarch{#1}}
+\newcommand\del[1]{\sout{#1}}
+
+\makeatletter %Allow superscript ^ and subscript _
+\catcode`_=\active%
+\gdef_#1{\ensuremath{{}\sb{#1}}}%
+\catcode`^=\active%
+\gdef^#1{\ensuremath{{}\sp{#1}}}%
+\makeatother
+
+\begin{document}
+% \pagenumbering{gobble}
+% \singlespacing
+
+
+\hfill \emph{Morphology 2024-25, Edinburgh, Handout 11}
+\bigskip
+
+
+\subsection*{Step 1: Intuitions}
+
+One of the Manner/Result diagnostics we haven't discussed yet has to do with the properties of the subject. In~(\nextx)--(\anextx) we have Manner and Result clauses where the subject is left unspecified.
+
+\bigskip
+\pex Manner verbs:
+    \a The wug scrubbed the tub.
+    \a The blix slammed the door.
+    \a The naz wiped the table.
+\xe
+\bigskip
+\pex Result verbs:
+    \a The wug broke the vase.
+    \a The blix shattered the vase.
+    \a The naz cut the rope.
+\xe
+
+\bigskip
+What are you intuitions: are there some kinds of subjects that would work better for Manner than for Result, or vice versa? Feel free to test different intuitions.
+
+\bigskip
+Once you're done, you'll get another sheet with the next steps: comparison with a proposal in the literature, and analysis.
+
+% \newpage
+% \vspace{2cm}
+\subsection*{Step 2: Predictions}
+
+One proposed difference has to do with the \textbf{animacy} of the subject; in other words, whether it can be a volitional agent or not.
+
+\bigskip
+Let's see if you share that intuition by testing its predictions. What are your judgments for the following examples, now with subjects filled in?
+
+\bigskip
+Manner:
+\pex 
+    \a The stiff brush scrubbed the tub.
+    \a The wind slammed the door.
+    \a The earthquake wiped the table.
+\xe
+\pex 
+    \a Kim scrubbed the tub.
+    \a Tyler slammed the door.
+    \a Chris wiped the table.
+\xe
+
+\bigskip
+Result:
+\pex
+    \a The hammer broke the vase.
+    \a The earthquake shattered the vase.
+    \a The tree branch cut the rope.
+\xe
+\pex
+    \a Kim broke the vase.
+    \a Tyler shattered the vase.
+    \a Chris cut the rope.
+\xe
+
+\begin{answer}
+{
+The general consensus is that Manner verbs require a volitional agent, whereas Result verbs don't. The question that then comes up is: if the distinction is semantic, then can we come up with contexts that make non-agentive subjects ok with Manner verbs? What is it about those contexts that makes it not-terrible to say, for example, \emph{The wind slammed the door (ferociously)}?
+}
+\end{answer}
+
+\subsection*{Step 3: Analysis}
+
+Assume for the sake of the argument that one verb class accepts animate subject more than the other. We've talked about the difference between Manner and Result as one of change on a scale, or change of state, or a prototypical Result having to obtain. Do any of these help explain the contrast we find above? If not, what kind of explanation could we give?
+
+\begin{answer}
+{
+We've identified change (on a scale) as a difference between Manner and Result verbs. Here it looks we have another difference: Manner verbs (roots) are concerned with the kind of activity, so it looks like they care much more about whether the subject is agentive or not. This is a good generalization to reach, but it's not obviously connected to the previous one. Whether we can derive both from one source is currently an open question.
+}
+\end{answer}
+
+% \bibliographystyle{linquiry2}
+% \bibliography{lingxbib}
+
+\end{document}
